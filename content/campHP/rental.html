@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>レンタル｜群馬みなかみ　ほうだいキャンプ場</title>
+        <link rel="stylesheet" href="css/rental.css">
+        <link rel="icon" type="image/x-icon" href="https://hodaigi-camp.jp/wp-content/themes/hodaigi/assets/img/site/favicon.ico">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+
+        <script type="text/javascript">
+			$(function() {
+				$('.Toggle1').click(function() {
+					$(this).toggleClass('active');
+
+					if ($(this).hasClass('active')) {
+						$('.NavMenu').addClass('active');//クラスを付与
+					} else {
+						$('.NavMenu').removeClass('active');//クラスを外す
+					}
+				});
+			});
+		</script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/rental.css" media="screen and (min-width:900px)">
+
+        <link rel="stylesheet" href="css/rental.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/rental.smart.css" media="screen and (max-width:549px)">
+
+    </head>
+    <body>
+        <header>
+            <div class="header-box">
+                <div class="header-box-inner"><a href="">
+                    <div><img src="images/top_carender.png" alt="カレンダー画像"></div>
+                    <p>予約する</p></a>
+                </div>
+                <div class="Toggle1">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="NavMenu">
+                <ul>
+                    <li><a href="money.html">施設・料金</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="rental.html">レンタル</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="activity.html">体験コーナー</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="outdoor.html">アウトドアスポーツ</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="spot.html">周辺観光</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="access.html">アクセス</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+                <h2><a href="index.html"><img src="images/logo_white.svg" alt="ロゴ画像"></a></h2>
+            </div>
+
+
+
+
+            <div class="header-img" id="top">
+                <div class="top-img"></div>
+                <img src="images/logo_bg.svg" alt="">
+                <h1><a href="index.html"><img src="images/logo.svg" alt="ロゴ画像"></a></h1>
+                <img src="images/fv_rental_icon.png" alt="コンロの画像">
+                <h2>レンタル</h2>
+                <div><img src="images/cover_fv.svg" alt="ヘッダー画像の下の画像"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="money.html">
+                            <p><img src="images/camp_price.png" alt="キャンプの写真"></p>
+                            <p>施設・料金</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="rental.html">
+                        <p><img src="images/camp_rental.png" alt="コンロの写真"></p>
+                        <p>レンタル</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="activity.html">
+                        <p><img src="images/camp_activity.png" alt="キャンプファイヤーの写真"></p>
+                        <p>体験コーナー</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="outdoor.html">
+                            <p><img src="images/camp_outdoor.png" alt="ボートの写真"></p>
+                            <p>アウトドアスポーツ</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="spot.html">
+                            <p><img src="images/camp_spots.png" alt="滝の写真"></p>
+                            <p>周辺観光</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                  <li><a href="access.html">
+                            <p><img src="images/camp_access.png" alt="地図の写真"></p>
+                            <p>アクセス</p>         
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="">
+                            <p><img src="images/camp_contact.png" alt="メールの写真"></p>
+                            <p>お問い合わせ</p>
+                    </a></li>
+                </ul>
+            </nav>
+                <p>しらかばハウスでご購入いただける備品やフード・ドリンク、有料でレンタル可能なアイテムをご紹介いたします。</p>
+                
+            <main>
+                <section>
+                    <div class="section-top">
+                        <h2>レンタル品のご案内</h2>
+                        <img src="images/hl_bg_kinoko.png" alt="キノコの画像">
+                    </div>
+                    <p>※在庫により希望メーカーを用意できない場合がございます。</p>
+                   <div class="section-parent">
+                        <div class="section-child">
+                            <h3>キャンプ用品</h3>
+                            <div>
+                                <p>布団セット</p>
+                                <p>1,500円</p>
+                            </div>
+                            <div>
+                                <p>掛布団</p>
+                                <p>850円</p>
+                            </div>
+                            <div>
+                                <p>敷き布団</p>
+                                <p>850円</p>
+                            </div>
+                            <div>
+                                <p>貸テント<span>(４人用) （スノーピーク社製 / コ
+ールマン社製）</span></p>
+                                <p>1張1泊 /
+ 3,000円</p>
+                            </div>
+                            <div>
+                                    <p>貸タープ
+<span>（スノーピーク社製）</span></p>
+                                <p>1張1泊 / 
+ 2,000円</p>
+                            </div>
+                            <div>
+                                <p>毛布</p>
+                                <p>500円</p>
+                            </div>
+                            <div>
+                                <p>寝袋</p>
+                                <p>1,000円</p>
+                            </div>
+                            <div>
+                                <p>テーブル</p>
+                                <p>1,000円</p>
+                            </div>
+                            <div>
+                                <p>LEDランタン</p>
+                                <p>800円</p>
+                            </div>
+                            <div>
+                                <p>いす</p>
+                                <p>500円</p>
+                            </div>
+                            <div>
+                                <p>たき火台</p>
+                                <p>1,000円</p>
+                            </div>
+                            <div>
+                                <p>セパレートハンモック</p>
+                                <p>1,550円</p>
+                            </div>
+                            <div>
+                                    <p>インナーマット
+<span>（スノーピーク社製）</span></p>
+                                <p>1,700円</p>
+                            </div>
+                        </div>
+                        <div class="section-child">
+                            <h3>BBQ用品</h3>
+                            <div>
+                                <p>バーベキューコンロ</p>
+                                <p>1,500円</p>
+                            </div>
+                            <div>
+                                <p>カセットコンロ（ガス別）</p>
+                                <p>600円</p>
+                            </div>
+                            <div>
+                                <p>鍋大</p>
+                                <p>400円</p>
+                            </div>
+                            <div>
+                                <p>鍋中</p>
+                                <p>300円</p>
+                            </div>
+                            <div>
+                                <p>鉄板</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>フライパン</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>飯ごう</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>バーベキューコンロ</p>
+                                <p>1,500円</p>
+                            </div>
+                            <div>
+                                <p>トング</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>ボウル</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>ざる</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>火ばさみ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>まな板</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>包丁</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>しゃもじ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>おたま</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>ボール</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>網</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>なた</p>
+                                <p>300円</p>
+                            </div>
+                        </div>
+                        <div class="section-child">
+                            <h3>その他レンタル</h3>
+                            <div>
+                                <p>貸し自転車大</p>
+                                <p>1h / 600円</p>
+                            </div>
+                            <div>
+                                <p>貸し自転車小</p>
+                                <p>1h / 400円</p>
+                            </div>
+                            <div>
+                                <p>テニスラケット（ボール付き）</p>
+                                <p>1h / 500円</p>
+                            </div>
+                            <div>
+                                <p>バドミントン</p>
+                                <p>1h / 300円</p>
+                            </div>
+                            <div>
+                                <p>貸しホール</p>
+                                <p>1日 / 11,000円</p>
+                            </div>
+                        </div>
+                   </div>
+                </section>
+
+
+                <section>
+                    <div class="section-top">
+                        <h2>販売品のご案内</h2>
+                        <img src="images/hl_bg_kinoko.png" alt="キノコの画像">
+                    </div>
+                    <p>※仕入状況により価格は変動する事がございます。</p>
+                   <div class="section-parent">
+                        <div class="section-child">
+                            <h3>日用品</h3>
+                            <div>
+                                <p>歯ブラシ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>タワシ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>スポンジ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>タオル</p>
+                                <p>250円</p>
+                            </div>
+                            <div>
+                                <p>食器洗剤</p>
+                                <p>180円</p>
+                            </div>
+                            <div>
+                                <p>蚊取り線香</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>紙おむつ</p>
+                                <p>100円</p>
+                            </div>
+                            <div>
+                                <p>ゴミ袋</p>
+                                <p>100円</p>
+                            </div>
+                        </div>
+                        <div class="section-child">
+                            <h3>BBQ用品</h3>
+                            <div>
+                                <p>炭</p>
+                                <p>500円</p>
+                            </div>
+                            <div>
+                                <p>薪</p>
+                                <p>1,000円</p>
+                            </div>
+                            <div>
+                                <p>らくらく着火炭</p>
+                                <p>250円</p>
+                            </div>
+                            <div>
+                                <p>ガスボンベ</p>
+                                <p>650円</p>
+                            </div>
+                            <div>
+                                <p>米（１合）</p>
+                                <p>150円</p>
+                            </div>
+                            <div>
+                                <p>塩</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>醤油</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>サラダ油</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>焼き肉のタレ</p>
+                                <p>320円</p>
+                            </div>
+                            <div>
+                                <p>カレー粉</p>
+                                <p>220円</p>
+                            </div>
+                            <div>
+                                <p>紙皿</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>紙コップ</p>
+                                <p>150円</p>
+                            </div>
+                            <div>
+                                <p>ラップ</p>
+                                <p>200円</p>
+                            </div>
+                            <div>
+                                <p>氷</p>
+                                <p>400円</p>
+                            </div>
+                        </div>
+                        <div class="section-child">
+                            <h3>その他販売</h3>
+                            <div>
+                                <p>トーチ</p>
+                                <p>1本 / 500円</p>
+                            </div>
+                            <div>
+                                <p>ホワイトガソリン</p>
+                                <p>1,700円</p>
+                            </div>
+                            <div>
+                                <p>その他の食材</p>
+                                <p>応相談・予約</p>
+                            </div>
+                        </div>
+                   </div>
+                </section>
+            </main>
+
+            <section class="last-section">
+                <h2>管理センターしらかばハウス</h2>
+                <div class="last-section-flex-box">
+                    <div class="last-section-flex-left-box">
+                        <div><img src="images/shirakaba-house.jpg" alt="しらかばハウスの画像"></div>
+                        <p>県道から青木沢の集落を通過して、つづら折れの道を登ると、左手に
+管理センターが見えます。ここで受付をすませてください。</p>
+                      <div class="last-section-flex-left-box-inner">
+                        <div class="last-section-position1"><a href="">
+                            <p><img src="images/cottage_img_pdf.jpg" alt="コテージの画像"></p>
+                            <p>PDF</p>
+                            <p>お客様へのお願い</p></a>
+                        </div>
+                            <div class="last-section-position2"><a href="">
+                                <p>大雨警報等が発令された
+場合のキャンセルについて</p>
+                                <p>PDF</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="last-section-flex-rigth-box">
+                        <div class="last-section-flex-rigth-inner-box1">
+                            <h3>営業期間</h3>
+                            <div class="last-section-flex-rigth-inner-box1-1">
+                                <p>2023年4月29日(土)～10月22日(日)</p>
+                                <p>※5月8日(月)～6月30日(金)及び10月2日(月)～20日(金)の間の平日は、団体様等の利
+用のみとさせていただきます。</p>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div class="last-section-flex-rigth-inner-box1">
+                            <h3>受付内容</h3>
+                            <p class="last-section-flex-rigth-inner-box1-1">キャンプ場入村・宿泊受付・レンタル用品・バーベキュー予約・キャンプ用品レン
+タル・お土産品・ドリンク・アイス等販売。その他、アウトドアスポーツ・周辺観
+光もご案内しております。</p>
+                        </div>
+                        <div></div>
+                        <div class="last-section-flex-rigth-inner-box1">
+                            <h3>営業時間</h3>
+                            <div class="last-section-flex-rigth-inner-box1-2">
+                                <div>
+                                    <p>利用受付時間</p>
+                                    <p>予約受付時間</p>
+                                    <p>売店営業時間</p>
+                                </div>
+                                <div>
+                                    <p>8:00～17:00(時期により変更あり)</p>
+                                    <p>8:00～17:00</p>
+                                    <p>売店営業時間8:00～17:00(時期により変更あり)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                        <div class="last-section-flex-rigth-inner-box1">
+                            <h3>電話番号</h3>
+                            <p>0278-75-2206</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+            <div>
+                <picture>
+                     <source srcset="images/cover_footer.svg" media="(min-width: 550px)">
+                     <img src="images/cover_footer_sp.svg" alt="標高の画像">
+                 </picture>
+             </div>
+
+    <footer>
+        <div class="footer-blue">
+            <div class="footer-flex-box1">
+                <div class="footer-flex-left">
+                    <h2><a href="index.html"><img src="images/logo_white.svg"alt="ロゴ画像"></a></h2>
+                    <div class="footer-icon">
+                        <p><a href=""><i class="fa-brands fa-twitter"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-facebook"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-instagram"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-youtube"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="money.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>施設・料金</p>
+                            </a></li>
+                            <li><a href="activity.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>体験コーナー</p>
+                            </a></li>
+                            <li><a href="spot.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>周辺観光</p>
+                            </a></li>
+                            <li><a href="contact.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>お問い合わせ</p>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="rental.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>レンタル</p>
+                            </a></li>
+                            <li><a href="outdoor.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>アウトドアスポーツ</p>
+                            </a></li>
+                            <li><a href="access.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>アクセス</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+        <div class="footer-parent">
+            <div class="footer-parent-inner">
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.693400957764!2d139.07402117451775!3d36.82586626625453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e3e538c0e0bad%3A0x2bdbaec5d8d3db36!2z44CSMzc5LTE3MjEg576k6aas55yM5Yip5qC56YOh44G_44Gq44GL44G_55S66Jek5Y6f77yZ77yR77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1708833009922!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <address>
+                    〒379-1721 群馬県利根郡みなかみ町藤原915-1<br>
+                    TEL　0278-75-2206
+                </address>
+            </div>
+            <div class="footer-green-img"><img src="images/footer_ill _rental.png" alt="フッター画像"></div>
+        </div>
+    <div><a href=""><img src="images/ill_flower.png" alt="黄色いお花の写真"></div></a>
+    <div class="footer-last-box">
+        <p><small>&copy;2021 ほうだいぎキャンプ場</small></p>
+        <p class="privacy"><a href="https://openhouse-group.co.jp/privacy.html">プライバシーポリシー</a></p>
+        <a href="#top"><p>トップへ戻る</p> </a>
+    </div>
+</div>
+</footer>
+    </body>
+
+</html>

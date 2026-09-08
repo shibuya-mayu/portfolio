@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>青森ねぶた冬祭</title>
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="js/color.js"></script>
+
+        <!--トグルボタンが押されたときに、クラスを付与-->
+		<script type="text/javascript">
+			$(function() {
+				$('.Toggle').click(function() {
+					$(this).toggleClass('active');
+
+					if ($(this).hasClass('active')) {
+						$('.NavMenu').addClass('active');//クラスを付与
+					} else {
+						$('.NavMenu').removeClass('active');//クラスを外す
+					}
+				});
+			});
+		</script>
+
+        <script>
+            $(function() {
+                var showFlag = false;
+                var topBtn = $('.page-top');
+                topBtn.css('bottom', '-100px');
+                var showFlag = false;
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 300) {
+                        if (showFlag == false) {
+                            showFlag = true;
+                            topBtn.stop().animate({'bottom' : '20px'}, 200);
+                            /*この200は0.2秒で要素が出てくるということ*/
+                        }
+                    } else {
+                        if (showFlag) {
+                            showFlag = false;
+                            topBtn.stop().animate({'bottom' : '-100px'}, 200);
+                        }
+                    }
+                });
+                //スクロールしてトップ
+                topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);//0.5かけて戻る
+                    return false;
+                });
+            });
+        </script>
+
+
+
+        <script type="text/javascript">
+            $(function(){
+            $('.single-item').slick({
+            accessibility: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            fade: true,
+            slidesPerRow: 4,
+            responsive: [
+                {
+            breakpoint: 1023,
+            settings: {
+            slidesPerRow: 3,
+                },
+            },
+            {
+            breakpoint: 375,
+            settings: {
+            slidesPerRow: 1,
+                }
+            }
+            ]
+            });
+            });
+        </script>
+
+        <script>
+            $(function () {
+                $('.js-open').click(function () {
+                $('#overlay, .modal-window').fadeIn();
+                $('html, body').css('overflow', 'hidden');
+                });
+                $('.js-close').click(function () {
+                $('#overlay, .modal-window').fadeOut();
+                $('html, body').removeAttr('style');
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            $(window).on('scroll', function (){
+
+                var elem = $('.elem');
+                var isAnimate = 'isAnimate';
+
+                elem.each(function () {
+
+                    var elemOffset = $(this).offset().top;
+                    var scrollPos = $(window).scrollTop();
+                    var wh = $(window).height();
+
+                    if(scrollPos > elemOffset - wh + (wh / 3) ){
+                        $(this).addClass(isAnimate);
+                    }
+                });
+
+            });
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" media="screen and (min-width:1024px)">
+
+        <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1023px) and (min-width:376px)">
+
+        <link rel="stylesheet" href="css/smart.css" media="screen and (max-width:375px)">
+
+    </head>
+    <body>
+        <header id="page-top">
+            <div class="header-nav color NavMenu" id="hamburger-menu">
+                <nav>
+                    <ul>
+                        <li><a href="#information">お知らせ</a></li>
+                        <li><a href="#place">会場一覧</a></li>
+                        <li><a href="#about">青森ねぶた冬祭について</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                        <li><a href="#access">よくあるご質問</a></li>
+                    </ul>
+                </nav>
+                <div class="Language-box">
+                    <div><img src="images/Internet.png" alt="インターネットの画像"></div>
+                    <p>Language</p>
+                </div>
+            </div>
+            <div class="top-img">
+                <div class="top-img-left">
+                    <p>2022.1.28 SAT　～2.12 SUN</p>
+                    <h1><img src="images/top-logo.png" alt="ロゴ画像"></h1>
+                </div>
+                <div class="top-img-rigth">
+                    <div><img src="images/top-img.jpg" alt="ねぶた冬祭の画像"></div>
+                    <div class="top-rigth-box">
+                        <p>!</p>
+                        <p class="top-rigth-p">新型コロナウィルス感染対策について</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Toggle color2 hamburger">
+                <span class="color2"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <section>
+            <h2>開催期間</h2>
+            <p>開催内容は各会場ページでご確認ください。</p>
+            <div class="place-flex elem">
+                <div class="place-box">
+                    <h3>八戸会場</h3>
+                    <div class="day-flex">
+                        <p>1.28<span>SAT</span></p>
+                        <p>2.11<span>SAT</span></p>
+                    </div>
+                    <p>ライトアップは22:00まで</p>
+                </div>
+                <div class="place-box">
+                    <h3>青森会場</h3>
+                    <div class="day-flex">
+                        <p>2.3<span>FRI</span></p>
+                        <p>2.12<span>SUN</span></p>
+                    </div>
+                    <p>ライトアップは23:00まで</p>
+                    <p>最終日は22:00まで</p>
+                </div>
+            </div>
+            <div class="ivent-box"><a href="">
+                <p>イベントスケジュール</p>
+                <p>Event schedule</p>
+            </a></div>
+            <div class="week-flex">
+                <div class="week-flex-left">
+                    <p>第31回 青森ねぶた冬祭パンフレット</p>
+                    <div><img src="images/pdf.png" alt="PDFの画像"></div>
+                </div>
+                <div class="week-flex-rigth"><a href="">
+                    <p>!</p>
+                    <p>新型コロナウイルス感染対策について</p>
+                </a></div>
+            </div>
+        </section>
+
+        <div class="page-top"><a href="#page-top"></a></div>
+
+        <section class="information-section"  id="information">
+            <div class="information-flex">
+                <div class="information-left">
+                    <h2>お知らせ</h2>
+                    <p>お知らせ一覧を見る</p>
+                </div>
+                <div class="information-rigth">
+                    <div><a href="">
+                        <time>2023.1.26</time>
+                        <p class="blue">お知らせ</p>
+                        <p>青森ねぶた冬祭の開催に伴う交通規制について</p>
+                    </a></div>
+                    <div><a href="">
+                        <time>2022.12.27</time>
+                        <p class="blue">お知らせ</p>
+                        <p>青森県のローソン279店舗で販売するオリジナル商品を通じて、「青森ねぶた冬祭」の開催を応援！</p>
+                    </a></div>
+                    <div><a href="">
+                        <time>2022.12.10</time>
+                        <p class="red">YouTube</p>
+                        <p>冬ねぶた制作の様子</p>
+                    </a></div>
+                </div>
+            </div>
+            <div class="sns-flex elem">
+                <div class="sns-parent"><a href="">
+                    <div><img src="images/twitter.png" alt="Twitterの画像"></div>
+                    <p>Twitter</p>
+                    <p><span>会場の様子</span>や
+最新情報を更新中！</p>
+                </a></div>
+                <div class="sns-parent"><a href="">
+                    <div><img src="images/facebook.png" alt="facebookの画像"></div>
+                    <p>Facebook</p>
+                    <p>最新情報を更新中！</p>
+                </a></div>
+                <div class="sns-parent"><a href="">
+                    <div><img src="images/instagram.png" alt="Instagramの画像"></div>
+                    <p>Instagram</p>
+                    <p>最新情報を更新中！</p>
+                </a></div>
+                <div class="sns-parent"><a href="">
+                    <div><img src="images/youtube.png" alt="YouTubeの画像"></div>
+                    <p>YouTube</p>
+                    <p>冬ねぶたの制作や
+コンテストの様子はこちら！</p>
+                </a></div>
+            </div>
+        </section>
+
+        <main>
+        <section class="about-section" id="about">
+            <h2>青森ねぶた冬祭について</h2>
+            <p>各会場で行われるイベントなど、詳細をご紹介いたします。内容は、都合により変更になる場合があります。予めご了承ください。</p>
+            <p><a href="">詳しくはこちら</a></p>
+            <div class="about-flex elem">
+                <div class="about-parent"><a href="">
+                    <div><img src="images/aomori.png" alt="ようこそ青森の画像"></div>
+                    <p>観光について</p>
+                </a></div>
+                <div class="about-parent"><a href="">
+                    <div><img src="images/kamakura.png" alt="かまくらの画像"></div>
+                    <p>かまくらコンテスト（八戸）</p>
+                </a></div>
+                <div class="about-parent"><a href="">
+                    <div><img src="images/hyoutoumaturi.png" alt="氷瀑祭りの画像"></div>
+                    <p>氷瀑まつりエリア（八戸）</p>
+                </a></div>
+                <div class="about-parent"><a href="">
+                    <div><img src="images/yukiakari.png" alt="雪明りの画像"></div>
+                    <p>はちのへ雪灯り（八戸）</p>
+                </a></div>
+                <div class="about-parent"><a href="">
+                    <div><img src="images/huyunebuta.png" alt="冬ねぶたの画像"></div>
+                    <p>冬ねぶたライトアップパレード（青森）</p>
+                </a></div>
+                <div class="about-parent"><a href="">
+                    <div><img src="images/hanabi.png" alt="花火の画像"></div>
+                    <p>グランドフィナーレ2023花火大会（青森）</p>
+                </a></div>
+            </div>
+        </section>
+
+        <section class="place-section" id="place"> 
+            <h2>会場案内</h2>
+            <p>青森の冬の一大イベント「青森ねぶた冬祭」。会場は2つあり、屋台や雪灯り、花火大会など、会場ごとに趣が異なります。それぞれのイベントスケジュールをチェックして冬の青森をたっぷり満喫してください！</p>
+            <div class="hachinohe-place elem">
+                <div class="hachinohe-left"><img src="images/hachinohe-place.png" alt=""></div>
+                <div class="hachinohe-rigth">
+                    <h3><a href=""><span>H</span><span>A</span><span>C</span><span>H</span><span>I</span><span>N</span><span>O</span><span>H</span><span>E</span></a></h3>
+                    <p>八戸会場</p>
+                    <p>1月28日（土）～2月11日（土・祝）</p>
+                    <p>幻想的な氷瀑が立ち並ぶ「八戸会場」では、氷爆を見て・ふれて氷の世界を体感することができる会場展開を予定しています。コンテストの会場もこちらになります。</p>
+                    <h4>八戸会場の主なイベントスケジュール</h4>
+                    <div class="schedule-flex">
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-senbei.png" alt="ご飯の画像"></div>
+                            <time>1/29</time>
+                            <p>[SUN]</p>
+                            <p>東北せんべい汁フェスタ</p>
+                        </div>
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-festival.png" alt="大道芸の画像"></div>
+                            <time>2/4</time>
+                            <p>[SAT]</p>
+                            <div class="schedule-inner">
+                                <p>大道芸フェスティバル</p>
+                                <p>（ゲスト：風船太郎・もりやすバンバンビガロ）</p>
+                            </div>
+                        </div>
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-yukiakari.png" alt="雪だるまの画像"></div>
+                            <time>2/5</time>
+                            <p>[SUN]</p>
+                            <p>雪灯り</p>
+                        </div>
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-contest.png" alt="トロフィーの画像"></div>
+                            <time>2/11</time>
+                            <p>[SAT]</p>
+                            <p>かまくらコンテスト結果発表</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="aomori-place elem">
+                <div class="aomori-left">
+                    <h3><a href=""><span>A</span><span>O</span><span>M</span><span>O</span><span>R</span><span>I</span></a></h3>
+                    <p>青森会場</p>
+                    <p>2月3日（金）～2月12日（日）</p>
+                    <p>「青森会場」は、合浦公園の敷地を全面使用した大きな会場となります。冬ねぶたのパレードや、花火大会の会場もこちらです。</p>
+                    <h4>青森会場の主なイベントスケジュール</h4>
+                    <div class="schedule-flex1">
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-tork.png" alt="マイクの画像"></div>
+                            <time>2/4</time>
+                            <p>[SAT]</p>
+                            <div class="schedule-inner">
+                                <p>ものまね&トークショー</p>
+                                <p>（ゲスト：古坂大魔王・西尾夕紀・りんごちゃん）</p>
+                            </div>
+                        </div>
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-huyunebuta.png" alt="ねぶたの画像"></div>
+                            <time>2/11</time>
+                            <p>[SAT]</p>
+                            <p>冬ねぶたライトアップパレード</p>
+                        </div>
+                        <div class="schedule-parent">
+                            <div class="schedule-png"><img src="images/schedule-finare.png" alt="花火の画像"></div>
+                            <time>2/12</time>
+                            <p>[SUN]</p>
+                            <div class="schedule-inner">
+                                <p>グランドフィナーレ・閉会式</p>
+                                <p>（ゲスト：王林）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aomori-rigth"><img src="images/aomori-place.png" alt="花火の画像"></div>
+            </div>
+        </section>
+
+            <section class="instagram-slick">
+                <h2>Instagram</h2>
+                <p>インスタグラムにハッシュタグ「青森の冬」をつけて投稿された写真を集めました！</p>
+                <div class='container'>
+                    <div class='single-item'>
+                            <div><a href="">
+                                <div><img src="images/slick1.png" alt="クーポン画像1"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick2.png" alt="クーポン画像2"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick3.png" alt="クーポン画像3"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick4.png" alt="クーポン画像4"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick4.png" alt="クーポン画像5"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick3.png" alt="クーポン画像6"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick2.png" alt="クーポン画像3"></div>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/slick1.png" alt="クーポン画像4"></div>
+                            </a></div>
+                    </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+        <section class="access-section" id="access">
+            <div class="access-flex">
+                <div class="access-left">
+                    <h2>アクセス</h2>
+                    <div class="js-open button-open"><p><span>八戸会場</span>へのアクセス</p></div>
+                    <div class="button-open"><p><span>青森会場</span>へのアクセス</p></div>
+                </div>
+                <div class="access-rigth">
+                    <h2>よくあるご質問</h2>
+                    <div><a href="">
+                        <p>FAQ</p>
+                        <p>よくあるご質問</p>
+                    </a></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top-flex">
+                <div class="footer-left">
+                    <h2>青森ねぶた冬祭
+公式サイト
+2023</h2>
+                        <p>青森県ねぶた冬祭実行委員会</p>
+                        <div class="footer-sns">
+                            <p><a href=""><img src="images/twitter.png" alt="Twitterのアイコン画像"></a></p>
+                            <p><a href=""><img src="images/facebook.png" alt="facebookのアイコン画像"></a></p>
+                            <p><a href=""><img src="images/instagram.png" alt="Instagramのアイコン画像"></a></p>
+                            <p><a href=""><img src="images/youtube.png" alt="YouTubeのアイコン画像"></a></p>
+                        </div>
+                </div>
+                <div class="footer-rigth">
+                    <ul class="footer-list">
+                        <li><a href="">トップページ</a></li>
+                        <li><a href="">お知らせ</a></li>
+                        <li><a href="">開催期間</a></li>
+                    </ul>
+                    <div class="footer-list-center">
+                            <p>会場案内</p>
+                            <ul>
+                                <li><a href="">八戸会場</a></p>
+                                <li><a href="">青森会場</a></p>
+                            </ul>
+                            <p>青森ねぶた冬祭について</p>
+                            <ul>
+                                <li><a href="">観光について</a></li>
+                                <li><a href="">かまくらコンテスト</a></li>
+                                <li><a href="">氷瀑祭り</a></li>
+                                <li><a href="">はちのへ雪灯り</a></li>
+                                <li><a href="">冬ねぶたライトアップパレード</a></li>
+                                <li><a href="">花火大会</a></li>
+                            </ul>
+                    </div>
+                    <ul class="footer-list">
+                        <li><a href="">会場へのアクセス</a></li>
+                        <li><a href="">よくあるご質問</a></li>
+                        <li><a href="">お問い合わせ</a></li>
+                        <li><a href="">新型コロナウィルス感染対策について</a></li>
+                        <li><a href="">ギャラリー</a></li>
+                        <li><a href="">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-flex">
+                <div class="white-box">
+                    <p>青森ねぶた冬祭  かまくらコンテスト</p>
+                    <p>申し込みは終了しました。</p>
+                </div>
+                <div class="white-box">
+                    <p>青森ねぶた冬祭  スタッフ募集</p>
+                    <p>現在募集はございません。</p>
+                </div>
+                <p><a href="">事業者・関係者の方へ</a></p>
+            </div>
+            <div class="footer-black">
+                <div><img src="images/footer-logo.png" alt="ロゴ画像"></div>
+                <p>青森ねぶた冬祭実行委員会</p>
+                <div class="tell-box">
+                    <p><img src="images/tell.png" alt="電話の画像"></p>
+                    <p>012-345-6789</p>
+                </div>
+                <p><small>&copy;Aomori Winter Nebuta Festival. All Rights Reserved.</small></p>
+            </div>
+        </footer>
+    </body>
+
+    <!-- オーバーレイ -->
+    <div id="overlay" class="overlay">
+        <div class="js-close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- モーダルウィンドウ -->
+          <div class="modal-window">
+            <div class="modal-flex">
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.0435649867736!2d141.3574252749065!3d43.06155129049758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b297825bf28dd%3A0xde79fa7cae942c03!2z44CSMDYwLTAwNDEg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65aSn6YCa5p2x77yS5LiB55uu77yTIOesrDM25qGC5ZKM44OT44OrIDcsNw!5e0!3m2!1sja!2sjp!4v1715498245672!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="address-box">
+                    <p>〒060-0041
+札幌市中央区大通東2-3-1
+第36桂和ビル7階7号</p>
+                    <p>大通駅徒歩10分</p>
+                    <p>バスセンター前駅地下5番出口直結</p>
+                </div>
+            </div>
+          </div>
+
+</html>

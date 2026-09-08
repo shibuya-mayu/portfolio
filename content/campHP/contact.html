@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>お問い合わせ｜群馬みなかみ　ほうだいキャンプ場</title>
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="icon" type="image/x-icon" href="https://hodaigi-camp.jp/wp-content/themes/hodaigi/assets/img/site/favicon.ico">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+
+        <script type="text/javascript">
+			$(function() {
+				$('.Toggle1').click(function() {
+					$(this).toggleClass('active');
+
+					if ($(this).hasClass('active')) {
+						$('.NavMenu').addClass('active');//クラスを付与
+					} else {
+						$('.NavMenu').removeClass('active');//クラスを外す
+					}
+				});
+			});
+		</script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/contact.css" media="screen and (min-width:900px)">
+
+        <link rel="stylesheet" href="css/contact.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/contact.smart.css" media="screen and (max-width:549px)">
+
+
+    </head>
+    <body>
+        <header>
+            <div class="header-box">
+                <div class="header-box-inner"><a href="">
+                    <div><img src="images/top_carender.png" alt="カレンダー画像"></div>
+                    <p>予約する</p></a>
+                </div>
+                <div class="Toggle1">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="NavMenu">
+                <ul>
+                    <li><a href="money.html">施設・料金</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="rental.html">レンタル</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="activity.html">体験コーナー</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="outdoor.html">アウトドアスポーツ</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="spot.html">周辺観光</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="access.html">アクセス</a></li>
+                    <div class="ivent-img"></div>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+                <h2><a href="index.html"><img src="images/logo_white.svg" alt="ロゴ画像"></a></h2>
+            </div>
+
+
+
+            <div class="header-img" id="top">
+                <div class="top-img"></div>
+                <img src="images/logo_bg.svg" alt="">
+                <h1><a href="index.html"><img src="images/logo.svg" alt="ロゴ画像"></a></h1>
+                <img src="images/fv_icon_contact.png" alt="メールの画像">
+                <h2>お問い合わせ</h2>
+                <div><img src="images/cover_fv.svg" alt="ヘッダー画像の下の画像"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="money.html">
+                            <p><img src="images/camp_price.png" alt="キャンプの写真"></p>
+                            <p>施設・料金</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="rental.html">
+                        <p><img src="images/camp_rental.png" alt="コンロの写真"></p>
+                        <p>レンタル</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="activity.html">
+                        <p><img src="images/camp_activity.png" alt="キャンプファイヤーの写真"></p>
+                        <p>体験コーナー</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="outdoor.html">
+                            <p><img src="images/camp_outdoor.png" alt="ボートの写真"></p>
+                            <p>アウトドアスポーツ</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="spot.html">
+                            <p><img src="images/camp_spots.png" alt="滝の写真"></p>
+                            <p>周辺観光</p>
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                  <li><a href="access.html">
+                            <p><img src="images/camp_access.png" alt="地図の写真"></p>
+                            <p>アクセス</p>         
+                    </a></li>
+                        <p class="nav-saidba-"><img src="images/menu_line.png" alt=""></p>
+                    <li><a href="contact.html">
+                            <p><img src="images/camp_contact.png" alt="メールの写真"></p>
+                            <p>お問い合わせ</p>
+                    </a></li>
+                </ul>
+            </nav>
+                        <p>お問い合わせはお電話又は、下記メールフォームにて承っております。
+どうぞお気軽にお問い合わせください。</p>
+                        <div class="flex-box">
+                            <p>お電話でのお問い合わせ</p>
+                            <p>0278-75-2206</p>
+                        </div>
+                <main>
+                    <section class="form-section">
+                        <form action="form.php" method="post">
+                            <h2>お問い合わせフォーム</h2>
+                            <p>※必須</p>
+                            <div></div>
+                            <div class="form-flex-box">
+                                <label for="name">お名前<span>※</span></label>
+                                <input type="text" id="name" required placeholder="宝台樹太郎">
+                            </div>
+                            <div></div>
+                            <div class="form-flex-box">
+                                <label for="furigana">ふりがな<span>※</span></label>
+                                <input type="text" id="furigana" required placeholder="ほうだいぎたろう">
+                            </div>
+                            <div></div>
+                            <div class="form-flex-box">
+                                <label for="mail">メールアドレス<span>※</span></label>
+                                <input class="mail" type="email" id="mail" required placeholder="sample@gmail.com">
+                            </div>
+                            <div></div>
+                            <div class="form-flex-box">
+                                <label for="mail">確認用メールアドレス<span>※</span></label>
+                                <input class="mail" type="email" id="mail" required placeholder="sample@gmail.com">
+                            </div>
+                            <div></div>
+                            <div class="form-flex-box">
+                                <label class="massage" for="message">お問い合わせ内容<span>※</span></label>
+                                <textarea id="message"  cols="30" rows="10" required ></textarea>
+                            </div>
+                            <div></div>
+                            <p class="p-title">個人情報収集に関する同意事項</p>
+                            <p>ほうだいぎスキー場の個人情報の取り扱いについては、以下の「プライバシーポリシー」をご確認ください。 本ページより登録されたお名前、メールアドレス等の情報は、ほうだいぎスキー場からのご連絡の手段以外には使用いたしません。</p>
+                            <p class="p-title">プライバシーポリシー</p>
+                            <p>ほうだいぎスキー場では、ご利用いただく皆さまの個人情報がプライバシーを構成する重要な情報であることを深く認識し、安心してご利用いただけるホームページづくりに努めております。お問い合わせやご意見箱などを通じて、利用者の個人情報をご入力いただくことがございますが、個人情報を紛失、破壊、外部への不正な流出、改ざん、不正アクセスから保護するために、合理的な安全対策を講じております。</p>
+                            <div class="checkbox">
+                                <label for="consent"></label>
+                                <input type="checkbox" id="consent" name="consent" value="上記の個人情報収集に関する事項に同意する"><p>上記の個人情報収集に関する事項に同意する</p>
+                            </div>
+                            <p>※「同意する」にチェックを頂けない場合は、お問い合わせ送信が出来ません事、ご了承ください。</p>
+                            <input type="submit" value="送信">
+                        </form>
+                    </section>
+
+                </main>
+                <div>
+                    <picture>
+                         <source srcset="images/cover_footer.svg" media="(min-width: 550px)">
+                         <img src="images/cover_footer_sp.svg" alt="標高の画像">
+                     </picture>
+                 </div>
+
+    <footer>
+        <div class="footer-blue">
+            <div class="footer-flex-box1">
+                <div class="footer-flex-left">
+                    <h2><a href="index.html"><img src="images/logo_white.svg"alt="ロゴ画像"></a></h2>
+                    <div class="footer-icon">
+                        <p><a href=""><i class="fa-brands fa-twitter"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-facebook"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-instagram"></i></a></p>
+                        <p><a href=""><i class="fa-brands fa-youtube"></i></a></p>
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="money.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>施設・料金</p>
+                            </a></li>
+                            <li><a href="activity.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>体験コーナー</p>
+                            </a></li>
+                            <li><a href="spot.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>周辺観光</p>
+                            </a></li>
+                            <li><a href="contact.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>お問い合わせ</p>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="rental.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>レンタル</p>
+                            </a></li>
+                            <li><a href="outdoor.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>アウトドアスポーツ</p>
+                            </a></li>
+                            <li><a href="access.html">
+                                <i class="fa-solid fa-greater-than"></i>
+                                <p>アクセス</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+        <div class="footer-parent">
+            <div class="footer-parent-inner">
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.693400957764!2d139.07402117451775!3d36.82586626625453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e3e538c0e0bad%3A0x2bdbaec5d8d3db36!2z44CSMzc5LTE3MjEg576k6aas55yM5Yip5qC56YOh44G_44Gq44GL44G_55S66Jek5Y6f77yZ77yR77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1708833009922!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <address>
+                    〒379-1721 群馬県利根郡みなかみ町藤原915-1<br>
+                    TEL　0278-75-2206
+                </address>
+            </div>
+            <div class="footer-green-img"><img src="images/footer_ill _contact.png" alt="フッター画像"></div>
+        </div>
+    <div><a href=""><img src="images/ill_flower.png" alt="黄色いお花の写真"></div></a>
+    <div class="footer-last-box">
+        <p><small>&copy;2021 ほうだいぎキャンプ場</small></p>
+        <p class="privacy"><a href="https://openhouse-group.co.jp/privacy.html">プライバシーポリシー</a></p>
+        <a href="#top"><p>トップへ戻る</p> </a>
+    </div>
+</div>
+</footer>
+    </body>
+
+</html>

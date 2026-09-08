@@ -1,0 +1,1873 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+@font-face {
+    font-family: "IBM_Plex_Sans";
+    src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Noto_Sans_JP";
+    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.header-box {
+    position: fixed;
+    display: flex;
+    top: 3%;
+    right: 1%;
+    width: 50%;
+    z-index: 500;
+}
+
+.header-box-inner {
+    width: 65%;
+}
+
+.header-box-inner a {
+    display: flex;
+    width: 100%;
+    line-height: 12vw;
+    border-radius: 50px;
+    background-color: #d85f56;
+    box-shadow: 0px 0px 10px #62716d;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-box-inner a:hover {
+    background-color: #16695f;
+    transition: 0.5s;
+}
+
+.header-box-inner a div {
+    width: 15%;
+    margin-top: 13%;
+    margin-left: 15%;
+}
+
+.header-box-inner a div img {
+    display: block;
+    width: 100%;
+}
+
+.header-box-inner a p {
+    width: 60%;
+    margin-left: 12%;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #fff;   
+}
+
+/*ハンバーガーメニュー*/
+/*トグルボタンが押されたときに付与するクラス*/
+.NavMenu.active{
+	transform: translateY(0%);/*上から出したい場合は、transform: translateYを使う。*/
+}
+
+.Toggle1 {
+    position: relative;
+    margin-left: 5%;
+	width: 12vw;
+	height: 12vw;
+	cursor: pointer;/*divだけどカーソルが変わるようにしている*/
+	z-index: 550;/*ボタンを一番上にしている(押せなくなるから)*/
+    border-radius: 6vw;
+    background-color: #16695f;
+    box-shadow: 0px 0px 10px #62716d;
+    transition: 0.5s;
+}
+
+.Toggle1:hover {
+    background-color: #d8d056;
+    transition: 0.5s;
+}
+
+.Toggle1 span {
+	display: block;
+	position: absolute;
+	width: 35%;
+	border-bottom: solid 3px #fff;
+	transition: .35s ease-in-out;			/*変化の速度を指定*/
+	left: 32%;
+    transition: 0.5s;
+}
+
+.Toggle1:hover span {
+    border-bottom: solid 3px #16695f;
+    transition: 0.5s;
+}
+
+.Toggle1 span:nth-child(1) {
+	top: 38%;
+}
+
+.Toggle1 span:nth-child(2) {
+	top: 53%;
+}
+
+/* 最初のspanをマイナス45度に */
+.Toggle1.active span:nth-child(1) {
+	top: 50%;
+	left: 30%;
+	transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle1.active span:nth-child(2) {
+	top: 50%;
+	transform: rotate(45deg);
+}
+
+.NavMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #248471;
+    height:80vh;
+    transform: translateY(-100%); 
+    transition: all 0.6s; 
+    background-image: url(../images/bg_gnav_sp.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    z-index: 100;
+}
+
+.NavMenu ul {
+    padding-top:18%;
+    width: 90%;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.NavMenu ul li {
+    padding: 2.5% 0;
+    line-height: 2;
+    font-size: 3.5vw;
+    list-style-type: none;
+    font-family: "Noto_Sans_JP";
+}
+
+.NavMenu ul li a {
+    position: relative;
+    display: block;
+    padding-left: 7%;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.NavMenu ul li a::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 23%;
+    left: 0;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 1.75vw;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.NavMenu ul li a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 42%;
+    left: 1.2%;
+    width: 0.9vw;
+    height: 0.9vw;
+    transform: rotate(45deg);
+    border-top: 1.5px solid #248471;
+    border-right: 1.5px solid #248471;
+}
+
+.NavMenu ul li a:hover {
+    color: #d8d056;
+    transition: 0.5s;
+}
+
+.NavMenu ul li a:hover::before {
+    background-color: #d8d056;
+    transition: 0.5s;
+}
+
+.NavMenu ul .ivent-img {
+    height: 0.3vw;
+    width: 100%;
+    background-image: url(../images/bg_dots.long-white.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.NavMenu ul + h2 {
+    margin: 0 auto;
+    margin-top: 15%;
+    width: 50%;
+    transition: 0.5s;
+}
+
+.NavMenu ul + h2 a {
+    display: block;
+}
+
+.NavMenu ul + h2 a img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.NavMenu ul + h2:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+} 
+
+
+.header-img {
+    position: relative;
+    height: 60vw;
+    background-color: #308672;
+}
+
+.top-img {
+    opacity: 0.1;
+    height: 60vw;
+    background-image: url(../images/fv.jpg);
+    background-size: 100% 100%;
+}
+
+.header-img img:nth-child(2) {
+    position: absolute;
+    width: 55%;
+    top: -1%;
+    left: -9%;
+    transform: scale(1,-1);
+}
+
+.header-img h1 {
+    position: absolute;
+    width: 30%;
+    top: 3%;
+    left: 6%;
+    transition: 0.5s;
+}
+
+.header-img h1 img {
+    width: 100%;
+}
+
+.header-img h1:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.header-img img:nth-child(4) {
+    position: absolute;
+    width: 10%;
+    top: 33%;
+    left: 45%;
+}
+
+.header-img h2 {
+    position: absolute;
+    width: 50%;
+    bottom: 28%;
+    left: 34%;
+    font-size: 6.5vw;
+    font-family: "Noto_Sans_JP";
+    color: #fff;
+}
+
+.header-img div:nth-child(6) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8vw;
+    background-image: url(../images/cover_fv_sp.svg);
+    background-position:  bottom;
+    background-size: 100% 100%;
+}
+
+.header-img div:nth-child(6) img {
+    width: 100%;
+    display: none;
+}
+
+
+/*ヘッダーナビゲーション*/
+nav {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-top: 5%;
+    width: 24%;
+}
+
+.nav-saidba- {
+    margin-top: 4.5%;
+    height: 3.8vw;
+    width: 0.5%;
+    object-fit: cover;
+}
+
+.nav-saidba- img {
+    height: 100%;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    font-family: "Noto_Sans_JP";
+    font-size: 2.5vw;
+    color: #3e3a39;
+}
+
+
+nav ul li a p:nth-child(1) img {
+    width: 46%;
+    vertical-align: bottom;
+    margin-left: 27%;
+}
+
+nav ul li a p:nth-child(2) {
+    width: 100%;
+    margin-top: 8%;
+    text-align: center;
+}
+
+nav ul li a:hover p {
+    color:#16695f;
+}
+
+nav ul li:nth-of-type(1) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_price.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(2) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_rental.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(3) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_activity.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(4) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_outdoor.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(5) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_spots.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(6) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_access.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+nav ul li:nth-of-type(7) a:hover img {
+    width: 46%;
+    background-image: url(../images/camp_contact.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+header nav + div {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+header nav + div p:nth-child(1) {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    line-height: 2;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+    font-size: 3vw;
+    border-radius: 5px;
+    background-color: #f2efeb;
+}
+
+header nav + div p:nth-child(2) {
+    width: 100%;
+    line-height: 2;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+header nav + div p:nth-child(2) span {
+    color: #dc7b71;
+}
+
+/*メインセクション 共通*/
+main section {
+    width: 90%;
+    padding: 0 5%;
+ }
+ 
+ section {
+     margin-bottom: 9%;
+ }
+ 
+ .section-top {
+     position: relative;
+ }
+
+.section-top h2 {
+    width: 100%;
+    text-indent: 1em;
+    margin-bottom: 5%;
+    line-height: 10vw;
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Noto_Sans_JP";
+    border-radius: 5px;
+    background-color: #248471;
+    background-image: url(../images/bg_hl_bg--green.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section-top img {
+    position: absolute;
+    width: 10%;
+    right: 4%;
+    bottom: 0;
+}
+
+.main-section-box {
+    display: block;
+}
+
+.section-img {
+    width: 100%;
+}
+
+.section-img img {
+    width: 100%;
+    border-radius: 5px;
+    vertical-align: bottom;
+}
+
+.section-img div {
+    margin-top: 5%;
+    width: 75%;
+}
+
+.section-img div a{
+    display: flex;
+    line-height: 2vw;
+    text-decoration: none;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+    font-weight: 600;
+    font-size: 3vw;
+    transition: 0.5s;
+}
+
+.section-img div a p:nth-child(2) {
+    margin-left: 3%;
+}
+
+.section-img div a:hover {
+    color: #248471;
+}
+
+.section-img div a i {
+    line-height: 3vw;
+    text-align: center;
+    width: 3vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Noto_Sans_JP";
+    border-radius: 50px;
+    background-color: #248471;
+}
+
+.section-right {
+    width: 100%;
+}
+
+.section-right1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    line-height: 2.5;
+    font-family: "Noto_Sans_JP";
+    font-weight: 100;
+    font-size: 3vw;
+    color: #3e3a39;
+}   
+
+
+/*セクション　グランピング*/
+.glamping-parent {
+    display: block;
+}
+
+.glamping-child {
+    width: 88%;
+    border-radius: 5px;
+    padding: 6%;
+    background-color: #f9f8f6;
+}
+
+.glamping-child:nth-of-type(2) {
+    margin-bottom: 25%;
+}
+
+
+.glamping-child:nth-of-type(1) {
+    margin-bottom: 3%;
+}
+
+.glamping-inner1 {
+    display: flex;
+}
+
+.glamping-inner1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.glamping-inner1 p:nth-child(2) {
+    margin-left: auto;
+    width: 12%;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+}
+
+.glamping-inner1 p:nth-child(2) a {
+    display: block;
+    line-height: 2;
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.glamping-inner1 p:nth-child(2) a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+.glamping-inner2 {
+    display: flex;
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+.glamping-inner2 div p {
+    line-height: 1.7;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.glamping-inner2 div:nth-child(1) p {
+    position: relative;
+}
+
+.glamping-inner2 div:nth-child(1) p::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 90%;
+    content: "";
+    width: 380%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.glamping-inner2 div:nth-child(1) p:nth-child(1):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 120%;
+    content: "";
+    width: 350%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.glamping-inner2 div:nth-child(2)  {
+    margin-left: auto;
+}
+
+.glamping-inner2 + p {
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+/*セクション　オートキャンプ*/
+.camp-parent {
+    display: flex;
+    margin-bottom: 25%;
+    width: 88%;
+    border-radius: 5px;
+    padding: 6%;
+    background-color: #f9f8f6;
+}
+
+.camp-parent div:nth-child(1) {
+    width: 60%;
+}
+
+.camp-parent div:nth-child(2) {
+    width: 17%;
+    margin-left: auto;
+    margin-top: 4%;
+    margin-right: 2%;
+}
+
+.camp-parent div:nth-child(2) p:nth-child(2) {
+    margin-top: 16.8%;
+}
+
+.camp-parent div:nth-child(1) p,.camp-parent div:nth-child(2) p {
+    line-height: 1.95;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.camp-parent div:nth-child(1) p {
+    position: relative;
+}
+
+.camp-parent div:nth-child(1) p::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -8%;
+    content: "";
+    width: 30%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.camp-parent div:nth-child(1) p:nth-child(1)::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -10%;
+    content: "";
+    width: 12%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+
+.camp-parent div:nth-child(3) {
+    margin-top: 4.5%;
+    width: 13%;
+}
+
+.camp-parent div:nth-child(3) p:nth-child(2) {
+    margin-top: 27%;
+}
+
+
+.camp-parent div:nth-child(3) p {
+    margin-left: auto;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+    margin-bottom: 12%;
+}
+
+.camp-parent div:nth-child(3) p:last-child {
+    margin-bottom: 0;
+}
+
+.camp-parent div:nth-child(3) p a {
+    display: block;
+    line-height: 1.6;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.camp-parent div:nth-child(3) p a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+/*セクション　フリーテントサイト*/
+.tent-parent {
+    width: 88%;
+    padding: 4.5% 6%;
+    border-radius: 10px;
+    background-color: #f9f8f6
+}
+
+.tent-parent:nth-of-type(1) {
+    margin-bottom: 3.5%;
+}
+
+.tent-parent:nth-of-type(2) {
+    margin-bottom: 25%;
+}
+
+.camp-child1 {
+    display: flex;
+    margin-bottom: 4%;
+}
+
+
+.camp-child1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.camp-child1 p:nth-child(2) {
+    margin-left: auto;
+    width: 13%;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+}
+
+.camp-child1 p:nth-child(2) a {
+    display: block;
+    line-height: 2;
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.camp-child1 p:nth-child(2) a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+.camp-child2 {
+    display: flex;
+}
+
+.camp-child2 div:nth-child(2)  {
+    margin-left: auto;
+}
+
+.camp-child2 div:nth-child(2) p {
+    text-align: right;
+}
+
+.camp-child2 div p {
+    line-height: 1.7;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.camp-child2 div:nth-child(1) p {
+    position: relative;
+}
+
+.camp-child2 div:nth-child(1) p::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -68%;
+    content: "";
+    width: 135%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.camp-child2 div:nth-child(1) p:nth-child(3):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -52%;
+    content: "";
+    width: 49%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.camp-child2 + p {
+    margin-top: 2%;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+/*バンガロー*/
+.bungalow-parent {
+    display: flex;
+    width: 88%;
+    border-radius: 5px;
+    margin-bottom: 25%;
+    padding: 6%;
+    background-color: #f9f8f6;
+}
+
+.bungalow-parent div:nth-child(1) {
+    width: 51%;
+}
+
+.bungalow-parent div:nth-child(2) {
+    width: 20%;
+    margin-left: auto;
+    margin-right: 3%;
+}
+
+.bungalow-parent div:nth-child(2) p:nth-child(3) {
+    margin-top: 20%;
+}
+
+.bungalow-parent div:nth-child(1) p,.bungalow-parent div:nth-child(2) p {
+    line-height: 1.95;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.bungalow-parent div:nth-child(1) p {
+    position: relative;
+}
+
+.bungalow-parent div:nth-child(1) p:nth-child(1):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -30%;
+    content: "";
+    width: 38%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.bungalow-parent div:nth-child(1) p:nth-child(2):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -25%;
+    content: "";
+    width: 30%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.bungalow-parent div:nth-child(1) p:nth-child(3):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -26%;
+    content: "";
+    width: 36%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+}
+
+.bungalow-parent div:nth-child(2) p {
+    text-align: right;
+}
+
+.bungalow-parent div:nth-child(3) {
+    margin-top: 0.8%;
+    width: 13%;
+}
+
+
+.bungalow-parent div:nth-child(3) p {
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+    margin-bottom: 10%;
+}
+
+.bungalow-parent div:nth-child(3) p:last-child {
+    margin-top: 40%;
+    margin-bottom: 0;
+}
+
+.bungalow-parent div:nth-child(3) p a {
+    display: block;
+    line-height: 1.6;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.bungalow-parent div:nth-child(3) p a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+/*セクション　コテージ*/
+.cottage-parent {
+    width: 88%;
+    border-radius: 5px;
+    padding: 5% 6%;
+    margin-bottom: 25%;
+    background-color: #f9f8f6;
+}
+
+.cottage-parent div {
+    display: flex;
+}
+
+.cottage-parent div p:nth-child(2) {
+    margin-left: 36%;
+}
+
+.cottage-parent div p:nth-child(1),.cottage-parent div p:nth-child(2) {
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.cottage-parent div p:nth-child(1) {
+    position: relative;
+}
+
+.cottage-parent div p:nth-child(1)::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -113%;
+    content: "";
+    width: 115%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+    
+}
+
+.cottage-parent div p:nth-child(3) {
+    margin-left: auto;
+    width: 13%;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+}
+
+.cottage-parent div p:nth-child(3) a {
+    display: block;
+    line-height: 1.6;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.cottage-parent div p:nth-child(3) a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+.cottage-parent div + p {
+    margin-top: 3%;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+/*セクション　ロッジ*/
+.lodge-parent {
+    width: 91%;
+    padding: 5% 4.5%;
+    border-radius: 5px;
+    background-color: #f9f8f6
+}
+
+.lodge-flex-box {
+    display: block;
+}
+
+.lodge-parent:nth-of-type(1) {
+    margin-bottom: 3.5%;
+}
+
+.lodge-flex-box-left,.lodge-flex-box-rigth {
+    width: 100%;
+}
+
+.lodge-top1 {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.lodge-flex-box-rigth {
+    margin-top: 7%;
+}
+
+.lodge-top1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.lodge-top1 p:nth-child(2) {
+    margin-left: auto;
+    width: 15%;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+}
+
+.lodge-top1 p:nth-child(2) a {
+    display: block;
+    line-height: 1.6;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.lodge-top1 p:nth-child(2) a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+.lodge-top2 {
+    display: flex;
+}
+
+.lodge-top2 div p {
+    line-height: 1.6;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.lodge-top2 div:nth-child(1) p {
+    position: relative;
+}
+
+.lodge-top2 div:nth-child(1) p::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -530%;
+    content: "";
+    width: 520%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+} 
+
+.lodge-top2 div:nth-child(2)  {
+    margin-left: auto;
+}
+
+.lodge-top2 + p {
+    margin-top: 2%;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.lodge-parent:nth-of-type(2) {
+    margin-bottom: 25%;
+}
+
+.lodge-bottom1 {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.lodge-bottom1 p:nth-child(1) {
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.lodge-bottom1 p:nth-child(2) {
+    margin-left: 3%;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+
+.lodge-bottom2 {
+    display: flex;
+    width: 100%;
+}
+
+.lodge-bottom2 div p {
+    line-height: 1.6;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+
+.lodge-bottom2 div:nth-child(1) p {
+    position: relative;
+}
+
+.lodge-bottom2 div:nth-child(1) p::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -641%;
+    content: "";
+    width: 635%;
+    height: 0.2vw;
+    background-color: #f2efeb;
+} 
+
+.lodge-bottom2 div:nth-child(2)  {
+    margin-left: auto;
+}
+
+/*セクション　バーベキュー*/
+.bbq-parent {
+    display: block;
+    width: 91%;
+    padding: 5% 4.5%;
+    border-radius: 5px;
+    background-color: #f9f8f6
+}
+
+.bbq-parent:nth-of-type(1) {
+    margin-bottom: 3.5%;
+}
+
+.bbq-parent:nth-of-type(2) {
+    margin-bottom: 25%;
+}
+
+.bbq-child {
+    width: 95%;
+    margin-right: 5%;
+}
+
+.bbq-child1 {
+    margin-bottom: 3%;
+    font-weight: 600;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.smart1 {
+    width: 80%;
+    line-height: 5.5;
+    background-image: url(../images/bbq_subimg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.smart2 {
+    width: 80%;
+    line-height: 5.5;
+    background-image: url(../images/bbq_subimg2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.bbq-child1:last-child {
+    background-color: pink;
+}
+
+.bbq-inner{
+    display: flex-;
+}
+
+.bbq-inner div:nth-child(1),.bbq-inner div:nth-child(2) {
+    line-height: 1.9;
+    color: #3e3a39;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.bbq-inner div:nth-child(1) p {
+    position: relative;
+}
+
+.bbq-inner div:nth-child(1) p:nth-child(1):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -48%;
+    content: "";
+    width: 63%;
+    height: 0.15vw;
+    background-color: #f2efeb;
+}
+
+.bbq-inner div:nth-child(1) p:nth-child(2):after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -56%;
+    content: "";
+    width: 50%;
+    height: 0.15vw;
+    background-color: #f2efeb;
+}
+
+.bbq-inner div:nth-child(2) {
+    margin-left: 20%;
+}
+
+.bbq-inner div:nth-child(2) p {
+    text-align: right;
+}
+
+.bbq-inner div:nth-child(3) {
+    margin-left: auto;
+    width: 15%;
+}
+
+.bbq-inner div:nth-child(3) a {
+    margin-top: 4%;
+    margin-bottom: 10%;
+    display: block;
+    line-height: 1.6;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #d85f56;
+    transition: 0.5s;
+}
+
+.bbq-inner div:nth-child(3) a:hover {
+    background-color: #248471;
+    transition: 0.5s;
+}
+
+.bbq-child + div {
+    width: 38%;
+    margin-left: auto;
+    display: none;
+}
+
+.bbq-child + div img {
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    display: none;
+}
+
+/*その他の施設や設備*/
+.others-section {
+    background-color: #f2efeb;
+    margin-bottom: 0;
+    padding-bottom: 5%;
+}
+
+.others-section-cober {
+    width: 100%;
+    height: 10vw;
+    background-image: url(../images/cover_white_sp.svg);
+}
+
+.others-section-cober img {
+    width: 100%;
+    height: 4vw;
+    display: none;
+}
+
+.others-section h2 {
+    margin-top: 10%;
+    font-size: 4.5vw;
+    color: #3e3a39;
+    text-align: center;
+}
+
+.others-flex-box {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.others-parent {
+    width: 86%;
+    margin-bottom: 7%;
+    border-radius: 10px;
+    background-image: url(../images/bg_item.svg);
+    background-repeat: no-repeat;
+    background-size: 58% 55%;
+    background-position:left top -20% ;
+    padding: 6% 7%;
+    background-color: #fff;
+}
+
+.others-flex-box:nth-of-type(3) .others-parent:last-child {
+    margin-bottom: 20%;
+}
+
+.others-parent div {
+    width: 100%;
+}
+
+.others-parent div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.others-parent h3 {
+    text-align: center;
+    margin: 8% 0;
+    font-size: 4vw;
+    color: #16695f;
+    font-weight: 580;
+    font-family: "Noto_Sans_JP";
+}
+
+.others-parent p {
+    white-space: pre-wrap;
+    font-size: 3vw;
+    line-height: 1.7;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.others-section + div {
+    width: 100%;
+    height: 10vw;
+    background-image: url(../images/cover_beige_sp.svg);
+}
+
+.others-section + div img {
+    width: 100%;
+    height: 5vw;
+    display: none;
+}
+
+/*最後のセクション　管理センターしらかばハウス*/
+.last-section {
+    width: 90%;
+    padding: 0 5%;
+    padding-top: 6%;
+    margin-bottom: 17%;
+}
+
+.last-section h2 {
+    margin-bottom: 8%;
+    color: #3e3a39;
+    font-size: 4.5vw;
+    font-family: "Noto_Sans_JP";
+}
+
+.last-section-flex-box {
+    display: block;
+}
+
+.last-section-flex-left-box {
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+.last-section-flex-left-box div:nth-child(1) {
+    width: 100%;
+}
+
+.last-section-flex-left-box div:nth-child(1) img {
+    width: 100%;
+    border-radius: 5px;
+    vertical-align: bottom;
+}
+
+.last-section-flex-left-box p:nth-child(2) {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    white-space: pre-wrap;
+    line-height: 1.7;
+    font-family: "Noto_Sans_JP";
+    font-size: 2.8vw;
+    color: #3e3a39;
+}
+
+.last-section-flex-left-box-inner {
+    display: flex;
+}
+
+.last-section-flex-left-box-inner a {
+    display: block;
+    text-decoration: none;
+}
+
+.last-section-position1 {
+    position: relative;
+    width: 50%;
+    margin-right: 3%;
+    border-radius: 5px;
+}
+
+.last-section-position1 a p:nth-child(1) {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #16695f;
+}
+
+.last-section-position1 p:nth-child(1) img {
+    width: 100%;
+    vertical-align: bottom;
+    border-radius: 5px;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.last-section-position1 a:hover p:nth-child(1) img {
+    transform: scale(1.2,1.2);
+    transition: 0.5S;
+}
+
+.last-section-position1 a p:nth-child(2) {
+    position: absolute;
+    top: -16%;
+    right: 0;
+    font-size: 2.5vw;
+    padding: 0 4%;
+    border-radius: 0 5px 0 0;
+    line-height: 1.9;
+    background-color: #1e3655;
+    color: #fff; 
+}
+
+.last-section-position1 a p:nth-child(3) {
+    position: absolute;
+    top: 26%;
+    left: 8%;
+    font-size: 3vw;
+    color: #fff;
+    font-family: "Noto_Sans_JP";
+}
+
+
+.last-section-position2 {
+    position: relative;
+    width: 95%;
+    background-color: #f2efeb;
+    border-radius: 5px;
+}
+
+.last-section-position2 a {
+    line-height: 1.7;
+    padding: 3%;
+    padding-bottom: 4%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.last-section-position2 a:hover {
+    background-color: #da6a73;
+    transition: 0.5s;
+}
+
+
+.last-section-position2 a p:nth-child(1) {
+    margin-top: 2.7%;
+    margin-left: 1%;
+}
+
+.last-section-position2 a p:nth-child(1) {
+    white-space: pre-wrap;
+    text-decoration: none;
+    color: #da6a73;
+    line-height: 1.7;
+    font-size: 2.9vw;
+    padding: 3%;
+    font-family: "Noto_Sans_JP";
+    transition: 0.5s;
+}
+
+.last-section-position2 a:hover p:nth-child(1) {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.last-section-position2 a p:nth-child(2) {
+    position: absolute;
+    top: -15%;
+    right: 0.8%;
+    font-size: 2.5vw;
+    padding: 0 4%;
+    border-radius: 0 5px 0 0;
+    line-height: 1.6;
+    background-color: #da6a73;
+    color: #fff; 
+    transition: 0.5s;
+}
+
+.last-section-position2 a:hover p:nth-child(2) {
+    background-color: #fff;
+    color: #da6a73;
+    transition: 0.5s;
+}
+
+.last-section-flex-rigth-box {
+    width: 100%;
+}
+
+.last-section-flex-rigth-inner-box1 {
+    display: flex;
+}
+
+.last-section-flex-rigth-inner-box1 h3 {
+    width: 20%;
+    font-family: "Noto_Sans_JP";
+    font-size: 3.2vw;
+    color: #3e3a39;
+}
+
+.last-section-flex-rigth-inner-box1 div:nth-child(2),.last-section-flex-rigth-inner-box1 p:nth-child(2) {
+    width: 85%;
+}
+
+.last-section-flex-rigth-box p {
+    line-height: 1.8;
+    font-size: 3vw;
+    font-family: "Noto_Sans_JP";
+    color: #3e3a39;
+}
+
+.last-section-flex-rigth-inner-box1 {
+    padding: 8% 0;
+}
+
+.last-section-flex-rigth-inner-box1:nth-of-type(1) {
+    padding-top: 0;
+}
+
+.last-section-flex-rigth-inner-box1-1 p:nth-child(2) {
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.last-section-flex-rigth-inner-box1-2 {
+    display: flex;
+}
+
+.last-section-flex-rigth-inner-box1-2 div:nth-child(1) {
+    width: 37%;
+}
+
+.last-section-flex-rigth-inner-box1 + div {
+    width: 100%;
+    height: 0.5vw;
+    background-image: url(../images/bg_dots.long.png);
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+
+.last-section-flex-rigth-inner-box1 + div img {
+    width: 100%;
+}
+
+.last-section + div {
+    position: relative;
+    width: 100%;
+    height: 5vw;
+}
+
+.last-section + div img {
+    position: absolute;
+    width: 100%;
+    height: 5vw;
+    bottom: -3%;
+}
+
+/*フッター　ナビゲーション*/
+.footer-blue {
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 4%;
+    background-image: url(../images/cover_footer2.svg),url(../images/bg_totop_sp.png);
+    background-size: 195% 50%,25% 10%;
+    background-position: top, right bottom;
+    background-repeat: no-repeat;
+    background-color: #16695f;
+}
+
+.footer-flex-box1 {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-flex-left {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 8%;
+}
+
+.footer-flex-left h2 {
+    margin-top: 7%;
+    width: 100%;
+    height: 13vw;
+    margin-bottom: 4%;
+}
+
+.footer-flex-left h2 a {
+    display: block;
+}
+
+.footer-flex-left h2  img {
+    width: 100%;
+    height: 13vw;
+    margin: 0 auto;
+}
+
+.footer-icon {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.footer-icon p {
+    width: calc(100%/4);
+    text-align: center;
+}
+
+.footer-icon p a {
+    color: #fff;
+    font-size: 3vw;
+}
+
+.footer-icon p a:hover {
+    color: #d8d056;
+    transition: 0.5s;
+}
+
+.footer-nav {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 15%;
+}
+
+.footer-nav ul {
+    display: block;
+    width: 100%;
+    list-style-type: none;
+}
+
+.footer-nav ul:nth-child(2) {
+    margin-top: 0;
+}
+
+.footer-nav ul:nth-of-type(1) li:nth-of-type(1),.footer-nav ul:nth-of-type(2) li:nth-of-type(1) {
+    width:  100%;
+}
+
+.footer-nav ul:nth-of-type(1) li:nth-of-type(2),.footer-nav ul:nth-of-type(2) li:nth-of-type(2) {
+    width: 100%;
+}
+
+.footer-nav ul:nth-of-type(1) li:nth-of-type(3),.footer-nav ul:nth-of-type(2) li:nth-of-type(3) {
+    width: 100%;
+}
+
+.footer-nav ul:nth-of-type(1) li:nth-of-type(4) {
+    width: 100%;
+}
+
+.footer-nav ul li a {
+    display: flex;
+    width: 100%;
+    margin-top: 12%;
+    line-height: 2.7vw;
+    text-decoration: none;
+}
+
+.footer-nav ul li a p {
+    width: 100%;
+    font-family: "Noto_Sans_JP";
+    color: #fff;
+    font-size: 3vw;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a i {
+    line-height: 2.7vw;
+    text-align: center;
+    width: 2.7vw;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #1e3655;
+    font-family: "Noto_Sans_JP";
+    border-radius: 50px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a p {
+    width: 90%;
+    margin-left: 8%;
+}
+
+.footer-nav ul li a:hover i {
+    background-color: #16695f;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover p {
+    color: #16695f;
+    transition: 0.5s;
+}
+
+.footer-parent {
+    display: block;
+}
+
+.footer-parent div:nth-child(1) {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.footer-parent-inner div:nth-child(1) {
+    width: 90%;
+}
+
+.footer-parent-inner div:nth-child(1) iframe {
+    display: block;
+    width: 100%;
+    height: 50vw; 
+    border-radius: 5px;
+}
+
+address {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1%;
+    font-style: normal;
+    font-family: "Noto_Sans_JP";
+    color: #fff;
+    font-size: 3vw;
+    line-height: 1.7;
+}
+
+.footer-green-img {
+    width: 100%;
+    height: 70vw;
+    background-image: url(../images/footer_ill_sp.png);
+    background-size: 100% 100%;
+    margin-top: -5%;
+}
+
+.footer-green-img img {
+    display: none;
+    width: 100%;
+    height: 90vw;
+    vertical-align: bottom;
+}
+
+.footer-parent + div {
+    margin-left: auto;
+    margin-right: 3%;
+    width: 10%;
+}
+
+.footer-parent + div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.footer-last-box {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 5%;
+    margin-top: 0.5%;
+}
+
+.footer-last-box p {
+    font-size: 2.5vw;
+    color: #fff;
+    font-family: "Noto_Sans_JP";
+}
+
+.privacy {
+    margin-left: 6%;
+}
+
+.privacy a {
+    display: block;
+    text-decoration: none;
+    font-size: 2.5vw;
+    color: #fff;
+    font-family: "Noto_Sans_JP";
+    transition: 0.5s;
+}
+
+.privacy a:hover {
+    color: #d8d056;
+    transition: 0.5s;
+}
+
+.footer-last-box a:nth-child(3) {
+    display: block;
+    margin-left: 19%;
+    text-decoration: none;
+    font-size: 0.9vw;
+    color: #fff;
+    font-family: "Noto_Sans_JP";
+} 

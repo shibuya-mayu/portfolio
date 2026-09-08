@@ -1,0 +1,881 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+赤　#DB4D6D
+黄色　#FFB11B
+青　#0089A7
+FOT-筑紫B丸ゴシック Std
+*/
+
+@font-face {
+    font-family: "Noto_Sans_JP";
+    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Klee_One";
+    src: url(../fonts/Klee_One/KleeOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Dela_Gothic_One";
+    src: url(../fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "RocknRoll_One";
+    src: url(../fonts/RocknRoll_One/RocknRollOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Zen_Kurenaido";
+    src: url(../fonts/Zen_Kurenaido/ZenKurenaido-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+ }
+
+
+ .top-position {
+    position: relative;
+    width: 100%;
+    height: 36vw;
+ }
+
+ .top-position div:nth-child(1) {
+    position: absolute;
+    top: -12%;
+    left: 10%;
+    width: 80%;
+ }
+
+ .top-position div:nth-child(1) img {
+    width: 100%;
+    vertical-align: bottom;
+ }
+
+ .top-position div:nth-child(2) {
+    position: absolute;
+    top: 28%;
+    left: 37%;
+    width: 25%;
+ }
+
+ .top-position div:nth-child(2) img {
+    width: 100%;
+    vertical-align: bottom;
+ }
+
+ .top-position h1 {
+    position: absolute;
+    top: 41%;
+    left: 44%;
+    font-size: 4vw;
+    color: #202020;
+    font-family: "Klee_One";
+ }
+
+/*ナビゲーション*/
+nav ul {
+    display: flex;
+    position: sticky;
+    width: 42%;
+    margin-left: auto;
+    margin-top: 0.5%;
+    margin-bottom: 10%;
+}
+
+nav ul li {
+    width: calc(100%/4);
+    margin-right: 2%;
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+nav ul li a div:nth-child(1) {
+    width: 100%;
+    padding-top: 11%;
+}
+
+nav ul li a div:nth-child(1) img {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+nav ul li a:hover div:nth-child(1) img {
+    display: block;
+    transition: 0.5s;
+}
+
+nav ul li a p {
+    position: relative;
+    line-height: 1.5;
+    font-size: 1.5vw;
+    color: #202020;
+    text-align: center;
+    font-family: "Klee_One";
+    z-index: 100;
+}
+
+nav ul li:nth-child(2) div:nth-child(3) {
+    width: 100%;
+}
+
+nav ul li:nth-child(2) div:nth-child(3) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+nav ul li:nth-child(2):hover div:nth-child(3) {
+    display: none;
+}
+
+
+/*疑似要素で●入れて、その疑似要素だけを薄くしたい*/
+nav ul li:nth-child(1) a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    width: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: #9acd32;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+nav ul li:nth-child(1) a:hover::before {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+nav ul li:nth-child(2) a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    width: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: #DB4D6D;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+nav ul li:nth-child(2) a:hover::before {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+nav ul li:nth-child(3) a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    width: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: #FFB11B;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+nav ul li:nth-child(3) a:hover::before {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+nav ul li:nth-child(4) a::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    width: 100%;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: #0089A7;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+nav ul li:nth-child(4) a:hover::before {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+/*メイン　自己紹介*/
+.flex-box {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+/********************左側**********************************/
+.left-box {
+    width: 30%;
+}
+
+.profile-box div:nth-child(1) {
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.profile-box div:nth-child(1) img {
+    width: 100%;
+    border-radius: 1vw;
+    vertical-align: bottom;
+}
+
+.profile-box div:nth-child(1) + p {
+    text-align: center;
+    white-space: pre-wrap;
+    font-family: "Noto_Sans_JP";
+    font-size: 1.4vw;
+}
+
+.inner-flex {
+    display: flex;
+}
+
+.inner-flex p:nth-child(1) {
+    width: 65%;
+} 
+
+.profile-box p:nth-child(3),.inner-flex p {
+    position: relative;
+    font-family: "Noto_Sans_JP";
+    font-size: 1.3vw;
+    text-indent: 1.3em;
+}
+
+.profile-box p:nth-child(3)::before,.inner-flex p::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: 0;
+    width: 1.3vw;
+    height: 1.3vw;
+    border-radius: 6.5vw;
+    opacity: 0.8;
+    background-color: #DB4D6D;
+}
+
+.profile-box p {
+    line-height: 1.8;
+    font-size: 1.3vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+.inner-flex + p {
+    margin-top: 5%;
+    font-family: "Noto_Sans_JP";
+}
+
+.soft-box {
+    position: relative;
+    margin-top: 13%;
+    padding: 5% 3%;
+    border-radius: 1vw;
+    border: 1px solid #ccc;
+}
+
+.soft-box h2 {
+    position: absolute;
+    top: -9%;
+    left: 5%;
+    font-size: 2vw;
+    width: 56%;
+    text-align: center;
+    color: #202020;
+    font-family: "Pacifico";
+    background-color: #fff;
+}
+
+.soft-box ul {
+    margin-left: 10%;
+}
+
+::marker {
+    font-size: 1vw;
+}
+
+.soft-box ul li {
+    position: relative;
+    color: #202020;
+    font-size: 1.3vw;
+    line-height: 2;
+    font-family: "Noto_Sans_JP";
+}
+
+.soft-box ul li:nth-child(1):after,.soft-box ul li:nth-child(2):after {
+    position: absolute;
+    display: block;
+    content: "★★☆☆☆";
+    top: 0;
+    right: 7%;
+    width: 30%;
+    font-size: 1.5vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+.soft-box ul li:nth-child(3):after {
+    position: absolute;
+    display: block;
+    content: "★☆☆☆☆";
+    top: 0;
+    right: 7%;
+    width: 30%;
+    font-size: 1.5vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+.soft-box ul li:nth-child(4):after,.soft-box ul li:nth-child(5):after,.soft-box ul li:nth-child(6):after  {
+    position: absolute;
+    display: block;
+    content: "★★★☆☆";
+    top: 0;
+    right: 7%;
+    width: 30%;
+    font-size: 1.5vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+/*
+.soft-box ul li:nth-child(6):after {
+    position: absolute;
+    display: block;
+    content: "★★★★☆";
+    top: 0;
+    right: 7%;
+    width: 30%;
+    font-size: 1.5vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}*/
+
+.style-box h2 {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: "Pacifico";
+    color: #202020;
+    font-size: 2vw;
+}
+
+.style-box h2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    transform: skewx(40deg);
+    border-left: 4px double #202020;
+}
+
+.style-box h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    right: -45%;
+    width: 50%;
+    height: 90%;
+    transform: skewx(-40deg);
+    border-left: 4px double #202020;
+}
+
+.style-box p {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 1.3vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+/********************右側******************************/
+.rigth-box {
+    width: 67%;
+    margin-left: 3%;
+}
+
+.rigth-box-top h2 {
+    position: relative;
+    margin: 3% 0;
+    text-align: center;
+    font-family: "Pacifico";
+    color: #202020;
+    font-size: 2vw;
+}
+
+.rigth-box-top h2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: 35%;
+    width: 50%;
+    height: 100%;
+    transform: skewx(40deg);
+    border-left: 4px double #202020;
+}
+
+.rigth-box-top h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    right: -15%;
+    width: 50%;
+    height: 90%;
+    transform: skewx(-40deg);
+    border-left: 4px double #202020;
+}
+
+.rigth-box-top p {
+    white-space: pre-wrap;
+    font-size: 1.3vw;
+    text-align: center;
+    color: #202020;
+    line-height: 1.6;
+    font-family: "Noto_Sans_JP";
+}
+
+.marker {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(255,207,116,1) 61%, rgba(255,205,108,1) 72%, rgba(255,255,255,1) 100%);
+  
+    /* 背景の繰り返しを停止 */
+    background-repeat: no-repeat;
+  
+    /* マーカーの横方向を0にして縮める */
+    background-size: 0% 100%;
+  
+    /* マーカーが引かれる速度を指定 */
+    transition: 2s;
+  }
+  
+  /* マーカーが引かれる際に付与するクラス */
+  .marker.on {
+    /* 横方向を100%にして、マーカーを引く */
+    background-size: 100% 100%;
+  }
+
+.rigth-box-bottom {
+    margin-top: 5%;
+}
+
+.rigth-box-bottom h2 {
+    position: relative;
+    text-align: center;
+    color: #202020;
+    font-family: "Pacifico";
+    font-size: 2vw;
+    margin-bottom: 3%;
+} 
+
+.rigth-box-bottom h2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: 30%;
+    width: 50%;
+    height: 100%;
+    transform: skewx(40deg);
+    border-left: 4px double #202020;
+}
+
+.rigth-box-bottom h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    right: -20%;
+    width: 50%;
+    height: 90%;
+    transform: skewx(-40deg);
+    border-left: 4px double #202020;
+}
+
+.rigth-bottom-flex {
+    display: flex;
+    width: 83%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rigth-bottom-parent {
+    position: relative;
+    width: 23%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.rigth-bottom-parent div:nth-child(1) {
+    width: 100%;
+    margin: 0 auto;
+    height: 11vw;
+    border-radius: 6vw;
+    background-color: #f5f5f5;
+}
+
+.rigth-bottom-parent div:nth-child(1) img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 15%;
+    transition: 0.5s;
+}
+
+.rigth-bottom-parent p:nth-child(2) {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 1.3vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+.rigth-bottom-parent p:nth-child(3) {
+    position: absolute;
+    top: 34%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8vw;
+    color: #fff;
+    text-shadow: 0px 0px 5px #202020;
+    font-family: "Noto_Sans_JP";
+    z-index: 3;
+    display: none;
+    transition: 0.5s;
+}
+
+.rigth-bottom-parent:hover p:nth-child(3) {
+    display: block;
+    transition: 0.5s;
+}
+
+.rigth-bottom-parent div:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 11vw;
+    border-radius: 6vw;
+}
+
+.rigth-bottom-parent div:nth-child(4) img {
+    width: 100%;
+    height: 11vw;
+    border-radius: 6vw;
+    display: none;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
+.rigth-bottom-parent:hover div:nth-child(1) img {
+    display: none;
+    transition: 0.5s;
+}
+
+.rigth-bottom-parent:hover div:nth-child(4) img {
+    display: block;
+    transition: 0.5s;
+}
+
+.img-box {
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+}
+
+.img-box div:nth-child(1) {
+    width: 20%;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.img-box div:nth-child(1) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.img-box div:nth-child(2) {
+    position: absolute;
+    width: 39%;
+    top: -18%;
+    left: 45%;
+}
+
+.img-box div:nth-child(2) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.img-box p {
+    position: absolute;
+    top: 14%;
+    right: 23%;
+    white-space: pre-wrap;
+    font-size: 1.1vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+
+/************************一番下************************************/
+.flex-box + h2 {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 25%;
+    margin-bottom: 6%;
+    text-align: center;
+    font-size: 2vw;
+    color: #202020;
+    font-family: "Pacifico";
+   /* border-bottom: 4px double #202020;*/
+}
+
+.flex-box + h2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    transform: skewx(40deg);
+    border-left: 4px double #202020;
+}
+
+.flex-box + h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: 85%;
+    width: 100%;
+    height: 90%;
+    transform: skewx(-40deg);
+    border-left: 4px double #202020;
+}
+
+
+.rigth-lste-flex {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(1) {
+    position: relative;
+    width: 35%;
+    padding: 4%;
+} 
+
+.rigth-lste-flex .rigth-child:nth-of-type(1)::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    transform: skewY(-3deg);
+    background-color: #F7EEE1;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(1)::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(3deg);
+    border: 1px solid #DB4D6D;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(1) h3 {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 5%;
+    font-size: 1.8vw;
+    color: #202020;
+    font-family: "Pacifico";
+    border-bottom: 3px double #DB4D6D;
+    z-index: 2;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(1) ul li {
+    position: relative;
+    line-height: 1.8;
+    margin-left: 6%;
+    font-size: 1.3vw;
+    font-family: "Noto_Sans_JP";
+    z-index: 2;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(2) {
+    position: relative;
+    width: 55%;
+    margin-left: 10%;
+    padding: 4%;
+} 
+
+
+.rigth-lste-flex .rigth-child:nth-of-type(2)::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    transform: skewY(-3deg);
+    background-color: #F7EEE1;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(2)::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(3deg);
+    border: 1px solid #DB4D6D;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(2) h3 {
+    position: relative;
+    margin-bottom: 4%;
+    width: fit-content;
+    font-size: 1.8vw;
+    color: #202020;
+    font-family: "Pacifico";
+    border-bottom: 3px double #DB4D6D;
+    z-index: 2;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(2) ul {
+    position: relative;
+    display: flex;
+    margin-top: 3%;
+    margin-left: 6%;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.rigth-lste-flex .rigth-child:nth-of-type(2) ul li {
+    width: fit-content;
+    margin-right: 10%;
+    line-height: 1.8;
+    font-size: 1.3vw;
+    font-family: "Noto_Sans_JP";
+}
+
+
+
+/*フッター*/
+footer {
+    position: relative;
+    margin-top: 15%;
+    padding: 2% 0;
+    background-image: url(../images/about-footer.png);
+    background-size: 100% 100%;
+}
+
+footer p {
+    margin-top: 7%;
+    text-align: center;
+    color: #fff;
+    font-size: 1vw;
+    font-family: "Noto_Sans_JP";
+}
+
+footer div {
+    position: absolute;
+    bottom: 13%;
+    right: 3%;
+    width: 10%;
+    animation: 2s fuwafuwa infinite;
+}
+
+footer div a {
+    display: block;
+}
+
+footer div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+@keyframes fuwafuwa {
+    50% {
+        bottom: 20%;
+    }
+    100% {
+        bottom: 13%;
+    }
+}

@@ -1,0 +1,3114 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Noto_Sans_JP";
+    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Zen_Maru_Gothic";
+    src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf);
+}
+
+/*
+90b44b　黄緑
+f4a7b9　ピンク
+202020　黒
+f39800　オレンジ
+6f5436　茶色
+29939f　青っぽい色
+656972 グレー
+#ffefe0 薄オレンジ
+fcc800 黄色
+#656972　ちょっと濃いめグレー
+#cccccc　かなり薄いグレー
+#fbedef 薄ピンク
+#e44a6f　濃いピンク
+*/
+
+html {
+   overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "Noto_Sans_JP";
+}
+
+header {
+    display: flex;
+    padding: 1.5% 3%;
+}
+
+header h1 {
+    width: 60%;
+}
+
+header h1 img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+header nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 25%;
+    transform: translateX(100%); 
+    transition: all 0.6s; 
+    background-color: #ffefe0;
+    z-index: 500;
+}
+
+header nav ul {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30%;
+    border-radius: 3vw;
+    padding: 3% 0;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #202020;
+}
+
+header nav ul li {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.ps-click::after {
+    display: block;
+    position: absolute;
+    content: "^";
+    top: 30%;
+    right: 10%;
+    font-size: 3vw;
+    transform: rotate(180deg);
+    color: #656972;
+	transition: .10s ease-in-out;	 /*変化の速度を指定*/	
+}
+
+.ps-click.active2::after {
+    top: 5%;
+    right: 10%;
+	transform: rotate(0deg);
+}
+
+.li-relative {
+    display: flex;
+    padding: 5%;
+    margin-top: 0;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+header nav ul li:hover .li-hover {
+    display: none;
+}
+
+header nav ul li a .nav-img {
+    width: 10%;
+    margin-right: 5%;
+}
+
+header nav ul li a .nav-img img {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.p-title {
+    margin-top: 3%;
+    line-height: 0;
+    text-align: center;
+    font-size: 4vw;
+    color: #202020;
+    transform: rotateX("0deg");
+    transition: 0.5s;
+}
+
+.li-relative:hover p {
+    transform: rotateX('360deg');
+    transition: 0.5s;
+}
+
+header nav ul li:hover .p-title {
+    text-decoration: underline 1px solid #202020;
+}
+
+
+/*ホバーしたらリスト出てくる*/
+.li-hover {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    background-color: none;
+    display: none;
+}
+
+.li-hover5 {
+    left: 0%;
+}
+
+.li-hover div a {
+    display: block;
+    padding: 1.5% 0;
+    text-decoration: none;
+}
+
+.li-hover div a:hover  {
+    background-color: #fbedef;
+}
+
+.li-hover div a:hover p {
+    color: #e44a6f;
+    font-family: "Noto_Sans_JP";
+}
+
+.li-child {
+    display: flex;
+    width: 100%;
+}
+
+.li-child div {
+    width: 10%;
+    vertical-align: bottom;
+}
+
+.li-child div img {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.li-child p {
+    width: 80%;
+    margin-left: 0.5%;
+    font-family: "Noto_Sans_JP";
+    color: #202020;
+    font-size: 3vw;
+}
+
+.li-child + p {
+    margin-left: 11%;
+    line-height: 1.6;
+    font-family: "Noto_Sans_JP";
+    font-size: 2vw;
+    color: #202020;
+}
+
+.li-flex-box {
+    display: flex;
+}
+
+.li-flex-box div:nth-child(1) {
+    width: 50%;
+}
+
+.li-flex-box div p a {
+    padding-left: 3%;
+    line-height: 2;
+     font-family: "Noto_Sans_JP";
+    font-size: 3vw;
+    color: #202020;
+}
+
+.li-flex-box div p a:hover {
+    color: #e44a6f;
+}
+
+.li-flex-box div:nth-child(2) {
+    width: 50%;
+}
+
+
+/*ハンバーガーメニュー*/
+/*トグルボタンが押されたときに付与するクラス*/
+nav.NavMenu.active{
+	transform: translateX(0%);/*上から出したい場合は、transform: translateYを使う。*/
+}
+
+
+.Toggle1 {
+	position: fixed;    /* bodyに対しての絶対位置指定 */
+	right: 6%;
+	top: 10%;
+	width: 13vw;
+	height: 13vw;
+	cursor: pointer;/*divだけどカーソルが変わるようにしている*/
+	z-index: 550;/*ボタンを一番上にしている(押せなくなるから)*/
+    border-radius: 3vw;
+    background-color: #202020;
+}
+
+.Toggle1 span {
+	display: block;
+	position: absolute;
+	width: 30px;
+	border-bottom: solid 3px #fff;
+	transition: .35s ease-in-out;			/*変化の速度を指定*/
+	left: 28%;
+}
+
+.Toggle1 span:nth-child(1) {
+	top: 35%;
+}
+
+.Toggle1 span:nth-child(2) {
+	top: 48%;
+}
+
+.Toggle1 span:nth-child(3) {
+	top: 61%;
+}
+
+/* 最初のspanをマイナス45度に */
+.Toggle1.active span:nth-child(1) {
+	top: 50%;
+	left: 28%;
+	transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle1.active span:nth-child(2),
+.Toggle1.active span:nth-child(3) {
+	top: 50%;
+	transform: rotate(45deg);
+}
+
+/*スムーススクロール ナビゲーション*/
+/*
+#top-nav-scroll {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    background-color: #ffefe0;
+    border-bottom: 1px solid #202020;
+    z-index: 1000;
+}
+
+.top-nav-scroll-flex {
+    display: flex;
+    padding: 0 3%;
+}
+
+.top-nav-img {
+    width: 15%;
+}
+
+.top-nav-img img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.top-nav-scroll-flex ul {
+    display: flex;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.top-nav-scroll-flex ul li {
+    position: relative;
+    list-style-type: none;
+    width: calc(100%/6);
+    margin-top: 1%;
+}
+
+.li-relative2 {
+    display: block;
+    margin-top: 15%;
+    text-decoration: none;
+}
+
+.top-nav-scroll-flex ul li:hover .li-hover2 {
+    display: block;
+}
+
+.p-title2 {
+    line-height: 2;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #202020;
+    transform: rotateX("0deg");
+    transition: 0.5s;
+}
+
+.li-relative2:hover p {
+    transform: rotateX('360deg');
+    transition: 0.5s;
+}
+
+.top-nav-scroll-flex ul li:hover .p-title2 {
+    text-decoration: underline 1px solid #202020;
+}
+
+/*ホバーしたらリスト出てくる*/
+/*
+.li-hover2 {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 280%;
+    border: 1px solid #202020;
+    background-color: #fff;
+    display: none;
+}
+
+.li-hover5-2 {
+    left: -170%;
+}
+
+.li-hover2 div a {
+    display: block;
+    padding: 1.5% 0;
+    text-decoration: none;
+}
+
+.li-hover2 div a:hover  {
+    background-color: #fbedef;
+}
+
+.li-hover2 div a:hover p {
+    color: #e44a6f;
+}
+
+.li-child2 {
+    display: flex;
+    width: 100%;
+}
+
+.li-child2 div {
+    width: 10%;
+    vertical-align: bottom;
+}
+
+.li-child2 div img {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.li-child2 p {
+    width: 80%;
+    margin-left: 0.5%;
+    color: #202020;
+    font-size: 1.2vw;
+}
+
+.li-child2 + p {
+    margin-left: 11%;
+    line-height: 1.6;
+    font-size: 0.9vw;
+    color: #202020;
+}
+
+.li-flex-box2 {
+    display: flex;
+}
+
+.li-flex-box2 div:nth-child(1) {
+    width: 50%;
+}
+
+.li-flex-box2 div p a {
+    padding-left: 3%;
+    line-height: 2;
+    font-size: 1.1vw;
+    color: #202020;
+}
+
+.li-flex-box2 div p a:hover {
+    color: #e44a6f;
+}
+
+.li-flex-box2 div:nth-child(2) {
+    width: 50%;
+}
+
+
+
+/*ヘッダーの下*/
+.orenge-box {
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 15vw;
+    background-color: #f39800;
+}
+
+.header-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*タブ切り替え 共通*/
+.tab_box{
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 90%;
+    height: fit-content;/*35vw*/
+    border: 2px solid #fff;
+}
+
+.btn_area {
+    display: flex;
+}
+
+.tab_btn {
+    width: calc(100%/3);
+    padding: 1.5% 0;
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 3.5vw;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn_area .tab_btn:last-child {
+    line-height: 3;
+} 
+
+.tab_btn.active {
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.tab_panel {
+    display:none;
+}
+
+.tab_panel.active {
+    display:block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.panel_area {
+    background-color: transparent;
+}
+
+/*タブ切り替え 国内ホテル旅館・宿*/
+.tab-position {
+    position: relative;
+}
+
+.tab-position input {
+    display: block;
+    width: 100%;
+    margin-top: 4%;
+    line-height: 3;
+    outline: none;
+    border: none;
+    font-size: 3vw;
+    border-radius: 1vw;
+    text-indent:2.5em;
+    color: #202020;
+}
+
+::placeholder {
+    font-size: 3vw;
+    text-indent: 2.5em;
+    line-height: 3;
+    font-family: "Noto_Sans_JP";
+}
+
+
+.pin {
+    background-image: url(../images/hover-list1-6.png);
+    background-repeat: no-repeat;
+    background-size: 6%  ;
+    background-position: top 50% left 3%;
+}
+
+.hito {
+    background-image: url(../images/hito.png);
+    background-repeat: no-repeat;
+    background-size: 6%  ;
+    background-position: top 50% left 3%;
+}
+
+.hito2 {
+    background-image: url(../images/hito.png);
+    background-repeat: no-repeat;
+    background-size: 6%  ;
+    background-position: top 50% left 3%;
+}
+
+.carender {
+    background-image: url(../images/carender.png);
+    background-repeat: no-repeat;
+    background-size: 6%  ;
+    background-position: top 50% left 3%;
+}
+
+.carender2 {
+    background-image: url(../images/carender.png);
+    background-repeat: no-repeat;
+    background-size: 6%  ;
+    background-position: top 50% left 3%;
+}
+
+.search {
+    background-image: url(../images/search-white.png);
+    background-repeat: no-repeat;
+    background-size: 7.5% ;
+    background-position: top 50% left 33%;
+}
+
+.tab-position p:nth-child(2) {
+    position: absolute;
+    top: -20%;
+    left: 5%;
+    font-size: 2.3vw;
+    color: #202020;
+}
+
+.tab-position + p {
+    margin: 2% 0;
+    margin-bottom: 4%;
+    margin-left: 45%;
+    line-height: 2;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.tab-flex-box {
+    display: block;
+}
+
+.tab-flex-box div:nth-child(1) {
+    margin-right: 0%;
+}
+
+
+.checkbox-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-flex div {
+    display: flex;
+    width: 48%;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+
+.checkbox-flex div p {
+    margin-left: 5%;
+    font-size: 3vw;
+    margin-top: 2%;
+    color: #202020;
+    line-height: 1.8;
+    color: #202020;
+}
+
+.checkbox-flex input[type="checkbox"] {
+    position: relative;
+    margin-top: 2.5%;
+    width: 17%;
+    height: 6vw;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    border-radius: 0.8vw;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  .checkbox-flex input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 16%;
+    left: 30%;
+    transform: rotate(50deg);
+    width: 26%;
+    height: 46%;
+    border-right: 2px solid #29939f;
+    border-bottom: 2px solid #29939f;
+    content: '';
+  }
+
+.checkbox-flex + p {
+    position: relative;
+    margin: 2% 0;
+    margin-left: 35%;
+    line-height: 2;
+    font-size: 3vw;
+    color: #fff;
+}
+
+.checkbox-flex + p::after {
+    position: absolute;
+    top: 0;
+    right: 6%;
+    display: block;
+    content: ">";
+    font-size: 3vw;
+    color: #fff;
+}
+
+.car-box {
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.car-box div {
+    margin: 0 3%;
+    width: 7%;
+}
+
+.car-box div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.car-box p {
+    font-size: 3vw;
+    color: #202020;
+}
+
+.car-box input[type="checkbox"] {
+    position: relative;
+    width: 8%;
+    height: 6vw;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    border-radius: 0.8vw;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+ .car-box input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 16%;
+    left: 30%;
+    transform: rotate(50deg);
+    width: 26%;
+    height: 46%;
+    border-right: 2px solid #29939f;
+    border-bottom: 2px solid #29939f;
+    content: '';
+  }
+
+  .car-box + input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    border: none;
+    text-indent: 2em;
+    line-height: 3;
+    font-size: 3vw;
+    color: #fff;
+    background-color: #29939f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.car-box + input:hover {
+    border-radius: 5vw;
+    transition: 0.5s;
+} 
+
+/*タブ切り替え　国内ツアー*/
+.tab_box1{
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.btn_area1 {
+    display: flex;
+}
+
+.tab_btn1 {
+    width: calc(100%/2);
+    padding-top: 2%;
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 3.5vw;
+    cursor: pointer;
+    color: #202020;
+}
+
+.tab_btn1.active1 {
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 3px solid #fff;
+}
+
+.tab_panel1 {
+    display:none;
+}
+
+.tab_panel1.active1 {
+    display:block;
+    width: 100%;
+    margin-top: 8%;
+}
+
+.panel_area1 {
+    background-color: transparent;
+}
+
+/*タブ切り替え　海外ツアー*/
+.tab-position p:nth-child(3) {
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    font-size: 2.5vw;
+    color: #ff6347;
+}
+
+.carender2 {
+    display: block;
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    line-height: 3;
+    outline: none;
+    border: none;
+    font-size: 3vw;
+    border-radius: 1vw;
+    text-indent: 1em;
+    color: #202020;
+}
+
+.tab-position + input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 4%;
+    border: none;
+    text-indent: 2em;
+    line-height: 3;
+    font-size: 3vw;
+    color: #fff;
+    background-color: #29939f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tab-position + input:hover {
+    border-radius: 5vw;
+    transition: 0.5s;
+}
+
+form + p a {
+    display: block;
+    margin-bottom: 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #fff;
+}
+
+/*ヘッダー下　右側　トップ動画*/
+.orenge-position {
+    position: relative;
+    width: 100%;
+    height: 120vw;
+}
+
+.orenge-position::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 105%;
+    height: 56vw;
+    bottom: -0.1%;
+    left: -0.1%;
+    border-radius: 5vw 0 0 5vw;
+    border: 1px solid #202020;
+    background-color: #ffefe0;
+    z-index: 1;
+    display: none;
+}
+
+.movie-box {
+    position: relative;
+    width: 100%;
+    height: 120vw;
+    border-top-right-radius: 15vw;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.swiper-slide a {
+    display: block;
+}
+
+.swiper img {
+    width: 100%;
+    height: 120vw;
+    object-fit: cover;
+    border-top-right-radius: 15vw;
+    border-bottom-left-radius: 0;
+    transition: 0.5s;
+}
+
+.swiper img:hover {
+    transform: scale(1.05,1.05);
+    transition: 0.5s;
+}
+
+
+
+
+/*ループアニメーション 上*/
+.loop-parent {
+    margin-left: 0%;
+    padding-top: 5%;
+    width: 100%;
+    padding-bottom: 5%;
+    background-color: #f39800;
+    border-top: 1px solid #000;
+}
+
+.loop02 {
+    display: flex;
+    overflow: hidden;
+}
+
+.loop02__box {
+    list-style-type: none;
+    display: flex;
+    margin-right: 32%;
+    animation: loop-list 50s linear infinite;
+}
+
+.loop02__box li {
+    margin-right: 1.5%;
+}
+
+.loop02__item a {
+    width: calc(400vw / 5);
+    display: flex;
+    padding: 2%;
+    height: 20vw;
+    text-decoration: none;
+    border-radius: 3vw;
+    border: 1px solid #fff;
+}
+.loop02__item img {
+    width: 35%;
+    border-radius: 0.8vw;
+}
+
+.loop02__item div {
+    width: 60%;
+    margin-left: 5%;
+}
+
+.loop02__item div p:nth-child(1) {
+    width: 100%;
+    white-space: pre-wrap;
+    color: #fff;
+    padding-bottom: 4%;
+    font-size: 2.8vw;
+    border-bottom: 1px dashed #fff;
+}
+
+.loop02__item div p:nth-child(2) {
+    margin-top: 5%;
+    font-size: 2.5vw;
+    color: #fff;
+} 
+
+@keyframes loop-list {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.loop02:hover .loop02__box {
+    animation-play-state: paused;
+}
+
+/*ループアニメーション　下*/
+.loop03 {
+    display: flex;
+    overflow: hidden;
+}
+
+.loop03__box {
+    list-style-type: none;
+    display: flex;
+    margin-top: 2.5%;
+    margin-right: 32%;
+    animation: loop-list2 50s linear infinite;
+}
+
+.loop03__box li {
+    margin-right: 1.5%;
+}
+
+@keyframes loop-list2 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.loop03:hover .loop03__box {
+    animation-play-state: paused;
+}
+
+.loop-parent {
+    position: relative;
+} 
+
+.loop-parent::after {
+    position: absolute;
+    display: block;
+    top: 100%;
+    right: 85%;
+    content: "";
+    width: 15%;
+    height: 40vw;
+    border-bottom-right-radius: 10vw;
+    background-color: #f39800;
+} 
+/*スムーススクロール ページトップ*/
+#page-top {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 6vw;
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    z-index: 400;
+    transition: 0.5s;
+}
+
+#page-top a {
+    display: block;
+    text-decoration: none;
+}
+
+#page-top div {
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+#page-top div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#page-top p {
+    text-align: center;
+    font-size: 2vw;
+    color: #ccc;
+    font-family: "Noto_Sans_JP";;
+}
+
+#page-top:hover {
+    background-color: #fbedef;
+    transition: 0.5s;
+}
+
+
+/*セクション お得な割引クーポン・キャンペーン*/
+.quupon-section {
+    position: relative;
+    width: 100%;
+    padding: 10% 0;
+    border-top-left-radius: 15vw;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-top-right-radius: 0;
+    background-color: #ffefe0;
+    z-index: 100;
+}
+
+.quupon-section h2 {
+    text-align: center;
+    font-size: 5vw;
+    color: #202020;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 5%;
+    width: 80%;
+  }
+  
+.slick-slide {
+    color: #202020;
+  }
+  
+.slick-slide img {
+	width: 95%;
+    margin: 0 auto;
+}
+
+.single-item a {
+    display: block;
+    text-decoration: none;
+}
+
+.slick-slide p {
+    width: 88%;
+    margin: 0 auto;
+    margin-top: 5%;
+    color: #202020;
+    font-size: 3vw;
+}
+
+.slick-slide p span {
+    visibility: hidden;
+}
+
+.spring-box a {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    
+}
+
+.spring-box div:nth-child(1) {
+    overflow: hidden;
+}
+
+.spring-box div:nth-child(1) img {
+    width: 100%;
+    filter: brightness(80%);
+    vertical-align: bottom;
+    transition: 0.5s;
+}
+
+.spring-box a:hover div:nth-child(1) img {
+    transform: scale(1.1,1.1);
+    transition: 0.5s;
+} 
+
+.spring-box div:nth-child(2) {
+    position: absolute;
+    top: 3.5%;
+    left: 32%;
+    width: 34vw;
+    height: 34vw;
+    border-radius: 17vw;
+    background-color: #fff;
+}
+
+.spring-box div:nth-child(2)::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -3%;
+    left: -3%;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 17.5vw;
+    border: 4px double #fff;
+} 
+
+.spring-box p:nth-child(3) {
+    position: absolute;
+    top: 8%;
+    left: 43%;
+    margin: 0 auto;
+    font-size: 12vw;
+    font-family: "Zen_Maru_Gothic";
+    color: #f4a7b9;
+}
+
+.spring-box p:nth-child(3) span {
+    font-size: 6vw;
+    color: #ccc;
+    text-shadow: 0 0 0 10% #000;
+}
+
+.spring-box p:nth-child(4) {
+    position: absolute;
+    top: 48%;
+    left: 31%;
+    font-size: 6vw;
+    color: #000;
+    font-family: "Zen_Maru_Gothic";
+} 
+
+.spring-box div:nth-child(5) {
+    position: absolute;
+    bottom: 8%;
+    left: 37%;
+    width: 30%;
+} 
+
+.spring-box div:nth-child(5) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.spring-box div:nth-child(6) {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    transform: rotate(-30deg);
+    width: 20%;
+} 
+
+.spring-box div:nth-child(6) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.spring-box div:nth-child(7) {
+    position: absolute;
+    bottom: 3%;
+    right: 28%;
+    transform: rotate(165deg);
+    width: 20%;
+} 
+
+.spring-box div:nth-child(7) img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/*セクション　１つ目*/
+.section1-parent {
+    position: relative;
+    width: 100%;
+    padding-bottom: 8%;
+    padding-top: 5%;
+    border-right: 1px solid #202020;
+    background-color: #ffefe0;
+    z-index: 100;
+}
+
+.section1-parent::after {
+    position: absolute;
+    display: block;
+    top: 138%;
+    right: -4%;
+    content: "";
+    width: 15%;
+    height: 30vw;
+    background-color: #ffefe0; 
+    z-index:1;
+} 
+
+.section1-parent h2 {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 5vw;
+    color: #202020;
+}
+
+.section1 {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.section1-parent1 {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 5%;
+    border-left: 2px solid #90b44b;
+}
+
+.section1-parent1 h3 {
+    line-height: 2;
+    width: 25%;
+    font-size: 4vw;
+    color: #202020;
+    text-align: center;
+    letter-spacing: 3%;
+}
+
+.section1-parent1 h3 + p,.section1-parent2 h3 + p {
+    position: relative;
+    margin-left: 65%;
+    margin-bottom: 3%;
+}
+
+.section1-parent1 h3 + p a,.section1-parent2 h3 + p a {
+    display: block;
+    text-decoration: none;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.section1-parent1 h3 + p::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 23%;
+    font-weight: bold;
+    font-size: 3vw;
+    content: ">";
+    color: #90b44b;
+}
+
+
+.section1-parent2 h3 + p::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 23%;
+    font-weight: bold;
+    font-size: 3vw;
+    content: ">";
+    color: #29939f;
+}
+
+.section1-parent1 h3 + p a:hover,.section1-parent2 h3 + p a:hover  {
+    text-decoration: underline 1px solid #202020;
+}
+
+.section1-flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.section1-flex-box .section1-child:last-child {
+    margin-right: 0;
+}
+
+.section1-child {
+    width: 47.5%;
+    margin-right: 0;
+    margin-bottom: 3%;
+    border-radius: 2vw;
+    background-color: #fff;
+    border: none;
+    transition: 0.5s;
+    border: 2px solid #fff;
+}
+
+.section1-parent1 .section1-flex-box .section1-child:hover {
+    border: 2px solid #90b44b;
+    transition: 0.5s;
+}
+
+.section1-parent2 .section1-flex-box .section1-child:hover {
+    border: 2px solid #29939f;
+    transition: 0.5s;
+}
+
+.section1-child a {
+    display: block;
+    text-decoration: none;
+    padding: 6%;
+    padding-top: 10%;
+}
+
+.section1-child a div {
+    width: 100%;
+}
+
+.section1-child a div img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.section1-child a p {
+    white-space: pre-wrap;
+    font-size: 3vw;
+    text-align: center;
+    color: #202020;
+}
+
+.p1 {
+    line-height: 3;
+}
+
+.section1-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.section1-bottom p {
+    position: relative;
+    font-size: 3vw;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(1) {
+    width: 35%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(2),.section1-parent2 .section1-bottom p:nth-child(5) {
+    width: 20%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(3) {
+    width: 12%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(4),.section1-parent1 .section1-bottom p:nth-child(6),
+.section1-parent2 .section1-bottom p:nth-child(2) {
+    width: 22%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(5),.section1-parent2 .section1-bottom p:nth-child(1),
+.section1-parent2 .section1-bottom p:nth-child(3),.section1-parent2 .section1-bottom p:nth-child(4) {
+    width: 41%;
+}
+
+.section1-parent1 .section1-bottom p:nth-child(7),.section1-parent1 .section1-bottom p:nth-child(8),
+.section1-parent2 .section1-bottom p:nth-child(6),.section1-parent2 .section1-bottom p:nth-child(7) {
+    width: 26%;
+}
+
+.section1-parent2 .section1-bottom p:nth-child(8) {
+    width: 30%;
+}
+
+.section1-bottom a {
+    display: block;
+    line-height: 1.7;
+    color: #202020;
+    text-decoration: none;
+}
+
+.section1-parent1 .section1-bottom p::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 5%;
+    line-height: 1.7;
+    font-weight: bold;
+    font-size: 3vw;
+    content: ">";
+    color: #90b44b;
+}
+
+.section1-bottom p a:hover {
+    text-decoration: underline 1px solid #202020;
+}
+
+
+.section1-parent2  {
+    width: 100%;
+    border-left: 2px solid #29939f;
+}
+
+.section1-parent2 h3 {
+    line-height: 2;
+    width: 25%;
+    font-size: 4vw;
+    color: #202020;
+    text-align: center;
+    letter-spacing: 3%;
+}
+
+.section1-parent2 .section1-bottom p::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 6%;
+    line-height: 1.7;
+    font-weight: bold;
+    font-size: 3vw;
+    content: ">";
+    color: #29939f;
+}
+
+
+/*セクション　場所から選ぶ*/
+.place-section {
+    position: relative;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    border-right: 1px solid #202020;
+    border-bottom: 1px solid #202020;
+    border-bottom-right-radius: 0;
+    background-color: #ffefe0; 
+    border: none;
+    z-index: 100; 
+}
+
+.place-section h2 {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 5vw;
+    color: #202020;
+}
+
+.place-flex-box {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.place-flex-box a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5vw;
+    color: #202020;
+}
+
+.place-flex-box a:hover {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-position-left {
+    position: relative;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3%;
+}
+
+.place-position-left .place-left-map {
+    width: 100%;
+}
+
+.place-position-left div:nth-child(1) img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.place-left-p1 {
+    position: absolute;
+    top: 11%;
+    right: 17%;
+    width: 15%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-child1 {
+    position: absolute;
+    top: 47%;
+    right: 19%;
+    width: 12.5%;
+}
+
+.place-left-p2 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}  
+
+.place-left-hover1 {
+    position: relative;
+    width: 155%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    display: none;
+    z-index: 100;
+}
+
+.place-hover-flex {
+    display: flex;
+    width: 100%;
+}
+
+.place-hover-flex  div {
+    width: calc(100%/2);
+    margin-right: 1%;
+}
+
+.place-hover-flex  div:nth-child(2) {
+    margin-right: 0;
+}
+
+.place-hover-flex p {
+    text-align: center;
+}
+
+.place-left-child1:hover .place-left-hover1{
+    display: block;
+}
+
+.place-left-child1:hover .place-left-p2 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child2 {
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    width: 14%;
+}
+
+.place-left-p3 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+} 
+
+.place-left-hover2 {
+    position: relative;
+    width: 150%;
+    padding: 0.5% 1%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-hover2 div {
+    display: flex;
+}
+
+.place-left-hover2 div p {
+    width: calc(100%/2);
+    text-align: center;
+    margin-right: 1%;
+}
+
+
+.place-left-hover2 div p:nth-child(2) {
+    margin-right: 0;
+}
+
+.place-left-hover2 div + p {
+    text-align: center;
+}
+
+.place-left-child2:hover .place-left-hover2 {
+    display: block;
+}
+
+.place-left-child2:hover .place-left-p3 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child3 {
+    position: absolute;
+    bottom: 28%;
+    right: 23%;
+    width: 12.5%;
+}
+
+.place-left-p4 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover3 {
+    position: absolute;
+    width: 195%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-hover-flex + p {
+    text-align: center;
+}
+
+.place-left-child3:hover .place-left-hover3 {
+    display: block;
+} 
+
+.place-left-child3:hover .place-left-p4 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child4 {
+    position: absolute;
+    bottom: 39%;
+    left: 43%;
+    width: 13%;
+}
+
+
+.place-left-p5 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+
+.place-left-hover4 {
+    position: absolute;
+    width: 150%;
+    padding: 0.5% 1%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-hover4 div {
+    display: flex;
+}
+
+.place-left-hover4 div p {
+    width: calc(100%/2);
+    text-align: center;
+    margin-right: 1%;
+}
+
+
+.place-left-hover4 div p:nth-child(2) {
+    margin-right: 0;
+}
+
+.place-left-hover4 div + p {
+    text-align: center;
+}
+
+.place-left-child4:hover .place-left-hover4 {
+    display: block;
+}
+
+.place-left-child4:hover .place-left-p5 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child5 {
+    position: absolute;
+    bottom: 14%;
+    right: 29%;
+    width: 12.5%;
+}
+
+.place-left-p6 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover5 {
+    position: absolute;
+    width: 155%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-child5:hover .place-left-hover5 {
+    display: block;
+}
+
+.place-left-child5:hover .place-left-p6 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child6 {
+    position: absolute;
+    bottom: 9%;
+    left: 45%;
+    width: 13%;
+}
+
+
+.place-left-p7 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover6 {
+    position: absolute;
+    width: 190%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-child6:hover .place-left-hover6 {
+    display: block;
+}
+
+.place-left-child6:hover .place-left-p7 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child7 {
+    position: absolute;
+    bottom: 30%;
+    left: 31%;
+    width: 12.5%;
+}
+
+.place-left-p8 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover7 {
+    position: absolute;
+    width: 155%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-child7:hover .place-left-hover7 {
+    display: block;
+}
+
+.place-left-child7:hover .place-left-p8 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child8 {
+    position: absolute;
+    bottom: 9%;
+    left: 30%;
+    width: 12.5%;
+}
+
+.place-left-p9 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover8 {
+    position: absolute;
+    width: 155%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-child8:hover .place-left-hover8{
+    display: block;
+}
+
+.place-left-child8:hover .place-left-p9 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-child9 {
+    position: absolute;
+    bottom: 18%;
+    left: 17%;
+    width: 12.5%;
+}
+
+.place-left-p10 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-left-hover9 {
+    position: absolute;
+    width: 160%;
+    padding: 1% 1.3%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-left-child9:hover .place-left-hover9 {
+    display: block;
+}
+
+.place-left-child9:hover .place-left-p10 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-left-p11 {
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    width: 12.5%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-hover-flex p,.place-left-hover2 p,.place-left-hover4 p {
+    line-height: 1.8;
+}
+
+
+.place-left-p1::before,.place-left-p2::before,.place-left-p3::before,.place-left-p4::before,.place-left-p5::before,.place-left-p6::before,
+.place-left-p7::before,.place-left-p8::before,.place-left-p9::before,.place-left-p10::before,.place-left-p11::before {
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 4%;
+    content: "▶";
+    line-height: 1.8;
+    font-size: 2vw;
+}
+
+.place-position-rigth {
+    position: relative;
+    width: 100%;
+}
+
+.place-position-rigth div:nth-child(1) {
+    width: 100%;
+}
+
+.place-position-rigth div:nth-child(1) img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.place-rigth-child1 {
+    position: absolute;
+    top: 23%;
+    left: 20%;
+    width: 23%;
+}
+
+.place-rigth-p1 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover1 {
+    position: absolute;
+    width: 230%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-hover-flex-rigth {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.place-hover-flex-rigth p {
+    width: fit-content;
+    line-height: 1.5;
+    margin-right: 5%;
+}
+
+.place-rigth-child1:hover .place-rigth-hover1 {
+    display: block;
+}
+
+.place-rigth-child1:hover .place-rigth-p1 {
+    text-decoration: underline 1px solid #202020;
+}
+
+
+.place-rigth-child2 {
+    position: absolute;
+    top: 42%;
+    left: 13%;
+    width: 28%;
+}
+
+.place-rigth-p2 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover2 {
+    position: absolute;
+    width: 150%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-rigth-child2:hover .place-rigth-hover2 {
+    display: block;
+}
+
+.place-rigth-child2:hover .place-rigth-p2 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-rigth-child3 {
+    position: absolute;
+    bottom: 24%;
+    left: 18%;
+    width: 27%;
+}
+
+.place-rigth-p3 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover3 {
+    position: absolute;
+    width: 190%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-rigth-child3:hover .place-rigth-hover3 {
+    display: block;
+}
+
+.place-rigth-child3:hover .place-rigth-p3 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-rigth-child4 {
+    position: absolute;
+    top: 28%;
+    right: 40%;
+    width: 15%;
+}
+
+.place-rigth-p4 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover4 {
+    position: absolute;
+    width: 300%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-rigth-child4:hover .place-rigth-hover4 {
+    display: block;
+}
+
+.place-rigth-child4:hover .place-rigth-p4 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-rigth-child5 {
+    position: absolute;
+    top: 47%;
+    right: 12%;
+    width: 22%;
+}
+
+.place-rigth-p5 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover5 {
+    position: absolute;
+    width: 165%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-rigth-child5:hover .place-rigth-hover5 {
+    display: block;
+}
+
+.place-rigth-child5:hover .place-rigth-p5 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-rigth-child6 {
+    position: absolute;
+    bottom: 21%;
+    right: 29%;
+    width: 20%;
+}
+
+.place-rigth-p6 {
+    width: 100%;
+    line-height: 1.8;
+    background-color: #fafaff99;
+}
+
+.place-rigth-hover6 {
+    position: absolute;
+    width: 250%;
+    padding: 3% 2.5%;
+    background-color: #fff;
+    border: 1px solid #202020;
+    z-index: 100;
+    display: none;
+}
+
+.place-rigth-child6:hover .place-rigth-hover6 {
+    display: block;
+}
+
+.place-rigth-child6.li-child .place-rigth-p6 {
+    text-decoration: underline 1px solid #202020;
+}
+
+.place-rigth-p1::before,.place-rigth-p4::before {
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 5%;
+    content: "▶";
+    line-height: 1.8;
+    font-size: 2vw;
+}
+
+.place-rigth-p2::before,.place-rigth-p3::before,.place-rigth-p5::before,.place-rigth-p6::before {
+    position: absolute;
+    display: block;
+    top: 10%;
+    left: 1%;
+    content: "▶";
+    line-height: 1.8;
+    font-size: 2vw;
+}
+/*セクション　遊び・体験*/
+.activity-section {
+    position: relative;
+    padding-top: 13%;
+    padding-bottom: 8%;
+    border-top-right-radius: 15vw;
+    background-color: #f39800;
+    z-index: 100;
+}
+
+.activity-title {
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    border-top: 2px solid #fff;
+}
+
+.activity-title div {
+    width: 20%;
+    margin-right: 5%;
+    border-top: none;
+    border-right: 1px solid #fff;
+}
+
+.activity-title div img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15%;
+    object-fit: contain;
+}
+
+.activity-title h2 {
+    font-size: 5vw;
+    width: 77%;
+    line-height: 2.5;
+    color: #fff;
+}
+
+.activity-flex-box {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+
+.activity-section .activity-flex-box:last-child {
+    margin-bottom: 0;
+}
+
+.activity-parent {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2%;
+}
+
+.activity-flex-box .activity-parent:last-child {
+    margin-right: 0;
+} 
+
+.activity-parent a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 3vw;
+    border: 1px solid #202020;
+}
+
+.activity-parent a::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 25%;
+    left: 3%;
+    width: 0;
+    height: 20vw;
+    background-color: #fafaff99;
+    transition: 0.5s;
+} 
+
+.activity-parent a:hover::after {
+    width: 94%;
+    transition: 0.5s;
+}
+
+.activity-parent div:nth-child(1) {
+    width: 100%;
+    height: 40vw;
+}
+
+.activity-parent div:nth-child(1) img {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.activity-parent p:nth-child(2) {
+    margin-top: 1%;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.activity-hover {
+    position: absolute;
+    top: 33%;
+    left: 6%;
+    height: 5vw;
+    width: 88%;
+    display: none;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.activity-hover h3 {
+    text-align: center;
+    font-size: 4vw;
+    color: #202020;
+}
+
+.activity-hover p {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.activity-parent a:hover .activity-hover {
+    display: block;
+    transition: 0.5s;
+}
+
+/*セクション　スポット*/
+.spot-section {
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.spot-title {
+    display: flex;
+    margin-left: 0;
+    width: 90%;
+    margin: 0 auto;
+    border-top: 2px solid #202020;
+}
+
+.spot-title div {
+    width: 20%;
+    margin-right: 5%;
+    border-top: none;
+    border-right: 1px solid #202020;
+}
+
+.spot-title div img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15%;
+    object-fit: contain;
+}
+
+.spot-title h2 {
+    font-size: 5vw;
+    width: 77%;
+    line-height: 2.5;
+    color: #202020;
+}
+
+.spot-parent {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.spot-flex-box {
+    display: block;
+}
+
+.spot-top-left {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 2%;
+}
+
+.spot-position1 {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.spot-position1::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 36vw;
+    border-radius: 2vw;
+    opacity: 0.8;
+    background-color: #fcc800;
+    display: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.spot-position1 div:nth-child(1) {
+    width: 100%;
+    height: 36vw;
+}
+
+.spot-position1 div:nth-child(1) img {
+    width: 100%;
+    height: 36vw;
+    object-fit: cover;
+    border-radius: 2vw;
+    vertical-align: bottom;
+}
+
+.spot-position1 div:nth-child(1) + p {
+    position: absolute;
+    top: 5%;
+    right: 9.5%;
+    font-size: 4.5vw;
+    color: #fff;
+    z-index: 100;
+}
+
+.spot-position1 div:nth-child(1) + p + p{
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    font-size: 3.5vw;
+    color: #fff;
+    z-index: 100;
+}
+
+.spot-hover1 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    width: 40%;
+    z-index: 100;
+    display: none;
+    transition: 0.5s;
+}
+
+.spot-hover1 p:nth-child(1) {
+    font-size: 3vw;
+    color: #202020;
+}
+
+.spot-hover1 p:nth-child(2) {
+    margin-top: 7%;
+    line-height: 1.7;
+    font-size: 2.5vw;
+    color: #202020;
+}
+
+.spot-hover1 p:nth-child(3) {
+    margin-top: 20%;
+    width: 220%;
+    line-height: 2;
+    font-size: 3vw;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.spot-hover1 p:nth-child(3) a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.spot-hover1 p:nth-child(3) a:hover {
+    background-color: #fff;
+    color: #fcc800;
+    transition: 0.5s;
+}
+
+.spot-position1:hover .spot-hover1 {
+    display: block;
+    transition: 0.5s;
+} 
+
+.spot-position1:hover::after{
+    display: block;
+    transition: 0.5s;
+}
+
+.spot-flex-box2 {
+    width: 100%;
+}
+
+.spot-child {
+    display: block;
+}
+
+.spot-child .spot-position {
+    width: 100%;
+    margin-right: 0;
+}
+
+.spot-child .spot-position:last-child {
+    margin-right: 0;
+}
+
+.spot-flex-box2 .spot-child:nth-of-type(2) {
+    margin-top: 0;
+}
+
+.spot-flex-bottom {
+    margin-top: 0;
+    display: block;
+}
+
+.spot-flex-bottom .spot-position {
+    width: 100%;
+    margin-right: 0;
+}
+
+.spot-flex-bottom .spot-position:last-child {
+    margin-right: 0;
+}
+
+.spot-position {
+    position: relative;
+    margin-bottom: 2%;
+}
+
+.spot-position::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 36vw;
+    border-radius: 2vw;
+    opacity: 0.8;
+    background-color: #fcc800;
+    display: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.spot-position div:nth-child(1) {
+    width: 100%;
+    height: 36vw;
+}
+
+.spot-position div:nth-child(1) img {
+    width: 100%;
+    height: 36vw;
+    object-fit: cover;
+    border-radius: 2vw;
+    vertical-align: bottom;
+}
+
+.spot-position div:nth-child(1) + p {
+    position: absolute;
+    top: 5%;
+    right: 9.5%;
+    font-size: 4.5vw;
+    color: #fff;
+    z-index: 100;
+}
+
+.spot-position div:nth-child(1) + p + p {
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    font-size: 3.5vw;
+    color: #fff;
+    z-index: 100;
+}
+
+.spot-position:hover::after{
+    display: block;
+    transition: 0.5s;
+}
+
+.spot-hover {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.spot-hover p:nth-child(1) {
+    width: 50%;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.spot-hover p:nth-child(2) {
+    margin-top: 5%;
+    line-height: 1.7;
+    width: 55%;
+    font-size: 2.5vw;
+    color: #202020;
+}
+
+.spot-hover p:nth-child(3) {
+    width: 85%;
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 86%;
+    font-size: 3vw;
+    line-height: 2;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.spot-hover p:nth-child(3) a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.spot-hover p:nth-child(3) a:hover {
+    background-color: #fff;
+    color: #fcc800;
+    transition: 0.5s;
+}
+
+.spot-position:hover .spot-hover {
+    display: block;
+    transition: 0.5s;
+}
+
+/*セクション　お知らせ*/
+.news-section {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    border-radius: 5vw;
+    border: 2px solid #202020;
+}
+
+.news-section h2 {
+    text-align: center;
+    padding: 2.5% 0;
+    font-size: 5vw;
+    color: #202020;
+    border-bottom: 1px solid #202020;
+}
+
+.news-section h2 + div {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3% 0;
+}
+
+.news-flex-box a {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4% 0;
+    width: 100%;
+    text-decoration: none;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.news-flex-box a p:nth-child(1) {
+    margin-left: 5%;
+    line-height: 2;
+    font-size: 3vw;
+    color: #202020;
+}
+
+.news-flex-box a p:nth-child(2) {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    width: 25%;
+    text-align: center;
+    line-height: 2;
+    font-size: 3vw;
+    color: #fff;
+}
+
+.news-blue {
+    border-radius: 5vw;
+    background-color: #29939f;
+}
+
+.nwes-green {
+    border-radius: 5vw;
+    background-color: #90b44b;
+}
+
+.news-orenge {
+    border-radius: 5vw;
+    background-color: #f39800;
+}
+
+.news-flex-box a p:nth-child(3) {
+    margin-left: 2%;
+    line-height: 1.8;
+    font-size: 3vw;
+    color: #202020;
+} 
+
+.news-flex-box a:hover p:nth-child(3) {
+    text-decoration: underline 1px #202020;
+} 
+
+.news-flex-box + p {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.news-flex-box + p a {
+    display: block;
+    text-decoration: none;
+    color: #202020;
+    line-height: 3;
+    font-size: 3vw;
+    border-radius: 5vw;
+    border: 1px solid #202020;
+}
+
+/*最後のセクション*/
+.last-section {
+    padding-top: 3%;
+    padding-bottom: 4%;
+    background-color: #ffefe0;
+    background-image: url(../images/feature_bg_img.png);
+    background-size: 125%;
+    background-position: top;
+}
+
+.last-section h2 {
+    margin-bottom: 3%;
+    white-space: pre-wrap;
+    text-align: center;
+    color: #f39800;
+    font-size: 3vw;
+}
+
+.last-section h2 span {
+    font-size: 3.5vw;
+    color: #29939f;
+    border-bottom: 3px solid #29939f;
+}
+
+.last-section h2 + p{
+    width: 47%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1vw;
+    line-height: 1.7;
+    color: #202020;
+    background-color: #fcc800;
+}
+
+.last-section h2 + p + p {
+    width: 17%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1vw;
+    line-height: 1.7;
+    color: #202020;
+    background-color: #fcc800;
+}
+
+.biginner-box a {
+    display: flex;
+    width: 18%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    margin-top: 1.5%;
+    line-height: 2.5;
+    border-radius: 3vw;
+    text-decoration: none;
+    background-color: #90b44b;
+}
+
+.biginner-box a div {
+    margin-left: 10%;
+    width: 6%;
+}
+
+.biginner-box a div img {
+    display: block;
+    margin-top: 45%;
+    width: 100%;
+}
+
+.biginner-box a p {
+    position: relative;
+    margin-left: 5%;
+    font-size: 1.1vw;
+    color: #fff;
+}
+
+.biginner-box a p::after {
+    position: absolute;
+    content: ">";
+    top: 0;
+    right: -15%;
+    font-size: 1.1vw;
+    color: #fff;
+}
+
+.biginner-box + div {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.biginner-box + div img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.biginner-box + div + p {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.biginner-box + div + p a {
+    display: block;
+    text-decoration: none;
+    color: #f39800;
+    line-height: 2.5;
+    font-size: 1.1vw;
+    border-radius: 3vw;
+    border: 1px solid #f39800;
+    background-color: #fff;
+}
+
+
+
+
+/*フッター*/
+.bn-box {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8%;
+    padding: 3% 1.5%;
+    background-color: #fbedef;
+}
+
+.bn-box div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bn-box div:nth-child(1) p {
+    width: 30%;
+    margin-top: 2%;
+}
+
+.bn-box div:nth-child(1) p:last-child {
+    margin-right: 0;
+}
+
+.bn-box div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.bn-box div:nth-child(2) p {
+    width: 30%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.bn-box div:nth-child(2) p:last-child {
+    margin-right: 0;
+}
+
+.bn-box div p a {
+    display: block;
+}
+
+.bn-box div p a img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.sub-mark {
+    display: flex;
+    width: 80%;
+    padding: 5% 0;
+    margin: 0 auto;
+}
+
+.sub-mark p {
+    width: calc(100%/5);
+    border-right: 1px dotted #cccccc;
+}
+
+.sub-mark p:nth-child(1) {
+    border-left: 1px dotted #cccccc;
+}
+
+.sub-mark p a {
+    display: block;
+}
+
+.sub-mark p img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*フッター　クリックイベント*/
+.footer-thin-orenge {
+    background-color: transparent
+}
+
+.fotter-thin-with {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer-thin-orenge a {
+    text-decoration: none;
+    color: #202020;
+}
+
+.footer-thin-orenge  h2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 3% 0;
+    font-size: 3vw;
+    cursor: pointer;
+    text-indent: 1em;
+    border-top: 1px solid #ccc;
+    background-color: #ffefe0;
+    color: #202020;
+}
+
+.optionBox1,.optionBox6,.optionBox11 {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.footer-thin-orenge  h3 {
+    position: relative;
+    width: 100%;
+    padding: 3% 0;
+    font-size: 3vw;
+    cursor: pointer;
+    text-indent: 1em;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    color: #202020;
+}
+
+.footer-thin-orenge h2 a,.footer-thin-orenge h3 a {
+    display: block;
+    pointer-events: none;
+}
+
+.footer-thin-orenge h3 + div {
+    width: 100%;
+    display: none;
+}
+
+.footer-top-p {
+    display: block;
+    font-size: 2.5vw;
+    padding: 2% 0;
+    text-indent: 1.3em;
+}
+
+.footer-thin-orenge h2:nth-of-type(2),.footer-thin-orenge h2:nth-of-type(3) {
+    margin-top: 0;
+}
+
+.footer-flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+    margin-bottom: 0;
+}
+
+.footer-flex-box p {
+    width: fit-content;
+    margin-top: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-right: 1px solid #656972;
+    line-height: 1.5;
+    font-size: 2.5vw;
+}
+
+.footer-flex-box p:hover {
+    text-decoration: underline 1px solid;
+}
+
+.footer-flex-box p:last-child {
+    border: none;
+}
+
+.Toggle::after {
+    display: block;
+    position: absolute;
+    content: "^";
+    top: 20%;
+    right: 3%;
+    font-size: 3vw;
+    transform: rotate(180deg);
+    color: #656972;
+	transition: .10s ease-in-out;	 /*変化の速度を指定*/	
+}
+
+.Toggle.active::after {
+    top: 35%;
+    right: 6%;
+	transform: rotate(0deg);
+}
+
+
+
+/*フッター　アプリなど*/
+.footer-orenge {
+    padding: 2%;
+}
+
+.footer-flex-box2 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer-flex-box2 h2 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.footer-flex-box2 h2 a {
+    display: block;
+}
+
+.footer-flex-box2 h2 img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.footter-rigth-box {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.footer-flex-box2-inner {
+    display: block;
+}
+
+.footer-sns {
+    width: 100%;
+    margin-right: 0;
+   
+}
+
+.footer-apri {
+    margin-top: 8%;
+    width: 100%;
+}
+
+.footer-sns p:nth-child(1),.footer-apri p:nth-child(1) {
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 3vw;
+    color: #202020;
+    font-family: "Noto_Sans_JP";
+}
+
+.footer-sns-icon {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.footer-sns-icon p {
+    width: calc(100%/3);
+}
+
+.footer-sns-icon p:last-child {
+    margin-right: 0;
+}
+
+.footer-sns-icon p a {
+    display: block;
+}
+
+.footer-sns-icon p a img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.footer-sns-icon + p {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2%;
+    font-size: 3vw;
+    text-align: center;
+    font-family: "Noto_Sans_JP";
+}
+
+.footer-sns-icon + p a {
+    display: block;
+    line-height: 2.5;
+    text-decoration: none;
+    color: #202020;
+    border-radius: 5vw;
+    background-color: #f39800;
+}
+
+.footer-apri-icon {
+    display: flex;
+    margin: 0 auto;
+}
+
+.footer-apri-icon p {
+    width: calc(100%/2);
+}
+
+.footer-apri-icon p img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-apri-icon + p {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 0%;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.footer-apri-icon + p a {
+    display: block;
+    line-height: 2.5;
+    text-decoration: none;
+    color: #202020;
+}
+
+.footer-flex-box2 + ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 90%;
+}
+
+.footer-flex-box2 + ul li {
+    width: fit-content;
+    list-style-type: none;
+    margin-right: 4%;
+}
+
+.footer-flex-box2 + ul li a {
+    text-decoration: underline 1px solid #202020;
+    font-size: 2.5vw;
+    line-height: 1.8;
+    color: #202020;
+}
+
+.footer-flex-box2 + ul li a:hover {
+    text-decoration: none;
+} 
+
+.footer-flex-box2 + ul + p {
+    margin-top: 4%;
+    text-align: center;
+    color: #202020;
+    font-size: 2vw;
+}
+

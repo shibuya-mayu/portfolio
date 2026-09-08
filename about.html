@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ポートフォリオサイト｜About</title>
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="icon" type="image/x-icon" href="images/saru-icon.png">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/lightbox.js" type="text/javascript"></script>
+
+        <script>
+            window.addEventListener('scroll',function() {
+            const height = window.innerHeight;                    //画面の高さを取得
+            const scroll = this.pageYOffset;                      //スクロール量
+            const marker = document.querySelectorAll('.marker');  //マーカーを引く要素を取得
+            const value = scroll - height + 150                   //後ろの数字を弄ることで、イベント位置をずらす
+
+            // markerクラスを持っている要素全てに処理を行う
+            marker.forEach(function(element){
+                //要素が画面内の指定の位置に来たら「on」クラスをつける
+                if (scroll > element.getBoundingClientRect().top + value) {
+                    element.classList.add('on')
+                }
+            });
+            })
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/about.css" media="screen and (min-width:900px)">
+
+        <link rel="stylesheet" href="css/about.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/about.smart.css" media="screen and (max-width:549px)">
+
+
+    </head>
+    <body>
+        <header>
+            <div class="top-position" id="top">
+                <div><img src="images/about-top.svg" alt="ピンクの雲っぽい画像"></div>
+                <div><img src="images/pen2.png" alt=""></div>
+                <h1>About</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">
+                        <div><img src="images/home.png" alt="アルパカアイスの画像"></div>
+                        <p>Home</p>
+                    </a></li>
+                    <li><a href="about.html">
+                        <div><img src="images/about.png" alt="サルの画像"></div>
+                        <p>About</p>
+                        <div><img src="images/about-nav-laine.png" alt="線の画像 "></div>
+                    </a></li>
+                    <li><a href="work-all.html">
+                        <div><img src="images/work.png" alt=""></div>
+                        <p>Work</p>
+                    </a></li>
+                    <li><a href="index.html#contact">
+                       <div><img src="images/contact.png" alt="メールの画像"></div>
+                       <p>Contact</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="flex-box">
+                    <div class="left-box">
+                        <div class="profile-box">
+                            <div><img src="images/profile.jpg" alt="渋谷茉由の画像"></div>
+                            <p>渋谷　茉由（シブヤ　マユ）</p>
+                            <p>北海道深川市出身</p>
+                            <div class="inner-flex">
+                                <p>1996年12月7日生まれ</p>
+                                <p>27歳</p>
+                            </div>
+                            <div class="inner-flex">
+                                <p>AB型</p>
+                                <p>いて座</p>
+                            </div>
+                            <p>深川西高等学校を卒業後、大学へ進学の為札幌へ。北海学園大学を卒業後、不動産会社へ入社し、4年4カ月勤め退職。大学生時代から興味のあったWEB業界を目指し、職業訓練を受講。</p>
+                        </div>
+                        <div class="soft-box">
+                            <h2>使用可能ソフト</h2>
+                            <ul>
+                                <li>Word</li>
+                                <li>Excel</li>
+                                <li>PowerPoint</li>
+                                <li>illustrator</li>
+                                <li>Photoshop</li>
+                                <li>Visual Studio Code</li>
+                            </ul>
+                        </div>
+                        <div class="style-box">
+                        <h2>得意の制作スタイル</h2>
+                        <p>　お手本を真似して制作するのが得意です。少しのずれもない様、細かく確認・調整し作成することができます。
+　今回のポートフォリオサイトに関しましては、デザインからすべて自分で考え制作しました。誰とも被らず、遊び心を忘れず自由に、新しいものにどんどん挑戦・成長していきたいという意味を込めました。雲と風船で自由・遊び心を、線・波線で挑戦・成長を、カラーでは青・赤・緑・黄をページごとにメインで使用し、それぞれ自由・挑戦・成長・楽しさを表現しました。</p>
+                        </div>
+                    </div>
+                    <div class="rigth-box">
+                        <div class="rigth-box-top">
+                            <h2>考え・目標</h2>
+                            <p>私は、仕事・プライベートともにとても重要で大事にしたいと考えています。
+将来を後悔をしないために、<span class="marker">「遊ぶときは全力で遊ぶ」</span><span class="marker">「勉強するときは全力で勉強する」</span>
+どんなことも<span class="marker">手を抜かずに全力にやる</span>ことを意識して生活しているからです。
+
+その中でも仕事は、人生の中でも長い時間も占めるものです。
+その為、人のためになり<span class="markertest scrollmarker">やりがいのあること</span>、
+少しでも自分自身が<span class="marker">成長できること</span>、自分が<span class="marker">やりたいと思ったこと</span>を
+仕事にしたいと思っています。
+また、「学生」という勉強をしなければならない義務教育は終わっていますが、
+<span class="marker">人生はずっと勉強</span>だと思っていて、勉強をし続け成長し続けたいと考えています。
+
+将来的には、デザインからディレクション、コーディングまで
+<span class="marker">幅広くできるようになりたい</span>と思っています。 
+また、動画の作成・プログラミング・figma・写真撮影、加工等も
+少しずつ勉強していく予定です。
+現時点では業界未経験の為、基礎的な知識を積み、
+またたくさんの経験をして成長していきたいです。
+</p>
+                        </div>
+                        <div class="rigth-box-bottom">
+                            <h2>好きなもの・趣味</h2>
+                            <div class="rigth-bottom-flex">
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/camera.png" alt="カメラの画像"></div>
+                                    <p>カメラ</p>
+                                    <p>思い出</p>
+                                    <div><img src="images/camera.jpg" alt="雪明りの画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/shoes.png" alt="靴の画像"></div>
+                                    <p>ランニング</p>
+                                    <p>風が最高</p>
+                                    <div><img src="images/run.jpg" alt="北海道マラソンのメダルの画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/backpack.png" alt="リュックの画像"></div>
+                                    <p>登山</p>
+                                    <p>大自然</p>
+                                    <div><img src="images/mountain.jpg" alt="旭岳の画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/carry.png" alt="キャリーバックの画像"></div>
+                                    <p>旅行</p>
+                                    <p>非日常</p>
+                                    <div><img src="images/trip.jpg" alt="チームラボの画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/shrine.png" alt="鳥居の画像"></div>
+                                    <p>御朱印</p>
+                                    <p>記録</p>
+                                    <div><img src="images/shrine.jpg" alt="御朱印の画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/wear.png" alt="スポーツウェアの画像"></div>
+                                    <p>ジム</p>
+                                    <p>心身の健康</p>
+                                    <div><img src="images/nas.jpg" alt="スポーツジムの会員証の画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/chocolate.png" alt="チョコレートの画像"></div>
+                                    <p>チョコレート</p>
+                                    <p>幸せ</p>
+                                    <div><img src="images/chocolate.jpg" alt="チョコまみれの画像"></div>
+                                </div>
+                                <div class="rigth-bottom-parent">
+                                    <div><img src="images/cheese.png" alt="チーズの画像"></div>
+                                    <p>チーズ</p>
+                                    <p>なんにでも◎</p>
+                                    <div><img src="images/cheese.jpg" alt="チーズインチーズオンハンバーグの画像"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-box">
+                            <div><img src="images/bear.png" alt="熊の画像"></div>
+                            <div><img src="images/speech.jpg" alt="吹き出しの画像"></div>
+                            <p>今年は・・・
+札幌から深川まで100km歩き
+Premiere Proの勉強
+　　　　　　　　　　　etc</p>
+                        </div>
+                    </div>
+                </div>
+                <h2>特徴・長所</h2>
+                        <div class="rigth-lste-flex">
+                            <div class="rigth-child">
+                                <h3>継続力・忍耐力</h3>
+                                <ul>
+                                    <li>バドミントン　15年</li>
+                                    <li>ストレッチ　12年</li>
+                                    <li>日記　9年</li>
+                                    <li>週に2.3回のジム</li>
+                                </ul>
+                            </div>
+                            <div class="rigth-child">
+                                <h3>好奇心旺盛・行動力</h3>
+                                <ul>
+                                    <li>取得資格10個以上</li>
+                                    <li>バンジージャンプ</li>
+                                    <li>短期留学</li>
+                                    <li>アルバイト含む職種経験10個以上</li>
+                                    <li>富士山登頂</li>
+                                    <li>スキューバダイビング</li>
+                                    <li>フルマラソン</li>
+                                    <li>函館までヒッチハイク</li>
+                                    <li>藻岩山日の出＆8時間歩き</li>
+                                    <li>真冬にBBQ＆ファミリアアイス</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    
+                
+            </section>
+        </main>
+    
+                
+
+            <footer>
+                <p><small>&copy;Shibuya Mayu</small></p>
+                <div><a href="#top"><img src="images/about-top-return.png" alt="風船の画像"></a></div>
+            </footer>
+            </footer>
+    </body>

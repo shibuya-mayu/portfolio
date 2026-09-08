@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>北海道深川市The Official Web Site of Fukagawa sity</title>
+        <meta name="keywords" content="北海道、深川市、市役所、">
+        <meta name="discription" content="北海道深川市は、市民のみなさんの知恵と力をいただきながら、新しい時代にふさわしいまちづくり「豊かな自然と　暮らしが調和した　田園都市　ふかがわ」の実現に向けて取り組みを進めています">
+        <link rel="stylesheet" href="css/life.css">
+        <link rel="icon" href="images/favicon.ico">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+        <script>
+
+            $(function() {
+                var showFlag = false;
+                var topBtn = $('#page-top');
+                topBtn.css('bottom', '-100px');
+                var showFlag = false;
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 300) {
+                        if (showFlag == false) {
+                            showFlag = true;
+                            topBtn.stop().animate({'bottom' : '20px'}, 200);
+                            /*この200は0.2秒で要素が出てくるということ*/
+                        }
+                    } else {
+                        if (showFlag) {
+                            showFlag = false;
+                            topBtn.stop().animate({'bottom' : '-100px'}, 200);
+                        }
+                    }
+                });
+                //スクロールしてトップ
+                topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);//0.5かけて戻る
+                    return false;
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <div id="page-top"><img src="images/top-link.svg" alt="矢印の画像"></div>
+            <div class="header-parent">
+                    <h1><a href="index.html"><img src="images/logo1.svg" alt="北海道深川市"></a></h1>
+                <!--<div class="header-child1">
+                    <p>文字サイズ</p>
+                    <p>大</p>
+                    <p>小</p>
+                    <p>背景</p>
+                    <p>黒</p>
+                    <p>白</p>
+                    <p>リセット</p>
+                </div>
+                <div class="header-child2">
+                    <p>サイト内検索</p>
+                    <div><img src="images/google.png" alt="google"></div>
+                    <p>検索</p>
+                </div>
+                <div class="header-child3">
+                    <p><a href="https://www.city.fukagawa.lg.jp/cms/info/gm9h2g000000nklo.html">🌐language＞</a></p>
+                </div>-->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="" class="nav-title">防災・防犯・緊急</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">防災・防犯・緊急トップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">当番医</a></p>
+                                <p><a href="">防災・防犯</a></p>
+                                <p><a href="">消防・救急</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="life.html" class="nav-title">暮らし・手続き</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="life.html">暮らし・手続きトップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">戸籍・住民票・印鑑</a></p>
+                                <p><a href="">助成・手当</a></p>
+                                <p><a href="">ふるさと納税</a></p>
+                                <p><a href="">税金</a></p>
+                                <p><a href="">引越し・住まい</a></p>
+                                <p><a href="">市民協働・コミュニティ</a></p>
+                                <p><a href="">年金</a></p>
+                                <p><a href="">水道・環境・ごみ</a></p>
+                                <p><a href="">各種相談</a></p>
+                                <p><a href="">生活支援</a></p>
+                                <p><a href="">移住・定住</a></p>
+                            </div>
+                        </div>
+                    </li>  
+                    <li><a href="" class="nav-title">子育て・教育</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">子育て・教育トップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">出産・子育て</a></p>
+                                <p><a href="">学校・教育</a></p>
+                                <p><a href="">各種相談</a></p>
+                                <p><a href="">健康</a></p>
+                                <p><a href="">生活支援</a></p>
+                                <p><a href="">医療</a></p>
+                                <p><a href="">助成・手当</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class="nav-title">健康・福祉</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">健康・福祉トップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">健康</a></p>
+                                <p><a href="">生活支援</a></p>
+                                <p><a href="">各種相談</a></p>
+                                <p><a href="">医療</a></p>
+                                <p><a href="">助成・手当</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class="nav-title">観光・文化・スポーツ</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">観光・文化・スポーツトップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">観光</a></p>
+                                <p><a href="">文化・スポーツ・生涯学習</a></p>
+                                <p><a href="">公共施設</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class="nav-title">産業・ビジネス</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">産業・ビジネストップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">農林業</a></p>
+                                <p><a href="">入札・指定管理者</a></p>
+                                <p><a href="">事業者向各種計画・届出</a></p>
+                                <p><a href="">商工業</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="" class="nav-title">市政情報</a>
+                        <div class="hover-list">
+                            <p class="p-title"><a href="">市政情報トップ</a></p>
+                            <div class="hover-flex">
+                                <p><a href="">市長室</a></p>
+                                <p><a href="">広報・広聴</a></p>
+                                <p><a href="">公共施設</a></p>
+                                <p><a href="">深川市の概要</a></p>
+                                <p><a href="">姉妹都市・国際交流</a></p>
+                                <p><a href="">市政情報</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+        <main>
+        <section>
+            <div class="section-parent">
+                <div class="section-child1">
+                    <div class="section-inner1">
+                        <p><a href="index.html">ホーム</a></p>
+                        <p>>暮らし・手続き</p>
+                    </div>
+                    <div class="section-inner2"><h2>暮らし・手続き</h2></div>
+                    <div class="section-inner3">
+                        <p class="section-inner3-3">ページ内目次</p>
+                            <div class="section-inner3-1">
+                                <a href="#coseki"><p>戸籍・住民票・印鑑</p></a>
+                                <a href="#zeikin"><p>税金</p></a>
+                                <a href="#nennkin"><p>年金</p></a>
+                                <a href="#seikatu"><p>生活支援</p></a>
+                                <a href="#teate"><p>助成・手当</p></a>
+                                <a href="#sumai"><p>引越し・住まい</p></a>
+                                <a href="#suidou"><p>水道・環境・ごみ</p></a>
+                                <a href="#izyuu"><p>移住・定住</p></a>
+                                <a href="#hurusato"><p>ふるさと納税</p></a>
+                                <a href="#siminn"><p>市民協働・コミュニティ</p></a>
+                                <a href="#soudan"><p>各種相談</p></a>
+                            </div>
+                    </div>
+                    <p class="section-inner4" id="coseki">戸籍・住民票・印鑑</p>
+                    <div class="section-child5">
+                        <div>
+                            <p><a href="">戸籍の届</a></p>
+                            <p><a href="">住民異動の届</a></p>
+                            <p><a href="">印鑑登録</a></p>
+                        </div>
+                        <div>
+                            <p><a href="">いろいろな証明</a></p>
+                            <p><a href="">住基ネット</a></p>
+                            <p><a href="">その他</a></p>
+                        </div>
+                    </div>
+                    <p class="section-inner4" id="zeikin">税金</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">市道民税</a></p>
+                                <p><a href="">法人市民税</a></p>
+                                <p><a href="">固定資産税</a></p>
+                                <p><a href="">軽自動車税</a></p>
+                                <p><a href="">国民健康保険税</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">その他の市税</a></p>
+                                <p><a href="">税制改正</a></p>
+                                <p><a href="">納税</a></p>
+                                <p><a href="">市税の証明</a></p>
+                                <p><a href="">その他税情報</a></p>
+                            </div>
+                        </div>
+                        <p class="section-inner4" id="nennkin">年金</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">国民年金</a></p>
+                                <p><a href="">農業者年金</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">年金の制度</a></p>
+                            </div>
+                        </div>    
+                        <p class="section-inner4" id="seikatu">生活支援</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">生活保護</a></p>
+                                <p><a href="">支援</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">ひとり親・母子</a></p>
+                                <p><a href="">相談</a></p>
+                            </div>
+                        </div>  
+                        <p class="section-inner4" id="teate">助成・手当</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">子育て・教育</a></p>
+                                <p><a href="">健康・医療</a></p>
+                                <p><a href="">生活・暮らし・環境</a></p>
+                                <p><a href="">高齢の方・障害のある方</a></p>
+                                <p><a href="">除雪・道路</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">お仕事・お住まい</a></p>
+                                <p><a href="">まちづくり・市民活動</a></p>
+                                <p><a href="">文化・スポーツ</a></p>
+                                <p><a href="">事業者の皆さんへ</a></p>
+                            </div>
+                        </div>
+                        <p class="section-inner4" id="sumai">引越・住まい</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">市内転居</a></p>
+                                <p><a href="">転出</a></p>
+                                <p><a href="">市営住宅</a></p>
+                                <p><a href="">住まいの知識</a></p>
+                                <p><a href="">空き家情報</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">除排雪</a></p>
+                                <p><a href="">道路・河川</a></p>
+                                <p><a href="">公共交通</a></p>
+                                <p><a href="">その他</a></p>
+                            </div>
+                        </div>   
+                        <p class="section-inner4" id="suidou">水道・環境・ごみ</p>
+                        <div class="section-child5">
+                            <div>
+                                <p><a href="">水道</a></p>
+                                <p><a href="">下水道</a></p>
+                                <p><a href="">くみ取り</a></p>
+                                <p><a href="">ごみとリサイクル</a></p>
+                            </div>
+                            <div>
+                                <p><a href="">環境</a></p>
+                                <p><a href="">ペット</a></p>
+                                <p><a href="">お墓</a></p>
+                            </div>
+                        </div>
+                        <p class="section-inner4" id="izyuu">移住・定住</p>
+                            <div class="section-child5">
+                                <p class="section-child5-1"><a href="">移住・定住</a></p>
+                            </div> 
+                        <p class="section-inner4" id="hurusato">ふるさと納税</p>
+                            <div class="section-child5">
+                                <p class="section-child5-1"><a href="">ふるさと納税</a></p>
+                            </div> 
+                        <p class="section-inner4" id="siminn">市民協働・コミュニティ</p>
+                            <div class="section-child5">
+                                <div>
+                                    <p><a href="">広聴・行政相談</a></p>
+                                    <p><a href="">団体・地域活動</a></p>
+                                </div>
+                                <div>
+                                    <p><a href="">市民協働</a></p>
+                                    <p><a href="">農業交流</a></p>
+                                </div>
+                            </div>
+                            <p class="section-inner4" id="soudan">各種相談</p>
+                            <div class="section-child6">
+                                <div>
+                                    <p><a href="">行政について</a></p>
+                                    <p><a href="">税と年金</a></p>
+                                    <p><a href="">女性・母子</a></p>
+                                    <p><a href="">子ども</a></p>
+                                </div>
+                                <div>
+                                    <p><a href="">心とからだ</a></p>
+                                    <p><a href="">その他相談</a></p>
+                                    <p><a href="">就職・退職</a></p>
+                                </div>
+                            </div>        
+                </div>
+                <div class="section-child2">
+                    <div class="section-inner5">
+                            <p class="section-inner5-1">注目情報</p>
+                            <div class="section-child3">
+                                <div class="section-inner5-2">
+                                    <p><a href="">2024年1月16日</a></p>
+                                    <p class="yellow"><a href="">ピックアップ</a></p>
+                                </div>
+                                <p class="section-inner5-3"><a href="">令和６年能登半島地震災害義援金受付について</a></p>
+                            </div>
+                            <div class="section-child3">
+                                <div class="section-inner5-2">
+                                <p><a href="">2024年2月7日</a></p>
+                                <p class="purple"><a href="">募集</a></p>
+                                </div>
+                                <p class="section-inner5-3"><a href="">深川市職員(言語聴覚士)募集</a></p>
+                            </div>
+                            <div class="section-child3">
+                                <div class="section-inner5-2">
+                                    <p><a href="">2024年2月5日</a></p>
+                                    <p class="gray"><a href="">お知らせ</a></p>
+                                </div>
+                                <p class="section-inner5-3"><a href="">会計年度任用職員募集(学習指導専門員)</a></p>
+                            </div>
+                            <div class="section-child3">
+                                <div class="section-inner5-2">
+                                    <p><a href="">2024年2月2日</a></p>
+                                    <p class="gray"><a href="">お知らせ</a></p>
+                                </div>
+                                <p class="section-inner5-3"><a href="">子育て支援アプリ「ふかすくナビ」をリリースしました！</a></p>
+                            </div>
+                            <div class="section-child4">
+                                <div class="section-inner5-2">
+                                    <p><a href="">2024年2月1日</a></p>
+                                    <p class="gray"><a href="">お知らせ</a></p>
+                                </div>
+                                <p class="section-inner5-3"><a href="">粗大ごみ収集の電子申込みを試験的に実施します</a></p>
+                            </div>
+                        </div>
+
+                        <div class="section-inner6">
+                                <p class="section-title6">おすすめ情報</p>
+                                <p><a href="">企業立地のご案内</a></p>
+                                <p><a href="">ふるさと納税</a></p>
+                                <p><a href="">これぞ！ふかがわ名物</a></p>
+                        </div>
+
+                        <div class="section-inner7">
+                            <p class="section-title6">深川市について</p>
+                            <div class="section-inner7-1">
+                                <p><a href=""><img src="images/life-img1.jpg" alt="市長さんの写真"></a></p>
+                                <p><a href="">ようこそ市長室へ</a></p>
+                            </div>
+                            <div class="section-inner7-1">
+                                <p><a href=""><img src="images/life-img2.jpg" alt="稲の写真"></a></p>
+                                <p><a href="">深川市のあらまし</a></p>
+                            </div>
+                            <p class="section-inner7-2">お役立ち情報</p>
+                            <div class="section-inner7-3">
+                            <p><a href="">深川市の条例や規則(別サイト)</a></p>
+                            <p><a href="">パブリックコメント</a></p>
+                            <p><a href="">当番医</a></p>
+                            <p><a href="">職員採用情報</a></p>
+                            <p><a href="">市議会会議録検索(別サイト)</a></p>
+                            <p><a href="">市立図書館蔵書検索(別サイト)</a></p>
+                            <p><a href="">各種相談</a></p>
+                            <p><a href="">助成・手当</a></p>
+                            <p><a href="">電子申請(外部サイト)</a></p>
+                            <p><a href="">市内学校(小・中学校、高校、大学など)</a></p>
+                            </div>
+                        </div>
+                        <p class="section-img"><a href=""><img src="images/life-img3.jpg" alt="花火の写真"></a></p>
+                        <p class="section-img"><a href=""><img src="images/life-img4.jpg" alt="会議室の写真"></a></p>
+                        <p class="section-img"><a href=""><img src="images/life-img5.jpg" alt="ふかがわ暮らしの写真"></a></p>
+                        <p class="section-img"><a href=""><img src="images/life-img6.png" alt="深ナビの写真"></a></p>
+
+                        <div>
+                        <p><a href="https://www.facebook.com/fukagawa.kouhou"></a></p>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">サイトマップ</a></li>
+                    <li><a href="">サイトについて</a></li>
+                    <li><a href="">個人情報の取り扱い</a></li>
+                    <li><a href="">著作権について</a></li>
+                    <li><a href="">リンクについて</a></li>
+                    <li><a href="">関連リンク</a></li>
+                    <li><a href="">ウェブアクセシビリティについて</a></li>
+                    <li><a href="">免責事項</a></li>
+                </ul>
+            </div>
+            <div class="footer-img">
+                <img src="images/footer.jpeg" alt="街の写真">
+            </div>
+            <div class="footer-parent">
+            <div class="footer-box1">
+                <div class="address-box">
+                    <p>深川市役所</p>
+                    <address>
+                        〒074-8650北海道深川市2条17番17号<br>
+                        電話：0164-26-2228 (代表)<br>
+                        ファクシミリ：0164-22-8134 (代表)
+                    </address>
+                    <p>開庁時間：平日 午前8時45分から午後5時15分まで (12月29日から1月3日までを除く)</p>
+                </div>
+                <div class="footer-box2">
+                    <ul class="footer-child1">
+                        <li class=><a href="">組織から探す</a></li>
+                        <li class=><a href="">市役所電話番号表</a></li>
+                        <li class=><a href="">庁舎フロアマップ</a></li>
+                    </ul>
+                    <ul class="footer-child2">
+                        <li><a href="">休日夜間の窓口対応</a></li>
+                        <li><a href="">深川市へのアクセス</a></li>
+                        <li><a href="">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright"><small>&copy;1996 北海道深川市 All rights reserved.</small></p>
+            </div>
+        </footer>
+    </body>

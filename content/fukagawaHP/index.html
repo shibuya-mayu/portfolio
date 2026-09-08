@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>北海道深川市The Official Web Site of Fukagawa sity</title>
+        <meta name="keywords" content="北海道、深川市、市役所、">
+        <meta name="discription" content="北海道深川市は、市民のみなさんの知恵と力をいただきながら、新しい時代にふさわしいまちづくり「豊かな自然と　暮らしが調和した　田園都市　ふかがわ」の実現に向けて取り組みを進めています">
+        <link rel="stylesheet" href="css/swiper-bundle.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+        <link rel="stylesheet" href="css/slick.css" type="text/css">
+        <link rel="icon" href="images/favicon.ico">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+
+        <script src="js/swiper-bundle.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/slick.js" type="text/javascript"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+        <script>
+
+            $(function() {
+                var showFlag = false;
+                var topBtn = $('#page-top');
+                topBtn.css('bottom', '-100px');
+                var showFlag = false;
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 300) {
+                        if (showFlag == false) {
+                            showFlag = true;
+                            topBtn.stop().animate({'bottom' : '20px'}, 200);
+                            /*この200は0.2秒で要素が出てくるということ*/
+                        }
+                    } else {
+                        if (showFlag) {
+                            showFlag = false;
+                            topBtn.stop().animate({'bottom' : '-100px'}, 200);
+                        }
+                    }
+                });
+                //スクロールしてトップ
+                topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);//0.5かけて戻る
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            $(function(){
+                $('.tab_box .tab_btn').click(function() {
+                    var index = $('.tab_box .tab_btn').index(this);
+                    $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
+                    $(this).addClass('active');
+                    $('.tab_box .tab_panel').eq(index).addClass('active');
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            $(function(){
+            $('.single-item').slick({
+            accessibility: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            dots: true,
+            fade: true,
+            slidesPerRow: 1,
+            });
+            });
+        </script>
+
+
+    </head>
+<body>
+    <header>
+        <div id="page-top"><img src="images/top-link.svg" alt="矢印の画像"></div>
+        <div class="header-parent">
+                <h1><a href="index.html"><img src="images/logo1.svg" alt="北海道深川市"></a></h1>
+            <!--<div class="header-child1">
+                <p>文字サイズ</p>
+                <p>大</p>
+                <p>小</p>
+                <p>背景</p>
+                <p>黒</p>
+                <p>白</p>
+                <p>リセット</p>
+            </div>
+            <div class="header-child2">
+                <p>サイト内検索</p>
+                <div><img src="images/google.png" alt="google"></div>
+                <p>検索</p>
+            </div>
+            <div class="header-child3">
+                <p><a href="https://www.city.fukagawa.lg.jp/cms/info/gm9h2g000000nklo.html">🌐language＞</a></p>
+            </div>-->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="" class="nav-title">防災・防犯・緊急</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">防災・防犯・緊急トップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">当番医</a></p>
+                            <p><a href="">防災・防犯</a></p>
+                            <p><a href="">消防・救急</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="life.html" class="nav-title">暮らし・手続き</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="life.html">暮らし・手続きトップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">戸籍・住民票・印鑑</a></p>
+                            <p><a href="">助成・手当</a></p>
+                            <p><a href="">ふるさと納税</a></p>
+                            <p><a href="">税金</a></p>
+                            <p><a href="">引越し・住まい</a></p>
+                            <p><a href="">市民協働・コミュニティ</a></p>
+                            <p><a href="">年金</a></p>
+                            <p><a href="">水道・環境・ごみ</a></p>
+                            <p><a href="">各種相談</a></p>
+                            <p><a href="">生活支援</a></p>
+                            <p><a href="">移住・定住</a></p>
+                        </div>
+                    </div>
+                </li>  
+                <li><a href="" class="nav-title">子育て・教育</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">子育て・教育トップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">出産・子育て</a></p>
+                            <p><a href="">学校・教育</a></p>
+                            <p><a href="">各種相談</a></p>
+                            <p><a href="">健康</a></p>
+                            <p><a href="">生活支援</a></p>
+                            <p><a href="">医療</a></p>
+                            <p><a href="">助成・手当</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" class="nav-title">健康・福祉</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">健康・福祉トップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">健康</a></p>
+                            <p><a href="">生活支援</a></p>
+                            <p><a href="">各種相談</a></p>
+                            <p><a href="">医療</a></p>
+                            <p><a href="">助成・手当</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" class="nav-title">観光・文化・スポーツ</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">観光・文化・スポーツトップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">観光</a></p>
+                            <p><a href="">文化・スポーツ・生涯学習</a></p>
+                            <p><a href="">公共施設</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" class="nav-title">産業・ビジネス</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">産業・ビジネストップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">農林業</a></p>
+                            <p><a href="">入札・指定管理者</a></p>
+                            <p><a href="">事業者向各種計画・届出</a></p>
+                            <p><a href="">商工業</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" class="nav-title">市政情報</a>
+                    <div class="hover-list">
+                        <p class="p-title"><a href="">市政情報トップ</a></p>
+                        <div class="hover-flex">
+                            <p><a href="">市長室</a></p>
+                            <p><a href="">広報・広聴</a></p>
+                            <p><a href="">公共施設</a></p>
+                            <p><a href="">深川市の概要</a></p>
+                            <p><a href="">姉妹都市・国際交流</a></p>
+                            <p><a href="">市政情報</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="section-boder">
+            <h2>重要なお知らせ</h2>
+            <div class="section-flexbox"><a href="">
+                <p>2023年12月27日</p>
+                <p>5歳から11歳の新型コロナワクチン接種について</p>
+            </a></div>
+            <div class="section-flexbox"><a href="">
+                <p>2023年12月27日</p>
+                <p>乳幼児の新型コロナワクチン接種について</p>
+            </a></div>
+            <div class="section-flexbox"><a href="">
+                <p>2023年12月27日</p>
+                <p>令和5年度秋開始接種について</p>
+            </a></div>
+        </div>
+
+        <div class="movie-box">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/section1.jpg" alt="ふくすかナビの写真">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/section2.png" alt="ふるさと納税の画像">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/section3.jpg" alt="line友達募集中の画像">
+                    </a></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+    </section>
+    <section class="section4">
+        <h4>お知らせ</h4>
+        <div class="section3-child">
+            <div class="tab_box">
+                <div class="btn_area">
+                        <p class="tab_btn active">注目情報</p>
+                        <p class="tab_btn">新着情報</p>
+                        <p class="tab_btn">イベント</p>
+                </div>
+                <div class="panel_area">
+                    <div class="tab_panel active">
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月18日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>深川地域消費者センター</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月16日</time>
+                            <p class="purple">募集</p>
+                            <p>会計年度任用職員(母子父子自立支援員)を募集します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月16日</time>
+                            <p class="purple">募集</p>
+                            <p>令和6年10月1日採用予定の深川市職員を募集します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月9日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>【企業版ふるさと納税】市外に本社のある企業の皆さまへ</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月5日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>介護職員養成研修（初任者研修・実務者研修）受講費用と介護福祉士国家試験受験に係る手数料を助成します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年3月26日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>エネルギー・食料品価格等物価高騰支援給付金「均等割のみ課税世帯（令和5年）」・「こども加算」について</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年3月26日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>深川市パートナーシップ宣誓制度について</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年3月26日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>会計年度任用職員（保健師または管理栄養士）を募集します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年3月25日</time>
+                            <p class="purple">募集</p>
+                            <p>会計年度任用職員 一般事務補助員（障がいのある方）を募集します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年2月15日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>深川市地域おこし協力隊（有害鳥獣支援員）を募集します</p>
+                        </a></div>
+                        <div class="tab-bottom-flex">
+                            <div><a href="">
+                                <i class="fa-solid fa-wifi"></i>
+                                <p>RSS</p>
+                            </a></div>
+                            <p class="button"><a href="">一覧を見る</a></p>
+                        </div>
+                    </div>
+                    <div class="tab_panel">
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月19日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>一般競争入札契約結果（4月17日）を掲載しました</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月18日</time>
+                            <p class="gray">お知らせ</p>
+                            <p><東京マラソン財団コラボイベント>FUKAGAWA HALF＆ENJOY RUN 2024会計年度任用職員 一般事務補助員（障がいのある方）を募集します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月18日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>アートホール東洲館ギャラリー情報更新のお知らせ</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月17日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>検針票の誤りについて（4月17日・文光町の一部）</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月15日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>地域総合整備資金貸付（ふるさと融資）制度のご案内</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月15日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>狂犬病予防「集合注射」を実施します</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月15日</time>
+                            <p class="blue">入札</p>
+                            <p>入札告示を更新しました</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月12日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>こどもまんなか応援サポーター宣言</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月10日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>市長動静（令和5年度）</p>
+                        </a></div>
+                        <div class="tab-flex-box"><a href="">
+                            <time>2024年4月10日</time>
+                            <p class="gray">お知らせ</p>
+                            <p>教育委員会会議（定例会・臨時会）</p>
+                        </a></div>
+                        <div class="tab-bottom-flex">
+                            <div><a href="">
+                                <i class="fa-solid fa-wifi"></i>
+                                <p>RSS</p>
+                            </a></div>
+                            <p class="button"><a href="">一覧を見る</a></p>
+                        </div>
+                    </div>
+                    <div class="tab_panel">
+                        <div class="tab-flex-box3"><a href="">
+                            <div>
+                                <p>【2024年04月17日（水曜日）開催】</p>
+                                <p>[2024年04月29日（月曜日）まで]</p>
+                            </div>
+                            <p>東洲館4月後期展覧会</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年04月24日（水曜日）開催】</p>
+                            <p>離乳食教室　ファースト（3～5か月児）</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年04月26日（金曜日）開催】</p>
+                            <p>夜間納税相談</p>
+                        </a></div>
+                        <div class="tab-flex-box3"><a href="">
+                            <div>
+                                <p>【2024年04月29日（月曜日）開催】</p>
+                                <p>[2024年05月06日（月曜日）まで]</p>
+                            </div>
+                            <p>桜山公園 桜ウィーク</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年05月10日（金曜日）開催】</p>
+                            <p>定例行政相談所</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年05月16日（木曜日）開催】</p>
+                            <p>夜間納税相談</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年05月17日（金曜日）開催】</p>
+                            <p>離乳食教室　ステップアップ（7～8か月児）</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年05月27日（月曜日）開催】</p>
+                            <p>夜間納税相談</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年06月07日（金曜日）開催】</p>
+                            <p>定例行政相談所</p>
+                        </a></div>
+                        <div class="tab-flex-box2"><a href="">
+                            <p>【2024年06月17日（月曜日）開催】</p>
+                            <p>夜間納税相談</p>
+                        </a></div>
+                        <div class="tab-bottom-flex">
+                            <p class="button"><a href="">カレンダーを見る</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section3-rigth">
+                <h3>発信 ! まちのできごと</h3>
+                    <div class="container">
+                        <div class="single-item">
+                            <div class="item-box"><a href="">
+                                <img src="images/knees.jpg" alt="膝痛み予防教室の画像">
+                                <p>膝痛み予防教室</p>
+                            </a></div>
+                            <div class="item-box"><a href="">
+                                <img src="images/nurse.jpg" alt="入学式の画像">
+                                <p>第54回深川市立高等看護学院入学式</p>
+                            </a></div>
+                            <div class="item-box"><a href="">
+                                <img src="images/greencup.jpg" alt="優勝報告会の画像">
+                                <p>多賀グリーンカップ争奪戦第20回学童軟式野球三年生大会優勝報告</p>
+                            </a></div>
+                            <div class="item-box"><a href="">
+                                <img src="images/mainavi.jpg" alt="子どもと男の人の画像">
+                                <p>マイナビDANCEL 2024 FINAL</p>
+                            </a></div>
+                            <div class="item-box"><a href="">
+                                <img src="images/volleyball.jpg" alt="鳥居の画像">
+                                <p>アルテミス北海道バレーボール教室</p>
+                            </a></div>
+                        </div>
+                    </div>
+                    <p><a href="">発信 ! まちのできごと一覧</a></p>
+                    </div>
+                </div>
+    </section>
+
+    <section class="sedtion5">
+        <h4>おすすめ情報</h4>
+            <div class="section5-parent">
+                <div class="section5-child">
+                    <p><a href=""><img src="images/section5-1.png" alt="ふるさと納税の写真"></a></p>
+                    <p><a href="">企業版ふるさと納税</a></p>
+                </div>
+                <div class="section5-child">
+                    <p><a href=""><img src="images/section5-2.jpg" alt="北海道の写真"></a></p>
+                    <p><a href="">これぞ！ふかがわ名物</a></p>
+                </div>
+                <div class="section5-child">
+                    <p><a href=""><img src="images/section5-3.png" alt="田園と走る人の写真"></a></p>
+                    <p><a href="">合宿の里ふかがわ</a></p>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="section6">
+        <h5>深川市について</h5>
+            <div class="section6-parent">
+                <div class="section6-child1">
+                    <div class="section6-inner1">
+                        <div>
+                            <p><a href=""><img src="images/section6-1.jpg" alt="市長さんの写真"></a></p>
+                            <p><a href="">ようこそ市長室へ</a></p>
+                        </div>
+                        <div>
+                            <p><a href=""><img src="images/section6-2.jpg" alt="稲の写真"></a></p>
+                            <p><a href="">深川市のあらまし</a></p>
+                        </div>
+                    </div>
+                    <div class="section6-inner2">
+                        <div class="section6-inner2-1">お役立ち情報</div>
+                        <div class="section6-inner2-2">
+                            <p class="square"><a href="">深川市の条例や規則（別サイト）</a></p>
+                            <p><a href="">パブリックコメント</a></p>
+                            <p><a href="">当番医</a></p>
+                            <p><a href="">職員採用情報</a></p>
+                            <p class="square"><a href="">市議会会議録検索（別サイト）</a></p>
+                            <p class="square"><a href="">市立図書館蔵書検索（別サイト）</a></p>
+                            <p><a href="">各種相談</a></p>
+                            <p><a href="">助成・手当</a></p>
+                            <p class="square"><a href="">電子申請（外部サイト）</a></p>
+                            <p><a href="">市内学校（小・中学校、高校、大学など）</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section6-child2">
+                    <div class="section-inner3">広報ふかがわ</div>
+                        <div class="section6-inner3-1">
+                            <div class="section6-inner3-2">
+                            <p><a href="">広報ふかがわ2024年2月号</a></p>
+                            <ul>
+                                <li>FOCUSまちの話題</li>
+                                <li>地域おこし協力隊だより</li>
+                                <li>市長コラム、みんなの広場</li>
+                                <li>市役所からのおしらせ</li>
+                                <li>おでかけ情報</li>
+                                <li>ふれあい ! 親子広場</li>
+                                <li>当番医、各種相談</li>
+                                <li>ひとこと、ご厚志</li>
+                                <li>Photoレポ</li>
+                            </ul>
+                            </div> 
+                            <p class="section6-img3"><img src="images/section6-3.jpg" alt="広報ふかがわ2024年2月号の写真"></p>
+                        </div>
+                    <p class="section6-inner3-3"><a href="">広報バックナンバー</a></p>
+                </div>
+            </div>
+    </section>
+    <section class="section7">
+        <div class="section7-parent">
+            <div class="section7-child">
+                <div class="section7-inner1">
+                <h6>関連サイト</h6>
+                    <div class="section7-inner1-1">
+                        <p><a href=""><img src="images/section7-1.jpg" alt="花火写真"></a></p>
+                        <p><a href="">北海道ふかがわ観光サイト（別サイト）</a></p>
+                    </div>
+                    <div class="section7-inner1-1">
+                        <p><a href=""><img src="images/section7-2.jpg" alt="深川でくらす写真"></a></p> 
+                        <p><a href="">移住・定住のご案内（別サイト）</a></p>
+                    </div>
+                    <h6 class="section7-inner1-3">市内の主要施設</h6>
+                </div>
+                <div class="section7-inner2">
+                    <h6>関連サイト</h6>
+                    <div class="section7-inner1-1">
+                        <p><a href=""><img src="images/section7-3.jpg" alt="会議室の写真"></a></p>
+                        <p><a href="">深川市議会（別サイト）</a></p>
+                    </div>
+                    <div class="section7-inner1-1">
+                        <p><a href=""><img src="images/section7-4.png" alt="深ナビの写真"></a></p>
+                        <p><a href="">深ナビ</a></p>
+                    </div>
+                </div>
+            </div>
+                <div class="section7-facebook"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffukagawa.kouhou%2F%3Fref%3Dembed_page&tabs=timeline&width=480&height=430&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+        </div>  
+        <div class="section7-parent2">
+            <div class="section7-child2">
+                <div class="section7-inner3">
+                    <p><a href=""><img src="images/section7-2-1.jpg" alt="病院の写真"></a></p>
+                    <p><a href="">深川市立病院(別サイト)</a></p>
+                </div>
+                <div class="section7-inner3">
+                    <p><a href=""><img src="images/section7-2-2.jpg" alt="深川市立図書館の写真"></a></p>
+                    <p><a href="">深川市立図書館(別サイト)</a></p>
+                </div>
+                <div class="section7-inner3">
+                    <p><a href=""><img src="images/section7-2-3.jpg" alt="アグリ工房まあぶの写真"></a></p>
+                    <p><a href="">アグリ工房まあぶ(別サイト)</a></p>
+                </div>
+            </div>
+            <div class="section7-child3">
+                <div class="section7-inner4">
+                    <p><a href=""><img src="images/section7-2-4.jpg" alt="キャンプ場の写真"></a></p>
+                    <p><a href="">まあぶオートキャンプ場(別サイト)</a></p>
+                </div>
+                <div class="section7-inner4">
+                    <p><a href=""><img src="images/section7-2-5.jpg" alt="道の駅の写真"></a></p>
+                    <p><a href="">道の駅「ライスランドふかがわ」(別サイト)</a></p>
+                </div>
+                <div class="section7-inner4">
+                    <p><a href=""><img src="images/section7-2-6.jpg" alt="拓殖大学北海道短期大学のロゴ"></a></p>
+                    <p><a href="">拓殖大学北海道短期大学(外部サイト)</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="">サイトマップ</a></li>
+                <li><a href="">サイトについて</a></li>
+                <li><a href="">個人情報の取り扱い</a></li>
+                <li><a href="">著作権について</a></li>
+                <li><a href="">リンクについて</a></li>
+                <li><a href="">関連リンク</a></li>
+                <li><a href="">ウェブアクセシビリティについて</a></li>
+                <li><a href="">免責事項</a></li>
+            </ul>
+        </div>
+        <div class="footer-img">
+            <img src="images/footer.jpeg" alt="街の写真">
+        </div>
+        <div class="footer-parent">
+        <div class="footer-box1">
+            <div class="address-box">
+                <p>深川市役所</p>
+                <address>
+                    〒074-8650北海道深川市2条17番17号<br>
+                    電話：0164-26-2228 (代表)<br>
+                    ファクシミリ：0164-22-8134 (代表)
+                </address>
+                <p>開庁時間：平日 午前8時45分から午後5時15分まで (12月29日から1月3日までを除く)</p>
+            </div>
+            <div class="footer-box2">
+                <ul class="footer-child1">
+                    <li class=><a href="">組織から探す</a></li>
+                    <li class=><a href="">市役所電話番号表</a></li>
+                    <li class=><a href="">庁舎フロアマップ</a></li>
+                </ul>
+                <ul class="footer-child2">
+                    <li><a href="">休日夜間の窓口対応</a></li>
+                    <li><a href="">深川市へのアクセス</a></li>
+                    <li><a href="">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright"><small>&copy;1996 北海道深川市 All rights reserved.</small></p>
+        </div>
+    </footer>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true, //ループ表示
+        pagination: {
+        el: '.swiper-pagination', //ページネーションを表示する要素
+        clickable: true //ドットをクリックできるように
+        },
+        navigation: {
+        nextEl: '.swiper-button-next', //次へボタンを表示する要素
+        prevEl: '.swiper-button-prev', //前へボタンを表示する要素
+        },
+        autoplay: {
+        speed: 700 //自動再生のスピード
+        },
+        breakpoints: {
+        // when window width is >= 320px
+        768: {
+        slidesPerView: 1,
+        spaceBetween: 20
+        },
+        }
+        });
+        </script>
+</body>
+</html>

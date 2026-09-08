@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>楽たび</title>
+        <link rel="icon" href="images/icon.png">
+
+        
+        <link rel="stylesheet" href="css/swiper-bundle.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/swiper-bundle.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/slick.js"></script>
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+
+        <script>
+            $(function(){
+                $('.tab_box .tab_btn').click(function() {
+                    var index = $('.tab_box .tab_btn').index(this);
+                    $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
+                    $(this).addClass('active');
+                    $('.tab_box .tab_panel').eq(index).addClass('active');
+                });
+            });
+        </script>
+
+         <script>
+              $(function(){
+                 $('.tab_box1 .tab_btn1').click(function() {
+                    var index = $('.tab_box1 .tab_btn1').index(this);
+                    $('.tab_box1 .tab_btn1, .tab_box1 .tab_panel1').removeClass('active1');
+                    $(this).addClass('active');
+                    $('.tab_box1 .tab_panel1').eq(index).addClass('active1');
+                });
+             });
+        </script>
+
+            <script type="text/javascript">
+                $(function(){
+                $('.single-item').slick({
+                accessibility: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                fade: true,
+                slidesPerRow: 3,
+                responsive: [{
+                breakpoint: 549,
+                settings: {
+                slidesPerRow: 1,
+        }
+    }]
+                });
+                });
+            </script>
+
+        <script>
+
+    $(function() {
+        var showFlag = false;
+        var topBtn = $('#top-nav-scroll');
+        topBtn.css('top', '-100px');
+        var showFlag = false;
+        //スクロールが100に達したらボタン表示
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                if (showFlag == false) {
+                    showFlag = true;
+                    topBtn.stop().animate({'top' : '0px'}, 300);
+                    /*この200は0.2秒で要素が出てくるということ*/
+                }
+            } else {
+                if (showFlag) {
+                    showFlag = false;
+                    topBtn.stop().animate({'top' : '-100px'}, 300);
+                }
+            }
+        });
+        //スクロールしてトップ
+        topBtn.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);//0.5かけて戻る
+            return false;
+        });
+    });
+</script>
+
+<script>
+
+    $(function() {
+        var showFlag = false;
+        var topBtn = $('#page-top');
+        topBtn.css('bottom', '-150px');
+        var showFlag = false;
+        //スクロールが100に達したらボタン表示
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                if (showFlag == false) {
+                    showFlag = true;
+                    topBtn.stop().animate({'bottom' : '20px'}, 300);
+                    /*この200は0.2秒で要素が出てくるということ*/
+                }
+            } else {
+                if (showFlag) {
+                    showFlag = false;
+                    topBtn.stop().animate({'bottom' : '-150px'}, 300);
+                }
+            }
+        });
+        //スクロールしてトップ
+        topBtn.click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500);//0.5かけて戻る
+            return false;
+        });
+    });
+</script>
+
+        <!--トグルボタンが押されたときに、クラスを付与-->
+		<script type="text/javascript">
+			$(function() {
+				$('.Toggle1').click(function() {
+					$(this).toggleClass('active');
+
+					if ($(this).hasClass('active')) {
+						$('.NavMenu').addClass('active');//クラスを付与
+					} else {
+						$('.NavMenu').removeClass('active');//クラスを外す
+					}
+				});
+			});
+		</script>
+
+        <script type="text/javascript">
+            $(function() {
+            $('.ps-click').click(function() {
+                $(this).toggleClass('active2');
+            });
+            });
+        </script>
+
+        <script>
+            $(function(){
+        //をクリックで要素を表示
+        $('.ps-option1').click(function() {
+        $('.ps-optionBox1').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.ps-option2').click(function() {
+        $('.ps-optionBox2').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.ps-option3').click(function() {
+        $('.ps-optionBox3').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.ps-option4').click(function() {
+        $('.ps-optionBox4').toggle();
+        })
+        });
+        </script>
+
+        <script>
+           $(function(){
+      //をクリックで要素を表示
+      $('.option1').click(function() {
+      $('.optionBox1').toggle();
+      })
+      });
+
+        $(function(){
+      //をクリックで要素を表示
+      $('.option2').click(function() {
+      $('.optionBox2').toggle();
+      })
+      });
+
+      $(function(){
+      //をクリックで要素を表示
+      $('.option3').click(function() {
+      $('.optionBox3').toggle();
+      })
+      });
+
+      $(function(){
+      //をクリックで要素を表示
+      $('.option4').click(function() {
+      $('.optionBox4').toggle();
+      })
+      });
+
+      $(function(){
+        //をクリックで要素を表示
+        $('.option5').click(function() {
+        $('.optionBox5').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option6').click(function() {
+        $('.optionBox6').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option7').click(function() {
+        $('.optionBox7').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option8').click(function() {
+        $('.optionBox8').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option9').click(function() {
+        $('.optionBox9').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option10').click(function() {
+        $('.optionBox10').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option11').click(function() {
+        $('.optionBox11').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option12').click(function() {
+        $('.optionBox12').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option13').click(function() {
+        $('.optionBox13').toggle();
+        })
+        });
+
+        $(function(){
+        //をクリックで要素を表示
+        $('.option14').click(function() {
+        $('.optionBox14').toggle();
+        })
+        });
+      </script>
+
+
+        <script type="text/javascript">
+            $(function() {
+            $('.Toggle').click(function() {
+                $(this).toggleClass('active');
+            });
+            });
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" media="screen and (min-width:900px)">
+
+        <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/smart.css" media="screen and (max-width:549px)">
+
+
+    </head>
+<body>
+    <header>
+        <h1 id="top"><a href="index.html"><img src="images/logo2.svg" alt=""></a></h1>
+  <nav class="NavMenu">
+    <ul>
+        <li><div class="ps-click ps-option1"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav1.png" alt=""></div>
+            <p class="p-title">国内旅行</p>
+        </a></div>
+        <div class="li-hover ps-optionBox1">
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-3.png" alt=""></div>
+                    <p>国内ツアー・パック(飛行機・JR)</p>
+                </div>
+                <p>JR・飛行機と宿泊プランを自由に組み合わせられる国内旅行</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-2.png" alt=""></div>
+                    <p>国内添乗員同行ツアー</p>
+                </div>
+                <p>添乗員がご案内する季節・テーマに沿ったツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-3.png" alt=""></div>
+                    <p>国内宿泊プラン(旅館・ホテル)</p>
+                </div>
+                <p>国内のホテル・旅館・宿の宿泊予約</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-4.png" alt=""></div>
+                    <p>日帰り新幹線</p>
+                </div>
+                <p>往復または片道の日帰りJR・新幹線利用ツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-5.png" alt=""></div>
+                    <p>国内現地観光プラン</p>
+                </div>
+                <p>旅行先の観光プラン・観光チケットの予約</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-6.png" alt=""></div>
+                    <p>国内観光スポット</p>
+                </div>
+                <p>国内のおすすめ観光スポット</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-7.png" alt=""></div>
+                    <p>「旅物語」</p>
+                </div>
+                <p>添乗員付を中心とした多彩で心弾む旬の旅をおとどけ</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-8.png" alt=""></div>
+                    <p>「夢の休日」</p>
+                </div>
+                <p>日本各地をゆったり愉しむ上質な少人数ツアー</p>
+            </a></div>
+        </div>
+        </li>
+        <li><div class="ps-click ps-option2"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav2.png" alt=""></div>
+            <p class="p-title">海外旅行</p>
+        </a></div>
+        <div class="li-hover ps-optionBox2">
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-1.png" alt=""></div>
+                    <p>海外ツアー・パック</p>
+                </div>
+                <p>フライト・ホテル・現地プランをアレンジできるツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-2.png" alt=""></div>
+                    <p>海外添乗員同行ツアー</p>
+                </div>
+                <p>初めての行先でも安心の添乗員同行ツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-3.png" alt=""></div>
+                    <p>海外航空券</p>
+                </div>
+                <p>複数航空会社の空席をリアルタイムで一括検索</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-3.png" alt=""></div>
+                    <p>海外ホテル</p>
+                </div>
+                <p>世界57万軒のホテル予約</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-5.png" alt=""></div>
+                    <p>海外現地ツアー「MyBus」</p>
+                </div>
+                <p>海外現地での送迎・アクティビティ</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-6.png" alt=""></div>
+                    <p>ヨーロッパ宿泊付き周遊ツアー</p>
+                </div>
+                <p>ヨーロッパの名所めぐりを楽しめる日本語周遊観光バス</p>
+            </a></di>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-7.png" alt=""></div>
+                    <p>「旅物語」</p>
+                </div>
+                <p>添乗員付を中心とした多彩で心弾む旬の旅をおとどけ</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list1-8.png" alt=""></div>
+                    <p>「夢の休日」</p>
+                </div>
+                <p>贅沢に海外を楽しむ少人数ツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-9.png" alt=""></div>
+                    <p>「楽たびグランドツアー×心ゆく旅」</p>
+                </div>
+                <p>個人旅行のように自由でアットホームな添乗員同行ツアー</p>
+            </a></div>
+            <div class="li-parent"><a href="">
+                <div class="li-child">
+                    <div><img src="images/hover-list2-10.png" alt=""></div>
+                    <p>海外観光ガイド</p>
+                </div>
+                <p>海外旅行の渡航情報・観光名所・レストラン情報</p>
+            </a></div>
+
+        </div>
+        </li>
+        <li><div class="ps-click ps-option3"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav3.png" alt=""></div>
+            <p class="p-title">目的から旅を探す</p>
+        </a></div>
+        <div class="li-hover ps-optionBox3">
+            <div class="li-flex-box">
+                <div>
+                    <p><a href="">クルーズ</a></p>
+                    <p><a href="">ハネムーン</a></p>
+                    <p><a href="">美術鑑賞ツアー</a></p>
+                    <p><a href="">エンタメツアー</a></p>
+                    <p><a href="">スポーツする旅</a></p>
+                    <p><a href="">ふるさと納税旅行クーポン</a></p>
+                </div>
+                <div>
+                    <p><a href="">リゾートウエディング</a></p>
+                    <p><a href="">スポーツ観戦・参加ツアー</a></p>
+                    <p><a href="">音楽の旅　ライブ</a></p>
+                    <p><a href="">山旅・登山ツアー</a></p>
+                    <p><a href="">グループ旅行</a></p>
+                    <p><a href="">海外オーダーメイドの旅</a></p>
+                </div>
+            </div>
+        </div>
+        </li>
+        <li><div class="ps-click"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav4.png" alt=""></div>
+            <p class="p-title">遊び・体験</p>
+        </a></div>
+        </li>
+        <li><div class="ps-click"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav5.png" alt=""></div>
+            <p class="p-title">おすすめスポット</p>
+        </a></div>
+        </li>
+        <li><div class="ps-click ps-option4"><a class="li-relative" href="">
+            <div class="nav-img"><img src="images/nav6.png" alt=""></div>
+            <p class="p-title">旅行関連サービス</p>
+        </a></div>
+        <div class="li-hover li-hover5 ps-optionBox4">
+            <div class="li-flex-box">
+                <div>
+                    <p><a href="">旅行保険(国内)</a></p>
+                    <p><a href="">楽たびカード</a></p>
+                    <p><a href="">MONEY T GLOBAL</a></p>
+                    <p><a href="">トラベルローン</a></p>
+                </div>
+                <div>
+                    <p><a href="">旅行保険(海外)</a></p>
+                    <p><a href="">ギフト券</a></p>
+                    <p><a href="">旅行積立(たびたびバンク)</a></p>
+                    <p><a href="">ビザ申請代行・サポート</a></p>
+                </div>
+            </div>
+        </div>
+        </li>
+    </ul>
+</nav>
+                <div class="Toggle1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+</header>
+
+<!-- <div id="top-nav-scroll">
+        <div class="top-nav-scroll-flex">
+            <div class="top-nav-img"><a href=""><img src="images/logo2.svg" alt="ロゴ画像"></a></div>
+            <ul>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">国内旅行</p>
+                </a>
+                <div class="li-hover2">
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-3.png" alt=""></div>
+                            <p>国内ツアー・パック(飛行機・JR)</p>
+                        </div>
+                        <p>JR・飛行機と宿泊プランを自由に組み合わせられる国内旅行</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-2.png" alt=""></div>
+                            <p>国内添乗員同行ツアー</p>
+                        </div>
+                        <p>添乗員がご案内する季節・テーマに沿ったツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-3.png" alt=""></div>
+                            <p>国内宿泊プラン(旅館・ホテル)</p>
+                        </div>
+                        <p>国内のホテル・旅館・宿の宿泊予約</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-4.png" alt=""></div>
+                            <p>日帰り新幹線</p>
+                        </div>
+                        <p>往復または片道の日帰りJR・新幹線利用ツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-5.png" alt=""></div>
+                            <p>国内現地観光プラン</p>
+                        </div>
+                        <p>旅行先の観光プラン・観光チケットの予約</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-6.png" alt=""></div>
+                            <p>国内観光スポット</p>
+                        </div>
+                        <p>国内のおすすめ観光スポット</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-7.png" alt=""></div>
+                            <p>「旅物語」</p>
+                        </div>
+                        <p>添乗員付を中心とした多彩で心弾む旬の旅をおとどけ</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child">
+                            <div><img src="images/hover-list1-8.png" alt=""></div>
+                            <p>「夢の休日」</p>
+                        </div>
+                        <p>日本各地をゆったり愉しむ上質な少人数ツアー</p>
+                    </a></div>
+                </div>
+                </li>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">海外旅行</p>
+                </a>
+                <div class="li-hover2">
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-1.png" alt=""></div>
+                            <p>海外ツアー・パック</p>
+                        </div>
+                        <p>フライト・ホテル・現地プランをアレンジできるツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-2.png" alt=""></div>
+                            <p>海外添乗員同行ツアー</p>
+                        </div>
+                        <p>初めての行先でも安心の添乗員同行ツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-3.png" alt=""></div>
+                            <p>海外航空券</p>
+                        </div>
+                        <p>複数航空会社の空席をリアルタイムで一括検索</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-3.png" alt=""></div>
+                            <p>海外ホテル</p>
+                        </div>
+                        <p>世界57万軒のホテル予約</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-5.png" alt=""></div>
+                            <p>海外現地ツアー「MyBus」</p>
+                        </div>
+                        <p>海外現地での送迎・アクティビティ</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-6.png" alt=""></div>
+                            <p>ヨーロッパ宿泊付き周遊ツアー</p>
+                        </div>
+                        <p>ヨーロッパの名所めぐりを楽しめる日本語周遊観光バス</p>
+                    </a></di>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-7.png" alt=""></div>
+                            <p>「旅物語」</p>
+                        </div>
+                        <p>添乗員付を中心とした多彩で心弾む旬の旅をおとどけ</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list1-8.png" alt=""></div>
+                            <p>「夢の休日」</p>
+                        </div>
+                        <p>贅沢に海外を楽しむ少人数ツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-9.png" alt=""></div>
+                            <p>「楽たびグランドツアー×心ゆく旅」</p>
+                        </div>
+                        <p>個人旅行のように自由でアットホームな添乗員同行ツアー</p>
+                    </a></div>
+                    <div class="li-parent2"><a href="">
+                        <div class="li-child2">
+                            <div><img src="images/hover-list2-10.png" alt=""></div>
+                            <p>海外観光ガイド</p>
+                        </div>
+                        <p>海外旅行の渡航情報・観光名所・レストラン情報</p>
+                    </a></div>
+                </div>
+
+                </div>
+                </li>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">目的から旅を探す</p>
+                </a>
+                <div class="li-hover2">
+                    <div class="li-flex-box2">
+                        <div>
+                            <p><a href="">クルーズ</a></p>
+                            <p><a href="">ハネムーン</a></p>
+                            <p><a href="">美術鑑賞ツアー</a></p>
+                            <p><a href="">エンタメツアー</a></p>
+                            <p><a href="">スポーツする旅</a></p>
+                            <p><a href="">ふるさと納税旅行クーポン</a></p>
+                        </div>
+                        <div>
+                            <p><a href="">リゾートウエディング</a></p>
+                            <p><a href="">スポーツ観戦・参加ツアー</a></p>
+                            <p><a href="">音楽の旅　ライブ</a></p>
+                            <p><a href="">山旅・登山ツアー</a></p>
+                            <p><a href="">グループ旅行</a></p>
+                            <p><a href="">海外オーダーメイドの旅</a></p>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">遊び・体験</p>
+                </a>
+                </li>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">おすすめスポット</p>
+                </a>
+                </li>
+                <li><a class="li-relative2" href="">
+                    <p class="p-title2">旅行関連サービス</p>
+                </a>
+                <div class="li-hover2 li-hover5-2">
+                    <div class="li-flex-box2">
+                        <div>
+                            <p><a href="">旅行保険(国内)</a></p>
+                            <p><a href="">楽たびカード</a></p>
+                            <p><a href="">MONEY T GLOBAL</a></p>
+                            <p><a href="">トラベルローン</a></p>
+                        </div>
+                        <div>
+                            <p><a href="">旅行保険(海外)</a></p>
+                            <p><a href="">ギフト券</a></p>
+                            <p><a href="">旅行積立(たびたびバンク)</a></p>
+                            <p><a href="">ビザ申請代行・サポート</a></p>
+                        </div>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </div>-->  
+
+
+    <div class="orenge-box">
+        <div class="header-bottom">
+        <div class="tab_box">
+            <div class="btn_area">
+                <p class="tab_btn active">国内ホテル
+旅館・宿</p>
+                <p class="tab_btn">国内ツアー
+飛行機/JR</p>
+                <p class="tab_btn">海外ツアー</p>
+            </div>
+            
+            <div class="panel_area">
+               
+                <div class="tab_panel active">
+                    <form action="reserv.php" method="post">
+                        <div class="tab-position">
+                            <input class="search-window" type="taext" placeholder="入力してください">
+                            <p>宿泊地・ホテル・キーワード</p>
+                        </div>
+                        <p>エリアを複数指定する</p>
+                        <div class="tab-flex-box">
+                            <div class="tab-position">
+                                <input class="carender" type="taext" placeholder="日付未定-泊">
+                                <p>宿泊日・日数</p>
+                            </div>
+                            <div class="tab-position">
+                                <input class="hito" type="taext" placeholder="1部屋/おとな2名,こ…">
+                                <p>部屋数・人数</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-flex">
+                            <div>
+                                <input type="checkbox" name="eat" id="eat" value="夕食/朝食付き" >
+                                <p>夕食/朝食付き</p>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="eat" id="eat" value="朝食のみ" >
+                                <p>朝食のみ</p>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="eat" id="eat" value="夕食のみ" >
+                                <p>夕食のみ</p>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="eat" id="eat" value="食事なし" >
+                                <p>食事なし</p>
+                            </div>
+                        </div>
+                        <p>こだわり条件を指定する</p>
+                        <div class="car-box">
+                            <input type="checkbox" name="car"  value="レンタカーも合わせて検索する">
+                            <div><img src="images/car.png" alt="車の画像"></div>
+                            <p>レンタカーもあわせて検索する</p>
+                        </div>
+                        <input class="search" type="submit" value="検索する">
+                    </form>
+                    
+                </div>
+
+                <div class="tab_panel">
+                    <div class="tab_box1">
+                        <div class="btn_area1">
+                            <p class="tab_btn1 active1">飛行機＋
+ホテル・旅館</p>
+                            <p class="tab_btn1">新幹線・JR＋
+ホテル・旅館</p>
+                        </div>
+                        <div class="panel_area1">
+                            <div class="tab_panel1 active1">
+                                <form action="reserv.php" method="post">
+                                <div class="tab-flex-box">
+                                    <div class="tab-position">
+                                        <input class="pin" type="taext" required placeholder="空港">
+                                        <p>出発地</p>
+                                        <p>※必須</p>
+                                    </div>
+                                    <div class="tab-position">
+                                        <input class="pin" type="taext" required placeholder="空港・都市">
+                                        <p>目的地</p>
+                                        <p>※必須</p>
+                                    </div>
+                                </div>
+                                <input class="carender2" type="taext" placeholder="出発日　現地出発日" >
+                                <div class="tab-flex-box">
+                                    <div class="tab-position">
+                                        <input class="carender" type="taext" placeholder="チェックイン">
+                                        <p>チェックイン日・日数</p>
+                                    </div>
+                                    <div class="tab-position">
+                                        <input class="hito" type="taext" placeholder="おとな 2名, こども 0名…">
+                                        <p>部屋数・人数</p>
+                                    </div>
+                                </div>
+                                <div class="car-box">
+                                    <input type="checkbox" name="car"  value="レンタカーも合わせて検索する">
+                                    <div><img src="images/car.png" alt="車の画像"></div>
+                                    <p>レンタカーもあわせて検索する</p>
+                                </div>
+                                    <input class="search" type="submit" value="検索する">
+                                </form>
+                              </div>
+                            <div class="tab_panel1">
+                            <form action="reserv.php" method="post">
+                                <div class="tab-flex-box">
+                                    <div class="tab-position">
+                                        <input class="pin"class="search-window" type="taext" required placeholder="都道府県">
+                                        <p>出発地</p>
+                                        <p>※必須</p>
+                                    </div>
+                                    <div class="tab-position">
+                                        <input class="pin" type="taext" required placeholder="都市・ホテル名">
+                                        <p>目的地</p>
+                                        <p>※必須</p>
+                                    </div>
+                                </div>
+                                <input class="carender2" type="taext" placeholder="出発日　現地出発日" >
+                                <div class="tab-flex-box">
+                                    <div class="tab-position">
+                                        <input class="carender" type="taext" placeholder="チェックイン">
+                                        <p>チェックイン日・日数</p>
+                                    </div>
+                                    <div class="tab-position">
+                                        <input class="hito" type="taext" placeholder="おとな 2名, こども 0名…">
+                                        <p>部屋数・人数</p>
+                                    </div>
+                                </div>
+                                <div class="car-box">
+                                    <input type="checkbox" name="car"  value="レンタカーも合わせて検索する">
+                                    <div><img src="images/car.png" alt="車の画像"></div>
+                                    <p>レンタカーもあわせて検索する</p>
+                                </div>
+                                <input class="search" type="submit" value="検索する">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_panel">
+                    <form action="reserv.php" method="post">
+                        <div class="tab-flex-box">
+                            <div class="tab-position">
+                                <input class="pin" type="taext" placeholder="空港">
+                                <p>出発地</p>
+                            </div>
+                            <div class="tab-position">
+                                <input class="pin" type="taext" required placeholder="都市">
+                                <p>目的地</p>
+                                <p>※必須</p>
+                            </div>
+                        </div>
+                        <input class="carender2" type="taext" placeholder="出発日　現地出発日" >
+                        <div class="tab-position">
+                            <input class="hito2" type="taext" placeholder="1人部屋/おとな2名 こども0名 幼児0名">
+                            <p>部屋数・人数</p>
+                        </div>
+                        <input class="search" type="submit" value="検索する">
+                    </form>
+                    <p><a href="">添乗員同行ツアーを探す</a></p>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="orenge-position">
+        <div class="movie-box">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img1.JPG" alt="">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img2.JPG" alt="">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img3.JPG" alt="">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img4.JPG" alt="">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img5.JPG" alt="">
+                    </a></div>
+                    <div class="swiper-slide"><a href="">
+                    <img src="images/top-img6.jpg" alt="">
+                    </a></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+
+            <div id="page-top"><a href="#top">
+                <div><img src="images/page-top.png" alt="飛行機の画像"></div>
+                <p>PAGE TOP</p>
+            </a></div>
+        
+
+
+
+            </div>
+        </div>
+        </div>
+
+
+        <div class="loop-parent">
+            <div class="loop02">
+                <ul class="loop02__box">
+                    <li class="loop02__item"><a href="">
+                        <img src="images/loop-top1.jpg" alt="">
+                        <div>
+                            <p>滞在中レンタカーSクラス付！
+　シティ＆リゾート沖縄3日間</p>
+                            <p>全ホテルうれしい朝食付！さらに沖縄美ら海水族館など人気施設から選べる入場券付</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top2.jpg" alt="">
+                        <div>
+                            <p>滞在中レンタカーSクラス付！
+　ドライブ北海道3日間</p>
+                            <p>宿泊は札幌・小樽・登別・富良野・旭川・函館・帯広など28施設より自由に選択！</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top3.jpg" alt="">
+                        <div>
+                            <p>京都市内のホテルを自由に選択♪ 
+　新幹線で行く 京都2日間</p>
+                            <p>ホテルは駅徒歩5分以内の観光に便利なホテル8つから自由に選べるプラン！</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top4.jpg" alt="">
+                        <div>
+                            <p>立山黒部アルペンルート・
+雪の大谷ウォークと上高地2日間</p>
+                            <p>4つの乗り物乗車で圧巻の雪壁に感動！上高地では便利な散策MAPもご用意</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top5.jpg" alt="">
+                        <div>
+                            <p>九州各県の空港間の乗捨代金無料のレンタカー付！九州3日間</p>
+                            <p>ANA・ソラシドエア・スターフライヤー利用！1,000円分のお土産クーポン付！</p>
+                        </div>
+                    </a></li>
+                </ul>
+                <ul class="loop02__box">
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top1.jpg" alt="">
+                        <div>
+                            <p>滞在中レンタカーSクラス付！
+　シティ＆リゾート沖縄3日間</p>
+                            <p>全ホテルうれしい朝食付！さらに沖縄美ら海水族館など人気施設から選べる入場券付</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top2.jpg" alt="">
+                        <div>
+                            <p>滞在中レンタカーSクラス付！
+　ドライブ北海道3日間</p>
+                            <p>宿泊は札幌・小樽・登別・富良野・旭川・函館・帯広など28施設より自由に選択！</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top3.jpg" alt="">
+                        <div>
+                            <p>京都市内のホテルを自由に選択♪ 
+　新幹線で行く 京都2日間</p>
+                            <p>ホテルは駅徒歩5分以内の観光に便利なホテル8つから自由に選べるプラン！</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top4.jpg" alt="">
+                        <div>
+                            <p>立山黒部アルペンルート・
+雪の大谷ウォークと上高地2日間</p>
+                            <p>4つの乗り物乗車で圧巻の雪壁に感動！上高地では便利な散策MAPもご用意</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-top5.jpg" alt="">
+                        <div>
+                            <p>九州各県の空港間の乗捨代金無料のレンタカー付！九州3日間</p>
+                            <p>ANA・ソラシドエア・スターフライヤー利用！1,000円分のお土産クーポン付！</p>
+                        </div>
+                    </a></li>
+                </ul>
+             </div>
+
+             <div class="loop03">
+                <ul class="loop03__box">
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom1.jpg" alt="">
+                        <div>
+                            <p>エアプサンで行く！ソウル3日間</p>
+                            <p>往路午前発＆復路午後発のゆとりのフライト！スタンダードクラスホテルに滞在</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom2.jpg" alt="">
+                        <div>
+                            <p>早朝発だから初日から遊べる！　
+台北4日間</p>
+                            <p>安心の往路送迎＆うれしい朝食付</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom3.jpg" alt="">
+                        <div>
+                            <p>ソウル/金浦（羽田発着）</p>
+                            <p>2024年3月～9月出発。アシアナ航空直行便利用。燃油サーチャージ・諸税別</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom4.jpg" alt="">
+                        <div>
+                            <p>ジェットスター航空で行く！
+　ケアンズ5日間</p>
+                            <p>人気のパームコーブとシティエリアを結ぶ「aQuAsケアンズバス」利用可能</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom5.jpg" alt="">
+                        <div>
+                            <p>ボンジュール モン・サン・
+ミッシェル＆パリ6日間</p>
+                            <p>羽田夜出発の直行便で仕事帰りにフランスへ！コンパクトな日程で世界遺産巡り</p>
+                        </div>
+                    </a></li>
+                </ul>
+                <ul class="loop03__box">
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom1.jpg" alt="">
+                        <div>
+                            <p>エアプサンで行く！ソウル3日間</p>
+                            <p>往路午前発＆復路午後発のゆとりのフライト！スタンダードクラスホテルに滞在</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom2.jpg" alt="">
+                        <div>
+                            <p>早朝発だから初日から遊べる！
+台北4日間</p>
+                            <p>安心の往路送迎＆うれしい朝食付</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom3.jpg" alt="">
+                        <div>
+                            <p>ソウル/金浦（羽田発着）</p>
+                            <p>2024年3月～9月出発。アシアナ航空直行便利用。燃油サーチャージ・諸税別</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom4.jpg" alt="">
+                        <div>
+                            <p>ジェットスター航空で行く！
+　ケアンズ5日間</p>
+                            <p>人気のパームコーブとシティエリアを結ぶ「aQuAsケアンズバス」利用可能</p>
+                        </div>
+                    </a></li>
+                    <li class="loop02__item"><a href="#">
+                        <img src="images/loop-bottom5.jpg" alt="">
+                        <div>
+                            <p>ボンジュール モン・サン・
+ミッシェル＆パリ6日間</p>
+                            <p>羽田夜出発の直行便で仕事帰りにフランスへ！コンパクトな日程で世界遺産巡り</p>
+                        </div>
+                    </a></li>
+                </ul>
+             </div>
+            </div>
+        <section>
+            <div class="quupon-section">
+                <h2>お得な割引クーポン・キャンペーン</h2>
+                <div class='container'>
+                    <div class='single-item'>
+                            <div><a href="">
+                                <div><img src="images/quupon1.jpg" alt="クーポン画像1"></div>
+                                <p>【北陸の笑顔を応援！旅行でつなごうキャンペーン】楽たびえでは、北陸応援キャンペーンを開催中！北陸の名産品やクーポンが当たるチャンス！詳細はこちら。</p>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/quupon2.jpg" alt="クーポン画像2"></div>
+                                <p>"いつか"じゃなくて"いま"でかけよう！海外旅行なら楽たびにお任せ！様々なキャンペーンや特典で、あなたの旅をサポートします。<span> wwwwwwwwwwwwwwwww</span></p>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/quupon3.jpg" alt="クーポン画像3"></div>
+                                <p>国内宿泊・ツアーのネット予約で使えるお得なクーポンが目白押し！期間限定や先着順など種類も豊富で、随時更新しています。お見逃しなく！</p>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/quupon4.png" alt="クーポン画像4"></div>
+                                <p>海外旅行・ツアーのネット予約で使えるお得なクーポンを配布中！期間限定や先着順など種類も豊富で、随時更新しています。お見逃しなく！</p>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/quupon5.png" alt="クーポン画像5"></div>
+                                <p>楽たびのふるさと納税旅行クーポンは寄付した自治体への1泊以上の宿泊を伴うご旅行のお支払いにご利用いただけます。<span> wwwwwwwwwwwwwwwwwwwwwwwwww</span></p>
+                            </a></div>
+                            <div><a href="">
+                                <div><img src="images/quupon6.jpg" alt="クーポン画像6"></div>
+                                <p>交通＋宿泊の旅行代金が1万円以上の国内旅行をお申し込みの方、必見！抽選で《次回の旅行に使える割引クーポン》が当たるキャンペーンを実施中！</p>
+                            </a></div>
+                    </div>
+            </div>
+                  <div class="spring-box"><a href="spring.html">
+                    <div><img src="images/supring1.jpg" alt="春のおすすめバナー"></div>
+                    <div></div>
+                    <p>春<span>の</span></p>
+                    <p>国内旅行特集</p>
+                    <div><img src="images/ribon.pn" alt=""></div>
+                    <div><img src="images/cherryblossom.png" alt="桜の画像"></div>
+                    <div><img src="images/cherryblossom.png" alt="桜の画像"></div>
+                </a></div>
+            </div>
+        </section>
+
+
+            <section class="section1-parent">
+                <h2>商品・サービスから探す</h2>
+                <div  class="section1">
+                <div class="section1-parent1">
+                    <h3>国内旅行</h3>
+                    <p><a href="">国内旅行トップ</a></p>
+                        <div class="section1-flex-box">
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour_plane_kokunai.png" alt="旅行鞄の画像"></div>
+                                <p class="p1">ツアー</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_pack_kokunai.png" alt="飛行機とホテルの画像"></div>
+                                <p class="p2">航空券
+＋ホテル</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour_with_attendant_kokunai.png" alt="鞄と旗の画像"></div>
+                                <p class="p2">添乗員
+同行ツアー</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_bus_tour_kokunai.png" alt="バスの画像"></div>
+                                <p class="p1">バスツアー</p>
+                            </a></div>
+                        </div>
+                        <div class="section1-flex-box">
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_plane_kokunai.png" alt="飛行機の画像"></div>
+                                <p class="p1">航空券</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour_train_kokunai.png" alt="鉄道と鞄の画像"></div>
+                                <p class="p1">鉄道ツアー</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_train_hotel_kokunai.png" alt="鉄道とホテルの画像"></div>
+                                <p class="p2">鉄道
+＋ホテル</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_hotel_kokunai.png" alt="寝てる人の画像"></div>
+                                <p class="p1">ホテル/旅館</p>
+                            </a></div>
+                        </div>
+                    <div class="section1-bottom">
+                            <p><a href="">ホテル（現地払い）</a></p>
+                            <p><a href=""></a>空港送迎</a></p>
+                            <p><a href="">鉄道</a></p>
+                            <p><a href="">レンタカー</a></p>
+                            <p><a href="">オンライン体験ツアー</a></p>
+                            <p><a href="">レストラン</a></p>
+                            <p><a href="">グループ旅行</a></p>
+                           <p><a href=""> ウェディング</a></p>
+                    </div>
+                </div>
+                <div class="section1-parent2">
+                    <h3>海外旅行</h3>
+                    <p><a href="">海外旅行トップ</a></p>
+                        <div class="section1-flex-box">
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour_kaigai.png" alt="鞄の画像"></div>
+                                <p class="p1">ツアー</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_plane_kaigai.png" alt="飛行機の画像"></div>
+                                <p class="p1">航空券</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_pack_kaigai.png" alt="飛行機とホテルの画像"></div>
+                                <p class="p2">航空券
+＋ホテル</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour_with_attendant_kaigai.png" alt="旗と鞄の画像"></div>
+                                <p class="p2">添乗員
+同行ツアー</p>
+                            </a></div>
+                        </div>
+                        <div class="section1-flex-box">
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_hotel_kaigai.png" alt="寝てる人の画像"></div>
+                                <p class="p1">ホテル</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_tour2_kaigai.png" alt="スキューバダイビングの画像"></div>
+                                <p class="p1">現地ツアー</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_business_first_kaigai.png" alt="座ってる人の画像"></div>
+                                <p class="p2">ビジネス
+クラス</p>
+                            </a></div>
+                            <div class="section1-child"><a href="">
+                                <div><img src="images/icon_cruise_kaigai.png" alt="船の画像"></div>
+                                <p class="p1">クルーズ</p>
+                            </a></div>
+                        </div>
+                    <div class="section1-bottom">
+                            <p><a href="">アクティビティ・体験</a></p>
+                            <p><a href="">レンタカー</a></p>
+                            <p><a href="">グランピング・一棟貸</a></p>
+                            <p><a href="">オンライン体験ツアー</a></p>
+                            <p><a href="">クルーズ</a></p>
+                            <p><a href="">グループ旅行</a></p>
+                            <p><a href="">ウェディング</a></p>
+                            <p><a href="">楽たびクーポン</a></p>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <section class="place-section">
+                <h2>行先から探す</h2>
+                <div class="place-flex-box">
+                    <div class="place-position-left">
+                        <div class="place-left-map"><img src="images/bg_map_01.gif" alt=""></div>
+                        <p class="place-left-p1"><a href="">北海道</a></p>
+                        <div class="place-left-child1">
+                            <p class="place-left-p2"><a href="">東北</a></p>
+                            <div class="place-left-hover1">
+                                <div class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">青森県</a></p>
+                                        <p><a href="">宮城県</a></p>
+                                        <p><a href="">山形県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">岩手県</a></p>
+                                        <p><a href="">秋田県</a></p>
+                                        <p><a href="">福島県</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-left-child2">
+                            <p class="place-left-p3"><a href=""> 甲信越</a></p>
+                                <div class="place-left-hover2">
+                                    <div>
+                                        <p><a href="">山梨県</a></p>
+                                        <p><a href="">新潟県</a></p>
+                                    </div>
+                                    <p><a href="">長野県</a></p>
+                                </div>
+                        </div>
+                        <div class="place-left-child3">
+                            <p class="place-left-p4"><a href="">関東</a></p>
+                            <div class="place-left-hover3">
+                                <div class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">東京都</a></p>
+                                        <p><a href="">埼玉県</a></p>
+                                        <p><a href="">茨城県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">神奈川県</a></p>
+                                        <p><a href="">千葉県</a></p>
+                                        <p><a href="">栃木県</a></p>
+                                    </div>
+                                </div>
+                                <p><a href="">群馬県</a></p>
+                            </div>
+                        </div>
+                        <div class="place-left-child4">
+                            <p class="place-left-p5"><a href="">北陸</a></p>
+                                <div class="place-left-hover4">
+                                    <div>
+                                        <p><a href="">富山県</a></p>
+                                        <p><a href="">石川県</a></p>
+                                    </div>
+                                    <p><a href="">福井県</a></p>
+                                </div>
+                        </div>           
+                        <div class="place-left-child5">                 
+                            <p class="place-left-p6"><a href="">東海</a></p>
+                            <div class="place-left-hover5">
+                                <div class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">静岡県</a></p>
+                                        <p><a href="">愛知県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">岐阜県</a></p>
+                                        <p><a href="">三重県</a></p>                 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-left-child6">                 
+                            <p class="place-left-p7"><a href="">関西</a></p>
+                            <div class="place-left-hover6">
+                                <div class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">滋賀県</a></p>
+                                        <p><a href="">大阪府</a></p>
+                                        <p><a href="">奈良県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">京都府</a></p>
+                                        <p><a href="">兵庫県</a></p>
+                                        <p><a href="">和歌山県</a></p>
+                                    </div>
+                                </div>
+                                <p><a href="">群馬県</a></p>
+                            </div>
+                        </div>
+                        <div class="place-left-child7"> 
+                             <p class="place-left-p8"><a href="">中国</a></p>
+                            <div class="place-left-hover7">
+                                <div class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">岡山県</a></p>
+                                        <p><a href="">鳥取県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">広島県</a></p>
+                                        <p><a href="">島根県</a></p>
+                                    </div>
+                                </div>
+                                <p><a href="">山口県</a></p>
+                            </div>
+                        </div>
+                        <div class="place-left-child8"> 
+                            <p class="place-left-p9"><a href="">四国</a></p>
+                            <div class="place-left-hover8">
+                                <div  class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">徳島県</a></p>
+                                        <p><a href="">香川県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">高知県</a></p>
+                                        <p><a href="">愛媛県</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-left-child9"> 
+                            <p class="place-left-p10"><a href="">九州</a></p>
+                            <div class="place-left-hover9">
+                                <div  class="place-hover-flex">
+                                    <div>
+                                        <p><a href="">福岡県</a></p>
+                                        <p><a href="">長崎県</a></p>
+                                        <p><a href="">大分県</a></p>
+                                    </div>
+                                    <div>
+                                        <p><a href="">佐賀県</a></p>
+                                        <p><a href="">熊本県</a></p>
+                                        <p><a href="">宮崎県</a></p>
+                                    </div>
+                                </div>
+                                <p><a href="">鹿児島県</a></p>
+                            </div>
+                        </div> 
+                        <p class="place-left-p11"><a href="">沖縄</a></p>
+                    </div>
+                    <div class="place-position-rigth">
+                        <div><img src="images/bg_map_02.gif" alt=""></div>
+                        <div class="place-rigth-child1"> 
+                            <p class="place-rigth-p1"><a href="">ヨーロッパ</a></p>
+                            <div class="place-rigth-hover1">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">イタリア</a></p>
+                                    <p><a href="">スペイン</a></p>
+                                    <p><a href="">ポルトガル</a></p>
+                                    <p><a href="">フランス</a></p>
+                                    <p><a href="">イギリス</a></p>
+                                    <p><a href="">ドイツ</a></p>
+                                    <p><a href="">ポーランド</a></p>
+                                    <p><a href="">オーストリア</a></p>
+                                    <p><a href="">チェコ</a></p>
+                                    <p><a href="">スロバキア</a></p>
+                                    <p><a href="">ハンガリー</a></p>
+                                    <p><a href="">クロアチア</a></p>
+                                    <p><a href="">スロベニア</a></p>
+                                    <p><a href="">ギリシャ</a></p>
+                                    <p><a href="">スイス</a></p>
+                                    <p><a href="">ノルウェー</a></p>
+                                    <p><a href="">スウェーデン</a></p>
+                                    <p><a href="">フィンランド</a></p>
+                                    <p><a href="">デンマーク</a></p>
+                                    <p><a href="">ロシア</a></p>
+                                    <p><a href="">オランダ</a></p>
+                                    <p><a href="">ベルギー</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-rigth-child2"> 
+                            <p class="place-rigth-p2"><a href="">中近東・アフリカ</a></p>
+                            <div class="place-rigth-hover2">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">トルコ</a></p>
+                                    <p><a href="">エジプト</a></p>
+                                    <p><a href="">モロッコ</a></p>
+                                    <p><a href="">ヨルダン</a></p>
+                                    <p><a href="">イスラエル</a></p>
+                                    <p><a href="">ケニア</a></p>
+                                    <p><a href="">チュニジア</a></p>
+                                    <p><a href="">南アフリカ</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-rigth-child3"> 
+                            <p class="place-rigth-p3"><a href="">ビーチリゾート</a></p>
+                            <div class="place-rigth-hover3">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">ハワイ</a></p>
+                                    <p><a href="">グアム</a></p>
+                                    <p><a href="">サイパン</a></p>
+                                    <p><a href="">パラオ</a></p>
+                                    <p><a href="">ニューカレドニア</a></p>
+                                    <p><a href="">フィジー</a></p>
+                                    <p><a href="">タヒチ</a></p>
+                                    <p><a href="">バリ島</a></p>
+                                    <p><a href="">モルディブ</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-rigth-child4"> 
+                            <p class="place-rigth-p4"><a href="">アジア</a></p>
+                            <div class="place-rigth-hover4">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">韓国</a></p>
+                                    <p><a href="">台湾</a></p>
+                                    <p><a href="">香港</a></p>
+                                    <p><a href="">マカオ</a></p>
+                                    <p><a href="">中国</a></p>
+                                    <p><a href="">タイ</a></p>
+                                    <p><a href="">シンガポール</a></p>
+                                    <p><a href="">ベトナム</a></p>
+                                    <p><a href="">カンボジア</a></p>
+                                    <p><a href="">ラオス</a></p>
+                                    <p><a href="">ミャンマー</a></p>
+                                    <p><a href="">マレーシア</a></p>
+                                    <p><a href="">インドネシア</a></p>
+                                    <p><a href="">フィリピン</a></p>
+                                    <p><a href="">インド</a></p>
+                                    <p><a href="">ネパール</a></p>
+                                    <p><a href="">スリランカ</a></p>
+                                    <p><a href="">ブータン</a></p>
+                                    <p><a href="">モンゴル</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-rigth-child5"> 
+                            <p class="place-rigth-p5"><a href="">北米・中南米</a></p>
+                            <div class="place-rigth-hover5">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">アメリカ・アラスカ</a></p>
+                                    <p><a href="">カナダ</a></p>
+                                    <p><a href="">メキシコ</a></p>
+                                    <p><a href="">ペルー</a></p>
+                                    <p><a href="">アルゼンチン</a></p>
+                                    <p><a href="">ブラジル</a></p>
+                                    <p><a href="">チリ</a></p>
+                                    <p><a href="">キューバ</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-rigth-child6"> 
+                            <p class="place-rigth-p6"><a href="">オセアニア</a></p>
+                            <div class="place-rigth-hover6">
+                                <div class="place-hover-flex-rigth">
+                                    <p><a href="">オーストラリア</a></p>
+                                    <p><a href="">ニュージーランド</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="activity-section">
+                <div class="activity-title">
+                    <div><img src="images/white-nav4.png" alt="スプーンとフォークの画像"></div>
+                    <h2>遊び・体験</h2>
+                </div>
+                <div class="activity-flex-box">
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity1.jpg" alt="SUPの画像"></div>
+                        <p>人気急上昇中の新しいウォーターアクティビティ。</p>
+                        <div class="activity-hover">
+                            <h3>SUP（サップ）</h3>
+                            <p>様々なアイデアが加わることで、楽しみ方は無限大！ </p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="シーサーの画像">
+                        <div><img src="images/activity2.webp" alt=""></div>
+                        <p>感動の沖縄Ｎｏ.1の思い出とお土産を持ち帰ろう。</p>
+                        <div class="activity-hover">
+                            <h3>シーサー作り体験</h3>
+                            <p>オーシャンビューお座敷あり！ </p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="ウミガメの画像">
+                        <div><img src="images/activity3.jpeg" alt=""></div>
+                        <p>写真データ＆備品レンタル＆温水シャワー無料♪</p>
+                        <div class="activity-hover">
+                            <h3>青の洞窟探検＆シュノーケリング</h3>
+                            <p>ウミガメに会えるかも！ </p>
+                        </div>
+                    </a></div>
+                </div>
+                <div class="activity-flex-box">
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity4.jpg" alt="バンジージャンプの画像"></div>
+                        <p>四季折々の自然景観が広がりスリル満点。</p>
+                        <div class="activity-hover">
+                            <h3>バンジージャンプ</h3>
+                            <p>日本一の高さを更新「岐阜バンジー(高さ215m)」 </p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity5.webp" alt="ラフティングの画像"></div>
+                        <p>美しい自然の中で、思いっきりはしゃいでみませんか？</p>
+                        <div class="activity-hover">
+                            <h3>ラフティング</h3>
+                            <p>大自然が作る天然ジェットコースター！ </p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity6.jpeg" alt="気球の画像"></div>
+                        <p>上空ドリンク・軽食付き！搭乗証明書もプレゼント。</p>
+                        <div class="activity-hover">
+                            <h3>熱気球本格フリーフライト体験</h3>
+                            <p>自然に囲まれた高度1000ｍの絶景！ </p>
+                        </div>
+                    </a></div>
+                </div>
+                <div class="activity-flex-box">
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity7.jpg" alt="洞窟の画像"></div>
+                        <p>広大な景色の中で心もからだもリフレッシュ。</p>
+                        <div class="activity-hover">
+                            <h3>神秘な森の巨大洞窟探検</h3>
+                            <p>一般公開されていない真っ暗な洞窟を突き進む！</p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity8.jpeg" alt="キャニオンニングの画像"></div>
+                        <p>壮大な自然を最大限満喫できる天然のアスレチック。</p>
+                        <div class="activity-hover">
+                            <h3>スプラッシュキャニオニング</h3>
+                            <p>川飛び込みは興奮度ＭＡＸ！</p>
+                        </div>
+                    </a></div>
+                    <div class="activity-parent"><a href="">
+                        <div><img src="images/activity9.jpeg" alt="トレッキングの画像"></div>
+                        <p>山に自生する動物や植物について楽しくご案内。</p>
+                        <div class="activity-hover">
+                            <h3>トレッキングツアー</h3>
+                            <p>楽しく爽快にハイキング！</p>
+                        </div>
+                    </a></div>
+                </div>
+            </section>
+
+
+            <section class="spot-section">
+                <div class="spot-title">
+                    <div><img src="images/nav5.png" alt="電球の画像"></div>
+                    <h2>おすすめスポット</h2>
+                </div>
+                <div class="spot-parent">
+                    <div class="spot-flex-box">
+                        <div class="spot-top-left">
+                            <div class="spot-position1">
+                                <div><img src="images/spot1.webp" alt="ランタン祭りの画像"></div>
+                                <p>SPOT</p>
+                                <p>熊本県/小国町</p>
+                                <div class="spot-hover1">
+                                    <p>七夕スカイランタン祭り</p>
+                                    <p>空飛ぶランタンが各地の夜空を彩る『日本最大』の七夕祭り</p>
+                                    <p><a href="">詳しく見る</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spot-flex-box2">
+                            <div class="spot-child">
+                                <div class="spot-position">
+                                    <div><img src="images/spot2.jpg" alt=""></div>
+                                    <p>SPOT</p>
+                                    <p>熊本県/小国町</p>
+                                    <div class="spot-hover">
+                                        <p>鍋ヶ滝</p>
+                                        <p>空豊かな山あいに位置する落差10m、幅20mの滝。カーテン状に流れる様子が清涼感たっぷりで美しい。</p>
+                                        <p><a href="">詳しく見る</a></p>
+                                    </div>
+                                </div>
+                                <div class="spot-position">
+                                    <div><img src="images/spot3.jpg" alt=""></div>
+                                    <p>SPOT</p>
+                                    <p>静岡県/富士市</p>
+                                    <div class="spot-hover">
+                                        <p>世界遺産　富士山</p>
+                                        <p>世界に誇る日本のシンボル。登るからこそ体感できる富士山の奥深い魅力。</p>
+                                        <p><a href="">詳しく見る</a></p>
+                                    </div>
+                                    </div>
+                            </div>
+                            <div class="spot-child">
+                                <div class="spot-position">
+                                    <div><img src="images/spot4.jpg" alt=""></div>
+                                    <p>SPOT</p>
+                                    <p>北海道/豊頃町</p>
+                                    <div class="spot-hover">
+                                        <p>氷の宝石 ジュエリーアイス</p>
+                                        <p>テレビなどでも取り上げられ注目を集める氷の宝石。</p>
+                                        <p><a href="">詳しく見る</a></p>
+                                    </div>
+                                </div>
+                                <div class="spot-position">
+                                    <div><img src="images/spot5.jpg" alt=""></div>
+                                    <p>SPOT</p>
+                                    <p>鳥取県/鳥取市</p>
+                                    <div class="spot-hover">
+                                        <p>鳥取砂丘</p>
+                                        <p>長い年月をかけて作りあげられた砂と風による奇跡の造形美。</p>
+                                        <p><a href="">詳しく見る</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spot-flex-bottom">
+                        <div class="spot-position">
+                            <div><img src="images/spot6.jpg" alt=""></div>
+                            <p>SPOT</p>
+                            <p>青森県/青森市</p>
+                            <div class="spot-hover">
+                                <p>青森ねぶた祭</p>
+                                <p>東北三大祭りの1つで国の重要無形民俗文化財に指定。熱狂の夏祭り、ハネトになって楽しさ倍増！</p>
+                                <p><a href="">詳しく見る</a></p>
+                            </div>
+                        </div>
+                        <div class="spot-position">
+                            <div><img src="images/spot7.jpg" alt=""></div>
+                            <p>SPOT</p>
+                            <p>新潟県/長岡市</p>
+                            <div class="spot-hover">
+                                <p>長岡まつり大花火大会</p>
+                                <p>日本三大花火大会のひとつで、「長岡まつり」のフィナーレを飾る。</p>
+                                <p><a href="">詳しく見る</a></p>
+                            </div>
+                        </div>
+                        <div class="spot-position">
+                            <div><img src="images/spot8.png" alt=""></div>
+                            <p>SPOT</p>
+                            <p>福井県/敦賀市</p>
+                            <div class="spot-hover">
+                                <p>水島</p>
+                                <p>敦賀湾の沖合いに浮かぶ無人島で、透明度抜群の海と真っ白な美しいビーチが自慢の絶景スポット。</p>
+                                <p><a href="">詳しく見る</a></p>
+                            </div>
+                        </div>
+                        <div class="spot-position">
+                            <div><img src="images/spot9.jpg" alt=""></div>
+                            <p>SPOT</p>
+                            <p>鹿児島県/与論町</p>
+                            <div class="spot-hover">
+                                <p>幸手権現堂桜堤</p>
+                                <p>約1,000本の桜が1キロにわたり咲き誇る。菜の花とのコントラストが美しく、関東で人気の桜名所。</p>
+                                <p><a href="">詳しく見る</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+
+
+
+            <section class="news-section">
+                <h2>お知らせ</h2>
+                <div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.20</p>
+                        <p class="news-blue">海外旅行</p>
+                        <p><span>【新聞掲載】</span>楽オリジナル観光＆計6回の食事付！GW出発 エアーズロック＆ケアンズ7日間 399,800円 他</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.19</p>
+                        <p class="nwes-green">国内旅行</p>
+                        <p><span>【上高地旅行】</span>パワースポットとしても人気！日本有数の山岳リゾート地 北アルプス上高地旅行</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.18</p>
+                        <p class="news-orenge">お知らせ</p>
+                        <p><span>【楽たびステーション】</span>新CM発表！旅する人の心がもっと躍るために「楽たびだからできたこと」を紹介します。</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.18</p>
+                        <p class="news-orenge">お知らせ</p>
+                        <p><span>【NEW】</span>グランピングや一棟貸しの宿など新しい宿泊体験の旅を見つける宿泊サイトWOW＋がオープンしました。</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.17</p>
+                        <p class="news-blue">海外旅行</p>
+                        <p><span>【新聞掲載】</span>往路：午前発/復路：午後発　観光に便利なソウル駅直結のホテルに滞在 ソウル3日間 39,800円～他</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.16</p>
+                        <p class="news-blue">海外旅行</p>
+                        <p><span>【新聞掲載】</span>●添乗員同行●羽田発着 クロアチア・スロベニア・バルカン半島5ヶ国周遊8日間 359,800円～ 他</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.16</p>
+                        <p class="news-blue">海外旅行</p>
+                        <p><span>【新聞掲載】</span>夏先ドリ家族旅行　LeaLea絶景朝ごはん付！ANA FLYINGHONUで行く ハワイ5日間 169,000円～ 他 </p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.16</p>
+                        <p class="news-blue">海外旅行</p>
+                        <p><span>【新聞掲載】</span>燃油サーチャージ込みまたはなし！アジアの旅 ビジネスクラスで行く 台北4日間 109,800円～ 他</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.16</p>
+                        <p class="nwes-green">国内旅行</p>
+                        <p><span>【長崎キャンペーン】</span>今ならご当地絶品グルメ特典付！世界遺産・温泉・絶景など魅力満載の長崎へ行こう！</p>
+                    </a></div>
+                    <div class="news-flex-box"><a href="">
+                        <p>2024.03.15</p>
+                        <p class="news-orenge">お知らせ</p>
+                        <p><span>【夏先ドリ家族旅行】お盆休み含む7～9月出発がおトク！夏の旅行が最大5万円引！その他お得な情報を今すぐチェック</p>
+                    </a></div>
+                    <p><a href="">一覧を見る</a></p>
+                </div>
+                </div>
+            </section>
+
+
+
+
+           <!--<section>
+                <div class="last-section">
+                    <h2>楽たびで
+世界を<span>もっと</span>楽しもう</h2>
+                    <p>「楽たび」は国内から海外まで幅広い品揃えでお客様のご旅行をサポートする旅行会社です。</p>
+                    <p>旅のプロがお手伝いいたします。</p>
+                    <div class="biginner-box"><a href="">
+                        <div><img src="images/biginner.png" alt="初心者マークの画像"></div>
+                        <p>はじめてのお客様へ</p>
+                    </a></div>
+                <div><img src="images/feature_message1.png" alt=""></div>
+                <p><a href="">もっと詳しく</a></p>
+            </div>
+            </section>--> 
+            <footer>
+                <div class="bn-box">
+                    <div>
+                        <p><a href=""><img src="images/bn_expack_149x40.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/bn_STAYJAPAN.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/sub_bn_13.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/sub_bn_dori-mupuran.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/bn_expo_logo_149x40.jpg" alt="バナー画像"></a></p>
+                    </div>
+                    <div>
+                        <p><a href=""><img src="images/bn_weekdaymore1_149x40.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/sub_bn_02.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/sub_bn_04.jpg" alt="バナー画像"></a></p>
+                        <p><a href=""><img src="images/bn_2022furusato_coupon.jpg" alt=""></a></p>
+                    </div>
+                </div>
+                <div class="sub-mark">
+                    <p><a href=""><img src="images/sub_mark_06.jpg" alt=""></a></p>
+                    <p><a href=""><img src="images/sub_mark_01.jpg" alt=""></a></p>
+                    <p><a href=""><img src="images/sub_mark_03.jpg" alt=""></a></p>
+                    <p><a href=""><img src="images/sub_mark_04.jpg" alt=""></a></p>
+                    <p><a href=""><img src="images/sub_mark_05.jpg" alt=""></a></p>
+                </div>
+
+                <footer>
+                    <div class="footer-thin-orenge">
+                        <div class="fotter-thin-with">
+                          <h2 class="option1 Toggle"><a href="">国内旅行</a></h2>
+                          <div class="optionBox1">
+                            <p class="footer-top-p"><a href="">国内旅行トップ</a></p>
+                            <h3 class="option2 Toggle"><a href="">国内ツアー</a></h3>
+                            <div class="optionBox2">
+                                <div class="footer-flex-box">
+                                    <p><a href="">沖縄旅行</a></p>
+                                    <p><a href="">沖縄離島旅行</a></p>
+                                    <p><a href="">北海道旅行</a></p>
+                                    <p><a href="">東北旅行</a></p>
+                                    <p><a href="">関東旅行</a></p>
+                                    <p><a href="">甲信越旅行</a></p>
+                                    <p><a href="">中部・北陸旅行</a></p>
+                                    <p><a href="">関西旅行</a></p>
+                                    <p><a href="">山陰・山陽旅行</a></p>
+                                    <p><a href="">四国旅行</a></p>
+                                    <p><a href="">九州旅行</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option3 Toggle"><a href="">国内航空券</a></h3>
+                            <div class="optionBox3">
+                                <div class="footer-flex-box">
+                                    <p><a href="">羽田空港発着</a></p>
+                                    <p><a href="">成田空港発着</a></p>
+                                    <p><a href="">新千歳空港発着</a></p>
+                                    <p><a href="">旭川空港発着</a></p>
+                                    <p><a href="">函館空港発着</a></p>
+                                    <p><a href="">青森空港発着</a></p>
+                                    <p><a href="">秋田空港発着</a></p>
+                                    <p><a href="">仙台空港発着</a></p>
+                                    <p><a href="">福島空港発着</a></p>
+                                    <p><a href="">中部国際空港発着</a></p>
+                                    <p><a href="">小牧空港発着</a></p>
+                                    <p><a href="">小松空港発着</a></p>
+                                    <p><a href="">富山空港発着</a></p>
+                                    <p><a href="">関西空港発着</a></p>
+                                    <p><a href="">伊丹空港発着</a></p>
+                                    <p><a href="">神戸空港発着</a></p>
+                                    <p><a href="">広島空港発着</a></p>
+                                    <p><a href="">岡山空港発着</a></p>
+                                    <p><a href="">高松空港発着</a></p>
+                                    <p><a href="">松山空港発着</a></p>
+                                    <p><a href="">高知龍馬空港発着</a></p>
+                                    <p><a href="">福岡空港発着</a></p>
+                                    <p><a href="">北九州空港発着</a></p>
+                                    <p><a href="">長崎空港発着</a></p>
+                                    <p><a href="">大分空港発着</a></p>
+                                    <p><a href="">熊本空港発着</a></p>
+                                    <p><a href="">宮崎空港発着</a></p>
+                                    <p><a href="">鹿児島空港発着</a></p>
+                                    <p><a href="">那覇空港発着</a></p>
+                                    <p><a href="">石垣空港発着</a></p>
+                                    <p><a href="">宮古空港発着</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option4 Toggle"><a href="">国内ホテル</a></h3>
+                            <div class="optionBox4">
+                                <div class="footer-flex-box">
+                                    <p><a href="">東京ホテル</a></p>
+                                    <p><a href="">北海道ホテル</a></p>
+                                    <p><a href="">札幌ホテル</a></p>
+                                    <p><a href="">仙台ホテル</a></p>
+                                    <p><a href="">千葉ホテル</a></p>
+                                    <p><a href="">横浜ホテル</a></p>
+                                    <p><a href="">静岡ホテル</a></p>
+                                    <p><a href="">長野ホテル</a></p>
+                                    <p><a href="">金沢ホテル</a></p>
+                                    <p><a href="">名古屋ホテル</a></p>
+                                    <p><a href="">京都ホテル</a></p>
+                                    <p><a href="">大阪ホテル</a></p>
+                                    <p><a href="">神戸ホテル</a></p>
+                                    <p><a href="">奈良ホテル</a></p>  
+                                    <p><a href="">岡山ホテル</a></p>
+                                    <p><a href="">広島ホテル</a></p>
+                                    <p><a href="">高知ホテル</a></p>
+                                    <p><a href="">福岡ホテル</a></p>
+                                    <p><a href="">長崎ホテル</a></p>
+                                    <p><a href="">熊本ホテル</a></p>
+                                    <p><a href="">大分ホテル</a></p>
+                                    <p><a href="">鹿児島ホテル</a></p>
+                                    <p><a href="">沖縄ホテル</a></p>
+                                    <p><a href="">名古屋ホテル</a></p>
+                                    <p><a href="">京都ホテル</a></p>
+                                    <p><a href="">大阪ホテル</a></p>
+                                    <p><a href="">神戸ホテル</a></p>
+                                    <p><a href="">奈良ホテル</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option5 Toggle"><a href="">国内アクティビティ・体験</a></h3>
+                            <div class="optionBox5">
+                                <div class="footer-flex-box">
+                                    <p><a href="">沖縄アクティビティ</a></p>
+                                    <p><a href="">石垣島アクティビティ</a></p>
+                                    <p><a href="">宮古島アクティビティ</a></p>
+                                    <p><a href="">北海道アクティビティ</a></p>
+                                    <p><a href="">東京アクティビティ</a></p>
+                                    <p><a href="">京都アクティビティ</a></p>
+                                    <p><a href="">大阪アクティビティ</a></p>
+                                    <p><a href="">福岡アクティビティ</a></p>
+                                    <p><a href="">鹿児島アクティビティ</a></p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <h2 class="option6 Toggle"><a href="">海外旅行</a></h2>
+                          <div class="optionBox6">
+                            <p class="footer-top-p"><a href="">海外旅行トップ</a></p>
+                            <h3 class="option7 Toggle">海外ツアー</h3>
+                            <div class="optionBox7">
+                                <div class="footer-flex-box">
+                                    <p><a href="">ハワイ旅行</a></p>
+                                    <p><a href="">グアム旅行</a></p>
+                                    <p><a href="">サイパン旅行</a></p>
+                                    <p><a href="">パラオ旅行</a></p>
+                                    <p><a href="">韓国旅行</a></p>
+                                    <p><a href="">台湾旅行</a></p>
+                                    <p><a href="">香港旅行</a></p>
+                                    <p><a href="">マカオ旅行</a></p>
+                                    <p><a href="">中国旅行</a></p>
+                                    <p><a href="">シンガポール旅行</a></p>
+                                    <p><a href="">タイ旅行</a></p>
+                                    <p><a href="">プーケット島旅行</a></p>
+                                    <p><a href="">フィリピン旅行</a></p>
+                                    <p><a href="">セブ島旅行</a></p>
+                                    <p><a href="">バリ島旅行</a></p>
+                                    <p><a href="">ベトナム旅行</a></p>
+                                    <p><a href="">カンボジア旅行</a></p>
+                                    <p><a href="">マレーシア旅行</a></p>
+                                    <p><a href="">インド旅行</a></p>
+                                    <p><a href="">スリランカ旅行</a></p>
+                                    <p><a href="">モンゴル旅行</a></p>
+                                    <p><a href="">イタリア旅行</a></p>
+                                    <p><a href="">ローマ旅行</a></p>
+                                    <p><a href="">ミラノ旅行</a></p>
+                                    <p><a href="">ベネチア旅行</a></p>
+                                    <p><a href="">フィレンツェ旅行</a></p>
+                                    <p><a href="">フランス旅行</a></p>
+                                    <p><a href="">イギリス旅行</a></p>
+                                    <p><a href="">ドイツ旅行</a></p>
+                                    <p><a href="">スイス旅行</a></p>
+                                    <p><a href="">オーストリア旅行</a></p>
+                                    <p><a href="">ベルギー旅行</a></p>
+                                    <p><a href="">スペイン旅行</a></p>
+                                    <p><a href="">オランダ旅行</a></p>
+                                    <p><a href="">クロアチア旅行</a></p>
+                                    <p><a href="">チェコ旅行</a></p>
+                                    <p><a href="">ギリシャ旅行</a></p>
+                                    <p><a href="">オーストラリア旅行</a></p>
+                                    <p><a href="">シドニー旅行</a></p>
+                                    <p><a href="">ケアンズ旅行</a></p>
+                                    <p><a href="">ゴールドコースト旅行</a></p>
+                                    <p><a href="">ニュージーランド旅行</a></p>
+                                    <p><a href="">フィジー旅行</a></p>
+                                    <p><a href="">ニューカレドニア旅行</a></p>
+                                    <p><a href="">タヒチ旅行</a></p>
+                                    <p><a href="">モルディブ旅行</a></p>
+                                    <p><a href="">アメリカ旅行</a></p>
+                                    <p><a href="">ロサンゼルス旅行</a></p>
+                                    <p><a href="">ラスベガス旅行</a></p>
+                                    <p><a href="">サンフランシスコ旅行</a></p>
+                                    <p><a href="">ニューヨーク旅行</a></p>
+                                    <p><a href="">オーランド旅行</a></p>
+                                    <p><a href="">カナダ旅行</a></p>
+                                    <p><a href="">バンクーバー旅行</a></p>
+                                    <p><a href="">トロント旅行</a></p>
+                                    <p><a href="">メキシコ旅行</a></p>
+                                    <p><a href="">ドバイ旅行</a></p>
+                                    <p><a href="">トルコ旅行</a></p>
+                                    <p><a href="">エジプト旅行</a></p>
+                                    <p><a href="">ケニア旅行</a></p>
+                                    <p><a href="">モロッコ旅行</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option8 Toggle"><a href="">海外航空券</a></h3>
+                            <div class="optionBox8">
+                                <div class="footer-flex-box">
+                                    <p><a href="">ソウル航空券</a></p>
+                                    <p><a href="">釜山航空券</a></p>
+                                    <p><a href="">台北航空券</a></p>
+                                    <p><a href="">上海航空券</a></p>
+                                    <p><a href="">北京航空券</a></p>
+                                    <p><a href="">大連航空券</a></p>
+                                    <p><a href="">香港航空券</a></p>
+                                    <p><a href="">バンコク航空券</a></p>
+                                    <p><a href="">プーケット航空券</a></p>
+                                    <p><a href="">シンガポール航空券</a></p>
+                                    <p><a href="">マニラ航空券</a></p>
+                                    <p><a href="">セブ島航空券</a></p>
+                                    <p><a href="">ホーチミン航空券</a></p>
+                                    <p><a href="">ハノイ航空券</a></p>
+                                    <p><a href="">ダナン航空券</a></p>
+                                    <p><a href="">クアラルンプール航空券</a></p>
+                                    <p><a href="">インドネシア航空券</a></p>
+                                    <p><a href="">ホノルル航空券</a></p>
+                                    <p><a href="">コナ（ハワイ島）航空券</a></p>
+                                    <p><a href="">グアム航空券</a></p>
+                                    <p><a href="">ロサンゼルス航空券</a></p>
+                                    <p><a href="">サンフランシスコ航空券</a></p>
+                                    <p><a href="">ラスベガス航空券</a></p>
+                                    <p><a href="">ニューヨーク航空券</a></p>
+                                    <p><a href="">ロンドン航空券</a></p>
+                                    <p><a href="">パリ航空券</a></p>
+                                    <p><a href="">ローマ航空券</a></p>
+                                    <p><a href="">ミラノ航空券</a></p>
+                                    <p><a href="">バルセロナ航空券</a></p>
+                                    <p><a href="">シドニー航空券</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option9 Toggle"><a href="">海外ホテル</a></h3>
+                            <div class="optionBox9">
+                                <div class="footer-flex-box">
+                                    <p><a href="">ホノルルホテル</a></p>
+                                    <p><a href="">グアムホテル</a></p>
+                                    <p><a href="">バンコクホテル</a></p>
+                                    <p><a href="">台北ホテル</a></p>
+                                    <p><a href="">ソウルホテル</a></p>
+                                    <p><a href="">釜山ホテル</a></p>
+                                    <p><a href="">香港ホテル</a></p>
+                                    <p><a href="">上海ホテル</a></p>
+                                    <p><a href="">シンガポールホテル</a></p>
+                                    <p><a href="">マニラホテル</a></p>
+                                    <p><a href="">ホーチミンホテル</a></p>
+                                    <p><a href="">バリ島ホテル</a></p>
+                                    <p><a href="">セブ島ホテル</a></p>
+                                    <p><a href="">ダナンホテル</a></p>  
+                                    <p><a href="">ニューヨークホテル</a></p>
+                                    <p><a href="">ロサンゼルスホテル</a></p>
+                                    <p><a href="">ラスベガスホテル</a></p>
+                                    <p><a href="">アナハイムホテル</a></p>
+                                    <p><a href="">パリホテル</a></p>
+                                    <p><a href="">ロンドンホテル</a></p>
+                                </div>
+                            </div>
+                            <h3 class="option10 Toggle"><a href="">海外現地ツアー</a></h3>
+                            <div class="optionBox10">
+                                <div class="footer-flex-box">
+                                    <p><a href="">ホノルル現地ツアー</a></p>
+                                    <p><a href="">ハワイ島現地ツアー</a></p>
+                                    <p><a href="">グアム現地ツアー</a></p>
+                                    <p><a href="">バリ島現地ツアー</a></p>
+                                    <p><a href="">バンコク現地ツアー</a></p>
+                                    <p><a href="">セブ島現地ツアー</a></p>
+                                    <p><a href="">台北現地ツアー</a></p>
+                                    <p><a href="">ソウル現地ツアー</a></p>
+                                    <p><a href="">シンガポール現地ツアー</a></p>
+                                    <p><a href="">ホーチミン現地ツアー</a></p>
+                                    <p><a href="">ダナン現地ツアー</a></p>
+                                    <p><a href="">ケアンズ現地ツアー</a></p>
+                                    <p><a href="">ゴールドコースト現地ツアー</a></p>
+                                    <p><a href="">シドニー現地ツアー</a></p>
+                                    <p><a href="">ロサンゼルス現地ツアー</a></p>
+                                    <p><a href="">ラスベガス現地ツアー</a></p>
+                                    <p><a href="">ニューヨーク現地ツアー</a></p>
+                                    <p><a href="">ロンドン現地ツアー</a></p>
+                                    <p><a href=""> パリ現地ツアー</a></p>
+                                    <p><a href=""> ローマ現地ツアー</a></p>
+                                </div>
+                            </div>
+                        </div>
+                
+                          <h2 class="option11 Toggle">その他</h2>
+                            <div class="optionBox11">
+                              <h3 class="option12 Toggle">旅行特集</h3>
+                              <div class="optionBox12">
+                                <div class="footer-flex-box">
+                                    <p><a href="">春休み旅行</a></p>
+                                    <p><a href="">ゴールデンウイーク旅行</a></p>
+                                    <p><a href="">夏休み旅行</a></p>
+                                    <p><a href="">秋旅行</a></p>
+                                    <p><a href="">年末年始旅行</a></p>
+                                    <p><a href="">家族旅行</a></p>
+                                    <p><a href="">学生旅行</a></p>
+                                    <p><a href="">カップル旅行</a></p>
+                                    <p><a href="">海外観光</a></p>
+                                </div>
+                            </div>
+                              <h3 class="option13 Toggle">オンライン体験ツアー</h3>
+                              <div class="optionBox13">
+                                <div class="footer-flex-box">
+                                    <p><a href="">アジア</a></p>
+                                    <p><a href="">アメリカ・カナダ</a></p>
+                                    <p><a href="">カリブ・中南米</a></p>
+                                    <p><a href="">ハワイ</a></p>
+                                    <p><a href="">グアム・サイパン・パラオ</a></p>
+                                    <p><a href="">オセアニア・南太平洋</a></p>
+                                    <p><a href="">ヨーロッパ</a></p>
+                                    <p><a href="">中近東・アフリカ</a></p>
+                                    <p><a href="">日本</a></p>
+                                </div>
+                            </div>
+                              <h3 class="option14 Toggle">法人・団体・組織向けサービス</h3>
+                              <div class="optionBox14">
+                                <div class="footer-flex-box">
+                                    <p><a href="">海外出張・業務渡航</a></p>
+                                    <p><a href="">出張手配・管理</a></p>
+                                    <p><a href="">社員旅行</a></p>
+                                    <p><a href="">団体・グループ旅行</a></p>
+                                    <p><a href="">企業イベント</a></p>
+                                    <p><a href="">会議・総会・入社式</a></p>
+                                    <p><a href="">ベネフィット（福利厚生）</a></p>
+                                    <p><a href="">DX経費削減</a></p>
+                                    <p><a href="">修学旅行</a></p>
+                                    <p><a href="">留学・語学研修</a></p>
+                                    <p><a href="">スポーツ事業</a></p>
+                                    <p><a href="">官公庁・自治体向け</a></p>
+                                    <p><a href="">地方創生</a></p>
+                                    <p><a href="">ビジネスコラム</a></p>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+
+           
+
+
+
+
+                <div class="footer-orenge">
+                    <div class="footer-flex-box2">
+                        <h2><a href=""><img src="images/logo2.svg" alt=""></a></h2>
+                        <div class="footter-rigth-box">
+                            <div class="footer-flex-box2-inner">
+                                <div class="footer-sns">
+                                    <p>楽たび公式SNS</p>
+                                    <div class="footer-sns-icon">
+                                        <p><a href=""><img src="images/tw.jpg" alt="ツイッターのアイコン画像"></a></p>
+                                        <p><a href=""><img src="images/insta.jpg" alt="インスタのアイコン画像"></a></p>
+                                        <p><a href=""><img src="images/line.jpg" alt="ラインのアイコン画像"></a></p>
+                                    </div>
+                                    <p><a href="">公式アカウント一覧</a></p>
+                                </div>
+                                <div class="footer-apri">
+                                    <p>楽たびアプリ</p>
+                                    <div class="footer-apri-icon">
+                                        <p><a href=""><img src="images/i_btn.png" alt="アップルストアのバナー"></a></p>
+                                        <p><a href=""><img src="images/google-play-badge.png" alt="google-playのバナー"></a></p>
+                                    </div>
+                                    <p>アプリからのご予約で1%割引</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <ul>
+                                <li><a href="">会社情報</a></li>
+                                <li><a href="">プライバシーポリシー</a></li>
+                                <li><a href="">旅行業登録票・約款</a></li>
+                                <li><a href="">規約集</a></li>
+                                <li><a href="">旅行条件書</a></li>
+                                <li><a href="">商標について</a></li>
+                                <li><a href="">ニュースリリース</a></li>
+                                <li><a href="">採用情報</a></p>
+                                <li><a href="">メンテナンスのお知らせ</a></li>
+                                <li><a href="">サイトマップ</a></li>
+                            </ul>
+                    <p><small>Copyright&copy;rakutabi,Ltd. All Rights Reserved.</small></p>
+                </div>
+
+
+            </footer>
+
+            <script>
+                const swiper = new Swiper('.swiper', {
+                loop: true, //ループ表示
+                pagination: {
+                el: '.swiper-pagination', //ページネーションを表示する要素
+                clickable: true //ドットをクリックできるように
+                },
+                navigation: {
+                nextEl: '.swiper-button-next', //次へボタンを表示する要素
+                prevEl: '.swiper-button-prev', //前へボタンを表示する要素
+                },
+                autoplay: {
+                speed: 650 //自動再生のスピード
+                },
+                breakpoints: {
+                // when window width is >= 320px
+                768: {
+                slidesPerView: 1,
+                spaceBetween: 20
+                },
+                }
+                });
+                </script>
+
+        </body>

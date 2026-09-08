@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ポートフォリオサイト</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="images/saru-icon.png">
+        
+        <script src="js/jquery-3.6.0.min.js"></script>
+
+        <script>
+
+            $(function () {
+              var webStorage = function () {
+                if (sessionStorage.getItem('access')) {
+                  /*
+                    2回目以降アクセス時の処理
+                  */
+                  $(".loading").addClass('is-active');
+                } else {
+                  /*
+                    初回アクセス時の処理
+                  */
+                  sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+                  $(".loading-animation").addClass('is-active'); // loadingアニメーションを表示
+                  setTimeout(function () {
+                    // ローディングを数秒後に非表示にする
+                    $(".loading").addClass('is-active');
+                    $(".loading-animation").removeClass('is-active');
+                  }, 3000); // ローディングを表示する時間
+                }
+              }
+              webStorage();
+            });
+            </script>
+
+        <script type="text/javascript">
+            $(window).on('scroll', function (){
+
+                var elem = $('.elem');
+                var isAnimate = 'isAnimate';
+
+                elem.each(function () {
+
+                    var elemOffset = $(this).offset().top;
+                    var scrollPos = $(window).scrollTop();
+                    var wh = $(window).height();
+
+                    if(scrollPos > elemOffset - wh + (wh / 3) ){
+                        $(this).addClass(isAnimate);
+                    }
+                });
+
+            });
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" media="screen and (min-width:900px)">
+
+        <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/smart.css" media="screen and (max-width:549px)">
+
+    </head>
+    <body>
+        <div class="loading">
+            <div class="loading-animation"><img src="images/top-gif.gif" alt="トップアニメーション"></div>
+        </div>
+        <header>
+            <div class="header-parent">
+                <div><img src="images/flower.png" alt="お花の画像"></div>
+                <div><img src="images/flower-line.png" alt="お花の淵の画像"></div>
+                <div><img src="images/pink-circle.png" alt=""></div>
+                <div><img src="images/pink2-circle.png" alt=""></div>
+                <div><img src="images/blue-circle.png" alt=""></div>
+                <div><img src="images/green-circle.png" alt=""></div>
+                <div><img src="images/rainbow-circle.png" alt=""></div>
+                <div><img src="images/yellow-circle.png" alt=""></div>
+                <div><img src="images/pink-circle.png" alt=""></div>
+                <div><img src="images/pink2-circle.png" alt=""></div>
+                <div><img src="images/blue-circle.png" alt=""></div>
+                <div><img src="images/green-circle.png" alt=""></div>
+                <div><img src="images/rainbow-circle.png" alt=""></div>
+                <div><img src="images/yellow-circle.png" alt=""></div>
+                <div><img src="images/koipink-circle.png" alt=""></div>
+                <div><img src="images/koipink-circle.png" alt=""></div>
+                <p>portfolio</p>
+            </div>
+            <div class="nav-flex-box">
+                <div class="scroll"></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">
+                            <div><img src="images/home.png" alt="アルパカアイスの画像"></div>
+                            <p>Home</p>
+                            <div><img src="images/home-nav-laine.png" alt="線の画像 "></div>
+                        </a></li>
+                        <li><a href="about.html">
+                            <div><img src="images/about.png" alt="サルの画像"></div>
+                            <p>About</p>
+                        </a></li>
+                        <li><a href="work-all.html">
+                            <div><img src="images/work.png" alt=""></div>
+                            <p>Work</p>
+                        </a></li>
+                        <li><a href="#contact">
+                        <div><img src="images/contact.png" alt="メールの画像"></div>
+                        <p>Contact</p>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div><img src="images/home-top-wave.svg" alt="クリーム色の波の画像"></div>
+            <main>
+                <section class="about-section">
+                    <div class="h2-position">
+                        <h2><span>A</span>bout</h2>
+                        <div><img src="images/about-line.png" alt="ピンクの線の画像"></div>
+                    </div>
+                    <div class="about-parent">
+                        <div class="about-left">
+                            <div><img src="images/top-profile-line.png" alt="雲の線画像"></div>
+                            <div><img src="images/top-profile.png" alt="ヒッチハイクしてる画像"></div>
+                        </div>
+                        <div class="about-rigth">
+                            <p class="p-big elem">「どんなことも全力に」</p>
+　　　　　　<!--<span>をモットーに。</span>-->
+                            <P>仕事もプライベートも手を抜くことなく
+バカになるくらい全力で取り組む。
+気になっていたwebについて学び、
+もっとスキルを身に着けていきたいと思っています。</P>
+                            <div class="view-box"><a href="about.html">
+                                <p>view more</p>
+                                <div class="arrow-parent">
+                                    <div class="arrow-left"></div>
+                                    <div class="arrow-rigth"></div>
+                                </div>
+                            </a></div>
+                        </div>
+                    </div>
+                </section>
+                <div><img src="images/home-line1.png" alt="２重の波線"></div>
+
+                <section class="work-section">
+                    <div class="h2-position">
+                        <h2><span>W</span>ork</h2>
+                        <div><img src="images/work-line.png" alt="黄色い線の画像"></div>
+                    </div>
+                        <div class="work-flex-box">
+                            <div class="work-left">
+                                <div class="work-parent"><a href="work-web.html#web">
+                                    <div class="loop-box">
+                                        <div><img src="images/web-loop1.png" alt=""></div>
+                                        <div><img src="images/flower.png" alt=""></div>
+                                        <div><img src="images/web-loop2.png" alt=""></div>
+                                        <h3>web</h3>
+                                    </div>
+                                </a></div>
+                                <div class="work-parent"><a href="work-poster.html#poster">
+                                    <div class="loop-box">
+                                        <div><img src="images/poster-loop1.png" alt=""></div>
+                                        <div><img src="images/flower.png" alt=""></div>
+                                        <div><img src="images/poster-loop2.png" alt=""></div>
+                                        <h3>poster
+   /banner</h3>
+                                    </div>
+                                </a></div>
+                                <div class="work-parent"><a href="work-logo.html#logo">
+                                    <div class="loop-box">
+                                        <div><img src="images/logo-loop1.png" alt=""></div>
+                                        <div><img src="images/flower.png" alt=""></div>
+                                        <div><img src="images/logo-loop2.png" alt=""></div>
+                                        <h3>logo</h3>
+                                    </div>
+                                </a></div>
+                                <div class="view-box2"><a href="work-all.html#all">
+                                    <p>view all</p>
+                                    <div class="arrow-parent2">
+                                        <div class="arrow-left2"></div>
+                                        <div class="arrow-rigth2"></div>
+                                    </div>
+                                </a></div>
+                            </div>
+                            <div class="work-rigth elem">
+                                <div><a href="work-camp.html">
+                                    <p><img src="content/camp-top.png" alt="キャンプ場HPの画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                                <div><a href="work-rakutabi.html">
+                                    <p><img src="content/rakutabi-top.png" alt="楽たびHPロゴ画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                                <div><a href="work-fukagawa.html">
+                                    <p><img src="content/fukagawa-top.png" alt="市役所HPのロゴ画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                                <div><a href="work-aomorinebuta.html">
+                                    <p><img src="content/aomorinebuta-top.png" alt="青森ねぶた冬祭HP画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                                <div><a href="work-poster.html#valentine">
+                                    <p><img src="content/valentine-baner.jpg" alt="バレンタインバナー画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                                <div><a href="work-poster.html#fitness">
+                                    <p><img src="content/fitness-baner.jpg" alt="フィットネスバナーの画像"></p>
+                                    <h3></h3>
+                                </a></div>
+                            </div>
+                        </div>
+                </section>
+                <div><img src="images/home-line2.png" alt="２重の波線"></div>
+
+                <section class="contact-section">
+                    <div class="h2-position">
+                    <h2 id="contact"><span>C</span>ontact</h2>
+                    <div><img src="images/contact-line.png" alt="青い線の画像"></div>
+                    <div>
+                    </div>
+                </div>
+                <div class="contact-profile elem">
+                    <div class="contact-flex">
+                        <div><img src="images/contact-tell.png" alt="猫と電話の画像"></div>
+                        <p>080-6061-4514</p>
+                    </div>
+                    <div class="contact-flex">
+                        <div><img src="images/contact-mail.png" alt="鳥と手紙の画像"></div>
+                        <p>s.mayu19961207@gmail.com</p>
+                    </div>
+                </div>
+                </section>
+            </main>
+            <div><img src="images/home-bottom-wave.svg" alt="波の画像"></div>
+
+            <footer>
+                <p><small>&copy;Shibuya Mayu</small></p>
+                <div><a href="#top"><img src="images/home-top-return.png" alt="風船の画像"></a></div>
+            </footer>
+    </body>
+    </html>
