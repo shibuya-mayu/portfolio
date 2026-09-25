@@ -514,7 +514,7 @@ html {
     vertical-align: bottom;
 }
 
-.header-parent p:last-child {
+.header-parent h1 {
     position: absolute;
     top: 40%;
     left: 36%;
@@ -812,7 +812,7 @@ main {
     vertical-align: bottom;
 }
 
-.about-rigth {
+.about-right {
     width: 49%;
 }
 
@@ -827,11 +827,11 @@ main {
 }
 
 /*
-.about-rigth p:nth-child(1) span {
+.about-right p:nth-child(1) span {
     font-size: 2.5vw;
 }*/
 
-.about-rigth p:nth-child(2) {
+.about-right p:nth-child(2) {
     white-space: pre-wrap;
     margin-top: 1%;/*8%*/
     text-align: center;
@@ -871,7 +871,7 @@ main {
     transition: 0.5s;
 }
 
-.arrow-rigth {
+.arrow-right {
     width: 3vw;
     height: 0.5vw;
     border-right: 0.2vw solid #000;
@@ -880,7 +880,7 @@ main {
     transition: 0.5s;
 }
 
-.view-box a:hover .arrow-left,.view-box a:hover .arrow-rigth {
+.view-box a:hover .arrow-left,.view-box a:hover .arrow-right {
     width: 5vw;
     transition: 0.5s;
 }
@@ -1062,7 +1062,7 @@ main {
     transition: 0.5s;
 }
 
-.arrow-rigth2 {
+.arrow-right2 {
     width: 3vw;
     height: 0.5vw;
     border-right: 0.2vw solid #000;
@@ -1071,12 +1071,12 @@ main {
     transition: 0.5s;
 }
 
-.view-box2 a:hover .arrow-left2,.view-box2 a:hover .arrow-rigth2 {
+.view-box2 a:hover .arrow-left2,.view-box2 a:hover .arrow-right2 {
     width: 5vw;
     transition: 0.5s;
 }
 
-.work-rigth {
+.work-right {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1087,34 +1087,34 @@ main {
     transform: translateY(50px);
 }
 
-.work-rigth div {
+.work-right div {
     width: 33%;
 }
 
-.work-rigth div a {
+.work-right div a {
     display: block;
     text-decoration: none;
 }
 
-.work-rigth div p {
+.work-right div p {
     width: 100%;
     border-radius: 1vw;
     overflow: hidden;
 }
 
-.work-rigth div img {
+.work-right div img {
     width: 100%;
     border-radius: 1vw;
     vertical-align: bottom;
     transition: 0.5s;
 }
 
-.work-rigth div:nth-child(odd) {
+.work-right div:nth-child(odd) {
     margin-top: 13%;
     margin-bottom: 5%;
 }
 
-.work-rigth div a:hover img {
+.work-right div a:hover img {
     transform: scale(1.1,1.1);
     transition: 0.5s;
 }

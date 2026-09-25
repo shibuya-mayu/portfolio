@@ -1932,12 +1932,12 @@ header + .top-img {
     color: #fff;
 }
 /*タブ切り替え　一番右*/
-.tab-position-rigth {
+.tab-position-right {
     position: relative;
     margin-bottom: 5%;
 }
 
-.tab-position-rigth input {
+.tab-position-right input {
     display: block;
     width: 100%;
     line-height: 3;
@@ -1950,7 +1950,7 @@ header + .top-img {
     color: #202020;
 }
 
-.tab-position-rigth p:nth-child(2) {
+.tab-position-right p:nth-child(2) {
     position: absolute;
     top: -14%;
     left: 3%;
@@ -1961,7 +1961,7 @@ header + .top-img {
     background-color: #fff;
 }
 
-.tab-position-rigth::placeholder {
+.tab-position-right::placeholder {
     text-indent: 1em;
 }
 
@@ -2189,7 +2189,7 @@ header + .top-img {
     vertical-align: bottom;
 }
 
-.footter-rigth-box {
+.footter-right-box {
     width: 90%;
     margin: 0 auto;
     margin-top: 5%;

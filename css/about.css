@@ -438,12 +438,12 @@ nav ul li:nth-child(4) a:hover::before {
 }
 
 /********************右側******************************/
-.rigth-box {
+.right-box {
     width: 67%;
     margin-left: 3%;
 }
 
-.rigth-box-top h2 {
+.right-box-top h2 {
     position: relative;
     margin: 3% 0;
     text-align: center;
@@ -452,7 +452,7 @@ nav ul li:nth-child(4) a:hover::before {
     font-size: 2vw;
 }
 
-.rigth-box-top h2::before {
+.right-box-top h2::before {
     display: block;
     position: absolute;
     content: "";
@@ -464,7 +464,7 @@ nav ul li:nth-child(4) a:hover::before {
     border-left: 4px double #202020;
 }
 
-.rigth-box-top h2::after {
+.right-box-top h2::after {
     display: block;
     position: absolute;
     content: "";
@@ -476,7 +476,7 @@ nav ul li:nth-child(4) a:hover::before {
     border-left: 4px double #202020;
 }
 
-.rigth-box-top p {
+.right-box-top p {
     white-space: pre-wrap;
     font-size: 1.3vw;
     text-align: center;
@@ -505,11 +505,11 @@ nav ul li:nth-child(4) a:hover::before {
     background-size: 100% 100%;
   }
 
-.rigth-box-bottom {
+.right-box-bottom {
     margin-top: 5%;
 }
 
-.rigth-box-bottom h2 {
+.right-box-bottom h2 {
     position: relative;
     text-align: center;
     color: #202020;
@@ -518,7 +518,7 @@ nav ul li:nth-child(4) a:hover::before {
     margin-bottom: 3%;
 } 
 
-.rigth-box-bottom h2::before {
+.right-box-bottom h2::before {
     display: block;
     position: absolute;
     content: "";
@@ -530,7 +530,7 @@ nav ul li:nth-child(4) a:hover::before {
     border-left: 4px double #202020;
 }
 
-.rigth-box-bottom h2::after {
+.right-box-bottom h2::after {
     display: block;
     position: absolute;
     content: "";
@@ -542,7 +542,7 @@ nav ul li:nth-child(4) a:hover::before {
     border-left: 4px double #202020;
 }
 
-.rigth-bottom-flex {
+.right-bottom-flex {
     display: flex;
     width: 83%;
     margin: 0 auto;
@@ -550,14 +550,14 @@ nav ul li:nth-child(4) a:hover::before {
     justify-content: space-between;
 }
 
-.rigth-bottom-parent {
+.right-bottom-parent {
     position: relative;
     width: 23%;
     margin-top: 3%;
     cursor: pointer;
 }
 
-.rigth-bottom-parent div:nth-child(1) {
+.right-bottom-parent div:nth-child(1) {
     width: 100%;
     margin: 0 auto;
     height: 11vw;
@@ -565,7 +565,7 @@ nav ul li:nth-child(4) a:hover::before {
     background-color: #f5f5f5;
 }
 
-.rigth-bottom-parent div:nth-child(1) img {
+.right-bottom-parent div:nth-child(1) img {
     display: block;
     width: 60%;
     margin: 0 auto;
@@ -573,7 +573,7 @@ nav ul li:nth-child(4) a:hover::before {
     transition: 0.5s;
 }
 
-.rigth-bottom-parent p:nth-child(2) {
+.right-bottom-parent p:nth-child(2) {
     margin-top: 3%;
     text-align: center;
     font-size: 1.3vw;
@@ -581,7 +581,7 @@ nav ul li:nth-child(4) a:hover::before {
     font-family: "Noto_Sans_JP";
 }
 
-.rigth-bottom-parent p:nth-child(3) {
+.right-bottom-parent p:nth-child(3) {
     position: absolute;
     top: 34%;
     left: 0;
@@ -596,12 +596,12 @@ nav ul li:nth-child(4) a:hover::before {
     transition: 0.5s;
 }
 
-.rigth-bottom-parent:hover p:nth-child(3) {
+.right-bottom-parent:hover p:nth-child(3) {
     display: block;
     transition: 0.5s;
 }
 
-.rigth-bottom-parent div:nth-child(4) {
+.right-bottom-parent div:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -611,7 +611,7 @@ nav ul li:nth-child(4) a:hover::before {
     border-radius: 6vw;
 }
 
-.rigth-bottom-parent div:nth-child(4) img {
+.right-bottom-parent div:nth-child(4) img {
     width: 100%;
     height: 11vw;
     border-radius: 6vw;
@@ -621,12 +621,12 @@ nav ul li:nth-child(4) a:hover::before {
 }
 
 
-.rigth-bottom-parent:hover div:nth-child(1) img {
+.right-bottom-parent:hover div:nth-child(1) img {
     display: none;
     transition: 0.5s;
 }
 
-.rigth-bottom-parent:hover div:nth-child(4) img {
+.right-bottom-parent:hover div:nth-child(4) img {
     display: block;
     transition: 0.5s;
 }
@@ -710,20 +710,20 @@ nav ul li:nth-child(4) a:hover::before {
 }
 
 
-.rigth-lste-flex {
+.right-lste-flex {
     display: flex;
     width: 90%;
     margin: 0 auto;
     margin-top: 2%;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(1) {
+.right-lste-flex .right-child:nth-of-type(1) {
     position: relative;
     width: 35%;
     padding: 4%;
 } 
 
-.rigth-lste-flex .rigth-child:nth-of-type(1)::before {
+.right-lste-flex .right-child:nth-of-type(1)::before {
     position: absolute;
     display: block;
     content: "";
@@ -737,7 +737,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 1;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(1)::after {
+.right-lste-flex .right-child:nth-of-type(1)::after {
     position: absolute;
     display: block;
     content: "";
@@ -751,7 +751,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 1;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(1) h3 {
+.right-lste-flex .right-child:nth-of-type(1) h3 {
     position: relative;
     width: fit-content;
     margin-bottom: 5%;
@@ -762,7 +762,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 2;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(1) ul li {
+.right-lste-flex .right-child:nth-of-type(1) ul li {
     position: relative;
     line-height: 1.8;
     margin-left: 6%;
@@ -771,7 +771,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 2;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(2) {
+.right-lste-flex .right-child:nth-of-type(2) {
     position: relative;
     width: 55%;
     margin-left: 10%;
@@ -779,7 +779,7 @@ nav ul li:nth-child(4) a:hover::before {
 } 
 
 
-.rigth-lste-flex .rigth-child:nth-of-type(2)::before {
+.right-lste-flex .right-child:nth-of-type(2)::before {
     position: absolute;
     display: block;
     content: "";
@@ -793,7 +793,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 1;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(2)::after {
+.right-lste-flex .right-child:nth-of-type(2)::after {
     position: absolute;
     display: block;
     content: "";
@@ -807,7 +807,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 1;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(2) h3 {
+.right-lste-flex .right-child:nth-of-type(2) h3 {
     position: relative;
     margin-bottom: 4%;
     width: fit-content;
@@ -818,7 +818,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 2;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(2) ul {
+.right-lste-flex .right-child:nth-of-type(2) ul {
     position: relative;
     display: flex;
     margin-top: 3%;
@@ -827,7 +827,7 @@ nav ul li:nth-child(4) a:hover::before {
     z-index: 2;
 }
 
-.rigth-lste-flex .rigth-child:nth-of-type(2) ul li {
+.right-lste-flex .right-child:nth-of-type(2) ul li {
     width: fit-content;
     margin-right: 10%;
     line-height: 1.8;

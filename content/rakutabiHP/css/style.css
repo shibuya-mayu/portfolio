@@ -1775,35 +1775,35 @@ form + p a {
     font-size: 0.7vw;
 }
 
-.place-position-rigth {
+.place-position-right {
     position: relative;
     width: 47.5%;
 }
 
-.place-position-rigth div:nth-child(1) {
+.place-position-right div:nth-child(1) {
     width: 100%;
 }
 
-.place-position-rigth div:nth-child(1) img {
+.place-position-right div:nth-child(1) img {
     display: block;
     width: 90%;
     margin: 0 auto;
 }
 
-.place-rigth-child1 {
+.place-right-child1 {
     position: absolute;
     top: 23%;
     left: 20%;
     width: 23%;
 }
 
-.place-rigth-p1 {
+.place-right-p1 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover1 {
+.place-right-hover1 {
     position: absolute;
     width: 175%;
     padding: 3% 2.5%;
@@ -1813,40 +1813,40 @@ form + p a {
     display: none;
 }
 
-.place-hover-flex-rigth {
+.place-hover-flex-right {
     display: flex;
     flex-wrap: wrap;
 }
 
-.place-hover-flex-rigth p {
+.place-hover-flex-right p {
     width: fit-content;
     line-height: 1.5;
     margin-right: 5%;
 }
 
-.place-rigth-child1:hover .place-rigth-hover1 {
+.place-right-child1:hover .place-right-hover1 {
     display: block;
 }
 
-.place-rigth-child1:hover .place-rigth-p1 {
+.place-right-child1:hover .place-right-p1 {
     text-decoration: underline 1px solid #202020;
 }
 
 
-.place-rigth-child2 {
+.place-right-child2 {
     position: absolute;
     top: 42%;
     left: 13%;
     width: 28%;
 }
 
-.place-rigth-p2 {
+.place-right-p2 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover2 {
+.place-right-hover2 {
     position: absolute;
     width: 130%;
     padding: 3% 2.5%;
@@ -1856,28 +1856,28 @@ form + p a {
     display: none;
 }
 
-.place-rigth-child2:hover .place-rigth-hover2 {
+.place-right-child2:hover .place-right-hover2 {
     display: block;
 }
 
-.place-rigth-child2:hover .place-rigth-p2 {
+.place-right-child2:hover .place-right-p2 {
     text-decoration: underline 1px solid #202020;
 }
 
-.place-rigth-child3 {
+.place-right-child3 {
     position: absolute;
     bottom: 24%;
     left: 18%;
     width: 25%;
 }
 
-.place-rigth-p3 {
+.place-right-p3 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover3 {
+.place-right-hover3 {
     position: absolute;
     width: 160%;
     padding: 3% 2.5%;
@@ -1887,28 +1887,28 @@ form + p a {
     display: none;
 }
 
-.place-rigth-child3:hover .place-rigth-hover3 {
+.place-right-child3:hover .place-right-hover3 {
     display: block;
 }
 
-.place-rigth-child3:hover .place-rigth-p3 {
+.place-right-child3:hover .place-right-p3 {
     text-decoration: underline 1px solid #202020;
 }
 
-.place-rigth-child4 {
+.place-right-child4 {
     position: absolute;
     top: 28%;
     right: 40%;
     width: 15%;
 }
 
-.place-rigth-p4 {
+.place-right-p4 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover4 {
+.place-right-hover4 {
     position: absolute;
     width: 250%;
     padding: 3% 2.5%;
@@ -1918,28 +1918,28 @@ form + p a {
     display: none;
 }
 
-.place-rigth-child4:hover .place-rigth-hover4 {
+.place-right-child4:hover .place-right-hover4 {
     display: block;
 }
 
-.place-rigth-child4:hover .place-rigth-p4 {
+.place-right-child4:hover .place-right-p4 {
     text-decoration: underline 1px solid #202020;
 }
 
-.place-rigth-child5 {
+.place-right-child5 {
     position: absolute;
     top: 47%;
     right: 12%;
     width: 21%;
 }
 
-.place-rigth-p5 {
+.place-right-p5 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover5 {
+.place-right-hover5 {
     position: absolute;
     width: 180%;
     padding: 3% 2.5%;
@@ -1949,28 +1949,28 @@ form + p a {
     display: none;
 }
 
-.place-rigth-child5:hover .place-rigth-hover5 {
+.place-right-child5:hover .place-right-hover5 {
     display: block;
 }
 
-.place-rigth-child5:hover .place-rigth-p5 {
+.place-right-child5:hover .place-right-p5 {
     text-decoration: underline 1px solid #202020;
 }
 
-.place-rigth-child6 {
+.place-right-child6 {
     position: absolute;
     bottom: 21%;
     right: 29%;
     width: 19%;
 }
 
-.place-rigth-p6 {
+.place-right-p6 {
     width: 100%;
     line-height: 1.8;
     background-color: #fafaff99;
 }
 
-.place-rigth-hover6 {
+.place-right-hover6 {
     position: absolute;
     width: 215%;
     padding: 3% 2.5%;
@@ -1980,15 +1980,15 @@ form + p a {
     display: none;
 }
 
-.place-rigth-child6:hover .place-rigth-hover6 {
+.place-right-child6:hover .place-right-hover6 {
     display: block;
 }
 
-.place-rigth-child6.li-child .place-rigth-p6 {
+.place-right-child6.li-child .place-right-p6 {
     text-decoration: underline 1px solid #202020;
 }
 
-.place-rigth-p1::before,.place-rigth-p4::before {
+.place-right-p1::before,.place-right-p4::before {
     position: absolute;
     display: block;
     top: 10%;
@@ -1998,7 +1998,7 @@ form + p a {
     font-size: 0.7vw;
 }
 
-.place-rigth-p2::before,.place-rigth-p3::before,.place-rigth-p5::before,.place-rigth-p6::before {
+.place-right-p2::before,.place-right-p3::before,.place-right-p5::before,.place-right-p6::before {
     position: absolute;
     display: block;
     top: 10%;
@@ -2799,7 +2799,7 @@ form + p a {
     vertical-align: bottom;
 }
 
-.footter-rigth-box {
+.footter-right-box {
     width: 70%;
     margin-top: 2%;
 }

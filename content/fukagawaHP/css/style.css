@@ -779,7 +779,7 @@ h2 {
     transition: 0.5s;
 }
 /*スリック*/
-.section3-rigth {
+.section3-right {
     width: 33%;
     padding: 1.5% 4%;
     border-radius: 0.5vw;
@@ -787,7 +787,7 @@ h2 {
     background-color: #fff;
 }
 
-.section3-rigth h3 {
+.section3-right h3 {
     font-size: 1.8vw;
     text-align: center;
 } 
@@ -836,7 +836,7 @@ h2 {
 }
 
 .slick-next:before{
-    background: url(../images/slick-rigth.png)!important;
+    background: url(../images/slick-right.png)!important;
     background-size: contain!important;
 }
 

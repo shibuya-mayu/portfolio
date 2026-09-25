@@ -167,24 +167,24 @@ header .top-img {
     vertical-align: bottom;
 }
 
-.top-img-rigth {
+.top-img-right {
     position: relative;
     width: 50%;
     height: 60vw;
 }
 
-.top-img-rigth div:nth-child(1) {
+.top-img-right div:nth-child(1) {
     width: 100%;
 }
 
-.top-img-rigth div:nth-child(1) img {
+.top-img-right div:nth-child(1) img {
     width: 100%;
     height: 60vw;
     object-fit: cover;
     vertical-align: bottom;
 }
 
-.top-img-rigth .top-rigth-box {
+.top-img-right .top-right-box {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -195,7 +195,7 @@ header .top-img {
     width: 100%;
 }
 
-.top-img-rigth .top-rigth-box p:nth-child(1) {
+.top-img-right .top-right-box p:nth-child(1) {
     margin-left: 3%;
     font-family: "Poppins";
     text-align: center;
@@ -209,7 +209,7 @@ header .top-img {
     background-color: #FFDD0F;
 }
 
-.top-rigth-p {
+.top-right-p {
     margin: auto 0;
     margin-left: 2%;
     color: #fff;
@@ -492,12 +492,12 @@ header + section h2 + p {
     vertical-align: middle;
 }
 
-.week-flex-rigth {
+.week-flex-right {
     width: 100%;
     margin-top: 3%;
 }
 
-.week-flex-rigth a {
+.week-flex-right a {
     display: flex;
     padding: 4.5% 0;
     background-color: #8A3831;
@@ -506,13 +506,13 @@ header + section h2 + p {
     transition: 0.5s;
 }
 
-.week-flex-rigth a:hover {
+.week-flex-right a:hover {
     transform: scale(1.02,1.02);
     background-color: #333;
     transition: 0.5s;
 }
 
-.week-flex-rigth p:nth-child(1) {
+.week-flex-right p:nth-child(1) {
     margin-left: 15%;
     margin-top: 0.8%;
     font-family: "Poppins";
@@ -527,7 +527,7 @@ header + section h2 + p {
     background-color: #FFDD0F;
 }
 
-.week-flex-rigth p:nth-child(2) {
+.week-flex-right p:nth-child(2) {
     margin-left: 2%;
     font-size: 3.2vw;
     font-weight: 900;
@@ -616,22 +616,22 @@ header + section h2 + p {
     color: #333;
 }
 
-.information-rigth {
+.information-right {
     width: 100%;
 }
 
-.information-rigth div a {
+.information-right div a {
     display: flex;
     width: 100%;
     padding: 1.5% 0;
     text-decoration: none;
 }
 
-.information-rigth div a:hover p:nth-of-type(2){
+.information-right div a:hover p:nth-of-type(2){
     text-decoration: underline 1px #333;
 }
 
-.information-rigth div a time {
+.information-right div a time {
     width: 14%;
     font-size: 2.1vw;
     font-weight: normal;
@@ -640,7 +640,7 @@ header + section h2 + p {
     color: #333;
 }
 
-.information-rigth div a p:nth-of-type(1) {
+.information-right div a p:nth-of-type(1) {
     font-size: 2vw;
     width: 12%;
     text-align: center;
@@ -662,7 +662,7 @@ header + section h2 + p {
     border-radius: 2vw;
 }
 
-.information-rigth div a p:nth-of-type(2) {
+.information-right div a p:nth-of-type(2) {
     width: 80%;
     margin-left: 3%;
     font-size: 2.1vw;
@@ -937,7 +937,7 @@ header + section h2 + p {
     z-index: 50;
 }
 
-.hachinohe-rigth {
+.hachinohe-right {
     position: relative;
     width: 50%;
     margin-left: 3%;
@@ -945,7 +945,7 @@ header + section h2 + p {
     z-index: 100;
 }
 
-.hachinohe-rigth h3 {
+.hachinohe-right h3 {
     font-size: 6vw;
     font-weight: 600;
     letter-spacing: 0.2vw;
@@ -953,60 +953,60 @@ header + section h2 + p {
     font-family: "Poppins";
 }
 
-.hachinohe-rigth h3 a {
+.hachinohe-right h3 a {
     position: relative;
     display: block;
     color: #fff;
     text-decoration: none;
 }
 
-.hachinohe-rigth h3 a span {
+.hachinohe-right h3 a span {
     display: inline-block;
 }
 
-.hachinohe-rigth h3 a:hover span {
+.hachinohe-right h3 a:hover span {
     transition: .6s;
     -webkit-transform: rotateY(360deg);
     transform: rotateY(360deg);
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(1) {
+.hachinohe-right h3 a:hover span:nth-of-type(1) {
     transition-delay: .02s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(2) {
+.hachinohe-right h3 a:hover span:nth-of-type(2) {
     transition-delay: .04s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(3) {
+.hachinohe-right h3 a:hover span:nth-of-type(3) {
     transition-delay: .06s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(4) {
+.hachinohe-right h3 a:hover span:nth-of-type(4) {
     transition-delay: .08s;
   }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(5) {
+.hachinohe-right h3 a:hover span:nth-of-type(5) {
     transition-delay: .10s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(6) {
+.hachinohe-right h3 a:hover span:nth-of-type(6) {
     transition-delay: .12s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(7) {
+.hachinohe-right h3 a:hover span:nth-of-type(7) {
     transition-delay: .14s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(8) {
+.hachinohe-right h3 a:hover span:nth-of-type(8) {
     transition-delay: .16s;
 }
 
-.hachinohe-rigth h3 a:hover span:nth-of-type(9) {
+.hachinohe-right h3 a:hover span:nth-of-type(9) {
     transition-delay: .18s;
 }
 
-.hachinohe-rigth h3 a::after {
+.hachinohe-right h3 a::after {
     display: block;
     position: absolute;
     content: "";
@@ -1020,12 +1020,12 @@ header + section h2 + p {
     transition: 0.5s;
 } 
 
-.hachinohe-rigth h3 a:hover::after {
+.hachinohe-right h3 a:hover::after {
     right: 5%;
     transition: 0.5s;
 }
 
-.hachinohe-rigth h3 + p {
+.hachinohe-right h3 + p {
     color: #fff;
     margin-top: -2%;
     font-size: 4vw;
@@ -1033,7 +1033,7 @@ header + section h2 + p {
     font-family: "Noto_Sans_JP";
 }
 
-.hachinohe-rigth h3 + p + p {
+.hachinohe-right h3 + p + p {
     margin-top: 3%;
     margin-bottom: 3%;
     color: #fff;
@@ -1042,7 +1042,7 @@ header + section h2 + p {
     font-family: "Noto_Sans_JP";
 }
 
-.hachinohe-rigth h3 + p + p + p {
+.hachinohe-right h3 + p + p + p {
     width: 100%;
     color: #fff;
     font-size: 2.3vw;
@@ -1050,7 +1050,7 @@ header + section h2 + p {
     font-family: "Noto_Sans_JP";
 }
 
-.hachinohe-rigth h4 {
+.hachinohe-right h4 {
     position: absolute;
     width: 120%;
     left: -50%;
@@ -1137,12 +1137,12 @@ header + section h2 + p {
     transform: translateX(100vw);
 }
 
-.aomori-rigth {
+.aomori-right {
     position: relative;
     width: 55%;
 }
 
-.aomori-rigth::after {
+.aomori-right::after {
     position: absolute;
     display: block;
     content: "";
@@ -1155,7 +1155,7 @@ header + section h2 + p {
     z-index: 1;
 }
 
-.aomori-rigth img {
+.aomori-right img {
     position: relative;
     width: 100%;
     vertical-align: bottom;
@@ -1571,11 +1571,11 @@ header + section h2 + p {
 }
 
 
-.access-rigth {
+.access-right {
     width: 48%;
 }
 
-.access-rigth div a {
+.access-right div a {
     position: relative;
     display: block;
     border-radius: 1.5vw;
@@ -1587,8 +1587,8 @@ header + section h2 + p {
 }
 
 
-.access-rigth div a::before,
-.access-rigth div a::after {
+.access-right div a::before,
+.access-right div a::after {
     position: absolute;
     display: block;
     content: "";
@@ -1598,33 +1598,33 @@ header + section h2 + p {
     transition: transform ease .3s;
 }
 
-.access-rigth div a::before {
+.access-right div a::before {
     right: -30vw;
     border-right: 30vw solid transparent;
     border-bottom: 30vw solid #333;
     transform: translateX(-100%);
 }
 
-.access-rigth div a::after {
+.access-right div a::after {
     left: -30vw;
     border-left: 30vw solid transparent;
     border-top: 30vw solid #333;
     transform: translateX(100%);
 }
 
-.access-rigth div a:hover p {
+.access-right div a:hover p {
     color: #FFDD0F;
 }
 
-.access-rigth div a:hover::before {
+.access-right div a:hover::before {
   transform: translateX(-49%);
 }
 
-.access-rigth div a:hover::after {
+.access-right div a:hover::after {
   transform: translateX(49%);
 }
 
-.access-rigth div p:nth-child(1) {
+.access-right div p:nth-child(1) {
     font-size: 5vw;
     text-align: center;
     color: #333;
@@ -1633,7 +1633,7 @@ header + section h2 + p {
     font-family: "Poppins";
 }
 
-.access-rigth div p:nth-child(2) {
+.access-right div p:nth-child(2) {
     text-align: center;
     color: #333;
     font-family: "Noto_Sans_JP";
@@ -1716,7 +1716,7 @@ header + section h2 + p {
     }
 }
 
-.footer-rigth {
+.footer-right {
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -1724,11 +1724,11 @@ header + section h2 + p {
     margin-top: 5%;
 }
 
-.footer-rigth .footer-list:nth-of-type(1) {
+.footer-right .footer-list:nth-of-type(1) {
     width: 20%;
 }
 
-.footer-rigth .footer-list:nth-of-type(2),.footer-list-center {
+.footer-right .footer-list:nth-of-type(2),.footer-list-center {
     width: 42%;
 }
 
@@ -1736,18 +1736,18 @@ header + section h2 + p {
     width: 37%;
 }
 
-.footer-rigth ul li {
+.footer-right ul li {
     list-style-type: none;
 }
 
-.footer-rigth ul li a {
+.footer-right ul li a {
     position: relative;
     text-decoration: none;
     color: #333;
     font-family: "Noto_Sans_JP";
 }
 
-.footer-rigth ul li a::before {
+.footer-right ul li a::before {
     position: absolute;
     display: block;
     content: "";
@@ -1761,7 +1761,7 @@ header + section h2 + p {
     transition: transform .3s;
 } 
 
-.footer-rigth ul li a:hover::before {
+.footer-right ul li a:hover::before {
     transform-origin: left top;
     transform: scale(1, 1);
 }
