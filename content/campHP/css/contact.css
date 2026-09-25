@@ -6,16 +6,6 @@
     
 }
 
-@font-face {
-    font-family: "IBM_Plex_Sans";
-    src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -65,7 +55,7 @@ html {
     width: 60%;
     margin-left: 12%;
     font-size: 1.1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;   
 }
 
@@ -156,7 +146,7 @@ html {
     line-height: 2;
     font-size: 1.1vw;
     list-style-type: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .NavMenu ul li a {
@@ -284,7 +274,7 @@ html {
     bottom: 28%;
     left: 41.3%;
     font-size: 3vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
 }
 
@@ -330,7 +320,7 @@ nav ul li {
 nav ul li a{
     display: block;
     text-decoration: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     color: #3e3a39;
 }
@@ -408,7 +398,7 @@ nav + p {
     text-align: center;
     font-size: 1.4vw;
     font-weight: bold;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 2;
     color: #3e3a39;
 }
@@ -430,7 +420,7 @@ nav + p {
     background-color: #248471;
     font-size: 1.4vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .flex-box p:nth-child(2) {
@@ -440,7 +430,7 @@ nav + p {
     color: #3e3a39;
     font-size: 2.3vw;
     font-weight: bold;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 /*フォーム*/
@@ -454,7 +444,7 @@ nav + p {
     text-align: center;
     font-size: 2.5vw;
     color: #3e3a39;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 form p:nth-child(2) {
@@ -477,13 +467,13 @@ form p:nth-child(2) {
     font-size: 1.2vw;
     color: #3e3a39;
     line-height: 2.3;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .form-flex-box label span {
     margin-top: -100%;
     margin-left: 1%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 0.7vw;
     color: #d85f56;
 }
@@ -507,7 +497,7 @@ form p:nth-child(2) {
 ::placeholder {
     color: #cccccc;
     font-size: 1.2vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 #mail {
@@ -535,7 +525,7 @@ textarea {
     font-weight: bold;
     margin-bottom: 1%;
     font-size: 1.4vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #3e3a39;
 }
 
@@ -544,7 +534,7 @@ textarea {
     white-space: pre-wrap;
     line-height: 1.7;
     font-size: 1.03vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #3e3a39;
 }
 
@@ -559,7 +549,7 @@ textarea {
 .checkbox input + p{
     margin-left: 2%;
     font-size: 1.15vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #3e3a39;
 }
 
@@ -568,7 +558,7 @@ textarea {
     margin-bottom: 8%;
     text-align: center;
     font-size: 0.9vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #3e3a39;
 }
 
@@ -582,7 +572,7 @@ textarea {
     font-size: 1.5vw;
     color: #fff;
     border-radius: 50px;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     background-color: #d6d6d6;
 }
 
@@ -710,7 +700,7 @@ main + div img {
     display: flex;
     line-height: 1.8vw;
     text-decoration: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
     font-size: 1vw;
     transition: 0.5s;
@@ -723,7 +713,7 @@ main + div img {
     font-size: 1vw;
     font-weight: bold;
     color: #1e3655;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     border-radius: 50px;
     background-color: #fff;
     transition: 0.5s;
@@ -779,7 +769,7 @@ main + div img {
 address {
     margin-top: 1%;
     font-style: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
     font-size: 1.1vw;
     line-height: 1.7;
@@ -807,7 +797,7 @@ address {
 .footer-last-box p {
     font-size: 1vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .privacy {
@@ -819,7 +809,7 @@ address {
     text-decoration: none;
     font-size: 0.9vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     transition: 0.5s;
 }
 
@@ -834,5 +824,5 @@ address {
     text-decoration: none;
     font-size: 0.9vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 

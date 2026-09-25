@@ -12,37 +12,6 @@
 */
 
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-   font-family: "Pacifico"; 
-    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Klee_One";
-    src: url(../fonts/Klee_One/KleeOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Dela_Gothic_One";
-    src: url(../fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "RocknRoll_One";
-    src: url(../fonts/RocknRoll_One/RocknRollOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Zen_Kurenaido";
-    src: url(../fonts/Zen_Kurenaido/ZenKurenaido-Regular.ttf);
-}
-
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -523,7 +492,7 @@ html {
     text-shadow: 0 0 5px #202020;
     font-weight: bold;
     letter-spacing: 0.08em;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 /*ナビゲーション*/
@@ -622,7 +591,7 @@ nav ul li a p {
     color: #202020;
     text-align: center;
     z-index: 100;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 nav ul li:nth-child(1) div:nth-child(3) {
@@ -755,7 +724,7 @@ main {
     margin-bottom: 5%;
     font-size: 4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
     z-index: 2;
 }
 
@@ -820,7 +789,7 @@ main {
     white-space: pre-wrap;
     font-size: 3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     opacity: 0;
     transition: 1s;
     transform: scale(0.6);
@@ -837,7 +806,7 @@ main {
     text-align: center;
     font-size: 1.2vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .view-box a {
@@ -854,7 +823,7 @@ main {
     font-size: 1.5vw;
     text-align: center;
     color: #202020;
-    font-family: "Zen_Kurenaido";
+    font-family: "Zen Kurenaido";
 }
 
 .arrow-parent {
@@ -909,7 +878,7 @@ main {
     margin-bottom: 8%;
     font-size: 4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
     z-index: 2;
 }
 
@@ -1007,7 +976,7 @@ main {
     font-size: 1.5vw;
     color: #fff;
     text-shadow: 0px 0px 1px #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 .work-left .work-parent:nth-of-type(2) .loop-box h3 {
@@ -1018,7 +987,7 @@ main {
     font-size: 1.5vw;
     color: #fff;
     text-shadow: 0px 0px 1px #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 .work-left .work-parent:nth-of-type(3) .loop-box h3 {
@@ -1028,7 +997,7 @@ main {
     font-size: 1.5vw;
     color: #fff;
     text-shadow: 0px 0px 1px #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 .view-box2 a {
@@ -1045,7 +1014,7 @@ main {
     font-size: 1.5vw;
     text-align: center;
     color: #202020;
-    font-family: "Zen_Kurenaido";
+    font-family: "Zen Kurenaido";
 }
 
 .arrow-parent2 {
@@ -1141,7 +1110,7 @@ main {
     margin-bottom: 10%;
     font-size: 4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
     z-index: 2;
 }
 
@@ -1191,7 +1160,7 @@ main {
     margin-top: 5%;
     margin-left: 5%;
     font-size: 1.5vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #202020;
 }
 
@@ -1219,7 +1188,7 @@ footer p {
     text-align: center;
     color: #fff;
     font-size: 1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 footer div {

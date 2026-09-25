@@ -12,36 +12,6 @@
 FOT-筑紫B丸ゴシック Std
 */
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Pacifico";
-    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Klee_One";
-    src: url(../fonts/Klee_One/KleeOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Dela_Gothic_One";
-    src: url(../fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "RocknRoll_One";
-    src: url(../fonts/RocknRoll_One/RocknRollOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Zen_Kurenaido";
-    src: url(../fonts/Zen_Kurenaido/ZenKurenaido-Regular.ttf);
-}
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -84,7 +54,7 @@ html {
     left: 44%;
     font-size: 4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
  }
 
 /*ナビゲーション*/
@@ -139,7 +109,7 @@ nav ul li a p {
     font-size: 1.5vw;
     color: #202020;
     text-align: center;
-    font-family: "Klee_One";
+    font-family: "Klee One";
     z-index: 100;
 }
 
@@ -267,7 +237,7 @@ nav ul li:nth-child(4) a:hover::before {
 .profile-box div:nth-child(1) + p {
     text-align: center;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.4vw;
 }
 
@@ -281,7 +251,7 @@ nav ul li:nth-child(4) a:hover::before {
 
 .profile-box p:nth-child(3),.inner-flex p {
     position: relative;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.3vw;
     text-indent: 1.3em;
 }
@@ -303,12 +273,12 @@ nav ul li:nth-child(4) a:hover::before {
     line-height: 1.8;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .inner-flex + p {
     margin-top: 5%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .soft-box {
@@ -344,7 +314,7 @@ nav ul li:nth-child(4) a:hover::before {
     color: #202020;
     font-size: 1.3vw;
     line-height: 2;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .soft-box ul li:nth-child(1):after,.soft-box ul li:nth-child(2):after {
@@ -356,7 +326,7 @@ nav ul li:nth-child(4) a:hover::before {
     width: 30%;
     font-size: 1.5vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .soft-box ul li:nth-child(3):after {
@@ -368,7 +338,7 @@ nav ul li:nth-child(4) a:hover::before {
     width: 30%;
     font-size: 1.5vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .soft-box ul li:nth-child(4):after,.soft-box ul li:nth-child(5):after,.soft-box ul li:nth-child(6):after  {
@@ -380,7 +350,7 @@ nav ul li:nth-child(4) a:hover::before {
     width: 30%;
     font-size: 1.5vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 /*
 .soft-box ul li:nth-child(6):after {
@@ -392,7 +362,7 @@ nav ul li:nth-child(4) a:hover::before {
     width: 30%;
     font-size: 1.5vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }*/
 
 .style-box h2 {
@@ -434,7 +404,7 @@ nav ul li:nth-child(4) a:hover::before {
     line-height: 1.6;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 /********************右側******************************/
@@ -482,7 +452,7 @@ nav ul li:nth-child(4) a:hover::before {
     text-align: center;
     color: #202020;
     line-height: 1.6;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .marker {
@@ -578,7 +548,7 @@ nav ul li:nth-child(4) a:hover::before {
     text-align: center;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .right-bottom-parent p:nth-child(3) {
@@ -590,7 +560,7 @@ nav ul li:nth-child(4) a:hover::before {
     font-size: 1.8vw;
     color: #fff;
     text-shadow: 0px 0px 5px #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     z-index: 3;
     display: none;
     transition: 0.5s;
@@ -667,7 +637,7 @@ nav ul li:nth-child(4) a:hover::before {
     white-space: pre-wrap;
     font-size: 1.1vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -767,7 +737,7 @@ nav ul li:nth-child(4) a:hover::before {
     line-height: 1.8;
     margin-left: 6%;
     font-size: 1.3vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     z-index: 2;
 }
 
@@ -832,7 +802,7 @@ nav ul li:nth-child(4) a:hover::before {
     margin-right: 10%;
     line-height: 1.8;
     font-size: 1.3vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -851,7 +821,7 @@ footer p {
     text-align: center;
     color: #fff;
     font-size: 1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 footer div {

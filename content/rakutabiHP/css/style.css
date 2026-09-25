@@ -5,16 +5,6 @@
     margin: 0;
 }
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Zen_Maru_Gothic";
-    src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf);
-}
-
 /*
 90b44b　黄緑
 f4a7b9　ピンク
@@ -38,7 +28,7 @@ html {
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 header {
@@ -99,7 +89,7 @@ header nav ul li a div img {
     text-align: center;
     font-size: 1.2vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     transform: rotateX("0deg");
     transition: 0.5s;
 }
@@ -140,7 +130,7 @@ header nav ul li:hover .p-title {
 
 .li-hover div a:hover p {
     color: #e44a6f;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .li-child {
@@ -162,7 +152,7 @@ header nav ul li:hover .p-title {
 .li-child p {
     width: 80%;
     margin-left: 0.5%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #202020;
     font-size: 1.2vw;
 }
@@ -170,7 +160,7 @@ header nav ul li:hover .p-title {
 .li-child + p {
     margin-left: 11%;
     line-height: 1.6;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 0.9vw;
     color: #202020;
 }
@@ -186,7 +176,7 @@ header nav ul li:hover .p-title {
 .li-flex-box div p a {
     padding-left: 3%;
     line-height: 2;
-     font-family: "Noto_Sans_JP";
+     font-family: "Noto Sans JP";
     font-size: 1.1vw;
     color: #202020;
 }
@@ -436,7 +426,7 @@ header nav ul li:hover .p-title {
     font-size: 1.1vw;
     text-indent: 2.5em;
     line-height: 3;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -930,7 +920,7 @@ form + p a {
     text-align: center;
     font-size: 1.2vw;
     color: #ccc;
-    font-family: "Noto_Sans_JP";;
+    font-family: "Noto Sans JP";;
 }
 
 #page-top:hover {
@@ -1041,7 +1031,7 @@ form + p a {
     left: 45%;
     margin: 0 auto;
     font-size: 9vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #f4a7b9;
 }
 
@@ -1057,7 +1047,7 @@ form + p a {
     left: 36%;
     font-size: 4vw;
     color: #000;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 } 
 
 .spring-box div:nth-child(5) {

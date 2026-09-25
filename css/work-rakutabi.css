@@ -11,36 +11,6 @@
 青　#0089A7
 */
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Pacifico";
-    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Klee_One";
-    src: url(../fonts/Klee_One/KleeOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Dela_Gothic_One";
-    src: url(../fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "RocknRoll_One";
-    src: url(../fonts/RocknRoll_One/RocknRollOne-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Zen_Kurenaido";
-    src: url(../fonts/Zen_Kurenaido/ZenKurenaido-Regular.ttf);
-}
-
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -82,7 +52,7 @@ html {
     left: 44%;
     font-size: 4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
  }
 
 /*ナビゲーション*/
@@ -137,7 +107,7 @@ nav ul li a p {
     font-size: 1.5vw;
     color: #202020;
     text-align: center;
-    font-family: "Klee_One";
+    font-family: "Klee One";
     z-index: 100;
 }
 
@@ -271,7 +241,7 @@ nav ul li:nth-child(4) a:hover::before {
     text-align: center;
     font-size: 1.4vw;
     color: #202020;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 .nav-box ul li:nth-child(2) a {
@@ -341,14 +311,14 @@ nav ul li:nth-child(4) a:hover::before {
     background-repeat: repeat-x;
     background-position: left bottom;
     font-size: 1.5vw;
-    font-family: "Klee_One";
+    font-family: "Klee One";
 }
 
 .content-box p:nth-child(even) {
     text-align: center;
     font-size: 1.2vw;
     line-height: 1.8;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .content-box + p {
@@ -356,7 +326,7 @@ nav ul li:nth-child(4) a:hover::before {
     margin: 0 auto;
     margin-bottom: 5%;
     font-size: 1.2vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .time-box {
@@ -379,7 +349,7 @@ nav ul li:nth-child(4) a:hover::before {
     font-size: 1.3vw;
     line-height: 2.5;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .time-box div:nth-child(3) {
@@ -398,7 +368,7 @@ nav ul li:nth-child(4) a:hover::before {
     font-size: 1.3vw;
     line-height: 2.5;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -409,7 +379,7 @@ nav ul li:nth-child(4) a:hover::before {
     margin-left: 10%;
     padding-left: 1.5%;
     font-size: 1.5vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .time-box + p a {
@@ -427,7 +397,7 @@ nav ul li:nth-child(4) a:hover::before {
     left: 0%;
     line-height: 2;
     font-size: 1.5vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 
 
 .time-box + p::after {
@@ -452,7 +422,7 @@ nav ul li:nth-child(4) a:hover::before {
     text-align: center;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .time-box + p + p::after {
@@ -463,7 +433,7 @@ nav ul li:nth-child(4) a:hover::before {
     left: 40%;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     animation: 2s scrool infinite linear;
 }
 
@@ -475,7 +445,7 @@ nav ul li:nth-child(4) a:hover::before {
     right: 40%;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     animation: 2s scrool infinite linear;
 }
 
@@ -495,7 +465,7 @@ nav ul li:nth-child(4) a:hover::before {
     width: 14%;
     padding-left: 1.5%;
     font-size: 1.5vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -514,7 +484,7 @@ nav ul li:nth-child(4) a:hover::before {
     left: 0%;
     line-height: 2;
     font-size: 1.5vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 
 
 .time-box + p + p + p::after {
@@ -547,7 +517,7 @@ footer p {
     text-align: center;
     color: #fff;
     font-size: 1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 footer div {

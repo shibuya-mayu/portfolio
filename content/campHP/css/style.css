@@ -6,17 +6,6 @@
     
 }
 
-@font-face {
-    font-family: "IBM_Plex_Sans";
-    src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-
 html {
     scroll-behavior: smooth;
 	overflow: auto;
@@ -73,7 +62,7 @@ body {
     width: 60%;
     margin-left: 12%;
     font-size: 1.1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;   
 }
 
@@ -164,7 +153,7 @@ body {
     line-height: 2;
     font-size: 1.1vw;
     list-style-type: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .NavMenu ul li a {
@@ -416,7 +405,7 @@ nav ul li {
 nav ul li a{
     display: block;
     text-decoration: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     color: #3e3a39;
 }
@@ -512,7 +501,7 @@ nav ul li:nth-of-type(7) a:hover img {
     text-align: center;
     color: #3e3a39;
     padding: 5% 4%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.1vw;
     border-radius: 10px;
     background-color: #f2efeb;
@@ -532,7 +521,7 @@ nav ul li:nth-of-type(7) a:hover img {
 }
 
 .header-box2-inner2 p:nth-child(1) {
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     text-align: center;
     font-size: 1.1vw;
     color: #fff;
@@ -542,7 +531,7 @@ nav ul li:nth-of-type(7) a:hover img {
 }
 
 .header-box2-inner2 p:nth-child(2) {
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     height: 6.8vw;  
     line-height: 6.8vw;
     text-align: center;
@@ -596,7 +585,7 @@ nav ul li:nth-of-type(7) a:hover img {
     position: absolute;
     top: -35%;
     left: 44%;
-    font-family: "IBM_Plex_Sans";
+    font-family: "IBM Plex Sans";
     font-size: 4.5vw;
     font-weight: 600;
     color: #1e3655;
@@ -648,7 +637,7 @@ nav ul li:nth-of-type(7) a:hover img {
     margin-bottom: 13%;
     line-height: 1.8;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.8vw;
     font-weight: 580;
     color: #3e3a39;
@@ -657,7 +646,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .camp-child-inner1 p:nth-child(2) {
     line-height: 2.3;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-weight: 300;
     font-size: 1.2vw;
     color: #3e3a39;
@@ -780,7 +769,7 @@ nav ul li:nth-of-type(7) a:hover img {
 }
 
 .map-parent h2 {
-    font-family: "IBM_Plex_Sans";
+    font-family: "IBM Plex Sans";
     font-size: 4.5vw;
     font-weight: 600;
     margin-top: 3%;
@@ -846,7 +835,7 @@ nav ul li:nth-of-type(7) a:hover img {
     margin-bottom: 13%;
     width: 100%;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 1.8;
     font-size: 1.8vw;
     font-weight: 580;
@@ -856,7 +845,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .map-inner-p2 {
     width: 100%;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 2.3;
     font-weight: 300;
     font-size: 1.2vw;
@@ -881,7 +870,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .map-child-inner div:nth-child(3) a p:nth-child(2) {
     width: 90%;
     text-indent: 1em;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.2vw;
     color: #fff;
     transition: 0.5s;
@@ -972,7 +961,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .third-child h3 {
     text-align: center;
-    font-family: "IBM_Plex_Sans";
+    font-family: "IBM Plex Sans";
     letter-spacing: 0.05em;
     font-size: 3vw;
     font-weight: 600;
@@ -981,7 +970,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .third-child p:nth-child(3) {
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     color: #1e3655;
 }
@@ -1008,7 +997,7 @@ nav ul li:nth-of-type(7) a:hover img {
     margin-top: 10%;
     white-space: pre-wrap;
     line-height: 2;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     color: #3e3a39;
 }
@@ -1019,7 +1008,7 @@ nav ul li:nth-of-type(7) a:hover img {
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 3.5;
     font-size: 1.2vw;
     color: #fff;
@@ -1060,7 +1049,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .outdoor-child1 h3 {
     margin-bottom: 12%;
-    font-family: "IBM_Plex_Sans";
+    font-family: "IBM Plex Sans";
     font-size: 3vw;
     font-weight: 600;
     color: #fff;
@@ -1069,7 +1058,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .outdoor-child1 p:nth-of-type(1) {
     margin-bottom: 10%;
     white-space: pre-wrap;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     line-height: 2vw;
     color: #fff;
@@ -1102,7 +1091,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .outdoor-child2 div p:nth-of-type(1) {
     text-align: center;
     margin-top: 5%;
-    font-family: "IBM_Plex_Sans";
+    font-family: "IBM Plex Sans";
     font-size: 1vw;
     color: #d8d056;
 }
@@ -1110,7 +1099,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .outdoor-child2 div p:nth-of-type(2) {
     text-align: center;
     margin-top: 3%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1vw;
     color: #fff;
 }
@@ -1123,7 +1112,7 @@ nav ul li:nth-of-type(7) a:hover img {
     line-height: 4vw;
     text-decoration: none;
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.1vw;
     border-radius: 50px;
     transition: 0.5s;
@@ -1219,7 +1208,7 @@ nav ul li:nth-of-type(7) a:hover img {
     bottom: 0;
     width: 60%;
     font-size: 1vw;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     text-align: center;
     line-height: 2.3vw;
     color: #fff;
@@ -1247,7 +1236,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .spot-child2 h3 {
     margin-top: 8%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.8vw;
     font-weight: 600;
     color: #3e3a39;
@@ -1264,7 +1253,7 @@ nav ul li:nth-of-type(7) a:hover img {
     line-height: 3.3vw;
     text-decoration: none;
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #3e3a39;
     border-radius: 50px;
     font-size: 1.1vw;
@@ -1309,7 +1298,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .ivent-section h3 {
     margin-top: 2%;
     width: 20%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.8vw;
     font-weight: 600;
     color: #3e3a39;
@@ -1329,7 +1318,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .ivent-inner a p:nth-child(1) {
     margin-left: 1%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 6vw;
     color: #3e3a39;
     font-size: 0.9vw;
@@ -1338,7 +1327,7 @@ nav ul li:nth-of-type(7) a:hover img {
 
 .ivent-inner a p:nth-child(2) {
     margin-left: 6%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     line-height: 6vw;
     color: #3e3a39;
     font-size: 1.1vw;
@@ -1375,7 +1364,7 @@ nav ul li:nth-of-type(7) a:hover img {
 .ivent-section + div a p:nth-child(2) {
     width: 90%;
     text-indent: 1em;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 1.2vw;
     color: #3e3a39;
     transition: 0.5s;
@@ -1515,7 +1504,7 @@ nav ul li:nth-of-type(7) a:hover img {
     display: flex;
     line-height: 1.8vw;
     text-decoration: none;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
     font-size: 1vw;
     transition: 0.5s;
@@ -1528,7 +1517,7 @@ nav ul li:nth-of-type(7) a:hover img {
     font-size: 1vw;
     font-weight: bold;
     color: #1e3655;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     border-radius: 50px;
     background-color: #fff;
     transition: 0.5s;
@@ -1583,7 +1572,7 @@ nav ul li:nth-of-type(7) a:hover img {
 address {
     margin-top: 1%;
     font-style: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
     font-size: 1.1vw;
     line-height: 1.7;
@@ -1611,7 +1600,7 @@ address {
 .footer-last-box p {
     font-size: 1vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .privacy {
@@ -1623,7 +1612,7 @@ address {
     text-decoration: none;
     font-size: 0.9vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     transition: 0.5s;
 }
 
@@ -1638,5 +1627,5 @@ address {
     text-decoration: none;
     font-size: 0.9vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 

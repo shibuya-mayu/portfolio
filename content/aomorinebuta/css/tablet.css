@@ -6,16 +6,6 @@
 }
 
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins/Poppins-Medium.ttf);
-}
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -65,7 +55,7 @@ body {
     margin-right: 0;
     font-size: 2.4vw;
     font-weight: 500;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     list-style-type: none;
     border-bottom: 1px dashed #333;
 }
@@ -112,7 +102,7 @@ body {
     margin-left: 3%;
     font-size: 2.4vw;
     font-weight: 500;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
 }
 
@@ -125,7 +115,7 @@ body {
     width: 0.8vw;
     height: 0.8vw;
     transform: rotate(45deg);
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     border-right: 1.5px solid #fff;
     border-bottom: 1.5px solid #fff;
     font-weight: 500;
@@ -216,7 +206,7 @@ header .top-img {
     line-height: 2vw;
     font-size: 2.5vw;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 
 
 /***************ハンバーガーメニュー************************/
@@ -272,7 +262,7 @@ header .top-img {
 header + section h2 {
     margin-top: 7%;
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 4vw;
     font-weight: 700;
     color: #333;
@@ -283,7 +273,7 @@ header + section h2 + p {
     font-weight: normal;
     font-size: 2vw;
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #333;
 }
 
@@ -318,7 +308,7 @@ header + section h2 + p {
     text-align: center;
     font-size: 3vw;
     font-weight: 500;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     background-color: #fff;
     color: #333;
 }
@@ -394,7 +384,7 @@ header + section h2 + p {
     text-align: center;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #333;
 }
 
@@ -403,7 +393,7 @@ header + section h2 + p {
     text-align: center;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #333;
 }
 
@@ -434,7 +424,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 3.2vw;
     font-weight: 900;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .ivent-box a p:nth-child(2) {
@@ -479,7 +469,7 @@ header + section h2 + p {
     font-size: 3.2vw;
     font-weight: 700;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .week-flex-left div {
@@ -532,7 +522,7 @@ header + section h2 + p {
     font-size: 3.2vw;
     font-weight: 900;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 /*************************ページトップ******************************/
 .page-top {
@@ -603,7 +593,7 @@ header + section h2 + p {
     font-size: 4vw;
     font-weight: 700;
     text-align: center;
-    font-family: "Noto_Sans_JP";    
+    font-family: "Noto Sans JP";    
     color: #333;
 }
 
@@ -612,7 +602,7 @@ header + section h2 + p {
     font-size: 2.3vw;
     text-align: center;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #333;
 }
 
@@ -636,7 +626,7 @@ header + section h2 + p {
     font-size: 2.1vw;
     font-weight: normal;
     line-height: 1.6;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #333;
 }
 
@@ -646,7 +636,7 @@ header + section h2 + p {
     text-align: center;
     line-height: 1.6;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
 }
 
@@ -668,7 +658,7 @@ header + section h2 + p {
     font-size: 2.1vw;
     font-weight: normal;
     line-height: 1.6;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .sns-flex {
@@ -737,7 +727,7 @@ header + section h2 + p {
     font-weight: normal;
     line-height: 1.7;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .sns-parent p:nth-of-type(2) span {
@@ -758,7 +748,7 @@ header + section h2 + p {
     font-size: 4vw;
     font-weight: 700;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .about-section h2 + p {
@@ -770,7 +760,7 @@ header + section h2 + p {
     font-size: 2vw;
     font-weight: normal;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .about-section h2 + p + p {
@@ -778,7 +768,7 @@ header + section h2 + p {
     width: 23%;
     margin: 0 auto;
     margin-bottom: 3%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .about-section h2 + p + p a {
@@ -872,7 +862,7 @@ header + section h2 + p {
     border-bottom-left-radius: 2.8vw;
     border-bottom-right-radius: 2.8vw;
     background-color: #C7584E;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -887,7 +877,7 @@ header + section h2 + p {
     font-size: 4vw;
     font-weight: 700;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .place-section h2 + p {
@@ -901,7 +891,7 @@ header + section h2 + p {
     font-size: 2vw;
     font-weight: normal;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .hachinohe-place {
@@ -1030,7 +1020,7 @@ header + section h2 + p {
     margin-top: -2%;
     font-size: 4vw;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .hachinohe-right h3 + p + p {
@@ -1039,7 +1029,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .hachinohe-right h3 + p + p + p {
@@ -1047,7 +1037,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .hachinohe-right h4 {
@@ -1109,7 +1099,7 @@ header + section h2 + p {
     font-weight: normal;
     line-height: 3.5;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 
 
 .schedule-inner p:nth-child(1) {
@@ -1117,14 +1107,14 @@ header + section h2 + p {
     font-weight: normal;
     margin-top: 5%;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .schedule-inner p:nth-child(2) {
     font-size: 2vw;
     font-weight: 300;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -1243,7 +1233,7 @@ header + section h2 + p {
     margin-top: -2%;
     font-size: 4vw;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .aomori-left h3 + p + p {
@@ -1252,7 +1242,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .aomori-left h3 + p + p + p {
@@ -1260,7 +1250,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2.3vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .aomori-left h4 {
@@ -1309,7 +1299,7 @@ header + section h2 + p {
     font-size: 2vw;
     font-weight: normal;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .container {
@@ -1397,7 +1387,7 @@ header + section h2 + p {
     margin-bottom: 3%;
     font-size: 4vw;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #fff;
 }
 
@@ -1416,7 +1406,7 @@ header + section h2 + p {
     line-height: 5;
     padding-left: 10%;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     cursor: pointer;
   }
 
@@ -1554,20 +1544,20 @@ header + section h2 + p {
     font-size: 2.8vw;
     white-space: pre-wrap;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .address-box p:nth-child(2) {
     margin-top: 5%;
     font-size: 2.8vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .address-box p:nth-child(3) {
     font-size: 2.8vw;
     color: #fff;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 
@@ -1636,7 +1626,7 @@ header + section h2 + p {
 .access-right div p:nth-child(2) {
     text-align: center;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 2.8vw;
     font-weight: 700;
 } 
@@ -1661,7 +1651,7 @@ header + section h2 + p {
     font-size: 4vw;
     font-weight: 700;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .footer-left h2 + p {
@@ -1669,7 +1659,7 @@ header + section h2 + p {
     font-size: 2.5vw;
     font-weight: normal;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .footer-sns {
@@ -1744,7 +1734,7 @@ header + section h2 + p {
     position: relative;
     text-decoration: none;
     color: #333;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .footer-right ul li a::before {
@@ -1781,7 +1771,7 @@ header + section h2 + p {
     line-height: 3;
     color: #333;
     font-weight: bold;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .footer-list-center p:nth-of-type(2) {
@@ -1831,7 +1821,7 @@ header + section h2 + p {
     color: #333;
     font-size: 2.3vw;
     font-weight: 500;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .white-box p:nth-child(2) {
@@ -1839,7 +1829,7 @@ header + section h2 + p {
     color: #333;
     font-size: 2.5vw;
     font-weight: 700;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 } 
 
 .footer-bottom-flex .white-box:nth-of-type(2) p:nth-child(2) {
@@ -1848,7 +1838,7 @@ header + section h2 + p {
 
 .white-box + p {
     text-align: center;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .white-box + p a {
@@ -1912,7 +1902,7 @@ header + section h2 + p {
     text-align: center;
     font-size: 2vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .tell-box {
@@ -1937,7 +1927,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .tell-box + p {
@@ -1946,7 +1936,7 @@ header + section h2 + p {
     color: #fff;
     font-size: 2vw;
     font-weight: normal;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .isAnimate {

@@ -5,16 +5,6 @@
     margin: 0;
 }
 
-@font-face {
-    font-family: "Noto_Sans_JP";
-    src: url(../fonts/Noto_Sans_JP/static/NotoSansJP-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Zen_Maru_Gothic";
-    src: url(../fonts/Zen_Maru_Gothic/ZenMaruGothic-Medium.ttf);
-}
-
 /*
 90b44b　黄緑
 f4a7b9　ピンク
@@ -110,7 +100,7 @@ header nav ul li a div img {
     text-align: center;
     font-size: 1.2vw;
     color: #202020;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     transform: rotateX("0deg");
     transition: 0.5s;
 }
@@ -151,7 +141,7 @@ header nav ul li:hover .p-title {
 
 .li-hover div a:hover p {
     color: #e44a6f;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
 }
 
 .li-child {
@@ -173,7 +163,7 @@ header nav ul li:hover .p-title {
 .li-child p {
     width: 80%;
     margin-left: 0.5%;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     color: #202020;
     font-size: 1.2vw;
 }
@@ -181,7 +171,7 @@ header nav ul li:hover .p-title {
 .li-child + p {
     margin-left: 11%;
     line-height: 1.6;
-    font-family: "Noto_Sans_JP";
+    font-family: "Noto Sans JP";
     font-size: 0.9vw;
     color: #202020;
 }
@@ -197,7 +187,7 @@ header nav ul li:hover .p-title {
 .li-flex-box div p a {
     padding-left: 3%;
     line-height: 2;
-     font-family: "Noto_Sans_JP";
+     font-family: "Noto Sans JP";
     font-size: 1.1vw;
     color: #202020;
 }
@@ -234,7 +224,7 @@ header + .top-img {
     top: 5%;
     left: 30%;
     font-size: 9vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     text-shadow: 0 0 5px #202020;
     color: #f4a7b9;
 }
@@ -250,7 +240,7 @@ header + .top-img {
     right: 25%;
     color: #fff;
     font-size: 6vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     text-shadow: 0 0 5px #202020;
 }
 
@@ -273,7 +263,7 @@ header + .top-img {
     width: 28%;
     font-size: 1.6vw;
     text-align: center;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .sakura + p a {
@@ -296,7 +286,7 @@ header + .top-img {
     width: 0.5vw;
     height: 0.5vw;
     transform: rotate(45deg);
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     border-top: 3.5px solid #fa93a1;
     border-right: 3.5px solid #fa93a1;
     transition: 0.5s;
@@ -361,7 +351,7 @@ header + .top-img {
     text-align: center;
     font-size: 1.5vw;
     font-weight: bold;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -428,7 +418,7 @@ header + .top-img {
 
 .top-nav-flex p {
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -480,7 +470,7 @@ header + .top-img {
     text-align: center;
     font-size: 1.2vw;
     color: #ccc;
-    font-family: "Noto_Sans_JP";;
+    font-family: "Noto Sans JP";;
 }
 
 #page-top:hover {
@@ -499,7 +489,7 @@ header + .top-img {
     margin-bottom: 6%;
     text-align: center;
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -521,7 +511,7 @@ header + .top-img {
     text-align: center;
     color: #fff;
     border-radius: 3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background-color: #fa93a1;
 }
 
@@ -531,7 +521,7 @@ header + .top-img {
 
 .news-flex p:nth-child(2) {
     font-size: 1.3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
     transition: 0.5s;
 }
@@ -553,7 +543,7 @@ header + .top-img {
 
 .keyword-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -563,7 +553,7 @@ header + .top-img {
     margin-bottom: 3%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -591,7 +581,7 @@ header + .top-img {
     font-size: 1.3vw;
     margin-top: 1.3%;
     margin-right: 1%;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .keyword-flex-box  p a {
@@ -613,7 +603,7 @@ header + .top-img {
     top: 0;
     left: 13%;
     font-size: 1.3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
     transition: 0.5s;
 }
@@ -662,7 +652,7 @@ header + .top-img {
 
 .theme-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -672,7 +662,7 @@ header + .top-img {
     margin-bottom: 3%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -749,7 +739,7 @@ header + .top-img {
     top: 43%;
     left: 0;
     font-size: 1.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
     z-index: 100;
 }
@@ -760,7 +750,7 @@ header + .top-img {
     width: 100%;
     text-align: center;
     font-size: 1.1vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
     z-index: 100;
     display: none;
@@ -785,7 +775,7 @@ header + .top-img {
 
 .quupon-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -795,7 +785,7 @@ header + .top-img {
     margin-bottom: 3%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -837,7 +827,7 @@ header + .top-img {
     font-size: 1.3vw;
     text-align: center;
     color: #202020;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .coupon-parent a:hover img {
@@ -859,7 +849,7 @@ header + .top-img {
 
 .recommend-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -869,7 +859,7 @@ header + .top-img {
     margin-bottom: 0.5%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -879,7 +869,7 @@ header + .top-img {
 .recommend-section h2 + p {
     text-align: center;
     font-size: 1.3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
 }
 
@@ -936,14 +926,14 @@ header + .top-img {
 .recommend-parent h3 p {
     text-align: center;
     font-size: 1.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
 .recommend-parent h3 + p {
     margin-top: 3%;
     font-size: 1.6vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -951,7 +941,7 @@ header + .top-img {
     margin-top: 3%;
     font-size: 1.2vw;
     line-height: 1.6;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
 }
 
@@ -992,7 +982,7 @@ header + .top-img {
     line-height: 3.5;
     text-align: center;
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     border-radius: 0.5vw;
     background-color: #fa93a1;
     cursor: pointer;
@@ -1032,7 +1022,7 @@ header + .top-img {
     margin-left: 8%;
     font-size: 1.2vw;
     line-height: 2;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #fff;
 }
 
@@ -1043,7 +1033,7 @@ header + .top-img {
     right: 8%;
     content: ">";
     font-style: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #fff;
     transition: 0.5s;
 }
@@ -1058,7 +1048,7 @@ header + .top-img {
     line-height: 3.5;
     text-align: center;
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     border-radius: 0.5vw;
     background-color: #fa93a1;
     transition: 0.5s;
@@ -1095,7 +1085,7 @@ header + .top-img {
     display: block;
     text-decoration: none;
     line-height: 3;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     font-size: 1.2vw;
     color: #fff;
     border-radius: 3vw;
@@ -1114,7 +1104,7 @@ header + .top-img {
 
 .area-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -1124,7 +1114,7 @@ header + .top-img {
     margin-bottom: 0.5%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -1177,14 +1167,14 @@ header + .top-img {
     text-align: center;
     font-size: 1.8vw;
     line-height: 1.6;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
 .area-paret a + p {
     margin-top: 3%;
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
 }
 /*セクション　人気のテーマパーク・レジャースポットから選ぶ*/
@@ -1200,7 +1190,7 @@ header + .top-img {
 
 .themepark-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -1210,7 +1200,7 @@ header + .top-img {
     margin-bottom: 3%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -1238,7 +1228,7 @@ header + .top-img {
     font-size: 1.3vw;
     margin-top: 1.3%;
     margin-right: 1%;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .themepark-flex-box  p a {
@@ -1260,7 +1250,7 @@ header + .top-img {
     top: 0;
     left: 8%;
     font-size: 1.3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
     transition: 0.5s;
 }
@@ -1321,7 +1311,7 @@ header + .top-img {
 
 .with-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -1331,7 +1321,7 @@ header + .top-img {
     margin-bottom: 5%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -1394,7 +1384,7 @@ header + .top-img {
     text-align: center;
     font-size: 2.5vw;
     color: #fff;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .with-pasition p {
@@ -1407,7 +1397,7 @@ header + .top-img {
     line-height: 2.3;
     font-size: 1.3vw;
     border-radius: 0.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background-color: #fa93a1;
     transition: 0.5s;
 }
@@ -1418,7 +1408,7 @@ header + .top-img {
     content: ">";
     top: -8%;
     right: 4%;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     font-size: 1.3vw;
     color: #fff;
 }
@@ -1443,7 +1433,7 @@ header + .top-img {
     text-align: center;
     color: #202020;
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     text-decoration: none;
     border-radius: 3vw;
     background-color: #fff;
@@ -1458,7 +1448,7 @@ header + .top-img {
     left: 8%;
     font-size: 1.2vw;
     color: #202020;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     transition: 0.5s;
 } 
 
@@ -1529,7 +1519,7 @@ header + .top-img {
 
 .feature-section h2 p:nth-child(2) {
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -1539,7 +1529,7 @@ header + .top-img {
     margin-bottom: 5%;
     font-size: 1.3vw;
     letter-spacing: 0.1em;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background: rgb(228,74,111);
     background: linear-gradient(90deg, rgba(228,74,111,1) 0%, rgba(236,133,157,1) 59%, rgba(251,237,239,1) 150%);
     -webkit-background-clip: text;
@@ -1582,14 +1572,14 @@ header + .top-img {
     text-align: center;
     font-size: 1.3vw;
     color: #202020;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .feature-parent p {
     font-size: 1.2vw;
     line-height: 1.6;
     color: #202020;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .feature-flex-box + p {
@@ -1603,7 +1593,7 @@ header + .top-img {
     line-height: 3.5;
     text-align: center;
     text-decoration: none;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #fff;
     border-radius: 3vw;
     background-color: #fa93a1;
@@ -1618,7 +1608,7 @@ header + .top-img {
 .search-section h2 {
     text-align: center;
     font-size: 2.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #873535;
 }
 
@@ -1643,14 +1633,14 @@ header + .top-img {
 
 .tab_btn p:nth-child(1) {
     font-size: 1.5vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .tab_btn p:nth-child(2) {
     text-align: center;
     margin-top: 1%;
     font-size: 1vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .btn_area .tab_btn:last-child {
@@ -1739,7 +1729,7 @@ header + .top-img {
     font-size: 1.2vw;
     text-indent: 2.5em;
     line-height: 3;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
 }
 
 .tab-position p:nth-child(2) {
@@ -1749,7 +1739,7 @@ header + .top-img {
     font-size: 0.9vw;
     padding: 0 1%;
     color: #656972;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background-color: #fff;
 }
 
@@ -1759,7 +1749,7 @@ header + .top-img {
     left: 19%;
     font-size: 0.9vw;
     padding: 0 1%;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #ff6347;
     border-radius: 2vw;
     border: 1px solid #ff6347;
@@ -1788,7 +1778,7 @@ header + .top-img {
 
 .car-box p {
     font-size: 1.2vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
 }
 
@@ -1843,7 +1833,7 @@ header + .top-img {
 .search-box p {
     margin-left: 3%;
     font-size: 1.3vw;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #fff;
 }
 /*タブ切り替え　一番右*/
@@ -1872,7 +1862,7 @@ header + .top-img {
     font-size: 0.9vw;
     padding: 0 0.5%;
     color: #656972;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background-color: #fff;
 }
 
@@ -1921,7 +1911,7 @@ header + .top-img {
     font-size: 0.9vw;
     padding: 0 1%;
     color: #656972;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     background-color: #fff;
 }
 
@@ -1941,7 +1931,7 @@ header + .top-img {
     margin-left: 5%;
     font-size: 1vw;
     margin-top: 2%;
-    font-family: "Zen_Maru_Gothic";
+    font-family: "Zen Maru Gothic";
     color: #202020;
 }
 
