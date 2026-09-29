@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/*
+タブレット用（550px〜899px）
+style.css の上から、タブレットで変えたいところだけ上書きする
+レイアウトはパソコンと同じで、小さくなりすぎる文字を大きくする
+*/
+
+header, section, section + div {
+    width: 85%;
+}
+/*ナビゲーション*/
+nav ul {
+    width: 60%;
+}
+
+nav ul li a p {
+    font-size: 2.4vw;
+}
+
+.scroll {
+    top: 100%;
+}
+
+header + div {
+    margin-top: 10%;
+}
+
+/*セクション アバウト*/
+.about-left {
+    width: 40%;
+}
+
+.about-right {
+    width: 58%;
+}
+
+.p-big {
+    font-size: 3.6vw;
+}
+
+.about-right p:nth-child(2) {
+    font-size: 1.75vw;
+    line-height: 1.8;
+}
+
+.view-box a {
+    height: auto;
+}
+
+.view-box a p,
+.view-box2 a p {
+    white-space: nowrap;
+    font-size: 2.4vw;
+}
+
+.arrow-parent,
+.arrow-parent2 {
+    margin-top: 1.5vw;
+}
+
+/*セクション ワーク*/
+.work-left {
+    width: 16%;
+}
+
+.work-parent {
+    height: 13vw;
+}
+
+.work-left .work-parent:nth-of-type(n) .loop-box h3 {
+    font-size: 2vw;
+}
+
+.view-box2 a {
+    height: auto;
+}
+
+.work-right {
+    width: 75%;
+    margin-left: 4%;
+}
+
+/*セクション コンタクト*/
+.contact-profile {
+    width: 80%;
+}
+
+.contact-flex {
+    align-items: center;
+}
+
+.contact-flex p {
+    margin-top: 0;
+    font-size: 2.6vw;
+}
+
+/*フッター*/
+footer > div{
+    width: 85%;
+}
+
+footer p {
+    font-size: 1.8vw;
+}
