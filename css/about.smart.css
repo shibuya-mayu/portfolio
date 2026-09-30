@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/*
+Aboutページ スマホ用（549px以下）
+about.css の上から、スマホで変えたいところだけ上書きする
+*/
+
+header, main {
+    width: calc(100% - 20px);
+ }
+
+/*ヘッダー*/
+.top-position {
+    height: 56vw;
+}
+
+.top-position div:nth-child(1) {
+    top: -6%;
+    left: 0;
+    width: 100%;
+}
+
+.top-position div:nth-child(2) {
+    top: 26%;
+    left: 30%;
+    width: 40%;
+}
+
+.top-position h1 {
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+}
+
+/*ナビゲーション*/
+nav ul {
+    width: 94%;
+    margin: 2% auto 10%;
+}
+
+nav ul li {
+    margin-right: 0;
+}
+
+nav ul li a {
+    height: auto;
+    padding: 2vw 0;
+    border-radius: 3vw;
+}
+
+nav ul li a p {
+    font-size: 4.2vw;
+}
+
+nav ul li:nth-child(n) a::before {
+    height: 100%;
+    border-radius: 3vw;
+}
+
+/*見出し 共通（左右の斜めの二重線を文字に合わせる）*/
+.style-box h2,
+.right-box-top h2,
+.right-box-bottom h2,
+.flex-box + h2 {
+    width: fit-content;
+    margin: 12% auto 6%;
+    padding: 0 12vw;
+    font-size: 5.5vw;
+}
+
+.style-box h2::before,
+.right-box-top h2::before,
+.right-box-bottom h2::before,
+.flex-box + h2::before {
+    left: 2vw;
+    width: 8vw;
+}
+
+.style-box h2::after,
+.right-box-top h2::after,
+.right-box-bottom h2::after,
+.flex-box + h2::after {
+    left: auto;
+    right: 2vw;
+    width: 8vw;
+    border-left: none;
+    border-right: 4px double #202020;
+}
+
+/*上のエリア（左右2列 → 縦1列）*/
+.flex-box {
+    flex-direction: column;
+}
+
+.left-box,
+.right-box {
+    width: 100%;
+    margin-left: 0;
+}
+
+/*プロフィール*/
+.profile-box div:nth-child(1) {
+    width: 60%;
+    margin: 0 auto 5%;
+}
+
+.profile-box div:nth-child(1) img {
+    border-radius: 3vw;
+}
+
+.profile-box div:nth-child(1) + p {
+    margin-bottom: 3%;
+    font-size: 4.6vw;
+}
+
+.profile-box p,
+.profile-box p:nth-child(3),
+.inner-flex p {
+    font-size: 3.8vw;
+}
+
+.profile-box p:nth-child(3)::before,
+.inner-flex p::before {
+    width: 3.4vw;
+    height: 3.4vw;
+    border-radius: 50%;
+}
+
+.inner-flex p:nth-child(1) {
+    width: 60%;
+}
+
+/*使用可能ソフト*/
+.soft-box {
+    margin-top: 16%;
+    padding: 9% 5% 6%;
+    border-radius: 3vw;
+}
+
+.soft-box h2 {
+    top: -4.5vw;
+    font-size: 5.5vw;
+}
+
+::marker {
+    font-size: 3vw;
+}
+
+.soft-box ul li {
+    font-size: 3.8vw;
+}
+
+.soft-box ul li:nth-child(n):after {
+    width: 36%;
+    font-size: 4vw;
+}
+
+/*得意の制作スタイル・考え・目標*/
+.style-box p,
+.right-box-top p {
+    font-size: 3.8vw;
+    line-height: 1.8;
+}
+
+/*好きなもの・趣味*/
+.right-box-bottom {
+    margin-top: 0;
+}
+
+.right-bottom-parent {
+    width: 44%;
+    margin-top: 6%;
+}
+
+.right-bottom-parent div:nth-child(1) img {
+    padding-top: 20%;
+}
+
+.right-bottom-parent p:nth-child(2) {
+    font-size: 4vw;
+}
+
+.right-bottom-parent p:nth-child(3) {
+    top: 36%;
+    font-size: 5vw;
+}
+
+/*クマと吹き出し*/
+.img-box {
+    margin-top: 16%;
+}
+
+.img-box div:nth-child(1) {
+    width: 28%;
+    margin-left: 6%;
+}
+
+.img-box div:nth-child(2) {
+    top: -26%;
+    left: 28%;
+    width: 72%;
+}
+
+.img-box p {
+    top: 14%;
+    right: 11%;
+    font-size: 3vw;
+}
+
+/*特徴・長所*/
+.right-lste-flex {
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.right-lste-flex .right-child:nth-of-type(n) {
+    width: auto;
+    margin-left: 0;
+    padding: 7% 6%;
+}
+
+.right-lste-flex .right-child:nth-of-type(2) {
+    margin-top: 12%;
+}
+
+.right-lste-flex .right-child:nth-of-type(n) h3 {
+    font-size: 4.8vw;
+}
+
+.right-lste-flex .right-child:nth-of-type(n) ul li {
+    font-size: 3.8vw;
+}
+
+.right-lste-flex .right-child:nth-of-type(2) ul li {
+    margin-right: 7%;
+}
+
+/*フッター*/
+footer {
+    margin-top: 30%;
+    padding: 4% 0;
+}
+
+footer > div{
+    width: calc(100% - 20px);
+}
+
+footer p {
+    font-size: 3vw;
+}
+
+footer .top-return {
+    width: 16%;
+}
