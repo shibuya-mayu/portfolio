@@ -40,7 +40,7 @@ nav ul li a {
     display: block;
     position: relative;
     width: 100%;
-    height: 10cqw;
+    height: 10cqw; /* 元: 10vw */
     text-decoration: none;
     border-radius: 50%;
     transition: 0.5s;
@@ -99,7 +99,7 @@ nav ul li a::before {
     left: 0;
     content: "";
     width: 100%;
-    aspect-ratio: 1 / 1;   /* height: 10cqw の代わり */
+    aspect-ratio: 1 / 1;   /* height: 10vw の代わり */
     border-radius: 50%;
     opacity: 0;
     transition: 0.5s;

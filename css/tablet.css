@@ -6,18 +6,7 @@ style.css の上から、タブレットで変えたいところだけ上書き�
 レイアウトはパソコンと同じで、小さくなりすぎる文字を大きくする
 */
 
-header, section, section + div {
-    width: 85%;
-}
 /*ナビゲーション*/
-nav ul {
-    width: 60%;
-}
-
-nav ul li a p {
-    font-size: 2.4vw;
-}
-
 .scroll {
     top: 100%;
 }
@@ -93,13 +82,4 @@ header + div {
 .contact-flex p {
     margin-top: 0;
     font-size: 2.6vw;
-}
-
-/*フッター*/
-footer > div{
-    width: 85%;
-}
-
-footer p {
-    font-size: 1.8vw;
 }
