@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/*コンテンツの横幅*/
+.inner { 
+    width: calc(100% - 20px); 
+}
+
+/*ナビゲーション*/
+nav ul {
+    width: 94%;
+    margin: 2% auto 0;
+}
+
+nav ul li {
+    margin-right: 0;
+}
+
+nav ul li a {
+    height: auto;
+    padding: 2vw 0;
+    border-radius: 3vw;
+}
+
+nav ul li a p {
+    font-size: 4.2vw;
+}
+
+nav ul li:nth-child(n) a::before {
+    height: 100%;
+    border-radius: 3vw;
+}
+
+/*フッター*/
+footer {
+    padding: 4% 0;
+}
+
+footer p {
+    font-size: 3vw;
+}
+
+footer .top-return {
+    width: 16%;
+}
