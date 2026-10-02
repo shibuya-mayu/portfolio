@@ -1,34 +1,11 @@
 @charset "UTF-8";
 
 /*
-Workページ共通 タブレット用（550px〜899px）
-work-all.css・work-camp.css など各ページのCSSの上から、タブレットで変えたいところだけ上書きする
-・一覧ページ（all・web・poster・logo・others）：.logo-flex-box / .tab-parent
-・詳細ページ（camp・rakutabi・fukagawa・aomorinebuta）：.movie-box / .content-box / .time-box
+Work詳細ページ共通 タブレット用（550px〜899px）
+対象：camp・rakutabi・fukagawa・aomorinebuta
+work-common-detail.css の上から、タブレットで変えたいところだけ上書きする
 */
 
-/*ヘッダー（一覧ページのみ）*/
-.top-position {
-    height: 44vw;
-}
-
-.top-position div:nth-child(1) {
-    top: -6%;
-    left: 5%;
-    width: 90%;
-}
-
-.top-position div:nth-child(2) {
-    left: 34%;
-    width: 32%;
-}
-
-.top-position h1 {
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 6vw;
-}
 
 /*ナビゲーション*/
 /*作品の種類メニュー（All / web / poster/banner / logo）*/
@@ -55,60 +32,6 @@ work-all.css・work-camp.css など各ページのCSSの上から、タブレッ
     width: calc(100% + 6vw);
     line-height: 0;
     transform: translateY(-50%);
-}
-
-/*一覧ページ：作品カード（3列 → 2列）*/
-.logo-flex-box {
-    width: 86%;
-}
-
-.tab-parent {
-    width: 46%;
-    margin-bottom: 8%;
-}
-
-.tab-parent div,
-.tab-parent div img {
-    height: 30vw;
-}
-
-.tab-parent div {
-    width: 90%;
-}
-
-.tab-parent h3 {
-    font-size: 2.6vw;
-}
-
-.tab-parent p:nth-of-type(1) {
-    line-height: 1.4;
-    font-size: 2.1vw;
-}
-
-.tab-parent p:nth-of-type(1)::before {
-    top: 0.3vw;
-    width: 2vw;
-    height: 2vw;
-}
-
-.tptc-p,
-.tab-parent p:nth-of-type(2),
-.tab-parent p:nth-of-type(6) {
-    font-size: 2vw;
-}
-
-.tab-parent p:last-child,
-.tab-parent p:last-child::before {
-    font-size: 2vw;
-}
-
-/*一覧ページ：ページ切り替え（1 / 2）*/
-.btn_area {
-    width: 12%;
-}
-
-.tab_btn {
-    font-size: 2.4vw;
 }
 
 /*詳細ページ：スライダー*/
@@ -219,4 +142,3 @@ work-all.css・work-camp.css など各ページのCSSの上から、タブレッ
 footer {
     margin-top: 16%;
 }
-
