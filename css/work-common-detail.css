@@ -81,7 +81,9 @@ nav ul {
 .movie-box + h2 {
     margin: 0 auto;
     margin-top: 5%;
-    width: 40%;
+    width: fit-content;
+    min-width: 40%;
+    padding: 0 1em;
     line-height: 3;
     font-size: 2.5vw;
     text-align: center;
@@ -222,6 +224,10 @@ nav ul {
 .time-box + p + p {
     position: relative;
     text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.8em;
     font-size: 1.3vw;
     color: #202020;
     font-family: "Noto Sans JP";
@@ -232,7 +238,7 @@ nav ul {
     position: absolute;
     content: "↓";
     top: 0;
-    left: 40%;
+    left: 0;
     font-size: 1.3vw;
     color: #202020;
     font-family: "Noto Sans JP";
@@ -244,7 +250,7 @@ nav ul {
     position: absolute;
     content: "↓";
     top: 0;
-    right: 40%;
+    right: 0;
     font-size: 1.3vw;
     color: #202020;
     font-family: "Noto Sans JP";
