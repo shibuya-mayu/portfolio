@@ -1,20 +1,4 @@
 @charset "UTF-8";
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/*
-赤　#DB4D6D
-黄色　#FFB11B
-青　#0089A7
-*/
-
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
- }
  
  .top-position {
     position: relative;
@@ -49,7 +33,9 @@ html {
  .top-position h1 {
     position: absolute;
     top: 41%;
-    left: 44%;
+    left: 0;
+    width: 100%;
+    text-align: center;
     font-size: 4vw;
     color: #202020;
     font-family: "Klee One";
@@ -83,6 +69,7 @@ nav ul {
 }
 
 .nav-box ul li:last-child {
+    display: none;
     margin-right: 0;
 }
 
@@ -99,17 +86,17 @@ nav ul {
     font-family: "Klee One";
 }
 
-.nav-box ul li:nth-child(5) a {
+.nav-box ul .work-circle-position a {
     position: relative;
 }
 
-.nav-box ul li:nth-child(5) a div {
+.nav-box ul .work-circle-position a div {
     position: absolute;
     top: 0;
     width: 100%;
 }
 
-.nav-box ul li:nth-child(5) a div img {
+.nav-box ul .work-circle-position a div img {
     width: 100%;
     vertical-align: bottom;
 }
@@ -178,6 +165,17 @@ nav ul {
     background-color: #FFB11B;
 }
 
+.tptc-p {
+    white-space: pre-wrap;
+    color: #202020;
+    line-height: 1.5;
+    font-size: 1.1vw;
+    font-family: "Klee One";
+}
+
+.tptc-p span {
+    font-family: "Noto Sans JP";
+}
 
 .tab-parent p:nth-of-type(6) {
     margin-top: 5%;
