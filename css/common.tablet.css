@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* ===== 全ページ ===== */
+/*コンテンツの横幅*/
+.inner {
+    width: 85%;
+}
+
+/* ===== 雲のヘッダー（About・Work一覧） ===== */
+.top-position {
+    height: 44vw;
+}
+
+.top-position div:nth-child(1) {
+    top: -8%;
+    left: 5%;
+    width: 90%;
+}
+
+.top-position div:nth-child(2) {
+    left: 34%;
+    width: 32%;
+}
+
+.top-position h1 {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6vw;
+}
+
+/* ===== 全ページ ===== */
+/*ナビゲーション*/
+nav ul {
+    width: 70%;
+}
+
+nav ul li a p {
+    font-size: 2.6vw;
+}
+
+/* ===== 全ページ ===== */
+/*フッター*/
+footer p {
+    font-size: 1.8vw;
+}

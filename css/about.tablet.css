@@ -6,52 +6,9 @@ about.css の上から、タブレットで変えたいところだけ上書き�
 文章が多いので、スマホと同じく縦1列にする
 */
 
-header, main {
-    width: 85%;
- }
-
-/*ヘッダー*/
-.top-position {
-    height: 44vw;
-}
-
-.top-position div:nth-child(1) {
-    top: -8%;
-    left: 5%;
-    width: 90%;
-}
-
-.top-position div:nth-child(2) {
-    left: 34%;
-    width: 32%;
-}
-
-.top-position h1 {
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 6vw;
-}
-
 /*ナビゲーション*/
 nav ul {
-    width: 70%;
     margin-bottom: 8%;
-}
-
-nav ul li a {
-    height: auto;
-    padding: 1.5vw 0;
-    border-radius: 2vw;
-}
-
-nav ul li a p {
-    font-size: 2.6vw;
-}
-
-nav ul li:nth-child(n) a::before {
-    height: 100%;
-    border-radius: 2vw;
 }
 
 /*見出し 共通（左右の斜めの二重線を文字に合わせる）*/
@@ -214,12 +171,4 @@ nav ul li:nth-child(n) a::before {
 /*フッター*/
 footer {
     margin-top: 22%;
-}
-
-footer > div{
-    width: 85%;
-}
-
-footer p {
-    font-size: 1.8vw;
 }

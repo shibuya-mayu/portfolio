@@ -1,21 +1,10 @@
 @charset "UTF-8";
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /*
 赤　#DB4D6D
 黄色　#FFB11B
 青　#0089A7
 */
-
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
- } 
 
  .loading {
     width: 100vw;
@@ -52,22 +41,13 @@ html {
     visibility: visible;
   }
 
-header {
-    padding-top: 3%;
-}
-
-header, section, section + div {
-    max-width: 1440px;
-    width: 80%;
-    margin: 0 auto;
-}
-
 .header-parent {
     position: relative;
     width: 100%;
-    height: 36vw;
-    padding-bottom: 5%;
-    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 100 / 36;        /* 36vw の代わり：幅に対して36%の高さ */
+    margin: 0 auto 5%;             /* padding-bottom ではなく margin で下をあける */
+    container-type: inline-size;   /* 中の cqw を、このヘッダーの幅に合わせる */
 }
 
 .header-parent div:nth-child(1) {
@@ -87,12 +67,13 @@ header, section, section + div {
     top: 3%;
     left: 30%;
     width: 40%;
-    height: 20vw;
+    height: 20cqw; /* 元: 20vw */
 }
 
 .header-parent div:nth-child(2) img {
     width: 100%;
-    height: 38vw;
+    height: auto;          /* 38vw の代わり */
+    aspect-ratio: 40 / 38; /* 元のデザインと同じ比率 */
     vertical-align: bottom;
     animation: 20s loop-top infinite linear;
 } 
@@ -497,13 +478,15 @@ header, section, section + div {
 .header-parent h1 {
     position: absolute;
     top: 40%;
-    left: 36%;
+    left: 0;
     font-size: 6vw;
     color: #fff;
     text-shadow: 0 0 5px #202020;
     font-weight: bold;
     letter-spacing: 0.08em;
     font-family: "Klee One";
+    width: 100%;
+    text-align: center;
 }
 
 /*ナビゲーション*/
@@ -515,8 +498,8 @@ header, section, section + div {
     position: absolute;
     top: 0%;
     left: 50%;
-    width: 0.15vw;
-    height: 15vw;
+    width: 0.15cqw; /* 元: 0.15vw */
+    height: 15cqw; /* 元: 15vw */
 }
 
 
@@ -526,8 +509,8 @@ header, section, section + div {
     content: "";
     top: 0;
     left: 0;
-    width: 0.15vw;
-    height: 0vw;
+    width: 0.15cqw; /* 元: 0.15vw */
+    height: 0cqw; /* 元: 0vw */
     background-color: rgb(161,218,128);
     background-color: linear-gradient(0deg, rgba(161,218,128,1) 0%, rgba(188,241,251,1) 100%);
     animation: 1.4s scroll  ease-in-out infinite;
@@ -541,7 +524,7 @@ header, section, section + div {
       opacity: 0;
     }
     30%{
-      height:15vw;
+      height:15cqw; /* 元: 15vw */
       opacity: 1;
     }
     100%{
@@ -554,153 +537,8 @@ header, section, section + div {
 
 nav ul {
     display: flex;
-    width: 42%;
+    width: 48%;
     margin-left: auto;
-}
-
-nav ul li {
-    width: calc(100%/4);
-    margin-right: 2%;
-    list-style-type: none;
-}
-
-nav ul li a {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 10vw;
-    text-decoration: none;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-nav ul li a div:nth-child(1) {
-    width: 100%;
-    padding-top: 11%;
-}
-
-nav ul li a div:nth-child(1) img {
-    display: block;
-    position: relative;
-    width: 60%;
-    margin: 0 auto;
-    display: none;
-    transition: 0.5s;
-    z-index: 100;
-}
-
-nav ul li a:hover div:nth-child(1) img {
-    display: block;
-    transition: 0.5s;
-}
-
-nav ul li a p {
-    position: relative;
-    line-height: 1.5;
-    font-size: 1.5vw;
-    color: #202020;
-    text-align: center;
-    z-index: 100;
-    font-family: "Klee One";
-}
-
-nav ul li:nth-child(1) div:nth-child(3) {
-    width: 100%;
-}
-
-nav ul li:nth-child(1) div:nth-child(3) img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
-nav ul li:nth-child(1):hover div:nth-child(3) {
-    display: none;
-}
-
-/*疑似要素で●入れて、その疑似要素だけを薄くしたい*/
-nav ul li:nth-child(1) a::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    border-radius: 50%;
-    width: 100%;
-    height: 10vw;
-    border-radius: 50%;
-    background-color: #9acd32;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-nav ul li:nth-child(1) a:hover::before {
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-nav ul li:nth-child(2) a::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    border-radius: 50%;
-    width: 100%;
-    height: 10vw;
-    border-radius: 50%;
-    background-color: #DB4D6D;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-nav ul li:nth-child(2) a:hover::before {
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-nav ul li:nth-child(3) a::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    border-radius: 50%;
-    width: 100%;
-    height: 10vw;
-    border-radius: 50%;
-    background-color: #FFB11B;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-nav ul li:nth-child(3) a:hover::before {
-    opacity: 0.5;
-    transition: 0.5s;
-}
-
-
-nav ul li:nth-child(4) a::before {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    border-radius: 50%;
-    width: 100%;
-    height: 10vw;
-    border-radius: 50%;
-    background-color: #0089A7;
-    opacity: 0;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-nav ul li:nth-child(4) a:hover::before {
-    opacity: 0.5;
-    transition: 0.5s;
 }
 
 header + div {
@@ -822,7 +660,7 @@ main {
 .view-box a {
     display: flex;
     width: 50%;
-    height: 2.4vw;
+    height: 2.4cqw; /* 元: 2.4vw */
     margin: 0 auto;
     margin-top: 10%;
     text-decoration: none;
@@ -842,25 +680,25 @@ main {
 }
 
 .arrow-left {
-    width: 3vw;
-    height: 0.5vw;
-    border-right: 0.2vw solid #000;
-    border-bottom: 0.1vw solid #000;
+    width: 3cqw; /* 元: 3vw */
+    height: 0.5cqw; /* 元: 0.5vw */
+    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
+    border-bottom: 0.1cqw solid #000; /* 元: 0.1vw */
     transform: skewX(45deg);
     transition: 0.5s;
 }
 
 .arrow-right {
-    width: 3vw;
-    height: 0.5vw;
-    border-right: 0.2vw solid #000;
-    border-top: 0.1vw solid #000;
+    width: 3cqw; /* 元: 3vw */
+    height: 0.5cqw; /* 元: 0.5vw */
+    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
+    border-top: 0.1cqw solid #000; /* 元: 0.1vw */
     transform: skewX(-45deg);
     transition: 0.5s;
 }
 
 .view-box a:hover .arrow-left,.view-box a:hover .arrow-right {
-    width: 5vw;
+    width: 5cqw; /* 元: 5vw */
     transition: 0.5s;
 }
 
@@ -923,7 +761,7 @@ main {
 .work-parent {
     position: relative;
     width: 100%;
-    height: 10vw;
+    height: 10cqw; /* 元: 10vw */
 }
 
 .work-left .work-parent:nth-of-type(2) {
@@ -1014,7 +852,7 @@ main {
 .view-box2 a {
     display: flex;
     width: 100%;
-    height: 2.4vw;
+    height: 2.4cqw; /* 元: 2.4vw */
     margin: 0 auto;
     margin-top: 20%;
     text-decoration: none;
@@ -1034,25 +872,25 @@ main {
 }
 
 .arrow-left2 {
-    width: 3vw;
-    height: 0.5vw;
-    border-right: 0.2vw solid #000;
-    border-bottom: 0.1vw solid #000;
+    width: 3cqw; /* 元: 3vw */
+    height: 0.5cqw; /* 元: 0.5vw */
+    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
+    border-bottom: 0.1cqw solid #000; /* 元: 0.1vw */
     transform: skewX(45deg);
     transition: 0.5s;
 }
 
 .arrow-right2 {
-    width: 3vw;
-    height: 0.5vw;
-    border-right: 0.2vw solid #000;
-    border-top: 0.1vw solid #000;
+    width: 3cqw; /* 元: 3vw */
+    height: 0.5cqw; /* 元: 0.5vw */
+    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
+    border-top: 0.1cqw solid #000; /* 元: 0.1vw */
     transform: skewX(-45deg);
     transition: 0.5s;
 }
 
 .view-box2 a:hover .arrow-left2,.view-box2 a:hover .arrow-right2 {
-    width: 5vw;
+    width: 5cqw; /* 元: 5vw */
     transition: 0.5s;
 }
 
@@ -1078,13 +916,13 @@ main {
 
 .work-right div p {
     width: 100%;
-    border-radius: 1vw;
+    border-radius: 1cqw; /* 元: 1vw */
     overflow: hidden;
 }
 
 .work-right div img {
     width: 100%;
-    border-radius: 1vw;
+    border-radius: 1cqw; /* 元: 1vw */
     vertical-align: bottom;
     transition: 0.5s;
 }
@@ -1185,52 +1023,8 @@ main + div img {
 
 /*フッター*/
 footer {
-    position: relative;
     margin-top: 10%;
-    padding: 2% 0;
     background-image: url(../images/contact-fotter.png);
-    background-size: 100% 100%;
-}
-
-footer > div{
-    position: relative;
-    width: 80%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-footer p {
-    margin-top: 7%;
-    text-align: center;
-    color: #fff;
-    font-size: 1vw;
-    font-family: "Noto Sans JP";
-}
-
-footer .top-return {
-    position: absolute;
-    bottom: 13%;
-    right: 3%;
-    width: 10%;
-    animation: 2s fuwafuwa infinite;
-}
-
-footer .top-return a {
-    display: block;
-}
-
-footer .top-return img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
-@keyframes fuwafuwa {
-    50% {
-        bottom: 20%;
-    }
-    100% {
-        bottom: 13%;
-    }
 }
 
 .isAnimate {

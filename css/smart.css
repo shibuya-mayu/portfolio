@@ -5,10 +5,6 @@
 style.css の上から、スマホで変えたいところだけ上書きする
 */
 
-header, section, section + div {
-    width: calc(100% - 20px);
-}
-
 /*ヘッダー*/
 .header-parent {
     height: 56vw;
@@ -18,10 +14,6 @@ header, section, section + div {
 .header-parent div:nth-child(2) {
     left: 20%;
     width: 60%;
-}
-
-.header-parent div:nth-child(2) img {
-    height: 57vw;
 }
 
 .header-parent div:nth-child(n+3) {
@@ -43,30 +35,6 @@ header, section, section + div {
 }
 .scroll::after {
     width: 0.4vw;
-}
-
-nav ul {
-    width: 94%;
-    margin: 2% auto 0;
-}
-
-nav ul li {
-    margin-right: 0;
-}
-
-nav ul li a {
-    height: auto;
-    padding: 2vw 0;
-    border-radius: 3vw;
-}
-
-nav ul li a p {
-    font-size: 4.2vw;
-}
-
-nav ul li:nth-child(n) a::before {
-    height: 100%;
-    border-radius: 3vw;
 }
 
 header + div {
@@ -246,17 +214,4 @@ header + div {
     margin-left: 4%;
     font-size: 4vw;
     word-break: break-all;
-}
-
-/*フッター*/
-footer {
-    padding: 4% 0;
-}
-
-footer > div{
-    width: calc(100% - 20px);
-}
-
-footer p {
-    font-size: 3vw;
 }

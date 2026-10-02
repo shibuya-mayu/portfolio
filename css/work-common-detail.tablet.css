@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/*
+Work詳細ページ共通 タブレット用（550px〜899px）
+対象：camp・rakutabi・fukagawa・aomorinebuta
+work-common-detail.css の上から、タブレットで変えたいところだけ上書きする
+*/
+
+
+/*ナビゲーション*/
+/*作品の種類メニュー（All / web / poster/banner / logo）*/
+.nav-box ul {
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto 8%;
+}
+
+.nav-box ul li {
+    width: auto;
+    margin-right: 0;
+    padding: 0 3vw;
+}
+
+.nav-box ul li a p {
+    font-size: 2.4vw;
+    white-space: nowrap;
+}
+
+.nav-box ul li:nth-child(n) a div {
+    top: 50%;
+    left: -3vw;
+    width: calc(100% + 6vw);
+    line-height: 0;
+    transform: translateY(-50%);
+}
+
+/*詳細ページ：スライダー*/
+.movie-box {
+    width: 90%;
+    height: auto;
+}
+
+.swiper-slide img {
+    height: 45vw;
+}
+
+/*詳細ページ：タイトル*/
+.movie-box + h2 {
+    width: 70%;
+    font-size: 3.6vw;
+}
+
+/*詳細ページ：Target・Perusona・Theme・Concept*/
+.content-box p:nth-child(odd) {
+    width: 26%;
+    font-size: 2.6vw;
+}
+
+.content-box p:nth-child(even) {
+    font-size: 2.2vw;
+}
+
+/*詳細ページ：感想*/
+.content-box + p {
+    font-size: 2.2vw;
+    line-height: 1.8;
+}
+
+/*詳細ページ：制作期間・ページ数*/
+.time-box {
+    align-items: center;
+}
+
+.time-box div:nth-child(1),
+.time-box div:nth-child(3) {
+    width: 6%;
+    margin-top: 0;
+}
+
+.time-box div:nth-child(3) {
+    margin-left: 6%;
+}
+
+.time-box p:nth-child(2),
+.time-box p:nth-child(4) {
+    margin-left: 1.5%;
+    font-size: 2.2vw;
+    line-height: 1.6;
+}
+
+/*詳細ページ：サイトへのリンク・別ページへのリンク*/
+.time-box + p,
+.time-box + p + p + p {
+    width: fit-content;
+    margin-top: 4%;
+    padding-left: 3vw;
+    font-size: 2.6vw;
+}
+
+.time-box + p::before,
+.time-box + p + p + p::before,
+.page-fleex-box p::before {
+    font-size: 2.6vw;
+}
+
+.time-box + p::after,
+.time-box + p + p + p::after,
+.page-fleex-box p::after {
+    height: 0.2vw;
+}
+
+.time-box + p + p {
+    margin-top: 4%;
+    font-size: 2.2vw;
+}
+
+.time-box + p + p::before {
+    right: 30%;
+    font-size: 2.2vw;
+}
+
+.time-box + p + p::after {
+    left: 30%;
+    font-size: 2.2vw;
+}
+
+/*詳細ページ：別ページへのリンク（キャンプ場）*/
+.page-fleex-box {
+    justify-content: flex-start;
+    margin-bottom: 8%;
+}
+
+.page-fleex-box p:nth-child(n) {
+    width: auto;
+    margin: 2% 4% 0 0;
+    padding-left: 3vw;
+    text-align: left;
+    font-size: 2.2vw;
+}
+
+/*フッター*/
+footer {
+    margin-top: 16%;
+}
