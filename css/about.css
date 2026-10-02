@@ -92,7 +92,7 @@ nav ul {
 
 .soft-box h2 {
     position: absolute;
-    top: -9%;
+    top: 0;
     left: 5%;
     font-size: 2vw;
     width: fit-content;
@@ -101,6 +101,7 @@ nav ul {
     color: #202020;
     font-family: "Pacifico";
     background-color: #fff;
+    transform: translateY(-50%);
 }
 
 .soft-box ul {
@@ -460,7 +461,7 @@ nav ul {
     position: absolute;
     content: "";
     top: 15%;
-    left: 0.8em;
+    left: -0.8em;
     width: 0;
     height: 100%;
     transform: skewx(35deg);
@@ -472,7 +473,7 @@ nav ul {
     position: absolute;
     content: "";
     top: 15%;
-    left: 0.8em;
+    right: -0.8em;
     width: 0;
     height: 100%;
     transform: skewx(-35deg);
