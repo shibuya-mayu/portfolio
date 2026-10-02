@@ -54,6 +54,7 @@ nav ul {
     margin-top: 8%;
     line-height: 2.6;
     font-size: 5.4vw;
+    padding: 0;
 }
 
 /*詳細ページ：Target・Perusona・Theme・Concept*/
@@ -144,12 +145,10 @@ nav ul {
 }
 
 .time-box + p + p::before {
-    right: 18%;
     font-size: 3.8vw;
 }
 
 .time-box + p + p::after {
-    left: 18%;
     font-size: 3.8vw;
 }
 

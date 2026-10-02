@@ -3,7 +3,7 @@
 /* ===== 全ページ ===== */
 /*コンテンツの横幅*/
 .inner {
-    width: 85%;
+    width: 90%;
 }
 
 /* ===== 雲のヘッダー（About・Work一覧） ===== */
@@ -23,9 +23,6 @@
 }
 
 .top-position h1 {
-    left: 0;
-    width: 100%;
-    text-align: center;
     font-size: 6vw;
 }
 

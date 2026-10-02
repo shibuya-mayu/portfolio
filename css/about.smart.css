@@ -79,10 +79,6 @@ nav ul {
     border-radius: 50%;
 }
 
-.inner-flex p:nth-child(1) {
-    width: 60%;
-}
-
 /*使用可能ソフト*/
 .soft-box {
     margin-top: 16%;
@@ -91,7 +87,6 @@ nav ul {
 }
 
 .soft-box h2 {
-    top: -4.5vw;
     font-size: 5.5vw;
 }
 

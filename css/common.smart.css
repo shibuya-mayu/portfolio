@@ -19,16 +19,11 @@
 }
 
 .top-position div:nth-child(2) {
-    top: 26%;
     left: 30%;
     width: 40%;
 }
 
 .top-position h1 {
-    top: 40%;
-    left: 0;
-    width: 100%;
-    text-align: center;
     font-size: 8vw;
 }
 

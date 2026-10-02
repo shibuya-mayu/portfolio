@@ -7,43 +7,19 @@
 .page-fleex-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;   /* space-between → center */
     width: 80%;
     margin: 0 auto;
     margin-top: 2%;
 }
 
-.page-fleex-box p:nth-child(1) {
+.page-fleex-box p {
     position: relative;
-    width: 10%;
-    text-align: right;
+    margin: 0 1.2em;
+    padding-left: 1.2em;       /* 「#」の分のすき間 */
     font-size: 1.3vw;
     font-family: "Noto Sans JP";
-}
-
-.page-fleex-box p:nth-child(2),.page-fleex-box p:nth-child(5),.page-fleex-box p:nth-child(6) {
-    position: relative;
-    width: 8%;
-    text-align: right;
-    font-size: 1.3vw;
-    font-family: "Noto Sans JP";
-}
-
-.page-fleex-box p:nth-child(3),.page-fleex-box p:nth-child(7) {
-    position: relative;
-    width: 11%;
-    text-align: right;
-    font-size: 1.3vw;
-    font-family: "Noto Sans JP";
-}
-
-.page-fleex-box p:nth-child(4) {
-    position: relative;
-    width: 16%;
-    text-align: right;
-    font-size: 1.3vw;
-    font-family: "Noto Sans JP";
-}
+} 
 
 .page-fleex-box p a {
     display: block;

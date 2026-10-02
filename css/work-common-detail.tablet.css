@@ -115,12 +115,10 @@ work-common-detail.css の上から、タブレットで変えたいところだ
 }
 
 .time-box + p + p::before {
-    right: 30%;
     font-size: 2.2vw;
 }
 
 .time-box + p + p::after {
-    left: 30%;
     font-size: 2.2vw;
 }
 
