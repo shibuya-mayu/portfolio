@@ -1,21 +1,10 @@
 @charset "UTF-8";
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /*
 赤　#DB4D6D
 黄色　#FFB11B
 青　#0089A7
 */
-
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
- } 
 
  .loading {
     width: 100vw;

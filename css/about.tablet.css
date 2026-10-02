@@ -6,29 +6,6 @@ about.css の上から、タブレットで変えたいところだけ上書き�
 文章が多いので、スマホと同じく縦1列にする
 */
 
-/*ヘッダー*/
-.top-position {
-    height: 44vw;
-}
-
-.top-position div:nth-child(1) {
-    top: -8%;
-    left: 5%;
-    width: 90%;
-}
-
-.top-position div:nth-child(2) {
-    left: 34%;
-    width: 32%;
-}
-
-.top-position h1 {
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 6vw;
-}
-
 /*ナビゲーション*/
 nav ul {
     margin-bottom: 8%;
