@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ポートフォリオサイト｜Work</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Klee+One&family=Pacifico&family=Dela+Gothic+One&family=RocknRoll+One&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/work.css">
+        <link rel="icon" type="image/x-icon" href="images/saru-icon.png">
+        <script src="https://kit.fontawesome.com/51a648782b.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/lightbox.js" type="text/javascript"></script>
+
+        <script>
+            $(function(){
+                $('.tab_box .tab_btn').click(function(e) {
+                    e.preventDefault();                          // href="#all" に飛ばないようにする
+                    var index = $('.tab_box .tab_btn').index(this);
+                    $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
+                    $(this).addClass('active');
+                    $('.tab_box .tab_panel').eq(index).addClass('active');
+                    history.replaceState(null, '', '#' + this.id); // URL を開いたタブ（#web など）にする
+                });
+
+                // URL の #〇〇 に合わせてタブを開く
+                function openByHash() {
+                    if (!location.hash) return;
+
+                    // タブの名前（#all・#web など）のとき：そのタブを開く
+                    var $tab = $('.tab_box .tab_btn' + location.hash);
+                    if ($tab.length) { $tab.click(); return; }
+
+                    // 作品（#fitness など）のとき：その作品があるタブを開いて、作品までスクロール
+                    var $target = $(location.hash);
+                    var $panel = $target.closest('.tab_panel');
+                    if (!$panel.length) return;
+
+                    var index = $('.tab_box .tab_panel').index($panel);
+                    $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
+                    $('.tab_box .tab_btn').eq(index).addClass('active');
+                    $panel.addClass('active');
+                    $target[0].scrollIntoView();
+                }
+
+                openByHash();                              // ほかのページから work.html#〇〇 で来たとき
+                $(window).on('hashchange', openByHash);   // 同じページの中で #〇〇 のリンクを押したとき
+            });
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/common.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+        <link rel="stylesheet" href="css/work.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+
+        <link rel="stylesheet" href="css/common.smart.css" media="screen and (max-width:549px)">
+        <link rel="stylesheet" href="css/work.smart.css" media="screen and (max-width:549px)">
+
+
+    </head>
+    <body>
+        <header class="inner">
+            <div class="top-position" id="top">
+                <div><img src="images/work-top.svg" alt="ピンクの雲っぽい画像"></div>
+                <div><img src="images/pen2.png" alt=""></div>
+                <h1>Work</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">
+                        <div><img src="images/home.png" alt="アルパカアイスの画像"></div>
+                        <p>Home</p>
+                    </a></li>
+                    <li><a href="about.html">
+                        <div><img src="images/about.png" alt="サルの画像"></div>
+                        <p>About</p>
+                    </a></li>
+                    <li><a href="work.html">
+                        <div><img src="images/work.png" alt=""></div>
+                        <p>Work</p>
+                        <div class="page-line"><img src="images/work-nav-laine.png" alt="線の画像 "></div>
+                    </a></li>
+                    <li><a href="index.html#contact">
+                       <div><img src="images/contact.png" alt="メールの画像"></div>
+                       <p>Contact</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main class="inner">
+        <section>
+            <div class="tab_box">
+                <div class="btn_area">
+                    <ul>
+                        <li id="all" class="tab_btn active"><a href="#all">
+                            <p>All</p>
+                            <div><img src="images/work-circle2.png" alt="円の画像"></div>
+                        </a></li>
+                        <li id="web" class="tab_btn"><a href="#web">
+                            <p>web</p>
+                            <div><img src="images/work-circle.png" alt="円の画像"></div>
+                        </a></li>
+                        <li id="poster" class="tab_btn"><a href="#poster">
+                            <p>poster/banner</p>
+                            <div><img src="images/work-circle2.png" alt="円の画像"></div>
+                        </a></li>
+                        <li id="logo" class="tab_btn"><a href="#logo">
+                            <p>logo</p>
+                            <div><img src="images/work-circle.png" alt="円の画像"></div>
+                        </a></li>
+                        <li id="others" class="tab_btn"><a href="#others">
+                            <p>others</p>
+                            <div><img src="images/work-circle2.png" alt="円の画像"></div>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="panel_area">
+                    <div class="tab_panel active">
+                        <div class="logo-flex-box">
+                            <div class="tab-parent">    
+                                <div><a href="work-fukagawa.html"><img src="content/fukagawa-top.png" alt="深川市役所ホームページ画像"></a></div>
+                                    <h3>深川市役所ホームページ</h3>
+                                    <p>制作時間　4日</p>
+                                    <p>visual studio code</p>
+                            </div>
+                            <div class="tab-parent">
+                                <div><a href="work-camp.html"><img src="content/camp-top.png" alt="キャンプ場ホームページ"></a></div>
+                                <h3>キャンプ場ホームページ</h3>
+                                <p>制作時間　2週間</p>
+                                <p>visual studio code</p>
+                            </div>
+                            <div class="tab-parent">
+                                <div><a href="work-rakutabi.html"><img src="content/rakutabi-top.png" alt="楽たび旅行会社ホームページ"></a></div>
+                                <h3>楽たび旅行会社ホームページ</h3>
+                                <p>制作時間　1週間</p>
+                                <p>visual studio code</p>
+                            </div>
+                            <div class="tab-parent">
+                                <div><a href="work-aomorinebuta.html"><img src="content/aomorinebuta-top.png" alt="青森ねぶた冬祭ホームページ"></a></div>
+                                <h3>青森ねぶた冬祭ホームページ</h3>
+                                <p>制作時間　4日間</p>
+                                <p>visual studio code</p>
+                            </div>
+                            <div class="tab-parent">
+                                <div><a href="work.html#fitness"><img src="content/fitness-baner.jpg" alt="フィットネスのバナー画像"></a></div>
+                                <h3>フィットネスのバナー</h3>
+                                <p>制作時間　8時間</p>
+                                <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent"> 
+                                <div><a href="work.html#hatuuri"><img src="content/hatuuri-baner.jpg" alt="初売りバナー画像"></a></div>
+                                <h3>初売りのバナー</h3>
+                                <p>制作時間　20時間</p>
+                                <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent"> 
+                                <div><a href="work.html#valentine"><img src="content/valentine-baner.jpg" alt="バレンタインバナーの画像"></a></div>
+                                <h3>バレンタインのバナー</h3>
+                                <p>制作時間　8時間</p>
+                                <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent"> 
+                                <div><a href="work.html#christmas"><img src="content/christmas-poster.jpg" alt="クリスマスポスターの画像"></a></div>
+                                <h3>クリスマスのポスター</h3>
+                                <p>制作時間　10時間</p>
+                                <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent"> 
+                                <div><a href="work.html#chocolate"><img src="content/chocolate-baner.png" alt="ちょこまみれのバナー画像"></a></div>
+                                <h3>チョコまみれのバナー</h3>
+                                <p>制作時間　15時間</p>
+                                <p>Photoshop</p>
+                            </div>
+                            <div class="tab-parent"> 
+                                    <div><a href="work.html#summerfestival"><img src="content/summerfestival-poster.jpg" alt="夏祭りポスターの画像"></a></div>
+                                    <h3>夏祭りのポスター</h3>
+                                    <p>制作時間　8時間</p>
+                                    <p>Photoshop</p>
+                            </div>
+                            <div class="tab-parent">
+                                    <div><a href="work.html#rakutabi"><img src="content/rakutabi-logo.svg" alt="楽たびのロゴ画像"></a></div>
+                                    <h3>楽たびのロゴ</h3>
+                                    <p>制作時間　5時間</p>
+                                    <p>illustrator</p>
+                                </div>
+                            <div class="tab-parent">
+                                <div><a href="work.html#comai"><img src="content/comai-logo.png" alt="comaiのロゴ画像"></a></div>
+                                <h3>comaiのロゴ画像</h3>
+                                <p>制作時間　1日</p>
+                                <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent">
+                                    <div><a href="work.html#banpaku"><img src="content/osakabanpak-logo.png" alt="大阪万博のロゴ画像"></a></div>
+                                    <h3>大阪万博のロゴ</h3>
+                                    <p>制作時間　2時間</p>
+                                    <p>illustrator</p>
+                            </div>
+                            <div class="tab-parent">
+                                <div><a href="work.html#fujiya"><img src="content/fujiya-logo.png" alt="不二家のロゴ画像"></a></div>
+                                <h3>不二家のロゴ</h3>
+                                <p>制作時間　1日</p>
+                                <p>illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="tab_panel">
+                            <div class="logo-flex-box tab-web">
+                                <div class="tab-parent">    
+                                    <div><a href="work-fukagawa.html"><img src="content/fukagawa-top.png" alt="深川市役所ホームページ画像"></a></div>
+                                    <h3>深川市役所ホームページ</h3>
+                                    <p>制作時間　4日</p>
+                                    <p>私の地元である深川市の市役所のホームページを制作しました。初めての制作でコンテンツも多く、時間がかかりました。</p>
+                                    <p>visual studio code</p>
+                                </div>
+                                <div class="tab-parent">
+                                    <div><a href="work-camp.html"><img src="content/camp-top.png" alt="キャンプ場ホームページ"></a></div>
+                                    <h3>キャンプ場ホームページ</h3>
+                                    <p>制作時間　2週間</p>
+                                    <p>実際にあるキャンプ場のサイトを模倣して制作しました。レスポンシブ対応含め、ナビゲーション全てのページを作成しました。</p>
+                                    <p>visual studio code</p>
+                                </div>
+                                <div class="tab-parent">
+                                    <div><a href="work-rakutabi.html"><img src="content/rakutabi-top.png" alt="楽たび旅行会社ホームページ"></a></div>
+                                    <h3>楽たび旅行会社ホームページ</h3>
+                                    <p>制作時間　1週間</p>
+                                    <p>コンセプト・デザイン等他社サイトを参考にしつつ、自分で考え工夫して制作しました。</p>
+                                    <p>visual studio code</p>
+                                </div>
+                                <div class="tab-parent">
+                                    <div><a href="work-aomorinebuta.html"><img src="content/aomorinebuta-top.png" alt="青森ねぶた冬祭ホームページ"></a></div>
+                                    <h3>青森ねぶた冬祭ホームページ</h3>
+                                    <p>制作時間　4日間</p>
+                                    <p>初めてモーダルウィンドウも入れた制作をしました。また、他制作サイトに比べ多くのスクロールイベント（jQuery）を多く使用しました。</p>
+                                    <p>visual studio code</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_panel">
+                            <div class="logo-flex-box">
+                                <div class="tab-parent" id="fitness">
+                                    <div><a href="content/fitness-baner.jpg" rel="lightbox[sample-group]">
+                                        <img src="content/fitness-baner.jpg" alt="フィットネスのバナー画像" width="100"></a></div>
+                                    <h3>フィットネスのバナー</h3>
+                                    <p>制作時間　8時間</p>
+                                    <p class="tptc-p">Target
+<span>20~40代の女性</span></p>
+                    <p class="tptc-p">Perusona
+<span>仕事は忙しいけど運動したいとジムを探している人</span></p>
+                    <p class="tptc-p">Theme
+<span>手軽に通えるジム</span></p>
+                    <p class="tptc-p">Concept
+<span>優しい色合いとフォントで女性向けに金額・営業時間で手軽さを表現</span></p>
+                                    <p>実際にあるものを自分なりに組み合わせて制作しました。クマの絵に時間がかかりました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="hatuuri">
+                                    <div><a href="content/hatuuri-baner.jpg" rel="lightbox[sample-group]">
+                                        <img src="content/hatuuri-baner.jpg" alt="初売りバナー画像" width="100"></a></div>
+                                    <h3>初売りのバナー</h3>
+                                    <p>制作時間　20時間</p>
+                                    <p class="tptc-p">Target
+<span>20~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>初売り・セール情報を探している人</span></p>
+                    <p class="tptc-p">Theme
+<span>新年をお祝いする</span></p>
+                    <p class="tptc-p">Concept
+<span>赤・白・金、花等で新年を表現</span></p>
+                                    <p>実際にあるものを組み合わせて自分なりに制作しました。色々なところから真似てしまったので統一感がなくなってしまったところが反省点です。辰は上手く出来たと思います。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="valentine">
+                                    <div><a href="content/valentine-baner.jpg" rel="lightbox[sample-group]">
+                                        <img src="content/valentine-baner.jpg" alt="バレンタインバナーの画像" width="100"></a></div>
+                                    <h3>バレンタインのバナー</h3>
+                                    <p>制作時間　8時間</p>
+                                    <p class="tptc-p">Target
+<span>20~50代の女性</span></p>
+                    <p class="tptc-p">Perusona
+<span>バレンタインチョコを探している人</span></p>
+                    <p class="tptc-p">Theme
+<span>特別なチョコレート</span></p>
+                    <p class="tptc-p">Concept
+<span>濃い茶色にリボンで特別感と高級感を表現</span></p>
+                                    <p>実際にあるバナーを自分なりにアレンジして制作しました。チョコレートは一つ一つ切り取って配置しており、背景は黒っぽい色にして目立たなくしています。</p>
+                                    <p>Photoshop</p>
+                                </div>
+                                <div class="tab-parent" id="christmas">
+                                    <div><a href="content/christmas.svg" rel="lightbox[sample-group]">
+                                        <img src="content/christmas-poster.jpg" alt="クリスマスポスターの画像" width="100"></a></div>
+                                    <h3>クリスマスのポスター</h3>
+                                    <p>制作時間　10時間</p>
+                                    <p class="tptc-p">Target
+<span>10~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>クリスマスにどこかへ行こうとしている人</span></p>
+                    <p class="tptc-p">Theme
+<span>クリスマスを楽しむ</span></p>
+                    <p class="tptc-p">Concept
+<span>クリスマスツリーの軌跡とカラフルな色で楽しさを表現</span></p>
+                                    <p>実際にあるものを真似て作成しました。真ん中のfactoryChristmasの文字が初めての制作だったこともあり時間がかかりました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="summerfestival">
+                                    <div><a href="content/summerfestival-poster.jpg" rel="lightbox[sample-group]">
+                                        <img src="content/summerfestival-poster.jpg" alt="夏祭りポスターの画像" width="100"></a></div>
+                                    <h3>夏祭りのポスター</h3>
+                                    <p>制作時間　8時間</p>
+                                    <p class="tptc-p">Target
+<span>20~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>お祭りが好きな人</span></p>
+                    <p class="tptc-p">Theme
+<span>夏を感じる</span></p>
+                    <p class="tptc-p">Concept
+<span>青で夏らしさを花火・金魚などでお祭りを表現</span></p>
+                                    <p>実際にあるポスターを自分なりにアレンジして制作しました。字の強弱、質感などにこだわりました。</p>
+                                    <p>Photoshop</p>
+                                </div>
+                                <div class="tab-parent" id="chocolate"> 
+                                    <div><a href="content/chocolate-baner.png" rel="lightbox[sample-group]">
+                                        <img src="content/chocolate-baner.png" alt="ちょこまみれのバナー画像" width="100"></a></div>
+                                    <h3>チョコまみれのバナー</h3>
+                                    <p>制作時間　15時間</p>
+                                    <p class="tptc-p">Target
+<span>10~30代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>普段チョコまみれを食べている、好きな人</span></p>
+                    <p class="tptc-p">Theme
+<span>お得感を伝える</span></p>
+                    <p class="tptc-p">Concept
+<span>字の大きさと色でお得感を強調・表現</span></p>
+                                    <p>チョコまみれの包装紙を参考に自分なりに制作しました。線のガタガタ感も上手く表現できるよう工夫しました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_panel">
+                            <div class="logo-flex-box">
+                                <div class="tab-parent" id="comai">
+                                    <div><a href="content/comai.svg" rel="lightbox[sample-group]">
+                                        <img src="content/comai-logo.png" alt="comaiのロゴ画像" width="100"></a></div>
+                                    <h3>comaiのロゴ画像</h3>
+                                    <p>制作時間　1日</p>
+                                    <p class="tptc-p">Target
+<span>20~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>美味しいお米を探している人</span></p>
+                    <p class="tptc-p">Theme
+<span>わかりやすさと</span></p>
+                    <p class="tptc-p">Concept
+<span>黒でわかりやすさと、丸みで親しみやすさを表現</span></p>
+                                    <p>実際にあるものを真似て作成しました。丸くなっている部分の間隔が上手くいかず、何度も調整に時間がかかってしまいました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="banpaku">
+                                    <div><a href="content/osakabanpak-logo.png" rel="lightbox[sample-group]">
+                                        <img src="content/osakabanpak-logo.png" alt="大阪万博のロゴ画像" width="100"></a></div>
+                                    <h3>大阪万博のロゴ</h3>
+                                    <p>制作時間　2時間</p>
+                                    <p class="tptc-p">Target
+<span>20~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>海外、日本の文化に興味があり、未来の世代に何かを残したいと考えている人</span></p>
+                    <p class="tptc-p">Theme
+<span>いのち輝く未来社会のデザイン</span></p>
+                    <p class="tptc-p">Concept
+<span>「セル（細胞）」を意識した赤い球体をつなげ、1つの生命体を表現</span></p>
+                                    <p>実際にあるものを真似て作成しました。楕円形ツールをつなげて作成していきました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="fujiya">
+                                    <div><a href="content/fujiya-logo.svg" rel="lightbox[sample-group]">
+                                        <img src="content/fujiya-logo.png" alt="不二家のロゴ画像" width="100"></a></div>
+                                    <h3>不二家のロゴ</h3>
+                                    <p>制作時間　1日</p>
+                                    <p class="tptc-p">Target
+<span>10~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span></span></p>
+                    <p class="tptc-p">Theme
+<span>「おいしい笑顔」を届ける</span></p>
+                    <p class="tptc-p">Concept
+<span>「FUJIYA」のFであるとともに、「Familiar（親しみやすい）」「Flower（花のような）」「Fantasy（夢）」「Fresh（新鮮なアイデアに満ちた）」Fancy（高級な品質）」という5つの意味も表現</span></p>
+                                    <p>不二家のバナーを作成する為に、ロゴも合わせて制作しました。1度制作していたこともあり、オブジェクトツールの使い方もスムーズに出来るようになりました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                                <div class="tab-parent" id="rakutabi">
+                                    <div><a href="content/rakutabi-logo.svg" rel="lightbox[sample-group]">
+                                        <img src="content/rakutabi-logo.svg" alt="楽たびのロゴ画像" width="100"></a></div>
+                                    <h3>楽たびのロゴ</h3>
+                                    <p>制作時間　5時間</p>
+                                    <p class="tptc-p">Target
+<span>20~60代の男女</span></p>
+                    <p class="tptc-p">Perusona
+<span>旅行はしたいけど、予約や調べるのが面倒くさい、でも楽しみたいと思っている人</span></p>
+                    <p class="tptc-p">Theme
+<span>旅行の楽しさ・安らぎを伝える</span></p>
+                    <p class="tptc-p">Concept
+<span>オレンジとニコニコマークで楽しさを、ピンクと四つ葉で安らぎ幸せを表現</span></p>
+                                    <p>旅行会社のサイトを制作するにあたって作りました。楽して、楽しく、旅行してもらいたいと思いを込めました。</p>
+                                    <p>illustrator</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_panel">
+                            <div class="logo-flex-box">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+                
+
+            <footer>
+                <div class="inner">
+                    <p><small>&copy;Shibuya Mayu</small></p>
+                    <div class="top-return"><a href="#top"><img src="images/work-top-return.png" alt="風船の画像"></a></div>
+                </div>
+            </footer>
+    </body>
+</html>
