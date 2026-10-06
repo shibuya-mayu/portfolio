@@ -479,7 +479,7 @@
     position: absolute;
     top: 40%;
     left: 0;
-    font-size: 6vw;
+    font-size: clamp(13px, 6vw, 86.4px);
     color: #fff;
     text-shadow: 0 0 5px #202020;
     font-weight: bold;
