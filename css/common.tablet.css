@@ -23,7 +23,7 @@
 }
 
 .top-position h1 {
-    font-size: 6vw;
+    font-size: max(13px, 6vw);
 }
 
 /* ===== 全ページ ===== */
@@ -33,11 +33,11 @@ nav ul {
 }
 
 nav ul li a p {
-    font-size: 2.6vw;
+    font-size: max(13px, 2.6vw);
 }
 
 /* ===== 全ページ ===== */
 /*フッター*/
 footer p {
-    font-size: 1.8vw;
+    font-size: max(13px, 1.8vw);
 }

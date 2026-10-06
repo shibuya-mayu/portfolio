@@ -25,11 +25,11 @@ header + div {
 }
 
 .p-big {
-    font-size: 3.6vw;
+    font-size: max(13px, 3.6vw);
 }
 
 .about-right p:nth-child(2) {
-    font-size: 1.75vw;
+    font-size: max(12px, 1.75vw); /* 13pxだと550px付近で改行がずれるため 12px */
     line-height: 1.8;
 }
 
@@ -40,7 +40,7 @@ header + div {
 .view-box a p,
 .view-box2 a p {
     white-space: nowrap;
-    font-size: 2.4vw;
+    font-size: max(13px, 2.4vw);
 }
 
 .arrow-parent,
@@ -58,7 +58,7 @@ header + div {
 }
 
 .work-left .work-parent:nth-of-type(n) .loop-box h3 {
-    font-size: 2vw;
+    font-size: max(13px, 2vw);
 }
 
 .view-box2 a {
@@ -81,5 +81,5 @@ header + div {
 
 .contact-flex p {
     margin-top: 0;
-    font-size: 2.6vw;
+    font-size: max(13px, 2.6vw);
 }

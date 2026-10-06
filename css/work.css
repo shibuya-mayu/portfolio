@@ -41,7 +41,7 @@ nav ul {
 .btn_area ul li a p {
     position: relative;
     text-align: center;
-    font-size: 1.4vw;
+    font-size: clamp(13px, 1.4vw, 20.2px);
     color: #202020;
     font-family: "Klee One";
 }
@@ -121,7 +121,7 @@ nav ul {
 .tab-parent h3 {
     margin-top: 5%;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -133,7 +133,7 @@ nav ul {
     margin-left: 10%;
     line-height: 1.2cqw; /* 元: 1.2vw */
     margin-bottom: 5%;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -154,7 +154,7 @@ nav ul {
     white-space: pre-wrap;
     color: #202020;
     line-height: 1.5;
-    font-size: 1.1vw;
+    font-size: clamp(13px, 1.1vw, 15.8px);
     font-family: "Klee One";
 }
 
@@ -166,7 +166,7 @@ nav ul {
     margin-top: 5%;
     color: #202020;
     line-height: 1.5;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     font-family: "Noto Sans JP";
 } 
 
@@ -175,7 +175,7 @@ nav ul {
     position: relative;
     margin-top: 5%;
     margin-left: 3%;
-    font-size: 1.1vw;
+    font-size: clamp(13px, 1.1vw, 15.8px);
     color: #ccc;
     font-family: "Zen Kurenaido";
 }
@@ -186,7 +186,7 @@ nav ul {
     content: "#";
     top: 3%;
     left: -3%;
-    font-size: 1.1vw;
+    font-size: clamp(13px, 1.1vw, 15.8px);
     font-family: "Zen Kurenaido";
 }
 
@@ -195,7 +195,7 @@ nav ul {
     margin-top: 5%;
     color: #202020;
     line-height: 1.5;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     font-family: "Noto Sans JP";
 }
 
