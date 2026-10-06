@@ -1,5 +1,5 @@
 @charset "UTF-8";
- 
+
 /*ナビゲーション*/
 nav ul {
     display: flex;
@@ -10,16 +10,17 @@ nav ul {
     margin-bottom: 5%;
 }
 
-/*疑似要素で●入れて、その疑似要素だけを薄くしたい*/
-/*ワーク　ナビゲーション*/
-.nav-box ul {
-    display: flex;
-    width: 60%;
+/*ワーク　タブ*/
+.btn_area {
     margin-bottom: 8%;
     margin-left: 1%;
 }
+.btn_area ul {
+    display: flex;
+    width: 60%;
+}
 
-.nav-box ul li {
+.btn_area ul li {
     width: calc(100%/5);
     padding-top: 5%;
     line-height: 3;
@@ -27,17 +28,17 @@ nav ul {
     list-style-type: none;
 }
 
-.nav-box ul li:last-child {
+.btn_area ul li:last-child {
     display: none;
     margin-right: 0;
 }
 
-.nav-box ul li a {
+.btn_area ul li a {
     display: block;
     text-decoration: none;
 }
 
-.nav-box ul li a p {
+.btn_area ul li a p {
     position: relative;
     text-align: center;
     font-size: 1.4vw;
@@ -45,28 +46,53 @@ nav ul {
     font-family: "Klee One";
 }
 
-.nav-box ul .work-circle-position a {
+.btn_area ul li.active a {
     position: relative;
 }
 
-.nav-box ul .work-circle-position a div {
+.btn_area ul li.active a div {
     position: absolute;
-    top: 0;
+    display: block;
+    top: 50%;
     width: 100%;
+    transform: translateY(-50%);
 }
 
-.nav-box ul .work-circle-position a div img {
+.btn_area ul li.active a div img {
     width: 100%;
     vertical-align: bottom;
 }
 
-/*タブ切り替え　ロゴ・名刺*/
+.btn_area ul li a div {
+    display: none;
+}
+
+/*メイン　タブ切り替え*/
+.tab_box{
+    width: 100%;
+}
+
+.tab_panel {
+    display:none;
+}
+
+.tab_panel.active {
+    display:block;
+    width: 100%;
+}
+
+.panel_area {
+    background-color: transparent;
+}
+
+/*タブ切り替え*/
 .logo-flex-box {
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
+    justify-content: flex-start;
+    column-gap: 5%;
+    width: 95%;
 }
 
 .tab-parent {
@@ -75,7 +101,7 @@ nav ul {
 }
 
 .tab-parent div {
-    width: 80%;
+    width: 100%;
     height: 20cqw; /* 元: 20vw */
     margin: 0 auto;
     padding-top: 5%;
@@ -164,9 +190,17 @@ nav ul {
     font-family: "Zen Kurenaido";
 }
 
+/*タブ切り替え　web*/
+.tab-web .tab-parent p:nth-of-type(2) {
+    margin-top: 5%;
+    color: #202020;
+    line-height: 1.5;
+    font-size: 1.2vw;
+    font-family: "Noto Sans JP";
+}
+
 /*フッター*/
 footer {
     margin-top: 10%;
     background-image: url(../images/work-footer.png);
 }
-

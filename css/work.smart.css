@@ -11,7 +11,7 @@ nav ul {
 }
 
 /*作品の種類メニュー（All / web / poster/banner / logo）*/
-.nav-box ul {
+.btn_area ul {
     justify-content: space-around;
     width: 100%;
     margin: 0 auto 10%;
@@ -19,23 +19,23 @@ nav ul {
     box-sizing: border-box;
 }
 
-.nav-box ul li {
+.btn_area ul li {
     width: auto;
     margin-right: 0;
     padding: 0 3vw;
 }
 
-.nav-box ul li a p {
+.btn_area ul li a p {
     font-size: 3.6vw;
     white-space: nowrap;
 }
 
-.nav-box ul li:nth-child(n) a div {
+.btn_area ul li:nth-child(n) a div {
     top: 50%;
-    left: -5vw;
-    width: calc(100% + 10vw);
+    left: 50%;
+    width: clamp(21vw, calc(100% + 10vw), 29vw);
     line-height: 0;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
 }
 
 /*一覧ページ：作品カード（3列 → 1列）*/
@@ -76,6 +76,7 @@ nav ul {
 
 .tptc-p,
 .tab-parent p:nth-of-type(2),
+.tab-web .tab-parent p:nth-of-type(2),
 .tab-parent p:nth-of-type(6) {
     font-size: 3.6vw;
 }
@@ -83,15 +84,6 @@ nav ul {
 .tab-parent p:last-child,
 .tab-parent p:last-child::before {
     font-size: 3.6vw;
-}
-
-/*一覧ページ：ページ切り替え（1 / 2）*/
-.btn_area {
-    width: 20%;
-}
-
-.tab_btn {
-    font-size: 4vw;
 }
 
 /*フッター*/
