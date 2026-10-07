@@ -19,7 +19,7 @@ nav ul {
     width: fit-content;
     margin: 8% auto 4%;
     padding: 0 8vw;
-    font-size: 3.4vw;
+    font-size: max(13px, 3.4vw);
 }
 
 .style-box h2::before,
@@ -59,12 +59,12 @@ nav ul {
 }
 
 .profile-box p {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 .profile-box div:nth-child(1) + p {
     margin-bottom: 2%;
-    font-size: 2.8vw;
+    font-size: max(13px, 2.8vw);
 }
 
 .inner-flex p::before {
@@ -82,25 +82,25 @@ nav ul {
 
 .soft-box h2 {
     width: 40%;
-    font-size: 3.4vw;
+    font-size: max(13px, 3.4vw);
 }
 
 ::marker {
-    font-size: 1.8vw;
+    font-size: max(13px, 1.8vw);
 }
 
 .soft-box ul li {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 .soft-box ul li:nth-child(n):after {
-    font-size: 2.4vw;
+    font-size: max(13px, 2.4vw);
 }
 
 /*得意の制作スタイル・考え・目標*/
 .style-box p,
 .right-box-top p {
-    font-size: 2.2vw;
+    font-size: max(12px, 2.2vw); /* 13pxだと550px付近で改行がずれるため 12px */
     line-height: 1.8;
 }
 
@@ -119,7 +119,7 @@ nav ul {
 
 .right-bottom-parent p:nth-child(2),
 .right-bottom-parent p:nth-child(3) {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 /*クマと吹き出し*/
@@ -140,7 +140,7 @@ nav ul {
 .img-box p {
     top: 20%;
     right: 20%;
-    font-size: 1.75vw;
+    font-size: max(13px, 1.75vw);
 }
 
 /*特徴・長所*/
@@ -160,11 +160,11 @@ nav ul {
 }
 
 .right-lste-flex .right-child:nth-of-type(n) h3 {
-    font-size: 2.8vw;
+    font-size: max(13px, 2.8vw);
 }
 
 .right-lste-flex .right-child:nth-of-type(n) ul li {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 /*フッター*/

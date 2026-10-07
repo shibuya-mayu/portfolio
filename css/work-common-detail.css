@@ -40,7 +40,7 @@ nav ul {
 .nav-box ul li a p {
     position: relative;
     text-align: center;
-    font-size: 1.4vw;
+    font-size: clamp(13px, 1.4vw, 20.2px);
     color: #202020;
     font-family: "Klee One";
 }
@@ -85,7 +85,7 @@ nav ul {
     min-width: 40%;
     padding: 0 1em;
     line-height: 3;
-    font-size: 2.5vw;
+    font-size: clamp(13px, 2.5vw, 36px);
     text-align: center;
     font-family: "Pacifico";
     border-radius: 1cqw; /* 元: 1vw */
@@ -113,13 +113,13 @@ nav ul {
     background-size: 100%;
     background-repeat: repeat-x;
     background-position: left bottom;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Klee One";
 }
 
 .content-box p:nth-child(even) {
     text-align: center;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     line-height: 1.8;
     font-family: "Noto Sans JP";
 }
@@ -128,7 +128,7 @@ nav ul {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 5%;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     font-family: "Noto Sans JP";
 }
 
@@ -149,7 +149,7 @@ nav ul {
 
 .time-box p:nth-child(2) {
     margin-left: 1%;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     line-height: 2.5;
     color: #202020;
     font-family: "Noto Sans JP";
@@ -168,7 +168,7 @@ nav ul {
 
 .time-box p:nth-child(4) {
     margin-left: 1%;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     line-height: 2.5;
     color: #202020;
     font-family: "Noto Sans JP";
@@ -181,7 +181,7 @@ nav ul {
     width: fit-content;
     margin-left: 10%;
     padding-left: 1.5%;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
 }
 
@@ -199,7 +199,7 @@ nav ul {
     top: 0;
     left: 0%;
     line-height: 2;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
 } 
 
@@ -228,7 +228,7 @@ nav ul {
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.8em;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -239,7 +239,7 @@ nav ul {
     content: "↓";
     top: 0;
     left: 0;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
     animation: 2s scrool infinite linear;
@@ -251,7 +251,7 @@ nav ul {
     content: "↓";
     top: 0;
     right: 0;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
     animation: 2s scrool infinite linear;
@@ -272,7 +272,7 @@ nav ul {
     margin-top: 2%;
     width: fit-content;
     padding-left: 1.5%;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
 }
 
@@ -291,7 +291,7 @@ nav ul {
     top: 0;
     left: 0%;
     line-height: 2;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
 } 
 

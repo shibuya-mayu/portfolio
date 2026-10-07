@@ -17,7 +17,7 @@
     position: relative;
     margin: 0 1.2em;
     padding-left: 1.2em;       /* 「#」の分のすき間 */
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     font-family: "Noto Sans JP";
 } 
 
@@ -35,7 +35,7 @@
     top: -10%;
     left: 0%;
     line-height: 2;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
 } 
 

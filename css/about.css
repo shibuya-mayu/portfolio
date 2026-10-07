@@ -43,7 +43,7 @@ nav ul {
 
 .profile-box p {
     line-height: 1.8;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -51,7 +51,7 @@ nav ul {
 .profile-box div:nth-child(1) + p {
     text-align: center;
     white-space: pre-wrap;
-    font-size: 1.4vw;
+    font-size: clamp(13px, 1.4vw, 20.2px);
 }
 
 .inner-flex {
@@ -94,7 +94,7 @@ nav ul {
     position: absolute;
     top: 0;
     left: 5%;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28.8px);
     width: fit-content;
     padding: 0 1%;
     text-align: center;
@@ -109,13 +109,13 @@ nav ul {
 }
 
 ::marker {
-    font-size: 1vw;
+    font-size: clamp(13px, 1vw, 14.4px);
 }
 
 .soft-box ul li {
     position: relative;
     color: #202020;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     line-height: 2;
     font-family: "Noto Sans JP";
 }
@@ -127,7 +127,7 @@ nav ul {
     top: 0;
     right: 7%;
     width: 30%;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -139,7 +139,7 @@ nav ul {
     top: 0;
     right: 7%;
     width: 30%;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -151,7 +151,7 @@ nav ul {
     top: 0;
     right: 7%;
     width: 30%;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -173,7 +173,7 @@ nav ul {
     margin: 10% auto 5%;
     font-family: "Pacifico";
     color: #202020;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28.8px);
     width: fit-content;
 }
 
@@ -204,7 +204,7 @@ nav ul {
 .style-box p {
     white-space: pre-wrap;
     line-height: 1.6;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -221,7 +221,7 @@ nav ul {
     width: fit-content;
     font-family: "Pacifico";
     color: #202020;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28.8px);
 }
 
 .right-box-top h2::before {
@@ -250,7 +250,7 @@ nav ul {
 
 .right-box-top p {
     white-space: pre-wrap;
-    font-size: 1.3vw;
+    font-size: clamp(11px, 1.3vw, 18.7px); /* 13pxだと900px付近で改行がずれるため 11px */
     text-align: center;
     color: #202020;
     line-height: 1.6;
@@ -287,7 +287,7 @@ nav ul {
     width: fit-content;
     color: #202020;
     font-family: "Pacifico";
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28.8px);
     margin-bottom: 3%;
 } 
 
@@ -349,7 +349,7 @@ nav ul {
 .right-bottom-parent p:nth-child(2) {
     margin-top: 3%;
     text-align: center;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -360,7 +360,7 @@ nav ul {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.8vw;
+    font-size: clamp(13px, 1.8vw, 25.9px);
     color: #fff;
     text-shadow: 0px 0px 5px #202020;
     font-family: "Noto Sans JP";
@@ -439,7 +439,7 @@ nav ul {
     top: 14%;
     right: 23%;
     white-space: pre-wrap;
-    font-size: 1.1vw;
+    font-size: clamp(9px, 1.1vw, 15.8px); /* 吹き出しの画像と一緒に縮むように 9px */
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -450,7 +450,7 @@ nav ul {
     position: relative;
     margin: 2% auto 6%;
     width: fit-content;
-    font-size: 2vw;
+    font-size: clamp(13px, 2vw, 28.8px);
     color: #202020;
     font-family: "Pacifico";
    /* border-bottom: 4px double #202020;*/
@@ -524,7 +524,7 @@ nav ul {
     position: relative;
     width: fit-content;
     margin-bottom: 5%;
-    font-size: 1.8vw;
+    font-size: clamp(13px, 1.8vw, 25.9px);
     color: #202020;
     font-family: "Pacifico";
     border-bottom: 3px double #DB4D6D;
@@ -535,7 +535,7 @@ nav ul {
     position: relative;
     line-height: 1.8;
     margin-left: 6%;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     font-family: "Noto Sans JP";
     z-index: 2;
 }
@@ -580,7 +580,7 @@ nav ul {
     position: relative;
     margin-bottom: 4%;
     width: fit-content;
-    font-size: 1.8vw;
+    font-size: clamp(13px, 1.8vw, 25.9px);
     color: #202020;
     font-family: "Pacifico";
     border-bottom: 3px double #DB4D6D;
@@ -600,7 +600,7 @@ nav ul {
     width: fit-content;
     margin-right: 10%;
     line-height: 1.8;
-    font-size: 1.3vw;
+    font-size: clamp(13px, 1.3vw, 18.7px);
     font-family: "Noto Sans JP";
 }
 

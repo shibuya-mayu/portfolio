@@ -67,7 +67,7 @@ header {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 5.5vw;
+    font-size: clamp(13px, 5.5vw, 79.2px);
     color: #202020;
     font-family: "Klee One";
  }
@@ -113,7 +113,7 @@ nav ul li a:hover div:nth-child(1) img {
 nav ul li a p {
     position: relative;
     line-height: 1.5;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 21.6px);
     color: #202020;
     text-align: center;
     font-family: "Klee One";
@@ -177,7 +177,7 @@ footer p {
     margin-top: 7%;
     text-align: center;
     color: #fff;
-    font-size: 1vw;
+    font-size: clamp(13px, 1vw, 14.4px);
     font-family: "Noto Sans JP";
 }
 

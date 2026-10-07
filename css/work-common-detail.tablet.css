@@ -22,7 +22,7 @@ work-common-detail.css の上から、タブレットで変えたいところだ
 }
 
 .nav-box ul li a p {
-    font-size: 2.4vw;
+    font-size: max(13px, 2.4vw);
     white-space: nowrap;
 }
 
@@ -47,22 +47,22 @@ work-common-detail.css の上から、タブレットで変えたいところだ
 /*詳細ページ：タイトル*/
 .movie-box + h2 {
     width: 70%;
-    font-size: 3.6vw;
+    font-size: max(13px, 3.6vw);
 }
 
 /*詳細ページ：Target・Perusona・Theme・Concept*/
 .content-box p:nth-child(odd) {
     width: 26%;
-    font-size: 2.6vw;
+    font-size: max(13px, 2.6vw);
 }
 
 .content-box p:nth-child(even) {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 /*詳細ページ：感想*/
 .content-box + p {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
     line-height: 1.8;
 }
 
@@ -84,7 +84,7 @@ work-common-detail.css の上から、タブレットで変えたいところだ
 .time-box p:nth-child(2),
 .time-box p:nth-child(4) {
     margin-left: 1.5%;
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
     line-height: 1.6;
 }
 
@@ -94,13 +94,13 @@ work-common-detail.css の上から、タブレットで変えたいところだ
     width: fit-content;
     margin-top: 4%;
     padding-left: 3vw;
-    font-size: 2.6vw;
+    font-size: max(13px, 2.6vw);
 }
 
 .time-box + p::before,
 .time-box + p + p + p::before,
 .page-fleex-box p::before {
-    font-size: 2.6vw;
+    font-size: max(13px, 2.6vw);
 }
 
 .time-box + p::after,
@@ -111,15 +111,15 @@ work-common-detail.css の上から、タブレットで変えたいところだ
 
 .time-box + p + p {
     margin-top: 4%;
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 .time-box + p + p::before {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 .time-box + p + p::after {
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 /*詳細ページ：別ページへのリンク（キャンプ場）*/
@@ -133,7 +133,7 @@ work-common-detail.css の上から、タブレットで変えたいところだ
     margin: 2% 4% 0 0;
     padding-left: 3vw;
     text-align: left;
-    font-size: 2.2vw;
+    font-size: max(13px, 2.2vw);
 }
 
 /*フッター*/
