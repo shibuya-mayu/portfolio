@@ -69,17 +69,3 @@ header + div {
     width: 75%;
     margin-left: 4%;
 }
-
-/*セクション コンタクト*/
-.contact-profile {
-    width: 80%;
-}
-
-.contact-flex {
-    align-items: center;
-}
-
-.contact-flex p {
-    margin-top: 0;
-    font-size: max(13px, 2.6vw);
-}

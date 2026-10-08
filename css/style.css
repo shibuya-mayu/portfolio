@@ -982,34 +982,53 @@ main {
     vertical-align: bottom;
 }
 
-.contact-profile {
-    width: 60%;
-    margin: 0 auto;
-    opacity: 0;
-    transition: 1s;
-    transform: translateX(-100vw);
+.contact-box {
+    text-align: center;
 }
 
-.contact-flex {
-    display: flex;
-    margin-top: 3%;
+.contact-box div {
+    width: 14%;
+    margin: 0 auto 1em;
 }
 
-.contact-flex div {
-    width: 20%;
-}
-
-.contact-flex div img {
+.contact-box div img {
     width: 100%;
     vertical-align: bottom;
 }
 
-.contact-flex p {
-    margin-top: 5%;
-    margin-left: 5%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
+.contact-box p {
+    margin-bottom: 1.2em;
+    font-size: clamp(13px, 1.2vw, 17.3px);
     color: #202020;
+    font-family: "Noto Sans JP";
+}
+
+.contact-box a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: fit-content;
+    padding: 0 1.5rem;
+    line-height: 3rem;
+    margin: 0 auto;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #0089A7;
+    font-family: "Noto Sans JP";
+    border: 1px solid #0089A7;
+    transition: 0.5s;
+}
+
+.mail-icon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.contact-box a:hover {
+    background-color: #0089A7;
+    color: #fff;
+    transition: 0.5s;
 }
 
 main + div {
