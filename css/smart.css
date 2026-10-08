@@ -196,22 +196,6 @@ header + div {
     padding-top: 12%;
 }
 
-.contact-profile {
-    width: 90%;
-}
-
-.contact-flex {
-    align-items: center;
-    margin-top: 5%;
-}
-
-.contact-flex div {
-    width: 18%;
-}
-
-.contact-flex p {
-    margin-top: 0;
-    margin-left: 4%;
-    font-size: 4vw;
-    word-break: break-all;
+.contact-box div {
+    width: 30%;
 }
