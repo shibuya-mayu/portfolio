@@ -22,6 +22,35 @@
                     $(this).addClass('active');
                     $('.tab_box .tab_panel').eq(index).addClass('active');
                     history.replaceState(null, '', '#' + this.id); // URL を開いたタブ（#web など）にする
+                    showPage(0);                                 // タブを変えたら1ページ目から
+                });
+
+                // ページ送り：開いているタブの作品を PER_PAGE 個ずつ表示する
+                var PER_PAGE = 9;
+
+                function showPage(page) {
+                    var $cards = $('.tab_box .tab_panel.active .tab-parent');
+                    var pages = Math.ceil($cards.length / PER_PAGE);
+
+                    $cards.addClass('is-hidden');
+                    $cards.slice(page * PER_PAGE, (page + 1) * PER_PAGE).removeClass('is-hidden');
+
+                    // ボタンを作り直す（1ページしかないときは出さない）
+                    var $area = $('.page_area').empty();
+                    if (pages <= 1) return;
+                    for (var i = 0; i < pages; i++) {
+                        $('<button type="button" class="page_btn"></button>')
+                            .text(i + 1)
+                            .data('page', i)
+                            .toggleClass('active', i === page)
+                            .attr('aria-current', i === page ? 'page' : null)
+                            .appendTo($area);
+                    }
+                }
+
+                $('.page_area').on('click', '.page_btn', function() {
+                    showPage($(this).data('page'));
+                    $('.btn_area')[0].scrollIntoView();          // 作品の種類メニューまで戻る
                 });
 
                 // URL の #〇〇 に合わせてタブを開く
@@ -41,10 +70,12 @@
                     $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
                     $('.tab_box .tab_btn').eq(index).addClass('active');
                     $panel.addClass('active');
+                    showPage(Math.floor($panel.find('.tab-parent').index($target) / PER_PAGE)); // 作品があるページを開く
                     $target[0].scrollIntoView();
                 }
 
-                openByHash();                              // ほかのページから work.html#〇〇 で来たとき
+                showPage(0);                               // 最初は All の1ページ目
+                openByHash();                            // ほかのページから work.html#〇〇 で来たとき
                 $(window).on('hashchange', openByHash);   // 同じページの中で #〇〇 のリンクを押したとき
             });
         </script>
@@ -410,6 +441,7 @@
                             </div>
                         </div>
                     </div>
+                <div class="page_area"></div> <!-- ページ送りのボタン（JavaScriptで作る） -->
                 </div>
         </section>
     </main>
