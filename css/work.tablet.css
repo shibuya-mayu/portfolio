@@ -84,6 +84,11 @@ work-common.css の上から、タブレットで変えたいところだけ上�
     font-size: max(13px, 2vw);
 }
 
+/*ページ送り（1 / 2 …）*/
+.page_area {
+    font-size: max(13px, 2.4vw);
+}
+
 /*フッター*/
 footer {
     margin-top: 16%;

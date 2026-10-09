@@ -85,6 +85,37 @@ nav ul {
     background-color: transparent;
 }
 
+/*ページ送り（1 / 2 …）*/
+.tab-parent.is-hidden {
+    display: none;
+}
+
+.page_area {
+    display: flex;
+    flex-wrap: wrap;           /* 入りきらなければ次の行へ */
+    justify-content: center;
+    gap: 0.3em;
+    font-size: clamp(13px, 1.2vw, 17.3px);
+}
+
+.page_btn {
+    flex-shrink: 0;            /* 丸を縮めない */
+    width: 2.5em;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    font-size: inherit;
+    font-family: "Zen Kurenaido";
+    color: #202020;
+    cursor: pointer;
+}
+
+.page_btn.active {
+    background-color: #ccc;
+}
+
 /*タブ切り替え*/
 .logo-flex-box {
     display: flex;
