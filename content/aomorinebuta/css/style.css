@@ -788,6 +788,7 @@ header + section h2 + p {
 .place-section {
     padding-top: 5%;
     background-color: #222;
+    overflow-x: hidden;
 }
 
 .place-section h2 {
