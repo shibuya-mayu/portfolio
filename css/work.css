@@ -122,13 +122,13 @@ nav ul {
     margin: 0 auto;
     flex-wrap: wrap;
     justify-content: flex-start;
-    column-gap: 3%;
+    column-gap: 5%;
     align-items: stretch;
 }
 
 .tab-parent {
     position: relative;
-    width: 29%;
+    width: 30%;
     margin-bottom: 5%;
 }
 
@@ -203,6 +203,7 @@ nav ul {
 .tab-parent a div img {
     width: 100%;
     height: 20cqw; /* 元: 20vw */
+    margin: 0 auto;
     object-fit: contain;
     border-radius: 10px;
     vertical-align: bottom
@@ -255,23 +256,38 @@ nav ul {
 }
 
 .skill p {
+    position: relative;
     font-size: clamp(13px, 1.1vw, 15.8px);
     color: #ccc;
     font-family: "Zen Kurenaido";
     padding: 0.3em 0.5em;
+    padding-left: 1.3em;
     border-radius: 5px;
+}
+
+.skill p::before {
+    display: block;
+    position: absolute;
+    content: "#";
+    top: 0.3em;
+    left: 0.5em;
+    font-size: clamp(13px, 1.1vw, 15.8px);
+    font-family: "Zen Kurenaido";
 }
 
 .html, .illustrator{
     background-color: orange;
+    opacity: 0.5;
 }
 
 .css, .Photoshop{
     background-color: skyblue;
+    opacity: 0.5;
 }
 
 .javascript {
     background-color: yellow;
+    opacity: 0.5;
 }
 
 .arrow-parent {
@@ -344,26 +360,6 @@ nav ul {
     font-size: clamp(13px, 1.2vw, 17.3px);
     font-family: "Noto Sans JP";
 } 
-
-
-/* .tab-parent p:last-child {
-    position: relative;
-    margin-top: 5%;
-    margin-left: 3%;
-    font-size: clamp(13px, 1.1vw, 15.8px);
-    color: #ccc;
-    font-family: "Zen Kurenaido";
-}
-
-.tab-parent p:last-child::before {
-    display: block;
-    position: absolute;
-    content: "#";
-    top: 3%;
-    left: -3%;
-    font-size: clamp(13px, 1.1vw, 15.8px);
-    font-family: "Zen Kurenaido";
-} */
 
 /*フッター*/
 footer {

@@ -48,17 +48,17 @@ nav ul {
     margin-bottom: 14%;
 }
 
-.tab-parent div,
-.tab-parent div img {
-    height: 60vw;
-}
-
-.tab-parent div {
-    width: 100%;
+.tab-parent a .contents-img,
+.tab-parent a .contents-img img {
+    height: 50vw;
 }
 
 .tab-parent h3 {
     font-size: 4.8vw;
+}
+
+.skill p::before {
+    font-size: 3.8vw;
 }
 
 .tab-parent p:nth-of-type(1) {
@@ -76,13 +76,7 @@ nav ul {
 
 .tptc-p,
 .tab-parent p:nth-of-type(2),
-.tab-web .tab-parent p:nth-of-type(2),
 .tab-parent p:nth-of-type(6) {
-    font-size: 3.6vw;
-}
-
-.tab-parent p:last-child,
-.tab-parent p:last-child::before {
     font-size: 3.6vw;
 }
 
