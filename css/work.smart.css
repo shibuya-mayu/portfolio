@@ -61,13 +61,13 @@ nav ul {
     font-size: 3.8vw;
 }
 
-.tab-parent p:nth-of-type(1) {
+.tab-parent .line + p {
     margin-left: 9%;
     line-height: 1.4;
     font-size: 3.8vw;
 }
 
-.tab-parent p:nth-of-type(1)::before {
+.line + p::before {
     top: 0.5vw;
     left: -5.5vw;
     width: 3.6vw;

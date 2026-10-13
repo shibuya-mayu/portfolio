@@ -116,7 +116,7 @@ nav ul {
     background-color: #ccc;
 }
 
-/*コンテンツ*/
+/*一覧ページ：作品カード*/
 .logo-flex-box {
     display: flex;
     margin: 0 auto;
@@ -127,37 +127,8 @@ nav ul {
 }
 
 .tab-parent {
-    position: relative;
     width: 30%;
     margin-bottom: 5%;
-}
-
-.tab-parent::after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    border-radius: 10px;
-}
-
-.tab-parent::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    border: 1px solid #DB4D6D;
-    border-radius: 10px;
-    transform: skewY(-1deg) skewX(-1deg);
-}
-
-.red::after, .red::before {
-    border: 1px solid #DB4D6D;
-}
-
-.yellow::after, .yellow::before {
-    border: 1px solid #FFB11B;
-}
-
-.blue::after, .blue::before {
-    border: 1px solid #0089A7;
 }
 
 .tab-parent a {
@@ -166,7 +137,8 @@ nav ul {
     text-decoration: none;
     height: 100%;
     color: #202020;
-    padding: 3%;
+    padding: 5%;
+    border-radius: 22px;
     box-sizing: border-box;
 }
 
@@ -176,17 +148,41 @@ nav ul {
     content: "";
     isolation: isolate;
     inset: 0;
-    border-radius: 10px;
+    border-radius: 22px;
     opacity: 0.1;
     z-index: -1;
+}
+
+.tab-parent a::before {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -4px;
+    bottom: -3px;
+    left: 6px;
+    content: "";
+    border-radius: 28px 17px 25px 14px / 15px 27px 18px 24px;
+    transform: rotate(-0.5deg);
+}
+
+.red a, .red a::before{
+    border: 1px solid #DB4D6D;
 }
 
 .red a::after {
     background-color: #DB4D6D;
 }
 
+.yellow a, .yellow a::before{
+    border: 1px solid #FFB11B;
+}
+
 .yellow a::after {
     background-color: #FFB11B;
+}
+
+.blue a, .blue a::before {
+    border: 1px solid #0089A7;
 }
 
 .blue a::after {
@@ -200,7 +196,7 @@ nav ul {
     border-radius: 10px;
 }
 
-.tab-parent a div img {
+.tab-parent a .contents-img img {
     width: 100%;
     height: 20cqw; /* 元: 20vw */
     margin: 0 auto;
@@ -210,7 +206,7 @@ nav ul {
 }
 
 .tab-parent a h3 {
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
     font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
@@ -252,16 +248,16 @@ nav ul {
     flex-wrap: wrap;
     justify-content: flex-start;
     column-gap: 5%;
-    margin-top: 5%;
+    margin: 5% 0;
 }
 
-.skill p {
+.tab-parent .skill p {
     position: relative;
-    font-size: clamp(13px, 1.1vw, 15.8px);
+    font-size: clamp(15px, 1.1vw, 15.8px);
     color: #ccc;
     font-family: "Zen Kurenaido";
-    padding: 0.3em 0.5em;
-    padding-left: 1.3em;
+    line-height: 1.5em;
+    padding: 0 0.5em 0 1.3em;
     border-radius: 5px;
 }
 
@@ -269,9 +265,8 @@ nav ul {
     display: block;
     position: absolute;
     content: "#";
-    top: 0.3em;
     left: 0.5em;
-    font-size: clamp(13px, 1.1vw, 15.8px);
+    font-size: clamp(15px, 1.1vw, 15.8px);
     font-family: "Zen Kurenaido";
 }
 

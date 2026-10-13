@@ -54,10 +54,14 @@ work-common.css の上から、タブレットで変えたいところだけ上�
 }
 
 .tab-parent h3 {
-    font-size: max(13px, 2.6vw);
+    font-size: max(15px, 2.6vw);
 }
 
-.tab-parent p:nth-of-type(1) {
+.tab-parent a p {
+    font-size: max(13px, 2.1vw);
+}
+
+.tab-parent .line + p {
     line-height: 1.4;
     font-size: max(13px, 2.1vw);
 }
@@ -66,22 +70,10 @@ work-common.css の上から、タブレットで変えたいところだけ上�
     font-size: max(13px, 2.1vw);
 }
 
-.tab-parent p:nth-of-type(1)::before {
+.line + p::before {
     top: 0.3vw;
     width: 2vw;
     height: 2vw;
-}
-
-.tptc-p,
-.tab-parent p:nth-of-type(2),
-.tab-web .tab-parent p:nth-of-type(2),
-.tab-parent p:nth-of-type(6) {
-    font-size: max(13px, 2vw);
-}
-
-.tab-parent p:last-child,
-.tab-parent p:last-child::before {
-    font-size: max(13px, 2vw);
 }
 
 /*ページ送り（1 / 2 …）*/
