@@ -5,12 +5,13 @@ Work一覧ページ共通 スマホ用（549px以下）
 対象：all・web・poster・logo・others
 work-common.css の上から、スマホで変えたいところだけ上書きする
 */
-/*ナビゲーション*/
+
+/********************ナビゲーション********************/
 nav ul {
     margin-bottom: 10%;
 }
 
-/*作品の種類メニュー（All / web / poster/banner / logo）*/
+/********************作品の種類メニュー（All / web / poster/banner / logo）********************/
 .btn_area ul {
     justify-content: space-around;
     width: 100%;
@@ -38,40 +39,75 @@ nav ul {
     transform: translate(-50%, -50%);
 }
 
-/*一覧ページ：作品カード（3列 → 1列）*/
-.logo-flex-box {
-    width: 84%;
+/********************一覧ページ：作品カードweb（3列 → 1列）********************/
+.web-box {
+    width: 90%;
+    margin: 0 auto 10%;
 }
 
-.tab-parent {
-    width: 100%;
-    margin-bottom: 14%;
-}
-
-.tab-parent a .contents-img,
-.tab-parent a .contents-img img {
+.web-box a .web-img,
+.web-box a .web-img img {
     height: 50vw;
 }
 
-.tab-parent h3 {
-    font-size: 4.8vw;
+/********************一覧ページ：作品カードweb以外（2列 → 1列）********************/
+.other-box {
+    width: 100%;
+    margin-bottom: 5%;
 }
 
-.skill p::before {
-    font-size: 3.8vw;
+/*画像の右にタイトルと制作時間、その下に Target など*/
+.other-flex {
+    display: grid;
+    grid-template-columns: 43% 1fr;                   /* 左：画像、右：タイトルなど */
+    grid-template-rows: 1fr auto auto auto 1fr;       /* タイトル・線・制作時間を上下の真ん中に */
+    column-gap: 4%;
+    align-items: start;
 }
 
-.tab-parent .line + p {
-    margin-left: 9%;
-    line-height: 1.4;
-    font-size: 3.8vw;
+.other-text {
+    display: contents;      /* 中身を .other-flex のグリッドに直接並べる */
 }
 
-.line + p::before {
-    top: 0.5vw;
-    left: -5.5vw;
-    width: 3.6vw;
-    height: 3.6vw;
+.other-text > * {
+    grid-column: 1 / -1;    /* Target などは幅いっぱい */
+}
+
+.other-img {
+    grid-column: 1;
+    grid-row: 1 / 6;        /* 画像は左の列で、上の5段分 */
+    width: 100%;
+    padding: 0;
+    align-self: center;
+}
+
+.other-img img {
+    width: 100%;
+    height: auto;
+    max-height: 49vw;
+}
+
+.other-text > h3 {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+}
+
+.other-text > .line {
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.other-text > .line + p {          /* 制作時間 */
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.other-text > .line + p + p {      /* Target（画像との間をあける） */
+    margin-top: 1em;
 }
 
 .tptc-p,
@@ -80,12 +116,33 @@ nav ul {
     font-size: 3.6vw;
 }
 
-/*ページ送り（1 / 2 …）*/
+/*************一覧ページ：作品カード web・それ以外共通*************/
+h3 {
+    font-size: 4.5vw;
+}
+
+.line + p {
+    margin-left: 9%;
+    line-height: 1.2em;
+    font-size: 3.6vw;
+}
+
+.line + p::before {
+    left: -5.5vw;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.arrow-parent {
+    width: 12%;
+}
+
+/********************ページ送り（1 / 2 …）********************/
 .page_area {
     font-size: 4vw;
 }
 
-/*フッター*/
+/********************フッター********************/
 footer {
     margin-top: 32%;
 }

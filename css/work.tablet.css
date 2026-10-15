@@ -5,13 +5,13 @@ Work一覧ページ共通 タブレット用（550px〜899px）
 対象：all・web・poster・logo・others
 work-common.css の上から、タブレットで変えたいところだけ上書きする
 */
-/*ヘッダー（一覧ページのみ）*/
+
+/********************ヘッダー（一覧ページのみ）********************/
 .top-position div:nth-child(1) {
     top: -6%;
 }
 
-/*ナビゲーション*/
-/*作品の種類メニュー（All / web / poster/banner / logo）*/
+/********************ナビゲーション********************/
 .btn_area ul {
     justify-content: space-around;
     width: 90%;
@@ -37,36 +37,50 @@ work-common.css の上から、タブレットで変えたいところだけ上�
     transform: translate(-50%, -50%);
 }
 
-/*一覧ページ：作品カード（3列 → 2列）*/
-.logo-flex-box {
-    width: 86%;
-    column-gap: 8%;
-}
-
-.tab-parent {
+/********************一覧ページ：作品カードweb（3列 → 2列）********************/
+.web-box {
     width: 46%;
     margin-bottom: 8%;
 }
 
-.tab-parent a .contents-img,
-.tab-parent a .contents-img img {
+.web-box a .web-img,
+.web-box a .web-img img {
     height: 23vw;
 }
 
-.tab-parent h3 {
+.web-box a p {
+    font-size: max(13px, 2.1vw);
+}
+
+/********************一覧ページ：作品カードweb以外（2列 → 1列）********************/
+.other-box {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.other-img {
+    width: 30%;
+}
+
+.other-text {
+    width: 70%;
+}
+
+.other-box .arrow-parent {
+    width: 10%;
+}
+
+/*************一覧ページ：作品カード web・それ以外共通*************/
+.logo-flex-box {
+    column-gap: 8%;
+}
+
+h3 {
     font-size: max(15px, 2.6vw);
 }
 
-.tab-parent a p {
-    font-size: max(13px, 2.1vw);
-}
-
-.tab-parent .line + p {
+.line + p {
     line-height: 1.4;
-    font-size: max(13px, 2.1vw);
-}
-
-.skill p::before {
     font-size: max(13px, 2.1vw);
 }
 
@@ -76,12 +90,16 @@ work-common.css の上から、タブレットで変えたいところだけ上�
     height: 2vw;
 }
 
-/*ページ送り（1 / 2 …）*/
+.skill p::before {
+    font-size: max(13px, 2.1vw);
+}
+
+/*************ページ送り（1 / 2 …）*************/
 .page_area {
     font-size: max(13px, 2.4vw);
 }
 
-/*フッター*/
+/*************フッター*************/
 footer {
     margin-top: 16%;
 }

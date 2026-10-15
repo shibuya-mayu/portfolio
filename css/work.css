@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*ナビゲーション*/
+/********************ナビゲーション********************/
 nav ul {
     display: flex;
     position: sticky;
@@ -10,7 +10,7 @@ nav ul {
     margin-bottom: 5%;
 }
 
-/*ワーク　タブ*/
+/********************ワーク　タブ********************/
 .btn_area {
     margin-bottom: 8%;
     margin-left: 1%;
@@ -67,7 +67,7 @@ nav ul {
     display: none;
 }
 
-/*メイン　タブ切り替え*/
+/********************メイン　タブ切り替え********************/
 .tab_box{
     width: 100%;
 }
@@ -85,8 +85,9 @@ nav ul {
     background-color: transparent;
 }
 
-/*ページ送り（1 / 2 …）*/
-.tab-parent.is-hidden {
+/********************ページ送り（1 / 2 …）********************/
+.web-box.is-hidden,
+.other-box.is-hidden {
     display: none;
 }
 
@@ -116,22 +117,13 @@ nav ul {
     background-color: #ccc;
 }
 
-/*一覧ページ：作品カード*/
-.logo-flex-box {
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    column-gap: 5%;
-    align-items: stretch;
+/********************一覧ページ：作品カード web********************/
+.web-box {
+    width: 32%;
+    margin-bottom: 3%;
 }
 
-.tab-parent {
-    width: 30%;
-    margin-bottom: 5%;
-}
-
-.tab-parent a {
+.web-box a {
     display: block;
     position: relative;
     text-decoration: none;
@@ -140,9 +132,10 @@ nav ul {
     padding: 5%;
     border-radius: 22px;
     box-sizing: border-box;
+    font-family: "Noto Sans JP";
 }
 
-.tab-parent a::after {
+.web-box a::after {
     display: block;
     position: absolute;
     content: "";
@@ -153,7 +146,7 @@ nav ul {
     z-index: -1;
 }
 
-.tab-parent a::before {
+.web-box a::before {
     display: block;
     position: absolute;
     top: 5px;
@@ -189,14 +182,15 @@ nav ul {
     background-color: #0089A7;
 }
 
-.tab-parent a .contents-img {
+.web-box a .web-img {
     width: 100%;
     height: 20cqw; /* 元: 20vw */
     margin: 0 auto;
+    margin-bottom: 3%;
     border-radius: 10px;
 }
 
-.tab-parent a .contents-img img {
+.web-box a .web-img img {
     width: 100%;
     height: 20cqw; /* 元: 20vw */
     margin: 0 auto;
@@ -205,136 +199,44 @@ nav ul {
     vertical-align: bottom
 }
 
-.tab-parent a h3 {
-    margin-top: 3%;
-    text-align: center;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
+/********************一覧ページ：作品カード web以外********************/
+.other-box {
+    width: 49%;
+    margin-bottom: 3%;
 }
 
-.tab-parent a .line {
-    width: 80%;
-    margin: 5% auto;
-    border: 1px solid gray;
-}
-
-.tab-parent a p {
-    font-family: "Noto Sans JP";
-}
-
-.tab-parent .line + p {
-    position: relative;
-    white-space: pre-wrap;
-    margin-left: 10%;
-    line-height: 1.2cqw; /* 元: 1.2vw */
-    margin-bottom: 5%;
-    font-size: clamp(13px, 1.2vw, 17.3px);
-}
-
-.tab-parent .line + p::before {
+.other-box a {
     display: block;
-    position: absolute;
-    content: "";
-    top: 0%;
-    left: -8%;
-    width: 1.2cqw; /* 元: 1.2vw */
-    height: 1.2cqw; /* 元: 1.2vw */
-    border-radius: 7.5cqw; /* 元: 7.5vw */
-    background-color: #FFB11B;
+    text-decoration: none;
+    height: 100%;
+    color: #202020;
+    padding: 2%;
+    border-radius: 22px;
+    font-family: "Noto Sans JP";
+    box-sizing: border-box;
 }
 
-.skill {
+.other-flex {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    column-gap: 5%;
-    margin: 5% 0;
+    column-gap: 3%;
+    height: 100%;          /* カードの高さいっぱいに伸ばす */
 }
 
-.tab-parent .skill p {
-    position: relative;
-    font-size: clamp(15px, 1.1vw, 15.8px);
-    color: #ccc;
-    font-family: "Zen Kurenaido";
-    line-height: 1.5em;
-    padding: 0 0.5em 0 1.3em;
-    border-radius: 5px;
-}
-
-.skill p::before {
-    display: block;
-    position: absolute;
-    content: "#";
-    left: 0.5em;
-    font-size: clamp(15px, 1.1vw, 15.8px);
-    font-family: "Zen Kurenaido";
-}
-
-.html, .illustrator{
-    background-color: orange;
-    opacity: 0.5;
-}
-
-.css, .Photoshop{
-    background-color: skyblue;
-    opacity: 0.5;
-}
-
-.javascript {
-    background-color: yellow;
-    opacity: 0.5;
-}
-
-.arrow-parent {
-    position: relative;
-    width: 15%;
-    aspect-ratio: 1 / 1;
-    margin-left: auto;
-    margin-bottom: auto;
-    border-radius: 50%;
-    background-color: #FFB11B;
-    cursor: pointer;
-}
-
-.arrow-parent::before,
-.arrow-parent::after {
-    content: "";
-    position: absolute;
-    background-color: #fff;
-}
-
-/* 矢印の横線 */
-.arrow-parent::before {
+.other-img {
     width: 40%;
-    height: 0.3vw;
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
-    transition: 0.5s;
+    padding: 10px;
+    align-self: center;    /* 画像だけカードの上下の真ん中に */
 }
 
-/* 矢印の先端 */
-.arrow-parent::after {
-    width: 25%;
-    height: 25%;
-    top: 50%;
-    left: 42%;
-    background-color: transparent;
-    border-top: 0.3vw solid #fff;
-    border-right: 0.3vw solid #fff;
-    transform: translateY(-50%) rotate(45deg);
-    transition: 0.5s;
+.other-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.tab-parent a:hover .arrow-parent::before {
-    width: 50%; /* 元: 5vw */
-    transition: 0.5s;
+.other-text {
+    width: 60%;
 }
-
-.tab-parent a:hover .arrow-parent::after {
-    left: 52%;
-    transition: 0.5s;
-} 
 
 .tptc-p {
     white-space: pre-wrap;
@@ -348,6 +250,22 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
+/* Target などの見出しに、詳細ページと同じ鉛筆の線（文字から少し離す） */
+.other-box .tptc-p {
+    text-indent: 0.4em;
+    line-height: 2;                       /* 見出しの行を高くして、線を文字から離す */
+    background-image: url(../images/work-content-line2.png);
+    background-repeat: no-repeat;
+    background-size: 6em auto;            /* 線の長さ（Concept・Persona が入る長さ） */
+    background-position: 0 -1.78em;      /* 線が見出しの行の下に来る位置 */
+}
+
+.other-box .tptc-p span {
+    display: block;                       /* 中身は見出しの下の行に */
+    line-height: 1.5;
+    text-indent: 0;                           /* 中身は字下げなし */
+}
+
 .tab-parent p:nth-of-type(6) {
     margin-top: 5%;
     color: #202020;
@@ -356,7 +274,155 @@ nav ul {
     font-family: "Noto Sans JP";
 } 
 
-/*フッター*/
+/*Lightbox の説明文（感想）*/
+.lb-data .lb-caption {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.7;
+    color: #fff;
+    font-family: "Noto Sans JP";
+}
+
+.lb-data .lb-number {
+    padding-top: 0.3em;
+    font-size: 12px;
+}
+
+/*************一覧ページ：作品カード web・それ以外共通*************/
+.logo-flex-box {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 2%;
+    align-items: stretch;
+}
+
+h3 {
+    text-align: center;
+    font-size: clamp(13px, 1.5vw, 21.6px);
+    font-family: "Noto Sans JP";
+}
+
+.line {
+    width: 80%;
+    margin: 3% auto;
+    border: 1px solid gray;
+}
+
+.line + p {
+    position: relative;
+    white-space: pre-wrap;
+    margin-left: 10%;
+    line-height: 1.2cqw; /* 元: 1.2vw */
+    margin-bottom: 5%;
+    font-size: clamp(13px, 1.2vw, 17.3px);
+}
+
+.line + p::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0%;
+    left: -8%;
+    width: 1.2cqw; /* 元: 1.2vw */
+    height: 1.2cqw; /* 元: 1.2vw */
+    border-radius: 7.5cqw; /* 元: 7.5vw */
+    background-color: #FFB11B;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 3%;
+}
+
+.card-bottom .skill {
+    margin: 0;
+}
+
+.card-bottom .arrow-parent {
+    margin: 0;
+    flex-shrink: 0;                    /* 矢印を縮めない */
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.4em 0.5em;
+    margin: 3% 0;
+}
+
+.skill p {
+    position: relative;
+    font-size: clamp(15px, 1.1vw, 15.8px);
+    color: #fff;
+    font-family: "Zen Kurenaido";
+    line-height: 1.8em;
+    padding: 0 0.5em 0 1.3em;
+    border-radius: 5px;
+}
+
+.skill p::before {
+    display: block;
+    position: absolute;
+    content: "#";
+    left: 0.5em;
+    font-size: clamp(15px, 1.1vw, 15.8px);
+    font-family: "Zen Kurenaido";
+}
+
+/*タグの色（薄い背景＋濃い文字）*/
+.skill .html {
+    background-color: #FCE5DE;
+    color: #C2410C;
+}
+
+.skill .css {
+    background-color: #DCEBF7;
+    color: #1565A6;
+}
+
+.skill .javascript {
+    background-color: #FDF6C3;
+    color: #6B5B00;
+}
+
+.skill .illustrator {
+    background-color: #FFEBD1;
+    color: #B45F00;
+}
+
+.skill .Photoshop {
+    background-color: #DDF0FF;
+    color: #0B6FB8;
+}
+
+.arrow-parent {
+    position: relative;
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    margin-left: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    background-color: #FFB11B;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12h12M13 7l5 5-5 5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 62%;
+    transition: background-position 0.5s;
+}
+
+/* ホバーで矢印が少し右へ */
+.web-box a:hover .arrow-parent,
+.other-box a:hover .arrow-parent {
+    background-position: 65% 50%;
+}
+
+/*************.  フッター.   *************/
 footer {
     margin-top: 10%;
     background-image: url(../images/work-footer.png);
