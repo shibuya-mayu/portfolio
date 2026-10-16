@@ -29,6 +29,54 @@
                     showPage(0);                                 // タブを変えたら1ページ目から
                 });
 
+                // オレンジの矢印を押したら、そのカードの画像を Lightbox で開く
+                $('.other-card .arrow-parent').on('click', function() {
+                    $(this).closest('.other-card').find('.other-img a').trigger('click');
+                });
+
+                // 同じ段（横並び）にある、ほかのカードを探す
+                function rowSiblings($box) {
+                    var top = $box.offset().top;
+                    return $box.siblings('.other-box:visible').filter(function() {
+                        return Math.abs($(this).offset().top - top) < 2;
+                    });
+                }
+
+                // 「制作のこだわりを見る」を押したとき：隣のカードが一緒に伸びないように、今の高さで止める
+                $('.making-details > summary').on('click', function() {
+                    var $box = $(this).closest('.other-box');
+                    $box.data('closedHeight', $box.outerHeight()); // 閉じているときの高さを覚えておく
+                    $box.css('height', '');                      // 自分は伸びられるように
+                    rowSiblings($box).each(function() {
+                        if (!$(this).find('details').prop('open')) {
+                            $(this).css('height', $(this).outerHeight());
+                        }
+                    });
+                });
+
+                // 画面の幅が変わったら、止めていた高さを外す
+                $(window).on('resize', function() {
+                    $('.other-box').css('height', '');
+                });
+
+                // 「閉じる」を押したら、制作のこだわりを閉じる
+                $('.making-close').on('click', function() {
+                    var $details = $(this).closest('details');
+                    $details.prop('open', false);
+                    var $box = $details.closest('.other-box');
+                    var $row = rowSiblings($box);
+                    if ($row.find('details[open]').length) {
+                        $box.css('height', $box.data('closedHeight'));  // 隣が開いたままなら、自分は元の高さで止める
+                    } else {
+                        $box.add($row).css('height', '');            // 段の全員が閉じたら、高さの固定を外す
+                    }
+                    // 閉じたあと「制作のこだわりを見る」が画面の上に隠れていたら、見える位置まで戻す
+                    var summary = $details.children('summary')[0];
+                    if (summary.getBoundingClientRect().top < 0) {
+                        summary.scrollIntoView({ block: 'center' });
+                    }
+                });
+
                 // ページ送り：開いているタブの作品を PER_PAGE 個ずつ表示する
                 var PER_PAGE = 9;
                 var CARD = '.web-box, .other-box';               // 作品のカード
@@ -315,278 +363,378 @@
                         <div class="tab_panel">
                             <div class="logo-flex-box">
                                 <div class="other-box red" id="fitness">
-                                    <a href="content/fitness-baner.jpg" rel="lightbox[poster]" data-title="実際にあるものを自分なりに組み合わせて制作しました。クマの絵に時間がかかりました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/fitness-baner.jpg" alt="フィットネスのバナー画像" width="100"></div>
+                                            <div class="other-img"><a href="content/fitness-baner.jpg" rel="lightbox[poster]"><img src="content/fitness-baner.jpg" alt="フィットネスのバナー画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>フィットネスのバナー</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　8時間</p>
-                                                <p class="tptc-p">Target
-<span>20~40代の女性</span></p>
-                    <p class="tptc-p">Persona
-<span>仕事は忙しいけど運動したいとジムを探している人</span></p>
-                    <p class="tptc-p">Theme
-<span>手軽に通えるジム</span></p>
-                    <p class="tptc-p">Concept
-<span>優しい色合いとフォントで女性向けに金額・営業時間で手軽さを表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>優しい色合いとフォントで女性向けに金額・営業時間で手軽さを表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~40代の女性</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>仕事は忙しいけど運動したいとジムを探している人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>手軽に通えるジム</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるものを自分なりに組み合わせて制作しました。クマの絵に時間がかかりました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                             <!-- <p>実際にあるものを自分なりに組み合わせて制作しました。クマの絵に時間がかかりました。</p> -->
                                             <div class="card-bottom">
                                                 <div class="skill">
                                                     <p class="illustrator">illustrator</p>
                                                 </div>
-                                                <div class="arrow-parent"></div>
+                                                <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                             </div>
                                         </div>
                                     </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box yellow" id="hatuuri">
-                                    <a href="content/hatuuri-baner.jpg" rel="lightbox[poster]" data-title="実際にあるものを組み合わせて自分なりに制作しました。色々なところから真似てしまったので統一感がなくなってしまったところが反省点です。辰は上手く出来たと思います。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                                <div class="other-img"><img src="content/hatuuri-baner.jpg" alt="初売りバナー画像" width="100"></div>
+                                                <div class="other-img"><a href="content/hatuuri-baner.jpg" rel="lightbox[poster]"><img src="content/hatuuri-baner.jpg" alt="初売りバナー画像" width="100"></a></div>
                                              <div class="other-text">
                                                 <h3>初売りのバナー</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　20時間</p>
-                                                <p class="tptc-p">Target
-<span>20~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>初売り・セール情報を探している人</span></p>
-                    <p class="tptc-p">Theme
-<span>新年をお祝いする</span></p>
-                    <p class="tptc-p">Concept
-<span>赤・白・金、花等で新年を表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>赤・白・金、花等で新年を表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>初売り・セール情報を探している人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>新年をお祝いする</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるものを組み合わせて自分なりに制作しました。色々なところから真似てしまったので統一感がなくなってしまったところが反省点です。辰は上手く出来たと思います。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                     <!-- <p>実際にあるものを組み合わせて自分なりに制作しました。色々なところから真似てしまったので統一感がなくなってしまったところが反省点です。辰は上手く出来たと思います。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                         <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box blue" id="valentine">
-                                    <a href="content/valentine-baner.jpg" rel="lightbox[poster]" data-title="実際にあるバナーを自分なりにアレンジして制作しました。チョコレートは一つ一つ切り取って配置しており、背景は黒っぽい色にして目立たなくしています。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                                <div class="other-img"><img src="content/valentine-baner.jpg" alt="バレンタインバナーの画像" width="100"></div>
+                                                <div class="other-img"><a href="content/valentine-baner.jpg" rel="lightbox[poster]"><img src="content/valentine-baner.jpg" alt="バレンタインバナーの画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>バレンタインのバナー</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　8時間</p>
-                                                <p class="tptc-p">Target
-<span>20~50代の女性</span></p>
-                    <p class="tptc-p">Persona
-<span>バレンタインチョコを探している人</span></p>
-                    <p class="tptc-p">Theme
-<span>特別なチョコレート</span></p>
-                    <p class="tptc-p">Concept
-<span>濃い茶色にリボンで特別感と高級感を表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>濃い茶色にリボンで特別感と高級感を表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~50代の女性</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>バレンタインチョコを探している人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>特別なチョコレート</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるバナーを自分なりにアレンジして制作しました。チョコレートは一つ一つ切り取って配置しており、背景は黒っぽい色にして目立たなくしています。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                     <!-- <p>実際にあるバナーを自分なりにアレンジして制作しました。チョコレートは一つ一つ切り取って配置しており、背景は黒っぽい色にして目立たなくしています。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                         <p class="Photoshop">Photoshop</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box red" id="christmas">
-                                    <a href="content/christmas.svg" rel="lightbox[poster]" data-title="実際にあるものを真似て作成しました。真ん中のfactoryChristmasの文字が初めての制作だったこともあり時間がかかりました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                                <div class="other-img"><img src="content/christmas-poster.jpg" alt="クリスマスポスターの画像" width="100"></div>
+                                                <div class="other-img"><a href="content/christmas.svg" rel="lightbox[poster]"><img src="content/christmas-poster.jpg" alt="クリスマスポスターの画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>クリスマスのポスター</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　10時間</p>
-                                                <p class="tptc-p">Target
-<span>10~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>クリスマスにどこかへ行こうとしている人</span></p>
-                    <p class="tptc-p">Theme
-<span>クリスマスを楽しむ</span></p>
-                    <p class="tptc-p">Concept
-<span>クリスマスツリーの軌跡とカラフルな色で楽しさを表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>クリスマスツリーの軌跡とカラフルな色で楽しさを表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>10~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>クリスマスにどこかへ行こうとしている人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>クリスマスを楽しむ</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるものを真似て作成しました。真ん中のfactoryChristmasの文字が初めての制作だったこともあり時間がかかりました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                                 <!-- <p>実際にあるものを真似て作成しました。真ん中のfactoryChristmasの文字が初めての制作だったこともあり時間がかかりました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                         <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box yellow" id="summerfestival">
-                                    <a href="content/summerfestival-poster.jpg" rel="lightbox[poster]" data-title="実際にあるポスターを自分なりにアレンジして制作しました。字の強弱、質感などにこだわりました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/summerfestival-poster.jpg" alt="夏祭りポスターの画像" width="100"></div>
+                                            <div class="other-img"><a href="content/summerfestival-poster.jpg" rel="lightbox[poster]"><img src="content/summerfestival-poster.jpg" alt="夏祭りポスターの画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>夏祭りのポスター</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　8時間</p>
-                                                <p class="tptc-p">Target
-<span>20~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>お祭りが好きな人</span></p>
-                    <p class="tptc-p">Theme
-<span>夏を感じる</span></p>
-                    <p class="tptc-p">Concept
-<span>青で夏らしさを花火・金魚などでお祭りを表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>青で夏らしさを花火・金魚などでお祭りを表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>お祭りが好きな人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>夏を感じる</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるポスターを自分なりにアレンジして制作しました。字の強弱、質感などにこだわりました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                                 <!-- <p>実際にあるポスターを自分なりにアレンジして制作しました。字の強弱、質感などにこだわりました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                         <p class="Photoshop">Photoshop</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box blue" id="chocolate"> 
-                                    <a href="content/chocolate-baner.png" rel="lightbox[poster]" data-title="チョコまみれの包装紙を参考に自分なりに制作しました。線のガタガタ感も上手く表現できるよう工夫しました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/chocolate-baner.png" alt="ちょこまみれのバナー画像" width="100"></div>
+                                            <div class="other-img"><a href="content/chocolate-baner.png" rel="lightbox[poster]"><img src="content/chocolate-baner.png" alt="ちょこまみれのバナー画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>チョコまみれのバナー</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　15時間</p>
-                                                <p class="tptc-p">Target
-<span>10~30代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>普段チョコまみれを食べている、好きな人</span></p>
-                    <p class="tptc-p">Theme
-<span>お得感を伝える</span></p>
-                    <p class="tptc-p">Concept
-<span>字の大きさと色でお得感を強調・表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>字の大きさと色でお得感を強調・表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>10~30代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>普段チョコまみれを食べている、好きな人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>お得感を伝える</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>チョコまみれの包装紙を参考に自分なりに制作しました。線のガタガタ感も上手く表現できるよう工夫しました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                                 <!-- <p>チョコまみれの包装紙を参考に自分なりに制作しました。線のガタガタ感も上手く表現できるよう工夫しました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                             <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="tab_panel">
                             <div class="logo-flex-box">
                                 <div class="other-box red" id="comai">
-                                    <a href="content/comai.svg" rel="lightbox[logo]" data-title="実際にあるものを真似て作成しました。丸くなっている部分の間隔が上手くいかず、何度も調整に時間がかかってしまいました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/comai-logo.png" alt="comaiのロゴ画像" width="100"></div>
+                                            <div class="other-img"><a href="content/comai.svg" rel="lightbox[logo]"><img src="content/comai-logo.png" alt="comaiのロゴ画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>comaiのロゴ画像</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　1日</p>
-                                                <p class="tptc-p">Target
-<span>20~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>美味しいお米を探している人</span></p>
-                    <p class="tptc-p">Theme
-<span>わかりやすさと</span></p>
-                    <p class="tptc-p">Concept
-<span>黒でわかりやすさと、丸みで親しみやすさを表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>黒でわかりやすさと、丸みで親しみやすさを表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>美味しいお米を探している人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>わかりやすさと</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるものを真似て作成しました。丸くなっている部分の間隔が上手くいかず、何度も調整に時間がかかってしまいました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                         <!-- <p>実際にあるものを真似て作成しました。丸くなっている部分の間隔が上手くいかず、何度も調整に時間がかかってしまいました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                             <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box yellow" id="banpaku">
-                                    <a href="content/osakabanpak-logo.png" rel="lightbox[logo]" data-title="実際にあるものを真似て作成しました。楕円形ツールをつなげて作成していきました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/osakabanpak-logo.png" alt="大阪万博のロゴ画像" width="100"></div>
+                                            <div class="other-img"><a href="content/osakabanpak-logo.png" rel="lightbox[logo]"><img src="content/osakabanpak-logo.png" alt="大阪万博のロゴ画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>大阪万博のロゴ</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　2時間</p>
-                                                <p class="tptc-p">Target
-<span>20~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>海外、日本の文化に興味があり、未来の世代に何かを残したいと考えている人</span></p>
-                    <p class="tptc-p">Theme
-<span>いのち輝く未来社会のデザイン</span></p>
-                    <p class="tptc-p">Concept
-<span>「セル（細胞）」を意識した赤い球体をつなげ、1つの生命体を表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>「セル（細胞）」を意識した赤い球体をつなげ、1つの生命体を表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>20~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd>海外、日本の文化に興味があり、未来の世代に何かを残したいと考えている人</dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>いのち輝く未来社会のデザイン</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>実際にあるものを真似て作成しました。楕円形ツールをつなげて作成していきました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                                 <!-- <p>実際にあるものを真似て作成しました。楕円形ツールをつなげて作成していきました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                                 <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box blue" id="fujiya">
-                                    <a href="content/fujiya-logo.svg" rel="lightbox[logo]" data-title="不二家のバナーを作成する為に、ロゴも合わせて制作しました。1度制作していたこともあり、オブジェクトツールの使い方もスムーズに出来るようになりました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/fujiya-logo.png" alt="不二家のロゴ画像" width="100"></div>
+                                            <div class="other-img"><a href="content/fujiya-logo.svg" rel="lightbox[logo]"><img src="content/fujiya-logo.png" alt="不二家のロゴ画像" width="100"></a></div>
                                             <div class="other-text">
                                                 <h3>不二家のロゴ</h3>
                                                 <div class="line"></div>
                                                 <p>制作時間　1日</p>
-                                                <p class="tptc-p">Target
-<span>10~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span></span></p>
-                    <p class="tptc-p">Theme
-<span>「おいしい笑顔」を届ける</span></p>
-                    <p class="tptc-p">Concept
-<span>「FUJIYA」のFであるとともに、「Familiar（親しみやすい）」「Flower（花のような）」「Fantasy（夢）」「Fresh（新鮮なアイデアに満ちた）」Fancy（高級な品質）」という5つの意味も表現</span></p>
+                                                <dl class="making-info">
+                                                    <dt class="concept">Concept</dt>
+                                                    <dd>「FUJIYA」のFであるとともに、「Familiar（親しみやすい）」「Flower（花のような）」「Fantasy（夢）」「Fresh（新鮮なアイデアに満ちた）」Fancy（高級な品質）」という5つの意味も表現</dd>
+                                                </dl>
+                                                <details class="making-details">
+                                                    <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                    <dl class="making-info">
+                                                        <dt class="target">Target</dt>
+                                                        <dd>10~60代の男女</dd>
+                                                        <dt class="persona">Persona</dt>
+                                                        <dd></dd>
+                                                        <dt class="theme">Theme</dt>
+                                                        <dd>「おいしい笑顔」を届ける</dd>
+                                                        <dt class="comment">Comment</dt>
+                                                        <dd>不二家のバナーを作成する為に、ロゴも合わせて制作しました。1度制作していたこともあり、オブジェクトツールの使い方もスムーズに出来るようになりました。</dd>
+                                                    </dl>
+                                                    <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                </details>
                                                 <!-- <p>不二家のバナーを作成する為に、ロゴも合わせて制作しました。1度制作していたこともあり、オブジェクトツールの使い方もスムーズに出来るようになりました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                             <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div class="other-box red" id="rakutabi">
-                                    <a href="content/rakutabi-logo.svg" rel="lightbox[logo]" data-title="旅行会社のサイトを制作するにあたって作りました。楽して、楽しく、旅行してもらいたいと思いを込めました。">
+                                    <div class="other-card">
                                         <div class="other-flex">
-                                            <div class="other-img"><img src="content/rakutabi-logo.svg" alt="楽たびのロゴ画像" width="100"></div>
+                                            <div class="other-img"><a href="content/rakutabi-logo.svg" rel="lightbox[logo]"><img src="content/rakutabi-logo.svg" alt="楽たびのロゴ画像" width="100"></a></div>
                                                 <div class="other-text">
                                                     <h3>楽たびのロゴ</h3>
                                                     <div class="line"></div>
                                                     <p>制作時間　5時間</p>
-                                                    <p class="tptc-p">Target
-<span>20~60代の男女</span></p>
-                    <p class="tptc-p">Persona
-<span>旅行はしたいけど、予約や調べるのが面倒くさい、でも楽しみたいと思っている人</span></p>
-                    <p class="tptc-p">Theme
-<span>旅行の楽しさ・安らぎを伝える</span></p>
-                    <p class="tptc-p">Concept
-<span>オレンジとニコニコマークで楽しさを、ピンクと四つ葉で安らぎ幸せを表現</span></p>
+                                                    <dl class="making-info">
+                                                        <dt class="concept">Concept</dt>
+                                                        <dd>オレンジとニコニコマークで楽しさを、ピンクと四つ葉で安らぎ幸せを表現</dd>
+                                                    </dl>
+                                                    <details class="making-details">
+                                                        <summary class="making-open">制作のこだわりを見る<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></summary>
+                                                        <dl class="making-info">
+                                                            <dt class="target">Target</dt>
+                                                            <dd>20~60代の男女</dd>
+                                                            <dt class="persona">Persona</dt>
+                                                            <dd>旅行はしたいけど、予約や調べるのが面倒くさい、でも楽しみたいと思っている人</dd>
+                                                            <dt class="theme">Theme</dt>
+                                                            <dd>旅行の楽しさ・安らぎを伝える</dd>
+                                                            <dt class="comment">Comment</dt>
+                                                            <dd>旅行会社のサイトを制作するにあたって作りました。楽して、楽しく、旅行してもらいたいと思いを込めました。</dd>
+                                                        </dl>
+                                                        <button type="button" class="making-close">閉じる<svg class="pm-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></button>
+                                                    </details>
                                         <!-- <p>旅行会社のサイトを制作するにあたって作りました。楽して、楽しく、旅行してもらいたいと思いを込めました。</p> -->
                                                 <div class="card-bottom">
                                                     <div class="skill">
                                                             <p class="illustrator">illustrator</p>
                                                     </div>
-                                                    <div class="arrow-parent"></div>
+                                                    <button type="button" class="arrow-parent" aria-label="画像を大きく表示"></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

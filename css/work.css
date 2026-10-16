@@ -135,17 +135,6 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-.web-box a::after {
-    display: block;
-    position: absolute;
-    content: "";
-    isolation: isolate;
-    inset: 0;
-    border-radius: 22px;
-    opacity: 0.1;
-    z-index: -1;
-}
-
 .web-box a::before {
     display: block;
     position: absolute;
@@ -158,35 +147,10 @@ nav ul {
     transform: rotate(-0.5deg);
 }
 
-.red a, .red a::before{
-    border: 1px solid #DB4D6D;
-}
-
-.red a::after {
-    background-color: #DB4D6D;
-}
-
-.yellow a, .yellow a::before{
-    border: 1px solid #FFB11B;
-}
-
-.yellow a::after {
-    background-color: #FFB11B;
-}
-
-.blue a, .blue a::before {
-    border: 1px solid #0089A7;
-}
-
-.blue a::after {
-    background-color: #0089A7;
-}
-
 .web-box a .web-img {
     width: 100%;
     height: 20cqw; /* 元: 20vw */
     margin: 0 auto;
-    margin-bottom: 3%;
     border-radius: 10px;
 }
 
@@ -205,8 +169,10 @@ nav ul {
     margin-bottom: 3%;
 }
 
-.other-box a {
+.other-box .other-card {
     display: block;
+    position: relative;
+    isolation: isolate;
     text-decoration: none;
     height: 100%;
     color: #202020;
@@ -238,41 +204,72 @@ nav ul {
     width: 60%;
 }
 
-.tptc-p {
-    white-space: pre-wrap;
+.making-details .making-info {
+    position: relative;
+    isolation: isolate;
+    padding: 0.6em 1em;
+    border-radius: 22px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.red .making-details .making-info {
+    border: 2px dashed color-mix(in srgb, #DB4D6D 20%, transparent);
+}
+
+.yellow .making-details .making-info {
+    border: 2px dashed color-mix(in srgb, #FFB11B 20%, transparent);
+}
+
+.blue .making-details .making-info{
+    border: 2px dashed color-mix(in srgb, #0089A7 20%, transparent);
+}
+
+.making-info dt {
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    color: #555;
+    font-size: clamp(13px, 1.1vw, 15.8px);
+    font-family: "Klee One";
+    line-height: 1.8;
+}
+
+/* 見出しの左のアイコン（SVG の形で切り抜いて、背景色で色を付ける） */
+.making-info dt::before {
+    content: "";
+    flex-shrink: 0;
+    width: 1.15em;
+    height: 1.15em;
+    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.making-info .concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
+.making-info .target { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
+.making-info .persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
+.making-info .theme { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
+.making-info .comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
+
+/* アイコンの色はカードの色 */
+.red .making-info dt::before {
+    background-color: #DB4D6D;
+}
+
+.yellow .making-info dt::before {
+    background-color: #E79A00;            /* #FFB11B だと薄い背景の上で見えにくいので少し濃く */
+}
+
+.blue .making-info dt::before {
+    background-color: #0089A7;
+}
+
+.making-info dd {
     color: #202020;
     line-height: 1.5;
     font-size: clamp(13px, 1.1vw, 15.8px);
-    font-family: "Klee One";
-}
-
-.tptc-p span {
     font-family: "Noto Sans JP";
 }
-
-/* Target などの見出しに、詳細ページと同じ鉛筆の線（文字から少し離す） */
-.other-box .tptc-p {
-    text-indent: 0.4em;
-    line-height: 2;                       /* 見出しの行を高くして、線を文字から離す */
-    background-image: url(../images/work-content-line2.png);
-    background-repeat: no-repeat;
-    background-size: 6em auto;            /* 線の長さ（Concept・Persona が入る長さ） */
-    background-position: 0 -1.78em;      /* 線が見出しの行の下に来る位置 */
-}
-
-.other-box .tptc-p span {
-    display: block;                       /* 中身は見出しの下の行に */
-    line-height: 1.5;
-    text-indent: 0;                           /* 中身は字下げなし */
-}
-
-.tab-parent p:nth-of-type(6) {
-    margin-top: 5%;
-    color: #202020;
-    line-height: 1.5;
-    font-size: clamp(13px, 1.2vw, 17.3px);
-    font-family: "Noto Sans JP";
-} 
 
 /*Lightbox の説明文（感想）*/
 .lb-data .lb-caption {
@@ -288,6 +285,62 @@ nav ul {
     font-size: 12px;
 }
 
+/*画像と矢印で Lightbox、Target などは開閉*/
+.other-img a {
+    display: block;
+}
+
+.other-card button.arrow-parent {
+    border: none;
+    padding: 0;
+}
+
+/*制作のこだわり（開く・閉じるボタン）*/
+.making-details > summary {
+    list-style: none;                     /* 標準の三角の印を消す */
+}
+
+.making-details > summary::-webkit-details-marker {
+    display: none;                        /* Safari 用 */
+}
+
+.making-open,
+.making-close {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    width: fit-content;
+    margin-top: 0.8em;
+    padding: 0.4em 0.8em 0.4em 1.1em;
+    border: 1px solid #C77700;            /* Work のページの色（オレンジ）を濃くしたもの */
+    border-radius: 999px;
+    background-color: #fff;
+    color: #C77700;
+    font-size: clamp(13px, 1.1vw, 15.8px);
+    font-family: "Noto Sans JP";
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.making-open:hover,
+.making-close:hover {
+    background-color: #C77700;
+    color: #fff;
+}
+
+.making-details[open] > .making-open {
+    display: none;                        /* 開いたら「見る」ボタンは消す */
+}
+
+.pm-icon {
+    width: 1.2em;
+    height: 1.2em;
+    fill: none;
+    stroke: currentColor;                 /* ボタンの文字と同じ色 */
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
 /*************一覧ページ：作品カード web・それ以外共通*************/
 .logo-flex-box {
     display: flex;
@@ -298,10 +351,48 @@ nav ul {
     align-items: stretch;
 }
 
+/*カードの背景と枠*/
+.web-box a::after,
+.other-box .other-card::after {
+    display: block;
+    position: absolute;
+    content: "";
+    isolation: isolate;
+    inset: 0;
+    border-radius: 22px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.red > a, .red > a::before, .red > .other-card {
+    border: 1px solid #DB4D6D;
+}
+
+.red > a::after, .red > .other-card::after {
+    background-color: #DB4D6D;
+}
+
+.yellow > a, .yellow > a::before, .yellow > .other-card {
+    border: 1px solid #FFB11B;
+}
+
+.yellow > a::after, .yellow > .other-card::after {
+    background-color: #FFB11B;
+}
+
+.blue > a, .blue > a::before, .blue > .other-card {
+    border: 1px solid #0089A7;
+}
+
+.blue > a::after, .blue > .other-card::after {
+    background-color: #0089A7;
+}
+
 h3 {
     text-align: center;
     font-size: clamp(13px, 1.5vw, 21.6px);
     font-family: "Noto Sans JP";
+    margin-top: 3%;
 }
 
 .line {
@@ -314,8 +405,8 @@ h3 {
     position: relative;
     white-space: pre-wrap;
     margin-left: 10%;
+    margin-bottom: 3%;
     line-height: 1.2cqw; /* 元: 1.2vw */
-    margin-bottom: 5%;
     font-size: clamp(13px, 1.2vw, 17.3px);
 }
 
@@ -418,8 +509,55 @@ h3 {
 
 /* ホバーで矢印が少し右へ */
 .web-box a:hover .arrow-parent,
-.other-box a:hover .arrow-parent {
+.other-card:has(.other-img a:hover) .arrow-parent,
+.other-card .arrow-parent:hover {
     background-position: 65% 50%;
+}
+
+/*Lightbox：左右の矢印は使わない（サムネイルで切り替える）*/
+.lb-nav {
+    display: none !important;             /* lightbox.js が表示を書き換えるので !important */
+}
+
+/*Lightbox：画像の下のサムネイル*/
+.lb-thumbs {
+    display: flex;
+    justify-content: safe center;         /* 入りきるときは中央、はみ出すときは左から */
+    gap: 8px;
+    width: fit-content;
+    max-width: min(92vw, 900px);
+    margin: 8px auto 0;
+    padding: 4px;
+    overflow-x: auto;                     /* 入りきらないときは横にスクロール */
+}
+
+.lb-thumb {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.lb-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
+.lb-thumb:hover {
+    opacity: 1;
+}
+
+.lb-thumb.is-active {
+    border-color: #FFB11B;                /* 今表示している画像 */
+    opacity: 1;
 }
 
 /*************.  フッター.   *************/

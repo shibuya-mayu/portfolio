@@ -106,11 +106,12 @@ nav ul {
     grid-row: 4;
 }
 
-.other-text > .line + p + p {      /* Target（画像との間をあける） */
-    margin-top: 1em;
+.other-text > .line + p + dl {     /* Concept（画像との間をあける） */
+    margin-top: 3.6vw;      /* 文字の大きさ（3.6vw）1つ分 */
 }
 
-.tptc-p,
+.making-info dt,
+.making-info dd,
 .tab-parent p:nth-of-type(2),
 .tab-parent p:nth-of-type(6) {
     font-size: 3.6vw;
