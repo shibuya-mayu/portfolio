@@ -257,28 +257,34 @@ nav ul {
 .making-info dt::before {
     content: "";
     flex-shrink: 0;
-    width: 1.15em;
-    height: 1.15em;
+    width: 1.5em;           /* 制作時期・制作時間のアイコンと同じくらいの大きさに見えるように */
+    height: 1.5em;
     -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
     mask: var(--icon) center / contain no-repeat;
 }
 
-.making-info .concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
-.making-info .target { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
-.making-info .persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
-.making-info .theme { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
-.making-info .comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
+.making-info .concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
+.making-info .target { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
+.making-info .persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
+.making-info .theme { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
+.making-info .comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
 
-/* アイコンの色はカードの色 */
-.red .making-info dt::before {
+/* アイコンの色はカードの色（制作時期・制作時間も） */
+.red .making-info dt::before,
+.red .period::before,
+.red .time::before {
     background-color: #DB4D6D;
 }
 
-.yellow .making-info dt::before {
+.yellow .making-info dt::before,
+.yellow .period::before,
+.yellow .time::before {
     background-color: #E79A00;    /* #FFB11B だと薄い背景の上で見えにくいので少し濃く */
 }
 
-.blue .making-info dt::before {
+.blue .making-info dt::before,
+.blue .period::before,
+.blue .time::before {
     background-color: #0089A7;
 }
 
@@ -482,9 +488,10 @@ h3 {
     border-top-color: color-mix(in srgb, #0089A7 40%, transparent);
 }
 
-.line + p {
-    display: flex;          /* オレンジの丸と文字を横に並べる（丸はカードの左端から） */
-    align-items: center;
+.period,
+.time {                     /* 制作時期・制作時間 */
+    display: flex;          /* アイコンと文字を横に並べる（アイコンはカードの左端から） */
+    align-items: flex-start;    /* 2行になったときは、アイコンを1行目に合わせる */
     gap: 0.5em;
     white-space: pre-wrap;
     margin-bottom: 3%;
@@ -492,14 +499,57 @@ h3 {
     font-size: clamp(15px, 1.2vw, 18px);
 }
 
-.line + p::before {
+.period {
+    margin-bottom: 0.5em;   /* 下に制作時間が続くので、間を詰める */
+}
+
+/*ラベルの色はカードの色*/
+.red .period em {
+    border-color: #DB4D6D;
+    color: #DB4D6D;
+}
+
+.yellow .period em {
+    border-color: #E79A00;
+    color: #A86B00;         /* 黄色の文字は白の上で読みにくいので、文字だけ濃く */
+}
+
+.blue .period em {
+    border-color: #0089A7;
+    color: #0089A7;
+}
+
+.period .nowrap {
+    white-space: nowrap;    /* 日付の途中で折り返さない */
+}
+
+.period em {                /* 「職業訓練」「入社前課題」のラベル */
+    display: inline-block;
+    padding: 0.1em 0.6em;
+    border: 1px solid;      /* 枠と文字の色はカードの色（下で指定） */
+    border-radius: 999px;
+    background-color: #fff;
+    font-style: normal;
+    font-size: 0.75em;
+    white-space: nowrap;
+    vertical-align: 0.1em;
+}
+
+.period::before,
+.time::before {
     content: "";
     flex-shrink: 0;
-    width: 0.9em;           /* 文字の大きさに合わせて丸の大きさも変わる */
-    height: 0.9em;
-    border-radius: 50%;
+    width: 1.35em;          /* 文字の大きさに合わせてアイコンの大きさも変わる */
+    height: 1.35em;
+    margin-top: calc((1lh - 1.35em) / 2);    /* 1行目の文字の高さの真ん中に */
     background-color: #FFB11B;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
 }
+
+/*アイコンの形（詳細ページと同じカレンダー・時計）*/
+.period::before { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3.5' y='5' width='17' height='15' rx='2'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4'/%3E%3C/svg%3E"); }
+.time::before   { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='13' r='8'/%3E%3Cpath d='M12 9v4l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5'/%3E%3C/svg%3E"); }
 
 .card-bottom {
     display: flex;

@@ -65,7 +65,7 @@ nav ul {
 .other-flex {
     display: grid;
     grid-template-columns: 43% 1fr;                   /* 左：画像、右：タイトルなど */
-    grid-template-rows: 1fr auto auto auto 1fr;       /* タイトル・線・制作時間を上下の真ん中に */
+    grid-template-rows: 1fr auto auto auto auto 1fr;  /* タイトル・線・制作時期・制作時間を上下の真ん中に */
     column-gap: 4%;
     align-items: start;
 }
@@ -80,14 +80,14 @@ nav ul {
 
 .other-img {
     grid-column: 1;
-    grid-row: 1 / 6;        /* 画像は左の列で、上の5段分 */
+    grid-row: 1 / 7;        /* 画像は左の列で、上の6段分 */
     width: 100%;
     padding: 0;
     align-self: center;
     aspect-ratio: auto;     /* 正方形の枠をやめて画像の高さぴったりに（下の余白を作品ごとにそろえる） */
 }
 
-.other-text > .line + p + dl {     /* Concept（画像との間をどの作品も同じにする） */
+.other-text > .time + dl {         /* Concept（画像との間をどの作品も同じにする） */
     margin-top: 3vw;
 }
 
@@ -106,9 +106,14 @@ nav ul {
     margin-right: 0;
 }
 
-.other-text > .line + p {          /* 制作時間 */
+.other-text > .period {            /* 制作時期 */
     grid-column: 2;
     grid-row: 4;
+}
+
+.other-text > .time {              /* 制作時間 */
+    grid-column: 2;
+    grid-row: 5;
 }
 
 .making-info dt,
@@ -123,9 +128,32 @@ h3 {
     font-size: clamp(16px, 4.2vw, 18px);
 }
 
-.line + p {
+.period,
+.time {
     line-height: 1.2em;
     font-size: clamp(14px, 3.6vw, 16px);
+}
+
+.making-info dt::before {    /* スマホは見出しと制作時期の文字が同じ大きさなので、アイコンも同じ大きさに */
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.period::before,
+.time::before {              /* 狭いカードでも日付とラベルが2行に収まるように、アイコンを少し小さく */
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: calc((1lh - 1.2em) / 2);
+}
+
+.period,
+.time {
+    gap: 0.3em;
+}
+
+.period em {                 /* 「職業訓練」などのラベルも少し詰める */
+    padding: 0.05em 0.45em;
+    font-size: 0.7em;
 }
 
 .arrow-parent {

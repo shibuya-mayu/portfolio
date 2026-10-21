@@ -84,9 +84,15 @@ h3 {
     font-size: max(15px, 2.6vw);
 }
 
-.line + p {
+.period,
+.time {
     line-height: 1.4;
     font-size: clamp(15px, 2.1vw, 16px);
+}
+
+.making-info dt::before {    /* 制作時期・制作時間のアイコンと同じくらいの大きさに */
+    width: 1.65em;
+    height: 1.65em;
 }
 
 .skill p::before {
