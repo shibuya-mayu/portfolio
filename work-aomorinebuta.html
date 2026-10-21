@@ -17,8 +17,8 @@
 
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <link rel="stylesheet" href="css/common.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
-        <link rel="stylesheet" href="css/work-common-detail.tablet.css" media="screen and (max-width:899px) and (min-width:550px)">
+        <link rel="stylesheet" href="css/common.tablet.css" media="screen and (max-width:999px) and (min-width:550px)">
+        <link rel="stylesheet" href="css/work-common-detail.tablet.css" media="screen and (max-width:999px) and (min-width:550px)">
 
         <link rel="stylesheet" href="css/common.smart.css" media="screen and (max-width:549px)">
         <link rel="stylesheet" href="css/work-common-detail.smart.css" media="screen and (max-width:549px)">
@@ -57,7 +57,8 @@
 
     <main class="inner">
         <section>
-            <div class="movie-box">
+            <a class="back-link" href="work.html#web"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Work 一覧へ戻る</a>
+            <div class="movie-box detail-red">
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
@@ -80,44 +81,30 @@
                     </div>
                 </div>
                 <h2>青森ねぶた冬祭のホームページ</h2>
-                <div class="content-box">
-                    <p class="tptc-p">Target</p>
-                    <p>10代以上の男女</p>
-                    <p class="tptc-p">Persona</p>
-                    <p>ねぶた冬祭に行く人、興味のある人</p>
-                    <p class="tptc-p">Theme</p>
-                    <p>県を揚げて行う年に１度の冬まつりに来場を検討している方々に向けて詳細を直感的に分かりやすく記載し、来場者の高揚感を高める目的。</p>
-                    <p class="tptc-p">Concept</p>
-                    <p>ねぶたの雰囲気や冬の寒さに打ち勝つような温かさ（熱さ）や祭りの光を表現したいと思い暖色系の色合いを採用。</p>
+                <div class="detail-card detail-red">
+                    <dl class="detail-info">
+                        <div class="concept"><dt>Concept</dt><dd>ねぶたの雰囲気や冬の寒さに打ち勝つような温かさ（熱さ）や祭りの光を表現したいと思い暖色系の色合いを採用。</dd></div>
+                        <div class="target"><dt>Target</dt><dd>10代以上の男女</dd></div>
+                        <div class="persona"><dt>Persona</dt><dd>ねぶた冬祭に行く人、興味のある人</dd></div>
+                        <div class="theme"><dt>Theme</dt><dd>県を揚げて行う年に１度の冬まつりに来場を検討している方々に向けて詳細を直感的に分かりやすく記載し、来場者の高揚感を高める目的。</dd></div>
+                        <div class="comment"><dt>Comment</dt><dd>初めてモーダルウィンドウも入れた制作をしました。また、他制作サイトに比べ多くのスクロールイベント（jQuery）を多く使用しました。</dd></div>
+                    </dl>
                 </div>
-                <p>初めてモーダルウィンドウも入れた制作をしました。また、他制作サイトに比べ多くのスクロールイベント（jQuery）を多く使用しました。</p>
-                <div class="time-box">
-                    <div><img src="images/alarm-clock_icon.png" alt="時計の画像"></div>
-                    <p>4日間</p>
-                    <div><img src="images/page.png" alt="メモの画像"></div>
-                    <p>全1ページ(レスポンシブ対応)</p>
-                </div>
-                <p><a href="content/aomorinebuta/index.html">青森ねぶた冬祭ＨＰ</a></p>
-            <div class="nav-box">
-                <ul>
-                    <li id="all"><a href="work.html#all">
-                        <p>All</p>
-                    </a></li>
-                    <li id="web"><a href="work.html#web">
-                        <p>web</p>
-                        <div><img src="images/work-circle.png" alt=""></div>
-                    </a></li>
-                    <li id="poster"><a href="work.html#poster">
-                        <p>poster/banner</p>
-                    </a></li>
-                    <li id="logo"><a href="work.html#logo">
-                        <p>logo</p>
-                    </a></li>
-                    <li id="others"><a href="work.html#others">
-                        <p>others</p>
-                    </a></li>
+
+                <ul class="detail-meta detail-red">
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5"/></svg><span>制作時間</span>4日間</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><span>ページ数</span>全1ページ(レスポンシブ対応)</li>
+                    <li class="skill-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg><span>使用</span><em class="html">HTML</em><em class="css">CSS</em><em class="javascript">JavaScript</em></li>
                 </ul>
-            </div>
+
+                <a class="site-button" href="content/aomorinebuta/index.html">サイトを見る<small>青森ねぶた冬祭ＨＰ</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+
+                <div class="work-pager">
+                    <a class="prev detail-blue" href="work-rakutabi.html"><i class="pager-arrow"></i><img src="content/rakutabi-top.png" alt=""><span><small>前の作品</small>楽たび旅行会社</span></a>
+                    <span class="next"></span>
+                </div>
+
+                <a class="back-link bottom" href="work.html#web"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Work 一覧へ戻る</a>
            
         
         </section>

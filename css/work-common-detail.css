@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*ナビゲーション*/
+/******************ナビゲーション******************/
 nav ul {
     display: flex;
     position: sticky;
@@ -10,61 +10,49 @@ nav ul {
     margin-bottom: 1%;/*5%*/
 }
 
-/*疑似要素で●入れて、その疑似要素だけを薄くしたい*/
-/*ワーク　ナビゲーション*/
-.nav-box ul {
-    display: flex;
-    width: 60%;
-    margin-bottom: 8%;
-    margin-left: 1%;
-}
-
-.nav-box ul li {
-    width: calc(100%/5);
-    padding-top: 5%;
-    line-height: 3;
-    margin-right: 2%;
-    list-style-type: none;
-}
-
-.nav-box ul li:last-child {
-    display: none;
-    margin-right: 0;
-}
-
-.nav-box ul li a {
-    display: block;
-    text-decoration: none;
-}
-
-.nav-box ul li a p {
-    position: relative;
-    text-align: center;
-    font-size: clamp(13px, 1.4vw, 20.2px);
-    color: #202020;
-    font-family: "Klee One";
-}
-
-.nav-box ul li:nth-child(2) a {
-    position: relative;
-}
-
-.nav-box ul li:nth-child(2) a div {
-    position: absolute;
-    top: 0%;
-    width: 100%;
-}
-
-.nav-box ul li:nth-child(2) a div img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
 /*セクション　内容*/
 .movie-box {
     margin: 0 auto;
     width: 80%;
-    height: 35cqw; /* 元: 35vw */
+}
+
+/*スライダーの台紙（作品の色）*/
+.movie-box .swiper {
+    padding: 2.5% 0 4.5%;
+    border-radius: 24px;
+    background-color: var(--p);
+    --swiper-navigation-size: 15px;
+    --swiper-pagination-color: var(--c);                                        /* 今のドット */
+    --swiper-pagination-bullet-inactive-color: color-mix(in srgb, var(--c) 40%, #fff);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+.movie-box .swiper-slide {
+    padding: 0 7%;              /* 左右の矢印の分 */
+    box-sizing: border-box;
+}
+
+/*左右の矢印（Work 一覧と同じオレンジの丸）*/
+.movie-box .swiper-button-prev,
+.movie-box .swiper-button-next {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #FFB11B;
+    box-shadow: 0 3px 0 #E79A00;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.movie-box .swiper-button-prev::after,
+.movie-box .swiper-button-next::after {
+    font-weight: bold;
+}
+
+.movie-box .swiper-button-prev:hover,
+.movie-box .swiper-button-next:hover {
+    box-shadow: 0 1px 0 #E79A00;
+    transform: translateY(2px);         /* 押したように少し沈む */
 }
 
 .swiper-slide a {
@@ -76,6 +64,11 @@ nav ul {
     height: 35cqw; /* 元: 35vw */
     object-fit: contain;
     vertical-align: bottom;
+    padding: 2% 0;
+    border-radius: 16px;
+    background-color: #fff;     /* 画像を白い角丸のカードに入れる */
+    box-shadow: 0 3px 10px rgba(80, 60, 30, 0.1);
+    box-sizing: border-box;
 }
 
 .movie-box + h2 {
@@ -85,7 +78,7 @@ nav ul {
     min-width: 40%;
     padding: 0 1em;
     line-height: 3;
-    font-size: clamp(13px, 2.5vw, 36px);
+    font-size: clamp(24px, 2.5vw, 36px);
     text-align: center;
     font-family: "Pacifico";
     border-radius: 1cqw; /* 元: 1vw */
@@ -95,221 +88,349 @@ nav ul {
     color: #202020;
 }
 
-.content-box {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+/*戻るボタン（ページの上と下）*/
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 3%;
+    padding: 0.35em 1em 0.35em 0.8em;
+    border: 1px solid #C77700;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #C77700;
+    font-size: clamp(13px, 1vw, 15px);
+    font-family: "Noto Sans JP";
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.content-box p:nth-child(odd) {
-    margin: 0 auto;
-    margin-top: 3%;
-    width: 15%;
-    text-align: center;
-    color: #202020;
-    line-height: 2;
-    background-image: url(../images/work-content-line2.png);
-    background-size: 100%;
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    font-size: clamp(13px, 1.5vw, 21.6px);
+.back-link svg {
+    width: 1.2em;
+    height: 1.2em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s;
+}
+
+.back-link:hover {
+    background-color: #C77700;
+    color: #fff;
+}
+
+.back-link:hover svg {
+    transform: translateX(-3px);    /* 矢印が少し左へ */
+}
+
+.back-link.bottom {
+    display: flex;
+    width: fit-content;
+    margin: 6% auto 0;
+}
+
+/*作品ごとの色（Work 一覧のカードと同じ）*/
+.detail-red    { --c: #DB4D6D; --p: #FCEBEF; }
+.detail-yellow { --c: #E79A00; --p: #FFF5E0; }
+.detail-blue   { --c: #0089A7; --p: #E3F2F6; }
+
+/*Concept・Target・Persona・Theme・Comment*/
+.detail-card {
+    width: 80%;
+    margin: 5% auto 0;
+    padding: clamp(18px, 2.5vw, 36px);
+    border: 2px dashed color-mix(in srgb, var(--c) 25%, transparent);
+    border-radius: 22px;
+    background-color: var(--p);
+    box-sizing: border-box;
+}
+
+.detail-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;     /* 2列 */
+    gap: 1.4em 3em;
+}
+
+.detail-info > div {
+    padding: 1em 1.2em;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-info .comment {
+    grid-column: 1 / -1;                /* 感想は幅いっぱい */
+}
+
+.detail-info dt {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 0.3em;
+    color: #555;
+    font-size: clamp(15px, 1.2vw, 18px);
     font-family: "Klee One";
 }
 
-.content-box p:nth-child(even) {
-    text-align: center;
-    font-size: clamp(13px, 1.2vw, 17.3px);
+/*見出しの左のアイコン（SVG の形で切り抜いて、作品の色を付ける）*/
+.detail-info dt::before {
+    flex-shrink: 0;
+    width: 1.2em;
+    height: 1.2em;
+    content: "";
+    background-color: var(--c);
+    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.detail-info .concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
+.detail-info .target { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
+.detail-info .persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
+.detail-info .theme { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
+.detail-info .comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
+
+.detail-info dd {
+    color: #202020;
+    font-size: clamp(15px, 1.2vw, 18px);
     line-height: 1.8;
     font-family: "Noto Sans JP";
 }
 
-.content-box + p {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 5%;
-    font-size: clamp(13px, 1.2vw, 17.3px);
-    font-family: "Noto Sans JP";
-}
-
-.time-box {
+/*制作時間・ページ数・使用*/
+.detail-meta {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em 2.5em;
     width: 80%;
-    margin: 0 auto;
+    margin: 4% auto 0;
+    list-style: none;
 }
 
-.time-box div:nth-child(1) {
-    width: 5%;
-}
-
-.time-box div:nth-child(1) img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
-.time-box p:nth-child(2) {
-    margin-left: 1%;
-    font-size: clamp(13px, 1.3vw, 18.7px);
-    line-height: 2.5;
+.detail-meta li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
     color: #202020;
+    font-size: clamp(15px, 1.2vw, 18px);
     font-family: "Noto Sans JP";
 }
 
-.time-box div:nth-child(3) {
-    margin-left: 10%;
-    margin-top: 0.5%;
-    width: 4%;
+.detail-meta svg {
+    width: 1.4em;
+    height: 1.4em;
+    fill: none;
+    stroke: var(--c);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-.time-box div:nth-child(3) img {
-    width: 100%;
-    vertical-align: bottom;
+.detail-meta span {                     /* 「制作時間」などのラベル */
+    color: #777;
+    font-size: 0.85em;
+    font-family: "Klee One";
 }
 
-.time-box p:nth-child(4) {
-    margin-left: 1%;
-    font-size: clamp(13px, 1.3vw, 18.7px);
-    line-height: 2.5;
-    color: #202020;
-    font-family: "Noto Sans JP";
-}
-
-
-.time-box + p {
+/*使用した言語のタグ（Work のタグと同じ形・色）*/
+.detail-meta em {
     position: relative;
-    margin-top: 2%;
-    width: fit-content;
-    margin-left: 10%;
-    padding-left: 1.5%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
+    padding: 0 0.55em 0 1.3em;
+    border-radius: 5px;
+    font-style: normal;
+    font-size: clamp(14px, 1.1vw, 15.8px);
+    line-height: 1.8;
+    font-family: "Zen Kurenaido";
 }
 
-.time-box + p a {
-    display: block;
-    color: #202020;
-    line-height: 2;
-    text-decoration: none;
-}
-
-.time-box + p::before {
-    display: block;
+.detail-meta em::before {
     position: absolute;
+    left: 0.5em;
     content: "#";
-    top: 0;
-    left: 0%;
-    line-height: 2;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
-} 
-
-.time-box + p::after {
-    display: block;
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0%;
-    width: 0%;
-    height: 0.1cqw; /* 元: 0.1vw */
-    background-color: #202020;
-    transition: 0.5s;
-} 
-
-.time-box + p:hover::after {
-    width: 100%;
-    transition: 0.5s;
 }
 
-/*青森ねぶた以外共通*/
-.time-box + p + p {
-    position: relative;
+.detail-meta .html       { background-color: #FCE5DE; color: #C2410C; }
+.detail-meta .css        { background-color: #DCEBF7; color: #1565A6; }
+.detail-meta .javascript { background-color: #FDF6C3; color: #6B5B00; }
+
+/*サイトを見るボタン*/
+.site-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em 0.6em;
+    width: fit-content;
+    max-width: 80%;
+    margin: 5% auto 0;
+    padding: 0.8em 2em;
+    border-radius: 999px;
+    background-color: #FFB11B;
+    box-shadow: 0 4px 0 #E79A00;
+    color: #fff;
+    font-size: clamp(16px, 1.4vw, 20px);
+    font-family: "Noto Sans JP";
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.site-button small {                    /* サイト名 */
+    font-size: 0.7em;
+    opacity: 0.9;
+}
+
+.site-button svg {
+    width: 1.1em;
+    height: 1.1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.site-button:hover {
+    box-shadow: 0 2px 0 #E79A00;
+    transform: translateY(2px);         /* 押したように少し沈む */
+}
+
+/*ページごとのリンク*/
+.page-links {
+    width: 80%;
+    margin: 5% auto 0;
+}
+
+.page-links-title {
+    margin-bottom: 1em;
+    color: #555;
+    font-size: clamp(15px, 1.2vw, 18px);
+    font-family: "Klee One";
     text-align: center;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1.8em;
-    font-size: clamp(13px, 1.3vw, 18.7px);
+}
+
+.page-links-title::before,
+.page-links-title::after {              /* 左右の線 */
+    display: inline-block;
+    width: 2.5em;
+    height: 1px;
+    margin: 0 0.8em;
+    content: "";
+    vertical-align: middle;
+    background-color: #ccc;
+}
+
+.page-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7em;
+    list-style: none;
+}
+
+.page-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.45em 1.1em;
+    border: 1px solid color-mix(in srgb, #E79A00 45%, transparent);
+    border-radius: 999px;
+    background-color: #fff;
     color: #202020;
+    font-size: clamp(14px, 1.1vw, 16px);
     font-family: "Noto Sans JP";
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.time-box + p + p::after {
-    display: block;
-    position: absolute;
-    content: "↓";
-    top: 0;
-    left: 0;
-    font-size: clamp(13px, 1.3vw, 18.7px);
+.page-links a::after {
+    content: "→";
+    color: #E79A00;
+    transition: transform 0.3s;
+}
+
+.page-links a:hover {
+    background-color: #FFF5E0;
+}
+
+.page-links a:hover::after {
+    transform: translateX(3px);
+}
+
+/*前の作品・次の作品（作品の画像＋作品の色）*/
+.work-pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    width: 80%;
+    margin: 6% auto 0;
+}
+
+.work-pager a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 18px;
+    background-color: var(--p);         /* 作品の色（.detail-red など） */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     color: #202020;
+    font-size: clamp(15px, 1.2vw, 18px);
     font-family: "Noto Sans JP";
-    animation: 2s scrool infinite linear;
-}
-
-.time-box + p + p::before {
-    display: block;
-    position: absolute;
-    content: "↓";
-    top: 0;
-    right: 0;
-    font-size: clamp(13px, 1.3vw, 18.7px);
-    color: #202020;
-    font-family: "Noto Sans JP";
-    animation: 2s scrool infinite linear;
-}
-
-@keyframes scrool {
-    50% {
-        top: 30%;
-    }
-    100% {
-        top: 0;
-    }
-}
-
-.time-box + p + p + p {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 2%;
-    width: fit-content;
-    padding-left: 1.5%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
-}
-
-
-.time-box + p + p + p a {
-    display: block;
-    color: #202020;
-    line-height: 2;
     text-decoration: none;
 }
 
-.time-box + p + p + p::before {
-    display: block;
-    position: absolute;
-    content: "#";
-    top: 0;
-    left: 0%;
-    line-height: 2;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    font-family: "Noto Sans JP";
-} 
+.work-pager img {
+    width: 38%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top;               /* サイトの上の部分を見せる */
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
 
-.time-box + p + p + p::after {
-    display: block;
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0%;
-    width: 0%;
-    height: 0.1cqw; /* 元: 0.1vw */
-    background-color: #202020;
-    transition: 0.5s;
-} 
+.work-pager a span {                    /* 作品名 */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.2em;
+}
 
-.time-box + p + p + p:hover::after {
-    width: 100%;
-    transition: 0.5s;
+.work-pager .next span {
+    align-items: flex-end;              /* 次の作品は右寄せ */
+}
+
+.work-pager small {                     /* 「前の作品」「次の作品」 */
+    color: var(--c);
+    font-size: clamp(12px, 0.9vw, 14px);
+    font-family: "Klee One";
+}
+
+/*オレンジの丸い矢印（Work 一覧の矢印と同じ）*/
+.pager-arrow {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #FFB11B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 55% no-repeat;
+    transition: transform 0.3s;
+}
+
+.work-pager .prev .pager-arrow {
+    transform: scaleX(-1);              /* 左向きにする */
+}
+
+.work-pager .prev:hover .pager-arrow {
+    transform: scaleX(-1) translateX(3px);
+}
+
+.work-pager .next:hover .pager-arrow {
+    transform: translateX(3px);
+}
+
+.work-pager a:hover img {
+    transform: scale(1.04);
 }
 
 /*フッター*/
