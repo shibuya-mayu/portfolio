@@ -27,7 +27,7 @@ nav ul {
 }
 
 .btn_area ul li a p {
-    font-size: 3.6vw;
+    font-size: clamp(13px, 3.4vw, 16px);
     white-space: nowrap;
 }
 
@@ -52,8 +52,13 @@ nav ul {
 
 /********************一覧ページ：作品カードweb以外（2列 → 1列）********************/
 .other-box {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 5%;
+}
+
+.other-box .other-card {
+    padding: 3vw;           /* カードの線と画像・文字の間（375px で 11px くらい） */
 }
 
 /*画像の右にタイトルと制作時間、その下に Target など*/
@@ -79,18 +84,18 @@ nav ul {
     width: 100%;
     padding: 0;
     align-self: center;
+    aspect-ratio: auto;     /* 正方形の枠をやめて画像の高さぴったりに（下の余白を作品ごとにそろえる） */
 }
 
-.other-img img {
-    width: 100%;
-    height: auto;
-    max-height: 49vw;
+.other-text > .line + p + dl {     /* Concept（画像との間をどの作品も同じにする） */
+    margin-top: 3vw;
 }
 
 .other-text > h3 {
     grid-column: 2;
     grid-row: 2;
     text-align: left;
+    font-size: clamp(15px, 4vw, 18px);  /* カードの余白を広げた分、375px でも作品名が1行に収まるように */
 }
 
 .other-text > .line {
@@ -106,32 +111,21 @@ nav ul {
     grid-row: 4;
 }
 
-.other-text > .line + p + dl {     /* Concept（画像との間をあける） */
-    margin-top: 3.6vw;      /* 文字の大きさ（3.6vw）1つ分 */
-}
-
 .making-info dt,
 .making-info dd,
 .tab-parent p:nth-of-type(2),
 .tab-parent p:nth-of-type(6) {
-    font-size: 3.6vw;
+    font-size: clamp(14px, 3.6vw, 16px);
 }
 
 /*************一覧ページ：作品カード web・それ以外共通*************/
 h3 {
-    font-size: 4.5vw;
+    font-size: clamp(16px, 4.2vw, 18px);
 }
 
 .line + p {
-    margin-left: 9%;
     line-height: 1.2em;
-    font-size: 3.6vw;
-}
-
-.line + p::before {
-    left: -5.5vw;
-    width: 1.2em;
-    height: 1.2em;
+    font-size: clamp(14px, 3.6vw, 16px);
 }
 
 .arrow-parent {
@@ -140,7 +134,7 @@ h3 {
 
 /********************ページ送り（1 / 2 …）********************/
 .page_area {
-    font-size: 4vw;
+    font-size: clamp(14px, 3.8vw, 16px);
 }
 
 /********************フッター********************/

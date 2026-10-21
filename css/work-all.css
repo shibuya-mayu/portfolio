@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+/*
+Work一覧ページ All タブ（写真アルバム風）
+対象：work.html の最初のタブ（.all-album）
+タブレット・スマホ用もこのファイルの下にまとめて書く
+*/
+
+/********************アルバムの台紙********************/
+.all-album {
+    position: relative;
+    margin-bottom: 8%;
+    padding: 70px 6% 140px;
+    border-radius: 30px;
+    background:                                    /* 水彩のにじみ ＋ 明るいクリーム色 */
+        radial-gradient(ellipse 40% 30% at 15% 20%, rgba(247, 182, 200, 0.22), transparent 70%),
+        radial-gradient(ellipse 35% 25% at 85% 35%, rgba(158, 216, 228, 0.2), transparent 70%),
+        radial-gradient(ellipse 45% 30% at 40% 80%, rgba(245, 194, 66, 0.14), transparent 70%),
+        #FFFDF7;
+    box-shadow: inset 0 0 40px rgba(214, 190, 150, 0.15);
+}
+
+/*紙のざらざら感（SVG のノイズ）*/
+.all-album::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border-radius: inherit;
+    opacity: 0.12;
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/********************散りばめたお花********************/
+.all-deco {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.all-deco img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/*回るお花（左回り・右回り）*/
+.all-deco .spin-l {
+    animation: all-spin-l 20s linear infinite;
+}
+
+.all-deco .spin-r {
+    animation: all-spin-r 26s linear infinite;
+}
+
+@keyframes all-spin-l {
+    from { transform: translate(-50%, -50%) rotate(0); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes all-spin-r {
+    from { transform: translate(-50%, -50%) rotate(0); }
+    to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+/*お花の位置・大きさ・濃さ（left / top は台紙に対しての位置）*/
+.all-deco img:nth-child(1)  { left: 1%;   top: 3%;  width: 54px; opacity: 0.8; }
+.all-deco img:nth-child(2)  { left: 99%;  top: 8%;  width: 34px; opacity: 0.7; }
+.all-deco img:nth-child(3)  { left: 2%;   top: 22%; width: 28px; opacity: 0.6; }
+.all-deco img:nth-child(4)  { left: 98%;  top: 26%; width: 68px; opacity: 0.85; }
+.all-deco img:nth-child(5)  { left: 47%;  top: 31%; width: 22px; opacity: 0.6; }
+.all-deco img:nth-child(6)  { left: 0;    top: 40%; width: 84px; opacity: 0.8; }
+.all-deco img:nth-child(7)  { left: 99%;  top: 47%; width: 28px; opacity: 0.7; }
+.all-deco img:nth-child(8)  { left: 30%;  top: 52%; width: 34px; opacity: 0.55; }
+.all-deco img:nth-child(9)  { left: 2%;   top: 60%; width: 42px; opacity: 0.75; }
+.all-deco img:nth-child(10) { left: 97%;  top: 64%; width: 54px; opacity: 0.8; }
+.all-deco img:nth-child(11) { left: 70%;  top: 71%; width: 22px; opacity: 0.6; }
+.all-deco img:nth-child(12) { left: 1%;   top: 79%; width: 34px; opacity: 0.7; }
+.all-deco img:nth-child(13) { left: 99%;  top: 85%; width: 42px; opacity: 0.75; }
+.all-deco img:nth-child(14) { left: 40%;  top: 93%; width: 28px; opacity: 0.6; }
+.all-deco img:nth-child(15) { left: 15%;  top: 97%; width: 68px; opacity: 0.8; }
+.all-deco img:nth-child(16) { left: 62%;  top: 99%; width: 42px; opacity: 0.7; }
+
+/*右下のクマ*/
+.all-bear {
+    position: absolute;
+    right: 3%;
+    bottom: 14px;
+    width: 110px;
+    mix-blend-mode: multiply;     /* 画像の白い背景を台紙の色になじませる */
+    transform: rotate(6deg);
+    pointer-events: none;
+}
+
+/********************写真の並び********************/
+.all-grid {
+    position: relative;           /* 散りばめたお花より手前に出す */
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 56px 4%;
+}
+
+/*写真1枚（色の紙 ＋ 白いふちの写真）*/
+.all-item {
+    position: relative;
+    display: block;
+    margin-top: var(--y, 0);
+    padding: 12px;
+    border-radius: 4px;
+    background-color: var(--paper);
+    box-shadow: 0 3px 10px rgba(80, 60, 30, 0.13);
+    color: #3a3a3a;
+    text-decoration: none;
+    transform: rotate(var(--r, 0deg));
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.all-item:hover {
+    z-index: 2;
+    box-shadow: 0 10px 22px rgba(80, 60, 30, 0.18);
+    transform: rotate(0) translateY(-8px) scale(1.04);   /* まっすぐ戻って、ふわっと持ち上がる */
+}
+
+/*紙とテープの色（ワークのカードと同じ赤・黄・青）*/
+.all-red    { --paper: #FBE3E9; }
+.all-yellow { --paper: #FFF1D6; }
+.all-blue   { --paper: #DDF0F4; }
+
+/*大きさ（作品の種類ごと）*/
+.all-web    { width: 25%; }
+.all-banner { width: 19%; }
+.all-poster { width: 16%; }
+.all-logo   { width: 15%; }
+
+.all-photo {
+    display: block;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.all-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;          /* ポスター・バナー・ロゴは正方形の枠に、切らずに収める */
+    object-fit: contain;
+}
+
+.all-web .all-photo img {
+    aspect-ratio: 4 / 3;          /* web はサイトの上の部分を横長に見せる */
+    object-fit: cover;
+    object-position: top;
+}
+
+.all-logo .all-photo img {
+    padding: 6%;
+    box-sizing: border-box;
+}
+
+/*手書き風のタイトル（写真の下）*/
+.all-title {
+    position: absolute;
+    bottom: -30px;
+    white-space: nowrap;
+    color: #4a4036;
+    font-size: clamp(15px, 1.25vw, 18px);
+    font-family: "Yomogi", "Zen Kurenaido", cursive;
+}
+
+.all-title::after {                /* 最後のくるっとした線 */
+    display: inline-block;
+    width: 1.3em;
+    height: 1em;
+    margin-left: 0.2em;
+    content: "";
+    vertical-align: middle;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 22'%3E%3Cpath d='M2 14c6 6 14 6 18-2s-2-12-6-8 2 10 14 6' fill='none' stroke='%237a6a58' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.all-title.left {
+    left: 6%;
+    transform: rotate(-4deg);
+}
+
+.all-title.right {
+    right: 4%;
+    transform: rotate(3deg);
+}
+
+/*マスキングテープ（両端がちぎれた形）*/
+.all-item::before {
+    position: absolute;
+    z-index: 3;
+    width: 34%;
+    max-width: 110px;
+    height: 24px;
+    content: "";
+    opacity: 0.85;
+    clip-path: polygon(0 10%, 5% 0, 10% 12%, 15% 0, 85% 0, 90% 12%, 95% 0, 100% 10%, 100% 90%, 95% 100%, 90% 88%, 85% 100%, 15% 100%, 10% 88%, 5% 100%, 0 90%);
+}
+
+.tape-top::before {                /* 上の真ん中 */
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+.tape-left::before {               /* 左上の角にななめ */
+    top: -4px;
+    left: -18px;
+    transform: rotate(-40deg);
+}
+
+.tape-right::before {              /* 右上の角にななめ */
+    top: -4px;
+    right: -18px;
+    transform: rotate(40deg);
+}
+
+.tape-pink::before   { background: repeating-linear-gradient(45deg, #F6B7C9 0 6px, #FAD3DE 6px 12px); }
+.tape-blue::before   { background: repeating-linear-gradient(90deg, #A9D8E6 0 5px, #CBE8F0 5px 10px); }
+.tape-mint::before   { background: #BFE5D2; }
+.tape-yellow::before { background: #FBE29A; }
+.tape-kraft::before  { background: #D9BC94; opacity: 0.75; }
+.tape-dot::before    { background: radial-gradient(circle, #fff 2px, transparent 2.5px) 0 0 / 10px 10px, #F9C6B0; }
+
+/*写真に貼ったお花のシール*/
+.all-sticker {
+    position: absolute;
+    z-index: 4;
+    width: 40px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+    pointer-events: none;
+}
+
+.all-sticker.left {
+    left: -16px;
+    bottom: 30%;
+    transform: rotate(-20deg);
+}
+
+.all-sticker.right {
+    right: -14px;
+    bottom: 40%;
+    transform: rotate(15deg);
+}
+
+/*「WEB」「BANNER」などの丸いスタンプ*/
+.all-badge {
+    position: absolute;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    aspect-ratio: 1 / 1;
+    border: 2px dashed currentColor;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    font-size: 11px;
+    font-family: "Klee One", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.all-web .all-badge    { color: #0089A7; }
+.all-banner .all-badge,
+.all-poster .all-badge { color: #DB4D6D; }
+.all-logo .all-badge   { color: #E79A00; }
+
+/*スタンプの位置（下に付けるときは、タイトルに重ならないよう写真の下の角に）*/
+.all-badge.top-right    { top: -16px;    right: -14px; transform: rotate(12deg); }
+.all-badge.top-left     { top: -16px;    left: -14px;  transform: rotate(-14deg); }
+.all-badge.bottom-right { bottom: -6px;  right: -20px; transform: rotate(-10deg); }
+.all-badge.bottom-left  { bottom: -6px;  left: -20px;  transform: rotate(8deg); }
+
+/********************タブレット（999px以下）********************/
+@media screen and (max-width: 999px) {
+    .all-album {
+        padding: 60px 5% 130px;
+    }
+
+    .all-grid {
+        gap: 50px 6%;
+    }
+
+    .all-web    { width: 42%; }
+    .all-banner { width: 30%; }
+    .all-poster { width: 26%; }
+    .all-logo   { width: 24%; }
+
+    .all-title {
+        font-size: clamp(15px, 1.9vw, 16px);
+    }
+}
+
+/********************スマホ（549px以下）********************/
+@media screen and (max-width: 549px) {
+    .all-album {
+        padding: 36px 4% 100px;
+        border-radius: 20px;
+    }
+
+    .all-grid {
+        gap: 40px 6%;
+    }
+
+    .all-web {
+        width: 88%;
+    }
+
+    .all-banner,
+    .all-poster,
+    .all-logo {
+        width: 42%;
+    }
+
+    .all-item {
+        padding: 8px;
+    }
+
+    .all-item::before {
+        height: 18px;
+    }
+
+    .all-photo {
+        padding: 5px;
+    }
+
+    .all-title {
+        bottom: -24px;
+        font-size: 12px;
+    }
+
+    .all-badge {
+        width: 40px;
+        font-size: 9px;
+    }
+
+    .all-sticker {
+        width: 28px;
+    }
+
+    .all-deco img {
+        max-width: 40px;
+    }
+
+    .all-bear {
+        width: 76px;
+    }
+}
