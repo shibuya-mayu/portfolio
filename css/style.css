@@ -6,6 +6,7 @@
 青　#0089A7
 */
 
+/*********************ヘッダー**********************/
  .loading {
     width: 100vw;
     height: 100vh;
@@ -489,7 +490,7 @@
     text-align: center;
 }
 
-/*ナビゲーション*/
+/**************************ナビゲーションとスクロール*************************/
 .nav-flex-box {
     position: relative;
 }
@@ -551,12 +552,12 @@ header + div img {
 }
 
 
-/*セクション　共通*/
+/************セクション　共通**************/
 main {
     background-color: #ffffef;
 }
 
-/*セクション　アバウト*/
+/**********************セクション　アバウト**********************/
 .about-section {
     padding-bottom: 8%;
 }
@@ -644,16 +645,11 @@ main {
     transform: scale(0.6);
 }
 
-/*
-.about-right p:nth-child(1) span {
-    font-size: 2.5vw;
-}*/
-
 .about-right p:nth-child(2) {
     white-space: pre-wrap;
     margin-top: 1%;/*8%*/
     text-align: center;
-    font-size: clamp(13px, 1.2vw, 17.3px);
+    font-size: clamp(15px, 1.2vw, 18px);
     color: #202020;
     font-family: "Noto Sans JP";
 }
@@ -714,7 +710,7 @@ main {
 }
 
 
-/*セクション　ワーク*/
+/***********************セクション　ワーク**********************/
 .work-section {
     padding: 8% 0;
 }
@@ -813,41 +809,22 @@ main {
     }
   
 }
-/*
-.loop-box:hover div:nth-child(1) img,.loop-box:hover div:nth-child(3) img {
-    -o-animation-play-state: paused;
-}*/
 
-.work-left .work-parent:nth-of-type(1) .loop-box h3 {
+.work-left .work-parent .loop-box h3 {
     position: absolute;
+    top: 37%;
     white-space: pre-wrap;
-    top: 36%;
-    left: 33%;
     font-size: clamp(13px, 1.5vw, 21.6px);
     color: #fff;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
     text-shadow: 0px 0px 1px #202020;
     font-family: "Klee One";
 }
 
 .work-left .work-parent:nth-of-type(2) .loop-box h3 {
-    position: absolute;
-    white-space: pre-wrap;
     top: 30%;
-    left: 18%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    color: #fff;
-    text-shadow: 0px 0px 1px #202020;
-    font-family: "Klee One";
-}
-
-.work-left .work-parent:nth-of-type(3) .loop-box h3 {
-    position: absolute;
-    top: 38%;
-    left: 33%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    color: #fff;
-    text-shadow: 0px 0px 1px #202020;
-    font-family: "Klee One";
 }
 
 .view-box2 a {
@@ -998,7 +975,7 @@ main {
 
 .contact-box p {
     margin-bottom: 1.2em;
-    font-size: clamp(13px, 1.2vw, 17.3px);
+    font-size: clamp(15px, 1.2vw, 18px);
     color: #202020;
     font-family: "Noto Sans JP";
 }

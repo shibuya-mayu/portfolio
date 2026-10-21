@@ -39,5 +39,5 @@ nav ul li a p {
 /* ===== 全ページ ===== */
 /*フッター*/
 footer p {
-    font-size: max(13px, 1.8vw);
+    font-size: clamp(12px, 1.8vw, 13px);
 }

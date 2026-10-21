@@ -17,7 +17,7 @@ html {
     overflow-x: hidden;
  } 
 
- /* ===== 全ページ ===== */
+ /* ==================== 全ページ =============== */
  /*コンテンツの幅*/
  .inner {
     container-type: inline-size;
@@ -30,7 +30,7 @@ header {
     padding-top: 3%;
 }
 
-/* ===== 雲のヘッダー（About・Work一覧） ===== */
+/* ==================== 雲のヘッダー（About・Work一覧） ====================== */
 .top-position {
     position: relative;
     width: 100%;
@@ -72,7 +72,7 @@ header {
     font-family: "Klee One";
  }
 
-/* ===== 全ページ ===== */
+/* ==================== 全ページ ====================== */
 /*ナビゲーション*/
 nav ul li {
     width: calc(100%/4);
@@ -160,12 +160,11 @@ nav ul li:nth-child(2) a::before { background-color: #DB4D6D; }
 nav ul li:nth-child(3) a::before { background-color: #FFB11B; }
 nav ul li:nth-child(4) a::before { background-color: #0089A7; }
 
-/* ===== 全ページ ===== */
+/* ==================== 全ページ ====================== */
 /*フッター*/
 footer {
     position: relative;
     padding: 2% 0;
-    /* background-image: url(../images/contact-fotter.png); */
     background-size: 100% 100%;
 }
 
@@ -177,7 +176,7 @@ footer p {
     margin-top: 7%;
     text-align: center;
     color: #fff;
-    font-size: clamp(13px, 1vw, 14.4px);
+    font-size: clamp(12px, 1vw, 14px);
     font-family: "Noto Sans JP";
 }
 
