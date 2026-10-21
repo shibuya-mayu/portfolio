@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-Aboutページ タブレット用（550px〜899px）
+Aboutページ タブレット用（550px〜999px）
 about.css の上から、タブレットで変えたいところだけ上書きする
 文章が多いので、スマホと同じく縦1列にする
 */
@@ -19,7 +19,7 @@ nav ul {
     width: fit-content;
     margin: 8% auto 4%;
     padding: 0 8vw;
-    font-size: max(13px, 3.4vw);
+    font-size: clamp(24px, 3.4vw, 28px);
 }
 
 .style-box h2::before,
@@ -59,12 +59,12 @@ nav ul {
 }
 
 .profile-box p {
-    font-size: max(13px, 2.2vw);
+    font-size: clamp(15px, 2.2vw, 16px);
 }
 
 .profile-box div:nth-child(1) + p {
     margin-bottom: 2%;
-    font-size: max(13px, 2.8vw);
+    font-size: clamp(15px, 2.8vw, 16px);
 }
 
 .inner-flex p::before {
@@ -73,32 +73,36 @@ nav ul {
     border-radius: 50%;
 }
 
-/*使用可能ソフト*/
-.soft-box {
+/*Skill*/
+.skill-box {
     margin-top: 10%;
     padding: 6% 5% 4%;
     border-radius: 2vw;
 }
 
-.soft-box h2 {
+.skill-box h2 {
     width: 40%;
-    font-size: max(13px, 3.4vw);
+    font-size: clamp(24px, 3.4vw, 28px);
 }
 
 ::marker {
-    font-size: max(13px, 1.8vw);
+    font-size: clamp(12px, 1.8vw, 13px);
 }
 
-.soft-box ul li {
-    font-size: max(13px, 2.2vw);
+.skill-group h3 {
+    font-size: max(13px, 2vw);
 }
 
-.soft-box ul li:nth-child(n):after {
-    font-size: max(13px, 2.4vw);
+.skill-tags li {
+    font-size: max(13px, 2.1vw);
 }
 
 /*得意の制作スタイル・考え・目標*/
-.style-box p,
+.style-box p {
+    font-size: clamp(15px, 2.2vw, 16px);
+    line-height: 1.8;
+}
+
 .right-box-top p {
     font-size: max(12px, 2.2vw); /* 13pxだと550px付近で改行がずれるため 12px */
     line-height: 1.8;
@@ -117,14 +121,17 @@ nav ul {
     padding-top: 20%;
 }
 
-.right-bottom-parent p:nth-child(2),
+.right-bottom-parent p:nth-child(2) {
+    font-size: clamp(15px, 2.2vw, 16px);
+}
+
 .right-bottom-parent p:nth-child(3) {
     font-size: max(13px, 2.2vw);
 }
 
 /*クマと吹き出し*/
 .img-box {
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .img-box div:nth-child(1) {
@@ -138,9 +145,9 @@ nav ul {
 }
 
 .img-box p {
-    top: 20%;
-    right: 20%;
-    font-size: max(13px, 1.75vw);
+    top: 0%;
+    right: 25%;
+    font-size: clamp(10px, 1.75vw, 18px); /* 吹き出しの画像と一緒に縮むように 10px */
 }
 
 /*特徴・長所*/
@@ -164,7 +171,7 @@ nav ul {
 }
 
 .right-lste-flex .right-child:nth-of-type(n) ul li {
-    font-size: max(13px, 2.2vw);
+    font-size: clamp(15px, 2.2vw, 16px);
 }
 
 /*フッター*/

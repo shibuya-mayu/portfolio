@@ -18,7 +18,7 @@ nav ul {
     width: fit-content;
     margin: 12% auto 6%;
     padding: 0 12vw;
-    font-size: 5.5vw;
+    font-size: clamp(20px, 5.5vw, 24px);
 }
 
 .style-box h2::before,
@@ -63,13 +63,13 @@ nav ul {
 
 .profile-box div:nth-child(1) + p {
     margin-bottom: 3%;
-    font-size: 4.6vw;
+    font-size: clamp(14px, 4.6vw, 16px);
 }
 
 .profile-box p,
 .profile-box p:nth-child(3),
 .inner-flex p {
-    font-size: 3.8vw;
+    font-size: clamp(14px, 3.8vw, 16px);
 }
 
 .profile-box p:nth-child(3)::before,
@@ -79,34 +79,33 @@ nav ul {
     border-radius: 50%;
 }
 
-/*使用可能ソフト*/
-.soft-box {
+/*Skill*/
+.skill-box {
     margin-top: 16%;
     padding: 9% 5% 6%;
     border-radius: 3vw;
 }
 
-.soft-box h2 {
-    font-size: 5.5vw;
+.skill-box h2 {
+    font-size: clamp(20px, 5.5vw, 24px);
 }
 
 ::marker {
-    font-size: 3vw;
+    font-size: clamp(12px, 3vw, 13px);
 }
 
-.soft-box ul li {
-    font-size: 3.8vw;
+.skill-group h3 {
+    font-size: clamp(12px, 3.4vw, 14px);
 }
 
-.soft-box ul li:nth-child(n):after {
-    width: 36%;
-    font-size: 4vw;
+.skill-tags li {
+    font-size: clamp(13px, 3.6vw, 15px);
 }
 
 /*得意の制作スタイル・考え・目標*/
 .style-box p,
 .right-box-top p {
-    font-size: 3.8vw;
+    font-size: clamp(14px, 3.8vw, 16px);
     line-height: 1.8;
 }
 
@@ -125,12 +124,12 @@ nav ul {
 }
 
 .right-bottom-parent p:nth-child(2) {
-    font-size: 4vw;
+    font-size: clamp(14px, 4vw, 16px);
 }
 
 .right-bottom-parent p:nth-child(3) {
     top: 36%;
-    font-size: 5vw;
+    font-size: clamp(16px, 4.6vw, 20px);
 }
 
 /*クマと吹き出し*/
@@ -144,14 +143,14 @@ nav ul {
 }
 
 .img-box div:nth-child(2) {
-    top: -26%;
-    left: 28%;
-    width: 72%;
+    left: 35%;
+    bottom: 27%;
+    width: 55%;
 }
 
 .img-box p {
-    top: 14%;
-    right: 11%;
+    top: 10%;
+    right: 15%;
     font-size: 3vw;
 }
 
@@ -172,11 +171,11 @@ nav ul {
 }
 
 .right-lste-flex .right-child:nth-of-type(n) h3 {
-    font-size: 4.8vw;
+    font-size: clamp(16px, 4.4vw, 18px);
 }
 
 .right-lste-flex .right-child:nth-of-type(n) ul li {
-    font-size: 3.8vw;
+    font-size: clamp(14px, 3.8vw, 16px);
 }
 
 .right-lste-flex .right-child:nth-of-type(2) ul li {
