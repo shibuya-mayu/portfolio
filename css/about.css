@@ -232,12 +232,15 @@ nav ul {
 }
 
 .right-box-top p {
-    white-space: pre-wrap;
     font-size: clamp(11px, 1.3vw, 18.7px); /* 13pxだと900px付近で改行がずれるため 11px */
     text-align: center;
     color: #202020;
     line-height: 1.6;
     font-family: "Noto Sans JP";
+}
+
+.right-box-top p + p {
+    margin-top: 1lh;        /* 段落の間は1行分あける */
 }
 
 .marker {

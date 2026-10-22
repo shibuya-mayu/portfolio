@@ -109,6 +109,14 @@ nav ul {
     line-height: 1.8;
 }
 
+.right-box-top p {
+    text-align: left;       /* スマホは画面の幅で折り返すので左揃え */
+}
+
+.right-box-top br {
+    display: none;          /* PC 用の改行はスマホでは使わない */
+}
+
 /*好きなもの・趣味*/
 .right-box-bottom {
     margin-top: 0;
