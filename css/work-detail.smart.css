@@ -3,7 +3,7 @@
 /*
 Work詳細ページ共通 スマホ用（549px以下）
 対象：camp・rakutabi・fukagawa・aomorinebuta
-work-common-detail.css の上から、スマホで変えたいところだけ上書きする
+work-detail.css の上から、スマホで変えたいところだけ上書きする
 */
 /*ナビゲーション*/
 nav ul {
