@@ -32,7 +32,7 @@ nav ul {
 }
 
 /*詳細ページ：タイトル*/
-.movie-box + h2 {
+.movie-box + h1 {
     max-width: 100%;        /* 幅は PC と同じく文字の長さ＋左右の余白（長いタイトルでも1行に） */
     margin-top: 8%;
     line-height: 2.6;

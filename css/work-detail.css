@@ -71,7 +71,7 @@ nav ul {
     box-sizing: border-box;
 }
 
-.movie-box + h2 {
+.movie-box + h1 {
     margin: 0 auto;
     margin-top: 5%;
     width: fit-content;
