@@ -612,6 +612,16 @@ h3 {
     color: #6B5B00;
 }
 
+.skill .react {
+    background-color: #DDF6FB;
+    color: #0E7490;
+}
+
+.skill .laravel {
+    background-color: #FDE2E1;
+    color: #B91C1C;
+}
+
 .skill .illustrator {
     background-color: #FFEBD1;
     color: #B45F00;

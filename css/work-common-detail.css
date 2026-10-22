@@ -253,6 +253,8 @@ nav ul {
 .detail-meta .html       { background-color: #FCE5DE; color: #C2410C; }
 .detail-meta .css        { background-color: #DCEBF7; color: #1565A6; }
 .detail-meta .javascript { background-color: #FDF6C3; color: #6B5B00; }
+.detail-meta .react      { background-color: #DDF6FB; color: #0E7490; }
+.detail-meta .laravel    { background-color: #FDE2E1; color: #B91C1C; }
 
 /*サイトを見るボタン*/
 .site-button {
