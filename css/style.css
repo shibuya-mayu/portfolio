@@ -990,7 +990,7 @@ main {
     margin: 0 auto;
     text-decoration: none;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 999px;   /* ほかのボタンと同じく角をまるく */
     color: #0089A7;
     font-family: "Noto Sans JP";
     border: 1px solid #0089A7;
