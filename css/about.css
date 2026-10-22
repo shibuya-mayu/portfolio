@@ -151,19 +151,6 @@ nav ul {
     content: "#";
 }
 
-/*タグの色（薄い背景＋濃い文字。Work と同じ色はそろえる）*/
-.skill-tags .html        { background-color: #FCE5DE; color: #C2410C; }
-.skill-tags .css         { background-color: #DCEBF7; color: #1565A6; }
-.skill-tags .javascript  { background-color: #FDF6C3; color: #6B5B00; }
-.skill-tags .react       { background-color: #DDF6FB; color: #0E7490; }
-.skill-tags .laravel     { background-color: #FDE2E1; color: #B91C1C; }
-.skill-tags .python      { background-color: #E4EAF8; color: #2B5797; }
-.skill-tags .illustrator { background-color: #FFEBD1; color: #B45F00; }
-.skill-tags .photoshop   { background-color: #DDF0FF; color: #0B6FB8; }
-.skill-tags .xd          { background-color: #FCE4F6; color: #A3238F; }
-.skill-tags .vscode      { background-color: #E6F1FB; color: #1F6FB2; }
-.skill-tags .git         { background-color: #EFE7FB; color: #6D3FB3; }
-
 .style-box h2 {
     position: relative;
     margin: 10% auto 5%;
@@ -390,7 +377,6 @@ nav ul {
     transition: 0.5s;
 }
 
-
 .right-bottom-parent:hover div:nth-child(1) img {
     display: none;
     transition: 0.5s;
@@ -441,7 +427,6 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-
 /************************一番下************************************/
 .flex-box + h2 {
     position: relative;
@@ -476,7 +461,6 @@ nav ul {
     transform: skewx(-35deg);
     border-left: 4px double #202020;
 }
-
 
 .right-lste-flex {
     display: flex;
@@ -543,7 +527,6 @@ nav ul {
     margin-left: 10%;
     padding: 4%;
 } 
-
 
 .right-lste-flex .right-child:nth-of-type(2)::before {
     position: absolute;
