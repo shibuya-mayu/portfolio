@@ -12,7 +12,7 @@ nav ul {
 
 /*詳細ページ：スライダー*/
 .movie-box {
-    width: 92%;
+    width: 100%;            /* 下のカードと左右の端をそろえる（画像の高さは下の 46vw のまま） */
     height: auto;
 }
 
@@ -33,11 +33,10 @@ nav ul {
 
 /*詳細ページ：タイトル*/
 .movie-box + h2 {
-    width: 84%;
+    max-width: 100%;        /* 幅は PC と同じく文字の長さ＋左右の余白（長いタイトルでも1行に） */
     margin-top: 8%;
     line-height: 2.6;
     font-size: clamp(20px, 5.4vw, 24px);
-    padding: 0;
 }
 
 /*詳細ページ：Concept など（1列）*/
