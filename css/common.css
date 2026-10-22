@@ -98,7 +98,10 @@ nav ul li a div:nth-child(1) {
 nav ul li a div:nth-child(1) img {
     display: block;
     position: relative;
-    width: 50%;          /* 60% → 50% */
+    width: auto;
+    height: 5cqw;        /* 高さをそろえて、どの画像でも文字が同じ位置に来るように */
+    max-width: 65%;
+    object-fit: contain; /* 横長の画像も縦横の比率はそのまま */
     margin: 0 auto;
     display: none;
     transition: 0.5s;
