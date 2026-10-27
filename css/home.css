@@ -654,6 +654,10 @@ main {
     font-family: "Noto Sans JP";
 }
 
+.about-right .nowrap {
+    display: inline-block;   /* 入りきらないときは「、」のあとでまとめて折り返す */
+}
+
 .view-box a {
     display: flex;
     width: 50%;
