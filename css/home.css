@@ -647,7 +647,7 @@ main {
 
 .about-right p:nth-child(2) {
     white-space: pre-wrap;
-    margin-top: 1%;/*8%*/
+    margin-top: calc(1% + 12px);   /* 12px：見出しとの間のあき */
     text-align: center;
     font-size: clamp(15px, 1.2vw, 18px);
     color: #202020;
