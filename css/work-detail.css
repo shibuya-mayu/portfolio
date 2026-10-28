@@ -201,7 +201,7 @@ nav ul {
     list-style: none;
 }
 
-.detail-meta li {
+.detail-meta > li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -225,23 +225,6 @@ nav ul {
     color: #777;
     font-size: 0.85em;
     font-family: "Klee One";
-}
-
-/*使用した言語のタグ（Work のタグと同じ形・色）*/
-.detail-meta em {
-    position: relative;
-    padding: 0 0.55em 0 1.3em;
-    border-radius: 5px;
-    font-style: normal;
-    font-size: clamp(14px, 1.1vw, 15.8px);
-    line-height: 1.8;
-    font-family: "Zen Kurenaido";
-}
-
-.detail-meta em::before {
-    position: absolute;
-    left: 0.5em;
-    content: "#";
 }
 
 /*サイトを見るボタン*/

@@ -93,7 +93,7 @@ nav ul {
     font-size: max(13px, 2vw);
 }
 
-.skill-tags li {
+.skill-group .tag {
     font-size: max(13px, 2.1vw);
 }
 

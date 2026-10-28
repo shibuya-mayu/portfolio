@@ -550,40 +550,13 @@ h3 {
     padding-top: 3%;        /* 文字との間が詰まりすぎないように */
 }
 
-.card-bottom .skill {
-    margin: 0;
-}
-
 .card-bottom .arrow-parent {
     margin: 0;
     flex-shrink: 0;                    /* 矢印を縮めない */
 }
 
-.skill {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.4em 0.5em;
-    margin: 3% 0;
-}
-
-.skill p {
-    position: relative;
+.card-bottom .tag {           /* 形と色は common.css の skillタグ */
     font-size: clamp(15px, 1.1vw, 15.8px);
-    color: #fff;
-    font-family: "Zen Kurenaido";
-    line-height: 1.8em;
-    padding: 0 0.5em 0 1.3em;
-    border-radius: 5px;
-}
-
-.skill p::before {
-    display: block;
-    position: absolute;
-    content: "#";
-    left: 0.5em;
-    font-size: clamp(15px, 1.1vw, 15.8px);
-    font-family: "Zen Kurenaido";
 }
 
 .arrow-parent {

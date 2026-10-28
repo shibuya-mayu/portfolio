@@ -52,7 +52,7 @@ nav ul {
 
 .detail-info dt,
 .detail-info dd,
-.detail-meta li {
+.detail-meta > li {
     font-size: clamp(14px, 3.8vw, 16px);
 }
 
@@ -63,13 +63,9 @@ nav ul {
     width: 100%;
 }
 
-.detail-meta li {
+.detail-meta > li {
     display: grid;
     grid-template-columns: auto auto 1fr;   /* アイコン・ラベル・内容 */
-}
-
-.detail-meta li.skill-row {
-    display: flex;
 }
 
 /*詳細ページ：サイトを見るボタン・ページごとのリンク*/

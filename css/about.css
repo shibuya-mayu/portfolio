@@ -11,7 +11,7 @@ FOT-筑紫B丸ゴシック Std
     top: -12%;
  }
 
-/*ナビゲーション*/
+/***********************ナビゲーション***************************/
 nav ul {
     display: flex;
     position: sticky;
@@ -21,11 +21,41 @@ nav ul {
     margin-bottom: 10%;
 }
 
-/*メイン　自己紹介*/
+/***********************メイン　自己紹介***************************/
 .flex-box {
     display: flex;
 }
-/**************************左側**********************************/
+
+/*****共通*****/
+/*見出しの左右の斜めの二重線（Skill の見出しには付けない）*/
+.style-box h2::before,
+.right-box h2::before,
+.flex-box + h2::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    left: -0.8em;
+    width: 0;
+    height: 100%;
+    transform: skewx(35deg);
+    border-left: 4px double #202020;
+}
+
+.style-box h2::after,
+.right-box h2::after,
+.flex-box + h2::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 15%;
+    right: -0.8em;
+    width: 0;
+    height: 100%;
+    transform: skewx(-35deg);
+    border-left: 4px double #202020;
+}
+/************左側***************/
 .left-box {
     width: 30%;
 }
@@ -127,30 +157,6 @@ nav ul {
     text-align: left;
 }
 
-/*タグ（Work のタグと同じ形）*/
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45em 0.5em;
-    list-style: none;
-}
-
-.skill-tags li {
-    position: relative;
-    padding: 0 0.55em 0 1.3em;
-    border-radius: 5px;
-    font-size: clamp(14px, 1.1vw, 15.8px);
-    font-family: "Zen Kurenaido";
-    line-height: 1.8em;
-    white-space: nowrap;
-}
-
-.skill-tags li::before {
-    position: absolute;
-    left: 0.5em;
-    content: "#";
-}
-
 .style-box h2 {
     position: relative;
     margin: 10% auto 5%;
@@ -158,30 +164,6 @@ nav ul {
     color: #202020;
     font-size: clamp(24px, 2vw, 36px);
     width: fit-content;
-}
-
-.style-box h2::before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    left: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(35deg);
-    border-left: 4px double #202020;
-}
-
-.style-box h2::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    right: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(-35deg);
-    border-left: 4px double #202020;
 }
 
 .style-box p {
@@ -192,7 +174,7 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/****************************右側******************************/
+/****************右側****************/
 .right-box {
     width: 67%;
     margin-left: 3%;
@@ -205,30 +187,6 @@ nav ul {
     font-family: "Pacifico";
     color: #202020;
     font-size: clamp(24px, 2vw, 36px);
-}
-
-.right-box-top h2::before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    left: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(35deg);
-    border-left: 4px double #202020;
-}
-
-.right-box-top h2::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    right: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(-40deg);
-    border-left: 4px double #202020;
 }
 
 .right-box-top p {
@@ -276,30 +234,6 @@ nav ul {
     font-size: clamp(24px, 2vw, 36px);
     margin-bottom: 3%;
 } 
-
-.right-box-bottom h2::before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    left: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(35deg);
-    border-left: 4px double #202020;
-}
-
-.right-box-bottom h2::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    right: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(-35deg);
-    border-left: 4px double #202020;
-}
 
 .right-bottom-flex {
     display: flex;
@@ -430,7 +364,7 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/************************一番下************************************/
+/************************特徴・長所（一番下）********************************/
 .flex-box + h2 {
     position: relative;
     margin: 2% auto 6%;
@@ -439,30 +373,6 @@ nav ul {
     color: #202020;
     font-family: "Pacifico";
    /* border-bottom: 4px double #202020;*/
-}
-
-.flex-box + h2::before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    left: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(35deg);
-    border-left: 4px double #202020;
-}
-
-.flex-box + h2::after {
-    display: block;
-    position: absolute;
-    content: "";
-    top: 15%;
-    right: -0.8em;
-    width: 0;
-    height: 100%;
-    transform: skewx(-35deg);
-    border-left: 4px double #202020;
 }
 
 .right-lste-flex {
@@ -587,7 +497,7 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/*フッター*/
+/********************フッター**************************/
 footer {
     margin-top: 15%;
     background-image: url(../images/about-footer.png);
