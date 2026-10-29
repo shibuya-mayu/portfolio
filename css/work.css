@@ -228,19 +228,8 @@ nav ul {
     padding: 0.6em 1em;
     border-radius: 22px;
     box-sizing: border-box;
+    border: 2px dashed color-mix(in srgb, var(--c) 20%, transparent);   /* 色はカードの色（common.css の作品の色） */
     background-color: rgba(255, 255, 255, 0.5);
-}
-
-.red .making-details .making-info {
-    border: 2px dashed color-mix(in srgb, #DB4D6D 20%, transparent);
-}
-
-.yellow .making-details .making-info {
-    border: 2px dashed color-mix(in srgb, #FFB11B 20%, transparent);
-}
-
-.blue .making-details .making-info{
-    border: 2px dashed color-mix(in srgb, #0089A7 20%, transparent);
 }
 
 .making-info dt {
@@ -259,27 +248,9 @@ nav ul {
     flex-shrink: 0;
     width: 1.5em;           /* 制作時期・制作時間のアイコンと同じくらいの大きさに見えるように */
     height: 1.5em;
+    background-color: var(--c-deep);   /* 色はカードの色 */
     -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
     mask: var(--icon) center / contain no-repeat;
-}
-
-/* アイコンの色はカードの色（制作時期・制作時間も） */
-.red .making-info dt::before,
-.red .period::before,
-.red .time::before {
-    background-color: #DB4D6D;
-}
-
-.yellow .making-info dt::before,
-.yellow .period::before,
-.yellow .time::before {
-    background-color: #E79A00;    /* #FFB11B だと薄い背景の上で見えにくいので少し濃く */
-}
-
-.blue .making-info dt::before,
-.blue .period::before,
-.blue .time::before {
-    background-color: #0089A7;
 }
 
 .making-info dd {
@@ -411,32 +382,13 @@ nav ul {
     isolation: isolate;
     inset: 0;
     border-radius: 22px;
+    background-color: var(--c);   /* カードの色を薄くして背景に */
     opacity: 0.1;
     z-index: -1;
 }
 
-.red > a, .red > a::before, .red > .other-card {
-    border: 1px solid #DB4D6D;
-}
-
-.red > a::after, .red > .other-card::after {
-    background-color: #DB4D6D;
-}
-
-.yellow > a, .yellow > a::before, .yellow > .other-card {
-    border: 1px solid #FFB11B;
-}
-
-.yellow > a::after, .yellow > .other-card::after {
-    background-color: #FFB11B;
-}
-
-.blue > a, .blue > a::before, .blue > .other-card {
-    border: 1px solid #0089A7;
-}
-
-.blue > a::after, .blue > .other-card::after {
-    background-color: #0089A7;
+.web-box > a, .web-box > a::before, .other-box > .other-card {
+    border: 1px solid var(--c);
 }
 
 .web-box a .web-img,
@@ -467,19 +419,7 @@ h3 {
     width: 80%;
     margin: 3% auto 5%;
     border: none;
-    border-top: 1px solid;   /* 色はカードの色に合わせる（下） */
-}
-
-.red .line {
-    border-top-color: color-mix(in srgb, #DB4D6D 40%, transparent);
-}
-
-.yellow .line {
-    border-top-color: color-mix(in srgb, #E79A00 40%, transparent);
-}
-
-.blue .line {
-    border-top-color: color-mix(in srgb, #0089A7 40%, transparent);
+    border-top: 1px solid color-mix(in srgb, var(--c-deep) 40%, transparent);   /* 色はカードの色 */
 }
 
 .period,
@@ -497,22 +437,6 @@ h3 {
     margin-bottom: 0.5em;   /* 下に制作時間が続くので、間を詰める */
 }
 
-/*ラベルの色はカードの色*/
-.red .period em {
-    border-color: #DB4D6D;
-    color: #DB4D6D;
-}
-
-.yellow .period em {
-    border-color: #E79A00;
-    color: #A86B00;         /* 黄色の文字は白の上で読みにくいので、文字だけ濃く */
-}
-
-.blue .period em {
-    border-color: #0089A7;
-    color: #0089A7;
-}
-
 .period .nowrap {
     white-space: nowrap;    /* 日付の途中で折り返さない */
 }
@@ -520,7 +444,8 @@ h3 {
 .period em {                /* 「職業訓練」「入社前課題」のラベル */
     display: inline-block;
     padding: 0.1em 0.6em;
-    border: 1px solid;      /* 枠と文字の色はカードの色（下で指定） */
+    border: 1px solid var(--c-deep);   /* 枠と文字の色はカードの色 */
+    color: var(--c-text);
     border-radius: 999px;
     background-color: #fff;
     font-style: normal;
@@ -536,7 +461,7 @@ h3 {
     width: 1.35em;          /* 文字の大きさに合わせてアイコンの大きさも変わる */
     height: 1.35em;
     margin-top: calc((1lh - 1.35em) / 2);    /* 1行目の文字の高さの真ん中に */
-    background-color: #FFB11B;
+    background-color: var(--c-deep);         /* 色はカードの色 */
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
 }

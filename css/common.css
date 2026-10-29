@@ -207,6 +207,16 @@ footer .top-return img {
     font-family: "Klee One";
  }
 
+/* ==================== 作品の色（赤・黄・青） ====================== */
+/*Work 一覧のカードと詳細ページで共通。HTML の class に red / yellow / blue を付ける
+  --c：メインの色（カードの枠・背景）
+  --c-deep：アイコン・線など（黄色は薄い背景の上で見えにくいので少し濃く）
+  --c-text：ラベルの文字（黄色は白の上で読みにくいので、さらに濃く）
+  --p：詳細ページの薄い背景 */
+.red    { --c: #DB4D6D; --c-deep: #DB4D6D; --c-text: #DB4D6D; --p: #FCEBEF; }
+.yellow { --c: #FFB11B; --c-deep: #E79A00; --c-text: #A86B00; --p: #FFF5E0; }
+.blue   { --c: #0089A7; --c-deep: #0089A7; --c-text: #0089A7; --p: #E3F2F6; }
+
 /* ==================== skillタグ ====================== */
 /*About の Skill・Work のカード・詳細ページの「使用」で共通
   HTML：<ul class="tags"><li class="tag html">HTML</li>…</ul> */

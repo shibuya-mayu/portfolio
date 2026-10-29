@@ -22,8 +22,8 @@ nav ul {
     border-radius: 24px;
     background-color: var(--p);
     --swiper-navigation-size: 15px;
-    --swiper-pagination-color: var(--c);                                        /* 今のドット */
-    --swiper-pagination-bullet-inactive-color: color-mix(in srgb, var(--c) 40%, #fff);
+    --swiper-pagination-color: var(--c-deep);                                        /* 今のドット */
+    --swiper-pagination-bullet-inactive-color: color-mix(in srgb, var(--c-deep) 40%, #fff);
     --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
@@ -131,17 +131,12 @@ nav ul {
     margin: 6% auto 0;
 }
 
-/*作品ごとの色（Work 一覧のカードと同じ）*/
-.detail-red    { --c: #DB4D6D; --p: #FCEBEF; }
-.detail-yellow { --c: #E79A00; --p: #FFF5E0; }
-.detail-blue   { --c: #0089A7; --p: #E3F2F6; }
-
 /*Concept・Target・Persona・Theme・Comment*/
 .detail-card {
     width: 80%;
     margin: 5% auto 0;
     padding: clamp(18px, 2.5vw, 36px);
-    border: 2px dashed color-mix(in srgb, var(--c) 25%, transparent);
+    border: 2px dashed color-mix(in srgb, var(--c-deep) 25%, transparent);
     border-radius: 22px;
     background-color: var(--p);
     box-sizing: border-box;
@@ -179,7 +174,7 @@ nav ul {
     width: 1.2em;
     height: 1.2em;
     content: "";
-    background-color: var(--c);
+    background-color: var(--c-deep);
     -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
     mask: var(--icon) center / contain no-repeat;
 }
@@ -215,7 +210,7 @@ nav ul {
     width: 1.4em;
     height: 1.4em;
     fill: none;
-    stroke: var(--c);
+    stroke: var(--c-deep);
     stroke-width: 1.8;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -345,7 +340,7 @@ nav ul {
     gap: 14px;
     padding: 12px;
     border-radius: 18px;
-    background-color: var(--p);         /* 作品の色（.detail-red など） */
+    background-color: var(--p);         /* 作品の色（common.css の .red など） */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     color: #202020;
     font-size: clamp(15px, 1.2vw, 18px);
@@ -375,7 +370,7 @@ nav ul {
 }
 
 .work-pager small {                     /* 「前の作品」「次の作品」 */
-    color: var(--c);
+    color: var(--c-deep);
     font-size: clamp(12px, 0.9vw, 14px);
     font-family: "Klee One";
 }
