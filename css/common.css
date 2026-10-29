@@ -207,7 +207,7 @@ footer .top-return img {
     font-family: "Klee One";
  }
 
-/* ==================== 作品の色（赤・黄・青） ====================== */
+/* ========================== 作品の色（赤・黄・青） ========================== */
 /*Work 一覧のカードと詳細ページで共通。HTML の class に red / yellow / blue を付ける
   --c：メインの色（カードの枠・背景）
   --c-deep：アイコン・線など（黄色は薄い背景の上で見えにくいので少し濃く）
@@ -217,9 +217,8 @@ footer .top-return img {
 .yellow { --c: #FFB11B; --c-deep: #E79A00; --c-text: #A86B00; --p: #FFF5E0; }
 .blue   { --c: #0089A7; --c-deep: #0089A7; --c-text: #0089A7; --p: #E3F2F6; }
 
-/* ==================== skillタグ ====================== */
-/*About の Skill・Work のカード・詳細ページの「使用」で共通
-  HTML：<ul class="tags"><li class="tag html">HTML</li>…</ul> */
+/* ========================== skillタグ ============================ */
+/*About の Skill・Work のカード・詳細ページの「使用」で共通 */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +242,7 @@ footer .top-return img {
     content: "#";
 }
 
-/*タグの色（薄い背景＋濃い文字）　新しい技術はここに1行足す*/
+/*タグの色（薄い背景＋濃い文字）*/
 .tag.html        { background-color: #FCE5DE; color: #C2410C; }
 .tag.css         { background-color: #DCEBF7; color: #1565A6; }
 .tag.javascript  { background-color: #FDF6C3; color: #6B5B00; }
@@ -256,13 +255,61 @@ footer .top-return img {
 .tag.vscode      { background-color: #E6F1FB; color: #1F6FB2; }
 .tag.git         { background-color: #EFE7FB; color: #6D3FB3; }
 
-/*アイコンの形（SVG の形で切り抜いて、背景色で色を付ける）
-  Concept など：Work のカードと詳細ページで共通　制作時期・制作時間：Work のカード */
-.making-info .concept, .detail-info .concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
-.making-info .target,  .detail-info .target  { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
-.making-info .persona, .detail-info .persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
-.making-info .theme,   .detail-info .theme   { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
-.making-info .comment, .detail-info .comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
-.period::before { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3.5' y='5' width='17' height='15' rx='2'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4'/%3E%3C/svg%3E"); }   /* カレンダー */
-.time::before   { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='13' r='8'/%3E%3Cpath d='M12 9v4l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5'/%3E%3C/svg%3E"); }   /* 時計 */
+
+/* ============================== Concept・Target など ============================= */
+/*Work のカード（.making-info）と詳細ページ（.detail-info）で共通 */
+.work-info dt {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    color: #555;
+    font-size: clamp(15px, 1.2vw, 18px);
+    font-family: "Klee One";
+    line-height: 1.8;       /* 行の高さで、中身との間をあける */
+}
+
+/*見出しの左のアイコン（形は下の svgアイコン、色は作品の色）*/
+.work-info dt::before {
+    flex-shrink: 0;
+    width: 1.2em;
+    height: 1.2em;
+    content: "";
+    background-color: var(--c-deep);
+    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.work-info dd {
+    color: #202020;
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.8;
+    font-family: "Noto Sans JP";
+}
+/* == svgアイコン（SVG の形で切り抜いて、背景色で色を付ける）======= */
+/* Concept など：Work のカードと詳細ページで共通　制作時期・制作時間：Work のカードと詳細ページで共通　ページ数・使用：詳細ページ */
+.concept { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a9 9 0 1 0 0 18c1 0 1.6-.8 1.6-1.6 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.7-1.6 1.6-1.6H16a5 5 0 0 0 5-5c0-4.1-4-7.4-9-7.4z'/%3E%3Ccircle cx='7.5' cy='11' r='1'/%3E%3Ccircle cx='10' cy='7' r='1'/%3E%3Ccircle cx='15' cy='7.5' r='1'/%3E%3C/svg%3E"); }   /* パレット */
+.target  { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.2'/%3E%3C/svg%3E"); }   /* 的 */
+.persona { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7'/%3E%3C/svg%3E"); }   /* 人 */
+.theme   { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z'/%3E%3C/svg%3E"); }   /* 電球 */
+.comment { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 15a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z'/%3E%3C/svg%3E"); }   /* 吹き出し */
+
+.period  { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3.5' y='5' width='17' height='15' rx='2'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4'/%3E%3C/svg%3E"); }   /* カレンダー */
+.time    { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='13' r='8'/%3E%3Cpath d='M12 9v4l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5'/%3E%3C/svg%3E"); }   /* 時計 */
+.pages   { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 3v6h6M8 13h8M8 17h5'/%3E%3C/svg%3E"); }   /* 書類 */
+.skills  { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m8 7-5 5 5 5M16 7l5 5-5 5'/%3E%3C/svg%3E"); }   /* コード */
+
+/* ========================== 制作時期のラベル ============================ */
+/*Work のカードと詳細ページで共通　<em>職業訓練</em> */
+.period em {      
+    display: inline-block;
+    padding: 0.1em 0.6em;
+    border: 1px solid var(--c-deep);   /* 枠と文字の色は作品の色 */
+    color: var(--c-text);
+    border-radius: 999px;
+    background-color: #fff;
+    font-style: normal;
+    font-size: 0.75em;
+    white-space: nowrap;
+    vertical-align: 0.1em;
+}
 

@@ -232,32 +232,20 @@ nav ul {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/*Concept など（形は common.css の .work-info、ここではカード用の大きさだけ）*/
 .making-info dt {
-    display: flex;
-    align-items: center;
-    gap: 0.35em;
-    color: #555;
     font-size: clamp(13px, 1.1vw, 15.8px);
-    font-family: "Klee One";
-    line-height: 1.8;
 }
 
 /* 見出しの左のアイコン（SVG の形で切り抜いて、背景色で色を付ける） */
 .making-info dt::before {
-    content: "";
-    flex-shrink: 0;
     width: 1.5em;           /* 制作時期・制作時間のアイコンと同じくらいの大きさに見えるように */
     height: 1.5em;
-    background-color: var(--c-deep);   /* 色はカードの色 */
-    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
-    mask: var(--icon) center / contain no-repeat;
 }
 
 .making-info dd {
-    color: #202020;
     line-height: 1.5;
     font-size: clamp(15px, 1.1vw, 18px);
-    font-family: "Noto Sans JP";
 }
 
 .other-card button.arrow-parent {
@@ -267,7 +255,7 @@ nav ul {
 
 /*制作のこだわり（開く・閉じるボタン）*/
 .making-details > summary {
-    list-style: none;                     /* 標準の三角の印を消す */
+    list-style: none;     /* 標準の三角の印を消す */
 }
 
 .making-details > summary::-webkit-details-marker {
@@ -439,19 +427,6 @@ h3 {
 
 .period .nowrap {
     white-space: nowrap;    /* 日付の途中で折り返さない */
-}
-
-.period em {                /* 「職業訓練」「入社前課題」のラベル */
-    display: inline-block;
-    padding: 0.1em 0.6em;
-    border: 1px solid var(--c-deep);   /* 枠と文字の色はカードの色 */
-    color: var(--c-text);
-    border-radius: 999px;
-    background-color: #fff;
-    font-style: normal;
-    font-size: 0.75em;
-    white-space: nowrap;
-    vertical-align: 0.1em;
 }
 
 .period::before,

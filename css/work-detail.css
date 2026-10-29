@@ -154,36 +154,8 @@ nav ul {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.detail-info .comment {
+.detail-info > div:has(.comment) {
     grid-column: 1 / -1;                /* 感想は幅いっぱい */
-}
-
-.detail-info dt {
-    display: flex;
-    align-items: center;
-    gap: 0.4em;
-    margin-bottom: 0.3em;
-    color: #555;
-    font-size: clamp(15px, 1.2vw, 18px);
-    font-family: "Klee One";
-}
-
-/*見出しの左のアイコン（SVG の形で切り抜いて、作品の色を付ける）*/
-.detail-info dt::before {
-    flex-shrink: 0;
-    width: 1.2em;
-    height: 1.2em;
-    content: "";
-    background-color: var(--c-deep);
-    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
-    mask: var(--icon) center / contain no-repeat;
-}
-
-.detail-info dd {
-    color: #202020;
-    font-size: clamp(15px, 1.2vw, 18px);
-    line-height: 1.8;
-    font-family: "Noto Sans JP";
 }
 
 /*制作時間・ページ数・使用*/
@@ -206,17 +178,18 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-.detail-meta svg {
+/*左のアイコン（形は common.css の .period など、色は作品の色）*/
+.detail-meta > li::before {
+    flex-shrink: 0;
     width: 1.4em;
     height: 1.4em;
-    fill: none;
-    stroke: var(--c-deep);
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    content: "";
+    background-color: var(--c-deep);
+    -webkit-mask: var(--icon) center / contain no-repeat;   /* Safari 用 */
+    mask: var(--icon) center / contain no-repeat;
 }
 
-.detail-meta span {                     /* 「制作時間」などのラベル */
+.detail-meta > li > span:first-child { /* 「制作時間」などの見出し */
     color: #777;
     font-size: 0.85em;
     font-family: "Klee One";
