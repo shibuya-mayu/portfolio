@@ -170,7 +170,6 @@ nav ul {
     display: block;
     position: relative;
     isolation: isolate;
-    text-decoration: none;
     height: 100%;
     color: #202020;
     padding: 2%;
