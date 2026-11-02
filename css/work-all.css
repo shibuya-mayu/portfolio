@@ -211,9 +211,9 @@ Work一覧ページ All タブ（写真アルバム風）
 }
 
 .tape-left::before {               /* 左上の角にななめ */
-    top: -4px;
-    left: -18px;
-    transform: rotate(-40deg);
+    top: 16px;
+    left: 16px;
+    transform: translate(-50%, -50%) rotate(-40deg);   /* テープの真ん中を角の近くに固定（長さが変わってもずれない） */
 }
 
 .tape-right::before {              /* 右上の角にななめ */
