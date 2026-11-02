@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/******************ナビゲーション******************/
+/******************************* ナビゲーション *******************************/
 nav ul {
     position: sticky;
     width: 42%;
@@ -8,7 +8,50 @@ nav ul {
     margin-bottom: 1%;
 }
 
-/*セクション　内容*/
+/************************ 戻るボタン（ページの上と下） ************************/
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-bottom: 3%;
+    padding: 0.35em 1em 0.35em 0.8em;
+    border: 1px solid #C77700;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #C77700;
+    font-size: clamp(13px, 1vw, 15px);
+    font-family: "Noto Sans JP";
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-link svg {
+    width: 1.2em;
+    height: 1.2em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s;
+}
+
+.back-link:hover {
+    background-color: #C77700;
+    color: #fff;
+}
+
+.back-link:hover svg {
+    transform: translateX(-3px);    /* 矢印が少し左へ */
+}
+
+.back-link.bottom {
+    display: flex;
+    width: fit-content;
+    margin: 6% auto 0;
+}
+
+/********************************* スライダー *********************************/
 .movie-box {
     margin: 0 auto;
     width: 80%;
@@ -69,6 +112,7 @@ nav ul {
     box-sizing: border-box;
 }
 
+/********************************** タイトル **********************************/
 .movie-box + h1 {
     margin: 0 auto;
     margin-top: 5%;
@@ -86,50 +130,7 @@ nav ul {
     color: #202020;
 }
 
-/*戻るボタン（ページの上と下）*/
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4em;
-    margin-bottom: 3%;
-    padding: 0.35em 1em 0.35em 0.8em;
-    border: 1px solid #C77700;
-    border-radius: 999px;
-    background-color: #fff;
-    color: #C77700;
-    font-size: clamp(13px, 1vw, 15px);
-    font-family: "Noto Sans JP";
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.back-link svg {
-    width: 1.2em;
-    height: 1.2em;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform 0.3s;
-}
-
-.back-link:hover {
-    background-color: #C77700;
-    color: #fff;
-}
-
-.back-link:hover svg {
-    transform: translateX(-3px);    /* 矢印が少し左へ */
-}
-
-.back-link.bottom {
-    display: flex;
-    width: fit-content;
-    margin: 6% auto 0;
-}
-
-/*Concept・Target・Persona・Theme・Comment*/
+/****************** Concept・Target・Persona・Theme・Comment ******************/
 .detail-card {
     width: 80%;
     margin: 5% auto 0;
@@ -156,7 +157,7 @@ nav ul {
     grid-column: 1 / -1;                /* 感想は幅いっぱい */
 }
 
-/*制作時間・ページ数・使用*/
+/************************** 制作時間・ページ数・使用 **************************/
 .detail-meta {
     display: flex;
     flex-wrap: wrap;
@@ -193,7 +194,7 @@ nav ul {
     font-family: "Klee One";
 }
 
-/*サイトを見るボタン*/
+/***************************** サイトを見るボタン *****************************/
 .site-button {
     display: flex;
     flex-wrap: wrap;
@@ -234,7 +235,7 @@ nav ul {
     transform: translateY(2px);         /* 押したように少し沈む */
 }
 
-/*ページごとのリンク*/
+/***************************** ページごとのリンク *****************************/
 .page-links {
     width: 80%;
     margin: 5% auto 0;
@@ -296,7 +297,7 @@ nav ul {
     transform: translateX(3px);
 }
 
-/*前の作品・次の作品（作品の画像＋作品の色）*/
+/***************** 前の作品・次の作品（作品の画像＋作品の色） *****************/
 .work-pager {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -372,9 +373,8 @@ nav ul {
     transform: scale(1.04);
 }
 
-/*フッター*/
+/********************************** フッター **********************************/
 footer {
     margin-top: 10%;
     background-image: url(../images/work-footer.png);
 }
-

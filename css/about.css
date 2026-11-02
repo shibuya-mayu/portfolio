@@ -4,11 +4,12 @@
 FOT-筑紫B丸ゴシック Std
 */
 
+/********************************** ヘッダー **********************************/
 .top-position div:nth-child(1) {
     top: -12%;
 }
 
-/***********************ナビゲーション***************************/
+/******************************* ナビゲーション *******************************/
 nav ul {
     position: sticky;
     width: 42%;
@@ -16,12 +17,24 @@ nav ul {
     margin-bottom: 10%;
 }
 
-/***********************メイン　自己紹介***************************/
+/****************************** メイン 自己紹介 *******************************/
 .flex-box {
     display: flex;
 }
 
-/*****共通*****/
+/******************************** 見出し 共通 *********************************/
+/*Skill 以外の見出し*/
+.style-box h2,
+.right-box-top h2,
+.right-box-bottom h2,
+.flex-box + h2 {
+    position: relative;
+    width: fit-content;
+    color: #202020;
+    font-size: clamp(24px, 2vw, 36px);
+    font-family: "Pacifico";
+}
+
 /*見出しの左右の斜めの二重線（Skill の見出しには付けない）*/
 .style-box h2::before,
 .right-box h2::before,
@@ -50,11 +63,13 @@ nav ul {
     transform: skewx(-35deg);
     border-left: 4px double #202020;
 }
-/************左側***************/
+
+/************************************ 左側 ************************************/
 .left-box {
     width: 30%;
 }
 
+/*プロフィール*/
 .profile-box div:nth-child(1) {
     margin-bottom: 5%;
     width: 100%;
@@ -107,6 +122,7 @@ nav ul {
     margin-top: 5%;
 }
 
+/*Skill*/
 .skill-box {
     position: relative;
     margin-top: 13%;
@@ -152,18 +168,7 @@ nav ul {
     text-align: left;
 }
 
-/*Skill 以外の見出し*/
-.style-box h2,
-.right-box-top h2,
-.right-box-bottom h2,
-.flex-box + h2 {
-    position: relative;
-    width: fit-content;
-    color: #202020;
-    font-size: clamp(24px, 2vw, 36px);
-    font-family: "Pacifico";
-}
-
+/*得意の制作スタイル*/
 .style-box h2 {
     margin: 10% auto 5%;
 }
@@ -176,12 +181,13 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/****************右側****************/
+/************************************ 右側 ************************************/
 .right-box {
     width: 67%;
     margin-left: 3%;
 }
 
+/*考え・目標*/
 .right-box-top h2 {
     margin: 0 auto 3%;
 }
@@ -214,6 +220,7 @@ nav ul {
     background-size: 100% 100%;
 }
 
+/*好きなもの・趣味*/
 .right-box-bottom {
     margin-top: 5%;
 }
@@ -341,7 +348,7 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/************************特徴・長所（一番下）********************************/
+/**************************** 特徴・長所（一番下） ****************************/
 .flex-box + h2 {
     margin: 2% auto 6%;
 }
@@ -447,7 +454,7 @@ nav ul {
     font-family: "Noto Sans JP";
 }
 
-/********************フッター**************************/
+/********************************** フッター **********************************/
 footer {
     margin-top: 15%;
     background-image: url(../images/about-footer.png);

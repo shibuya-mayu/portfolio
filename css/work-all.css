@@ -6,7 +6,7 @@ Work一覧ページ All タブ（写真アルバム風）
 タブレット・スマホ用もこのファイルの下にまとめて書く
 */
 
-/********************アルバムの台紙********************/
+/******************************* アルバムの台紙 *******************************/
 .all-album {
     position: relative;
     margin-bottom: 8%;
@@ -31,7 +31,7 @@ Work一覧ページ All タブ（写真アルバム風）
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/********************散りばめたお花********************/
+/******************************* 散りばめたお花 *******************************/
 .all-deco {
     position: absolute;
     inset: 0;
@@ -93,7 +93,7 @@ Work一覧ページ All タブ（写真アルバム風）
     pointer-events: none;
 }
 
-/********************写真の並び********************/
+/********************************* 写真の並び *********************************/
 .all-grid {
     position: relative;           /* 散りばめたお花より手前に出す */
     z-index: 1;
@@ -278,7 +278,7 @@ Work一覧ページ All タブ（写真アルバム風）
 .all-badge.bottom-right { bottom: -6px;  right: -20px; transform: rotate(-10deg); }
 .all-badge.bottom-left  { bottom: -6px;  left: -20px;  transform: rotate(8deg); }
 
-/********************写真を貼っていくアニメーション********************/
+/*********************** 写真を貼っていくアニメーション ***********************/
 /*
 js/work-all.js が、画面に入る前の写真に .is-wait、入ったら .is-in を付ける
 --d は1枚ずつずらす時間（js で入れる）
@@ -343,7 +343,7 @@ js/work-all.js が、画面に入る前の写真に .is-wait、入ったら .is-
     to   { scale: 1; opacity: 1; }
 }
 
-/********************タブレット（999px以下）********************/
+/************************** タブレット（999px以下） ***************************/
 @media screen and (max-width: 999px) {
     .all-album {
         padding: 60px 5% 130px;
@@ -363,7 +363,7 @@ js/work-all.js が、画面に入る前の写真に .is-wait、入ったら .is-
     }
 }
 
-/********************スマホ（549px以下）********************/
+/**************************** スマホ（549px以下） *****************************/
 @media screen and (max-width: 549px) {
     .all-album {
         padding: 36px 4% 100px;

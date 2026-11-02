@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*********************ヘッダー**********************/
+/******************************** ローディング ********************************/
 .loading {
     width: 100vw;
     height: 100vh;
@@ -36,6 +36,7 @@
     visibility: visible;
 }
 
+/********************************** ヘッダー **********************************/
 .header-parent {
     position: relative;
     width: 100%;
@@ -266,7 +267,6 @@
     }
 }
 
-
 .header-parent div:nth-child(10) {
     position: absolute;
     top: 33%;
@@ -473,7 +473,7 @@
     text-align: center;
 }
 
-/**************************ナビゲーションとスクロール*************************/
+/************************* ナビゲーションとスクロール *************************/
 .nav-flex-box {
     position: relative;
 }
@@ -485,7 +485,6 @@
     width: 0.15cqw;
     height: 15cqw;
 }
-
 
 .scroll::after {
     position: absolute;
@@ -517,11 +516,11 @@
     }
   }
 
-
 nav ul {
     width: 48%;
 }
 
+/*ヘッダーの下の波線*/
 header + div {
     width: 100%;
 }
@@ -531,17 +530,12 @@ header + div img {
     vertical-align: bottom;
 }
 
-
-/************セクション　共通**************/
+/****************************** セクション 共通 *******************************/
 main {
     background-color: #ffffef;
 }
 
-/**********************セクション　アバウト**********************/
-.about-section {
-    padding-bottom: 8%;
-}
-
+/******************************** 見出し 共通 *********************************/
 .h2-position {
     position: relative;
     width: fit-content;
@@ -573,6 +567,11 @@ main {
 .h2-position h2 + div img {
     width: 100%;
     vertical-align: bottom;
+}
+
+/**************************** セクション アバウト *****************************/
+.about-section {
+    padding-bottom: 8%;
 }
 
 .about-section h2 {
@@ -713,8 +712,7 @@ main {
     vertical-align: bottom;
 }
 
-
-/***********************セクション　ワーク**********************/
+/***************************** セクション ワーク ******************************/
 .work-section {
     padding: 8% 0;
 }
@@ -856,7 +854,7 @@ main {
     transform: scale(1.1,1.1);
 }
 
-/*セクション　コンタクト*/
+/*************************** セクション コンタクト ****************************/
 .contact-section {
     padding-top: 8%;
 }
@@ -913,6 +911,7 @@ main {
     color: #fff;
 }
 
+/*メインの下の波線*/
 main + div {
     width: 100%;
 }
@@ -922,13 +921,13 @@ main + div img {
     vertical-align: bottom;
 }
 
-
-/*フッター*/
+/********************************** フッター **********************************/
 footer {
     margin-top: 10%;
     background-image: url(../images/contact-fotter.png);
 }
 
+/************** スクロールで表示（js/home.js が .elem に付ける） **************/
 .isAnimate {
     opacity: 1;
     transform: scale(1);

@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-/********************ナビゲーション********************/
+/******************************* ナビゲーション *******************************/
 nav ul {
     position: sticky;
     width: 42%;
     margin-top: 0.5%;
 }
 
-/********************ワーク　タブ********************/
+/************** ワーク タブ（All / web / poster/banner / logo） ***************/
 .btn_area {
     margin-bottom: 5%;
     margin-left: 1%;
@@ -64,7 +64,7 @@ nav ul {
     display: none;
 }
 
-/********************メイン　タブ切り替え********************/
+/**************************** メイン タブ切り替え *****************************/
 .tab_box{
     width: 100%;
 }
@@ -78,39 +78,7 @@ nav ul {
     width: 100%;
 }
 
-/********************ページ送り（1 / 2 …）********************/
-.web-box.is-hidden,
-.other-box.is-hidden {
-    display: none;
-}
-
-.page_area {
-    display: flex;
-    flex-wrap: wrap;           /* 入りきらなければ次の行へ */
-    justify-content: center;
-    gap: 0.3em;
-    font-size: clamp(13px, 1.2vw, 17.3px);
-}
-
-.page_btn {
-    flex-shrink: 0;            /* 丸を縮めない */
-    width: 2.5em;
-    aspect-ratio: 1 / 1;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background: none;
-    font-size: inherit;
-    font-family: "Zen Kurenaido";
-    color: #202020;
-    cursor: pointer;
-}
-
-.page_btn.active {
-    background-color: #ccc;
-}
-
-/********************一覧ページ：作品カード web********************/
+/************************* 一覧ページ：作品カード web *************************/
 .web-box {
     width: 32%;
     margin-bottom: 3%;
@@ -154,7 +122,7 @@ nav ul {
     vertical-align: bottom;
 }
 
-/********************一覧ページ：作品カード web以外********************/
+/*********************** 一覧ページ：作品カード web以外 ***********************/
 .other-box {
     width: 49%;
     margin-bottom: 3%;
@@ -292,59 +260,7 @@ nav ul {
     stroke-linecap: round;
 }
 
-/*Lightbox の説明文（感想）*/
-.lb-data .lb-number {
-    padding-top: 0.3em;
-    font-size: 12px;
-}
-
-/*Lightbox：左右の矢印は使わない（サムネイルで切り替える）*/
-.lb-nav {
-    display: none !important;             /* lightbox.js が表示を書き換えるので !important */
-}
-
-/*Lightbox：画像の下のサムネイル*/
-.lb-thumbs {
-    display: flex;
-    justify-content: safe center;         /* 入りきるときは中央、はみ出すときは左から */
-    gap: 8px;
-    width: fit-content;
-    max-width: min(92vw, 900px);
-    margin: 8px auto 0;
-    padding: 4px;
-    overflow-x: auto;                     /* 入りきらないときは横にスクロール */
-}
-
-.lb-thumb {
-    flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    padding: 0;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.9);
-    opacity: 0.6;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.lb-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    vertical-align: bottom;
-}
-
-.lb-thumb:hover {
-    opacity: 1;
-}
-
-.lb-thumb.is-active {
-    border-color: #FFB11B;                /* 今表示している画像 */
-    opacity: 1;
-}
-
-/*************一覧ページ：作品カード web・それ以外共通*************/
+/****************** 一覧ページ：作品カード web・それ以外共通 ******************/
 .logo-flex-box {
     display: flex;
     margin: 0 auto;
@@ -475,7 +391,92 @@ h3 {
     background-position: 65% 50%;
 }
 
-/*************.  フッター.   *************/
+/*************************** ページ送り（1 / 2 …） ***************************/
+.web-box.is-hidden,
+.other-box.is-hidden {
+    display: none;
+}
+
+.page_area {
+    display: flex;
+    flex-wrap: wrap;           /* 入りきらなければ次の行へ */
+    justify-content: center;
+    gap: 0.3em;
+    font-size: clamp(13px, 1.2vw, 17.3px);
+}
+
+.page_btn {
+    flex-shrink: 0;            /* 丸を縮めない */
+    width: 2.5em;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    font-size: inherit;
+    font-family: "Zen Kurenaido";
+    color: #202020;
+    cursor: pointer;
+}
+
+.page_btn.active {
+    background-color: #ccc;
+}
+
+/************************* Lightbox（作品の拡大表示） *************************/
+/*Lightbox の説明文（感想）*/
+.lb-data .lb-number {
+    padding-top: 0.3em;
+    font-size: 12px;
+}
+
+/*Lightbox：左右の矢印は使わない（サムネイルで切り替える）*/
+.lb-nav {
+    display: none !important;             /* lightbox.js が表示を書き換えるので !important */
+}
+
+/*Lightbox：画像の下のサムネイル*/
+.lb-thumbs {
+    display: flex;
+    justify-content: safe center;         /* 入りきるときは中央、はみ出すときは左から */
+    gap: 8px;
+    width: fit-content;
+    max-width: min(92vw, 900px);
+    margin: 8px auto 0;
+    padding: 4px;
+    overflow-x: auto;                     /* 入りきらないときは横にスクロール */
+}
+
+.lb-thumb {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.lb-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: bottom;
+}
+
+.lb-thumb:hover {
+    opacity: 1;
+}
+
+.lb-thumb.is-active {
+    border-color: #FFB11B;                /* 今表示している画像 */
+    opacity: 1;
+}
+
+/********************************** フッター **********************************/
 footer {
     margin-top: 10%;
     background-image: url(../images/work-footer.png);
