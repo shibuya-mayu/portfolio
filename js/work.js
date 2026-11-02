@@ -3,12 +3,19 @@ lightbox.option({ albumLabel: '%1 / %2' });   // 「Image 1 of 6」→「1 / 6�
 
 // Work：タブ・ページ送り・制作のこだわりの開閉など
 $(function(){
-    $('.tab_box .tab_btn').click(function(e) {
+    var $tabBtns = $('.tab_box .tab_btn');
+    var $tabPanels = $('.tab_box .tab_panel');
+
+    // index 番目のタブを開く
+    function openTab(index) {
+        $tabBtns.add($tabPanels).removeClass('active');
+        $tabBtns.eq(index).addClass('active');
+        $tabPanels.eq(index).addClass('active');
+    }
+
+    $tabBtns.click(function(e) {
         e.preventDefault();                          // href="#all" に飛ばないようにする
-        var index = $('.tab_box .tab_btn').index(this);
-        $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
-        $(this).addClass('active');
-        $('.tab_box .tab_panel').eq(index).addClass('active');
+        openTab($tabBtns.index(this));
         history.replaceState(null, '', '#' + this.id); // URL を開いたタブ（#web など）にする
         showPage(0);                                 // タブを変えたら1ページ目から
     });
@@ -66,7 +73,7 @@ $(function(){
     var CARD = '.web-box, .other-box';               // 作品のカード
 
     function showPage(page) {
-        var $cards = $('.tab_box .tab_panel.active').find(CARD);
+        var $cards = $tabPanels.filter('.active').find(CARD);
         var pages = Math.ceil($cards.length / PER_PAGE);
 
         $cards.addClass('is-hidden');
@@ -95,7 +102,7 @@ $(function(){
         if (!location.hash) return;
 
         // タブの名前（#all・#web など）のとき：そのタブを開く
-        var $tab = $('.tab_box .tab_btn' + location.hash);
+        var $tab = $tabBtns.filter(location.hash);
         if ($tab.length) { $tab.click(); return; }
 
         // 作品（#fitness など）のとき：その作品があるタブを開いて、作品までスクロール
@@ -103,10 +110,7 @@ $(function(){
         var $panel = $target.closest('.tab_panel');
         if (!$panel.length) return;
 
-        var index = $('.tab_box .tab_panel').index($panel);
-        $('.tab_box .tab_btn, .tab_box .tab_panel').removeClass('active');
-        $('.tab_box .tab_btn').eq(index).addClass('active');
-        $panel.addClass('active');
+        openTab($tabPanels.index($panel));
         showPage(Math.max(0, Math.floor($panel.find(CARD).index($target) / PER_PAGE))); // 作品があるページを開く
         $target[0].scrollIntoView();
     }
