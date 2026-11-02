@@ -83,7 +83,6 @@ nav ul {
     grid-row: 1 / 7;        /* 画像は左の列で、上の6段分 */
     width: 100%;
     padding: 0;
-    align-self: center;
     aspect-ratio: auto;     /* 正方形の枠をやめて画像の高さぴったりに（下の余白を作品ごとにそろえる） */
 }
 

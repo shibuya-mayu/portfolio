@@ -80,10 +80,6 @@ nav ul {
     width: 100%;
 }
 
-.panel_area {
-    background-color: transparent;
-}
-
 /********************ページ送り（1 / 2 …）********************/
 .web-box.is-hidden,
 .other-box.is-hidden {

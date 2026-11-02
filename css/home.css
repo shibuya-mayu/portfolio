@@ -1,13 +1,7 @@
 @charset "UTF-8";
 
-/*
-赤　#DB4D6D
-黄色　#FFB11B
-青　#0089A7
-*/
-
 /*********************ヘッダー**********************/
- .loading {
+.loading {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
@@ -18,14 +12,14 @@
     z-index: 9999;
     opacity: 1;
     visibility: visible;
-  }
-  
-  .loading.is-active {
+}
+
+.loading.is-active {
     opacity: 0;
     visibility: hidden;
-  }
-  
-  .loading-animation {
+}
+
+.loading-animation {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
@@ -35,12 +29,12 @@
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-  }
-  
-  .loading-animation.is-active {
+}
+
+.loading-animation.is-active {
     opacity: 1;
     visibility: visible;
-  }
+}
 
 .header-parent {
     position: relative;
@@ -68,7 +62,7 @@
     top: 3%;
     left: 30%;
     width: 40%;
-    height: 20cqw; /* 元: 20vw */
+    height: 20cqw;
 }
 
 .header-parent div:nth-child(2) img {
@@ -499,8 +493,8 @@
     position: absolute;
     top: 0%;
     left: 50%;
-    width: 0.15cqw; /* 元: 0.15vw */
-    height: 15cqw; /* 元: 15vw */
+    width: 0.15cqw;
+    height: 15cqw;
 }
 
 
@@ -510,10 +504,9 @@
     content: "";
     top: 0;
     left: 0;
-    width: 0.15cqw; /* 元: 0.15vw */
-    height: 0cqw; /* 元: 0vw */
+    width: 0.15cqw;
+    height: 0cqw;
     background-color: rgb(161,218,128);
-    background-color: linear-gradient(0deg, rgba(161,218,128,1) 0%, rgba(188,241,251,1) 100%);
     animation: 1.4s scroll  ease-in-out infinite;
     opacity: 0;
 }
@@ -525,7 +518,7 @@
       opacity: 0;
     }
     30%{
-      height:15cqw; /* 元: 15vw */
+      height:15cqw;
       opacity: 1;
     }
     100%{
@@ -661,7 +654,7 @@ main {
 .view-box a {
     display: flex;
     width: 50%;
-    height: 2.4cqw; /* 元: 2.4vw */
+    height: 2.4cqw;
     margin: 0 auto;
     margin-top: 10%;
     text-decoration: none;
@@ -681,26 +674,25 @@ main {
 }
 
 .arrow-left {
-    width: 3cqw; /* 元: 3vw */
-    height: 0.5cqw; /* 元: 0.5vw */
-    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
-    border-bottom: 0.1cqw solid #000; /* 元: 0.1vw */
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-bottom: 0.1cqw solid #000;
     transform: skewX(45deg);
     transition: 0.5s;
 }
 
 .arrow-right {
-    width: 3cqw; /* 元: 3vw */
-    height: 0.5cqw; /* 元: 0.5vw */
-    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
-    border-top: 0.1cqw solid #000; /* 元: 0.1vw */
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-top: 0.1cqw solid #000;
     transform: skewX(-45deg);
     transition: 0.5s;
 }
 
 .view-box a:hover .arrow-left,.view-box a:hover .arrow-right {
-    width: 5cqw; /* 元: 5vw */
-    transition: 0.5s;
+    width: 5cqw;
 }
 
 .about-section + div {
@@ -762,7 +754,7 @@ main {
 .work-parent {
     position: relative;
     width: 100%;
-    aspect-ratio: 13 / 12; /* 元: height: 10vw */
+    aspect-ratio: 13 / 12;
 }
 
 .work-left .work-parent:nth-of-type(2) {
@@ -834,7 +826,7 @@ main {
 .view-box2 a {
     display: flex;
     width: 100%;
-    height: 2.4cqw; /* 元: 2.4vw */
+    height: 2.4cqw;
     margin: 0 auto;
     margin-top: 20%;
     text-decoration: none;
@@ -854,26 +846,25 @@ main {
 }
 
 .arrow-left2 {
-    width: 3cqw; /* 元: 3vw */
-    height: 0.5cqw; /* 元: 0.5vw */
-    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
-    border-bottom: 0.1cqw solid #000; /* 元: 0.1vw */
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-bottom: 0.1cqw solid #000;
     transform: skewX(45deg);
     transition: 0.5s;
 }
 
 .arrow-right2 {
-    width: 3cqw; /* 元: 3vw */
-    height: 0.5cqw; /* 元: 0.5vw */
-    border-right: 0.2cqw solid #000; /* 元: 0.2vw */
-    border-top: 0.1cqw solid #000; /* 元: 0.1vw */
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-top: 0.1cqw solid #000;
     transform: skewX(-45deg);
     transition: 0.5s;
 }
 
 .view-box2 a:hover .arrow-left2,.view-box2 a:hover .arrow-right2 {
-    width: 5cqw; /* 元: 5vw */
-    transition: 0.5s;
+    width: 5cqw;
 }
 
 .work-right {
@@ -898,13 +889,13 @@ main {
 
 .work-right div p {
     width: 100%;
-    border-radius: 1cqw; /* 元: 1vw */
+    border-radius: 1cqw;
     overflow: hidden;
 }
 
 .work-right div img {
     width: 100%;
-    border-radius: 1cqw; /* 元: 1vw */
+    border-radius: 1cqw;
     vertical-align: bottom;
     transition: 0.5s;
 }
@@ -916,7 +907,6 @@ main {
 
 .work-right div a:hover img {
     transform: scale(1.1,1.1);
-    transition: 0.5s;
 }
 
 .work-section + div {
@@ -1009,7 +999,6 @@ main {
 .contact-box a:hover {
     background-color: #0089A7;
     color: #fff;
-    transition: 0.5s;
 }
 
 main + div {
@@ -1030,8 +1019,5 @@ footer {
 
 .isAnimate {
     opacity: 1;
-    transform: rotate(0); 
-    transform: translateY(0px);
-    transform: translateX(0px);
     transform: scale(1);
 }

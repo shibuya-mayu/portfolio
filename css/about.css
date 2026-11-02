@@ -1,15 +1,12 @@
 @charset "UTF-8";
 
 /*
-赤　#DB4D6D
-黄色　#FFB11B
-青　#0089A7
 FOT-筑紫B丸ゴシック Std
 */
 
- .top-position div:nth-child(1) {
+.top-position div:nth-child(1) {
     top: -12%;
- }
+}
 
 /***********************ナビゲーション***************************/
 nav ul {
@@ -67,7 +64,7 @@ nav ul {
 
 .profile-box div:nth-child(1) img {
     width: 100%;
-    border-radius: 1cqw; /* 元: 1vw */
+    border-radius: 1cqw;
     vertical-align: bottom;
 }
 
@@ -101,9 +98,9 @@ nav ul {
     content: "";
     top: 30%;
     left: 0;
-    width: 1.3cqw; /* 元: 1.3vw */
-    height: 1.3cqw; /* 元: 1.3vw */
-    border-radius: 6.5cqw; /* 元: 6.5vw */
+    width: 1.3cqw;
+    height: 1.3cqw;
+    border-radius: 6.5cqw;
     opacity: 0.8;
     background-color: #DB4D6D;
 }
@@ -116,7 +113,7 @@ nav ul {
     position: relative;
     margin-top: 13%;
     padding: 5% 3%;
-    border-radius: 1cqw; /* 元: 1vw */
+    border-radius: 1cqw;
     border: 1px solid #ccc;
 }
 
@@ -202,24 +199,20 @@ nav ul {
 }
 
 .marker {
-    background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(255,207,116,1) 61%, rgba(255,205,108,1) 72%, rgba(255,255,255,1) 100%);
-  
     /* 背景の繰り返しを停止 */
     background-repeat: no-repeat;
-  
     /* マーカーの横方向を0にして縮める */
     background-size: 0% 100%;
-  
     /* マーカーが引かれる速度を指定 */
     transition: 2s;
-  }
-  
-  /* マーカーが引かれる際に付与するクラス */
-  .marker.on {
+}
+
+/* マーカーが引かれる際に付与するクラス */
+.marker.on {
     /* 横方向を100%にして、マーカーを引く */
     background-size: 100% 100%;
-  }
+}
 
 .right-box-bottom {
     margin-top: 5%;
@@ -291,7 +284,6 @@ nav ul {
 
 .right-bottom-parent:hover p:nth-child(3) {
     display: block;
-    transition: 0.5s;
 }
 
 .right-bottom-parent div:nth-child(4) {
@@ -316,12 +308,10 @@ nav ul {
 
 .right-bottom-parent:hover div:nth-child(1) img {
     display: none;
-    transition: 0.5s;
 }
 
 .right-bottom-parent:hover div:nth-child(4) img {
     display: block;
-    transition: 0.5s;
 }
 
 /*クマと吹き出し*/
@@ -372,7 +362,6 @@ nav ul {
     font-size: clamp(24px, 2vw, 36px);
     color: #202020;
     font-family: "Pacifico";
-   /* border-bottom: 4px double #202020;*/
 }
 
 .right-lste-flex {
