@@ -10,10 +10,8 @@ FOT-筑紫B丸ゴシック Std
 
 /***********************ナビゲーション***************************/
 nav ul {
-    display: flex;
     position: sticky;
     width: 42%;
-    margin-left: auto;
     margin-top: 0.5%;
     margin-bottom: 10%;
 }
@@ -154,13 +152,20 @@ nav ul {
     text-align: left;
 }
 
-.style-box h2 {
+/*Skill 以外の見出し*/
+.style-box h2,
+.right-box-top h2,
+.right-box-bottom h2,
+.flex-box + h2 {
     position: relative;
-    margin: 10% auto 5%;
-    font-family: "Pacifico";
+    width: fit-content;
     color: #202020;
     font-size: clamp(24px, 2vw, 36px);
-    width: fit-content;
+    font-family: "Pacifico";
+}
+
+.style-box h2 {
+    margin: 10% auto 5%;
 }
 
 .style-box p {
@@ -178,12 +183,7 @@ nav ul {
 }
 
 .right-box-top h2 {
-    position: relative;
     margin: 0 auto 3%;
-    width: fit-content;
-    font-family: "Pacifico";
-    color: #202020;
-    font-size: clamp(24px, 2vw, 36px);
 }
 
 .right-box-top p {
@@ -219,14 +219,8 @@ nav ul {
 }
 
 .right-box-bottom h2 {
-    position: relative;
-    margin: 0 auto;
-    width: fit-content;
-    color: #202020;
-    font-family: "Pacifico";
-    font-size: clamp(24px, 2vw, 36px);
-    margin-bottom: 3%;
-} 
+    margin: 0 auto 3%;
+}
 
 .right-bottom-flex {
     display: flex;
@@ -282,10 +276,6 @@ nav ul {
     transition: 0.5s;
 }
 
-.right-bottom-parent:hover p:nth-child(3) {
-    display: block;
-}
-
 .right-bottom-parent div:nth-child(4) {
     position: absolute;
     top: 0;
@@ -310,6 +300,7 @@ nav ul {
     display: none;
 }
 
+.right-bottom-parent:hover p:nth-child(3),
 .right-bottom-parent:hover div:nth-child(4) img {
     display: block;
 }
@@ -327,11 +318,6 @@ nav ul {
     margin-left: 25%;
 }
 
-.img-box div:nth-child(1) img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
 .img-box div:nth-child(2) {
     position: absolute;
     width: 42%;
@@ -339,6 +325,7 @@ nav ul {
     left: 45%;
 }
 
+.img-box div:nth-child(1) img,
 .img-box div:nth-child(2) img {
     width: 100%;
     vertical-align: bottom;
@@ -356,12 +343,7 @@ nav ul {
 
 /************************特徴・長所（一番下）********************************/
 .flex-box + h2 {
-    position: relative;
     margin: 2% auto 6%;
-    width: fit-content;
-    font-size: clamp(24px, 2vw, 36px);
-    color: #202020;
-    font-family: "Pacifico";
 }
 
 .right-lste-flex {
@@ -369,17 +351,17 @@ nav ul {
     margin-top: 2%;
 }
 
-.right-lste-flex .right-child:nth-of-type(1) {
+/*2つの枠で共通（傾いた背景と線・見出し）*/
+.right-lste-flex .right-child:nth-of-type(n) {
     position: relative;
-    width: 35%;
     padding: 4%;
-} 
+}
 
-.right-lste-flex .right-child:nth-of-type(1)::before {
+.right-lste-flex .right-child:nth-of-type(n)::before {
     position: absolute;
     display: block;
     content: "";
-    top: 0%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -389,12 +371,11 @@ nav ul {
     z-index: 1;
 }
 
-.right-lste-flex .right-child:nth-of-type(1)::after {
+.right-lste-flex .right-child:nth-of-type(n)::after {
     position: absolute;
     display: block;
     content: "";
     top: 2%;
-    left: 2%;
     width: 95%;
     height: 95%;
     transform: skewY(3deg);
@@ -403,15 +384,27 @@ nav ul {
     z-index: 1;
 }
 
-.right-lste-flex .right-child:nth-of-type(1) h3 {
+.right-lste-flex .right-child:nth-of-type(n) h3 {
     position: relative;
     width: fit-content;
-    margin-bottom: 5%;
     font-size: clamp(13px, 1.8vw, 25.9px);
     color: #202020;
     font-family: "Pacifico";
     border-bottom: 3px double #DB4D6D;
     z-index: 2;
+}
+
+/*左の枠*/
+.right-lste-flex .right-child:nth-of-type(1) {
+    width: 35%;
+}
+
+.right-lste-flex .right-child:nth-of-type(1)::after {
+    left: 2%;
+}
+
+.right-lste-flex .right-child:nth-of-type(1) h3 {
+    margin-bottom: 5%;
 }
 
 .right-lste-flex .right-child:nth-of-type(1) ul li {
@@ -423,50 +416,18 @@ nav ul {
     z-index: 2;
 }
 
+/*右の枠*/
 .right-lste-flex .right-child:nth-of-type(2) {
-    position: relative;
     width: 55%;
     margin-left: 10%;
-    padding: 4%;
-} 
-
-.right-lste-flex .right-child:nth-of-type(2)::before {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    transform: skewY(-3deg);
-    background-color: #F7EEE1;
-    opacity: 0.5;
-    z-index: 1;
 }
 
 .right-lste-flex .right-child:nth-of-type(2)::after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 2%;
     right: 2%;
-    width: 95%;
-    height: 95%;
-    transform: skewY(3deg);
-    border: 1px solid #DB4D6D;
-    opacity: 0.5;
-    z-index: 1;
 }
 
 .right-lste-flex .right-child:nth-of-type(2) h3 {
-    position: relative;
     margin-bottom: 4%;
-    width: fit-content;
-    font-size: clamp(13px, 1.8vw, 25.9px);
-    color: #202020;
-    font-family: "Pacifico";
-    border-bottom: 3px double #DB4D6D;
-    z-index: 2;
 }
 
 .right-lste-flex .right-child:nth-of-type(2) ul {

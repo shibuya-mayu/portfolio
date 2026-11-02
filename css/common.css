@@ -30,6 +30,11 @@ header {
 }
 
 /***********ナビゲーション***********/
+nav ul {
+    display: flex;
+    margin-left: auto;
+}
+
 nav ul li {
     width: calc(100%/4);
     margin-right: 2%;
@@ -175,11 +180,6 @@ footer .top-return img {
     width: 80%;
 }
 
-.top-position div:nth-child(1) img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
 .top-position div:nth-child(2) {
     position: absolute;
     top: 24%;
@@ -187,6 +187,7 @@ footer .top-return img {
     width: 30%;
 }
 
+.top-position div:nth-child(1) img,
 .top-position div:nth-child(2) img {
     width: 100%;
     vertical-align: bottom;

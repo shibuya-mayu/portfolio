@@ -2,10 +2,8 @@
 
 /******************ナビゲーション******************/
 nav ul {
-    display: flex;
     position: sticky;
     width: 42%;
-    margin-left: auto;
     margin-top: 0.5%;
     margin-bottom: 1%;
 }

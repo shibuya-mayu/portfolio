@@ -519,9 +519,7 @@
 
 
 nav ul {
-    display: flex;
     width: 48%;
-    margin-left: auto;
 }
 
 header + div {
