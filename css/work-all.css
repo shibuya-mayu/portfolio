@@ -313,6 +313,11 @@ js/work-all.js が、画面に入る前の写真に .is-wait、入ったら .is-
     animation: all-tape 0.5s ease-out calc(var(--d, 0ms) + 0.65s) backwards;
 }
 
+/*左上のテープは、回転の中心が左端だと写真から浮くので真ん中にする（真ん中から伸びる）*/
+.all-item.is-in.tape-left::before {
+    transform-origin: center;
+}
+
 @keyframes all-tape {
     from { scale: 0 1; opacity: 0; }
     to   { scale: 1 1; }
