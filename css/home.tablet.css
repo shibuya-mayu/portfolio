@@ -15,6 +15,15 @@ header + div {
     margin-top: 10%;
 }
 
+/******************************* 共通矢印 *******************************/
+.view-box a p {
+    font-size: max(13px, 2.4vw);
+}
+
+.arrow-parent {
+    margin-top: 0.5cqw;
+}
+
 /**************************** セクション アバウト *****************************/
 .about-left {
     width: 40%;
@@ -33,21 +42,6 @@ header + div {
     line-height: 1.8;
 }
 
-.view-box a {
-    height: auto;
-}
-
-.view-box a p,
-.view-box2 a p {
-    white-space: nowrap;
-    font-size: max(13px, 2.4vw);
-}
-
-.arrow-parent,
-.arrow-parent2 {
-    margin-top: 1.5vw;
-}
-
 /***************************** セクション ワーク ******************************/
 .work-left {
     width: 16%;
@@ -59,10 +53,6 @@ header + div {
 
 .work-left .work-parent:nth-of-type(n) .loop-box h3 {
     font-size: max(13px, 2vw);
-}
-
-.view-box2 a {
-    height: auto;
 }
 
 .work-right {

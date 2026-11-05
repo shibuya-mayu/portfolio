@@ -43,16 +43,31 @@ header + div {
     margin-left: 8%;
 }
 
-.about-section h2,
-.work-section h2,
-.contact-section h2 {
+.h2-position h2 {
     font-size: clamp(28px, 7.5vw, 36px);
 }
-
-.about-section h2 span,
-.work-section h2 span,
-.contact-section h2 span {
+.h2-position h2 span {
     font-size: clamp(38px, 10vw, 48px);
+}
+
+/************************ view more・view all（矢印共通） *************************/
+.view-box a p {
+    font-size: clamp(13px, 4vw, 16px);
+}
+
+.arrow-parent {
+    margin-top: 0.7cqw;
+}
+
+.arrow-left,
+.arrow-right {
+    width: 7vw;
+    height: 1.2vw;
+}
+
+.view-box a:hover .arrow-left,
+.view-box a:hover .arrow-right {
+    width: 10vw;
 }
 
 /**************************** セクション アバウト *****************************/
@@ -83,39 +98,8 @@ header + div {
     line-height: 1.8;
 }
 
-.view-box a {
-    justify-content: center;
-    width: 60%;
-    height: auto;
+.about-section .view-box a {
     margin-top: 8%;
-}
-
-.view-box a p,
-.view-box2 a p {
-    width: auto;
-    margin-right: 4vw;
-    font-size: clamp(13px, 4vw, 16px);
-}
-
-.arrow-parent,
-.arrow-parent2 {
-    width: auto;
-    margin-top: 3vw;
-}
-
-.arrow-left,
-.arrow-right,
-.arrow-left2,
-.arrow-right2 {
-    width: 7vw;
-    height: 1.2vw;
-}
-
-.view-box a:hover .arrow-left,
-.view-box a:hover .arrow-right,
-.view-box2 a:hover .arrow-left2,
-.view-box2 a:hover .arrow-right2 {
-    width: 10vw;
 }
 
 /***************************** セクション ワーク ******************************/
@@ -152,14 +136,11 @@ header + div {
     font-size: 3.6vw;
 }
 
-.view-box2 {
+.work-section .view-box {
     width: 100%;
 }
 
-.view-box2 a {
-    justify-content: center;
-    width: 60%;
-    height: auto;
+.work-section .view-box a {
     margin-top: 6%;
 }
 

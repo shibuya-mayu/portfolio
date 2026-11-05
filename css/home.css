@@ -561,7 +561,15 @@ main {
     position: absolute;
     top: 60%;
     width: 140%;
-    margin-bottom: 5%;
+}
+
+.about-section h2 + div,
+.contact-section h2 + div {
+    left: -20%;
+}
+
+.work-section h2 + div {
+    right: -20%;
 }
 
 .h2-position h2 + div img {
@@ -569,23 +577,56 @@ main {
     vertical-align: bottom;
 }
 
+/************************ view more・view all（矢印共通） *************************/
+.view-box a {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.view-box a p {
+    white-space: nowrap;
+    padding-right: 0.7rem;
+    font-size: clamp(13px, 1.5vw, 21.6px);
+    text-align: center;
+    color: #202020;
+    font-family: "Zen Kurenaido";
+}
+
+.arrow-parent {
+    width: 20%;
+    margin-top: 0.3cqw;
+}
+
+.arrow-left {
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-bottom: 0.1cqw solid #000;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.arrow-right {
+    margin-top: -0.1cqw;    /* 上の線と重ねて1本にする（幅によって2本に見えるため） */
+    width: 3cqw;
+    height: 0.5cqw;
+    border-right: 0.2cqw solid #000;
+    border-top: 0.1cqw solid #000;
+    transform: skewX(-45deg);
+    transition: 0.5s;
+}
+
+.view-box a:hover .arrow-left,
+.view-box a:hover .arrow-right {
+    width: 5cqw;
+}
+
 /**************************** セクション アバウト *****************************/
 .about-section {
     padding-bottom: 8%;
-}
-
-.about-section h2 {
-    margin-bottom: 5%;
-}
-
-.about-section h2 span,
-.contact-section h2 span {
-    margin-right: 0.5%;
-}
-
-.about-section h2 + div,
-.contact-section h2 + div {
-    left: -20%;
 }
 
 .about-parent {
@@ -649,54 +690,8 @@ main {
     display: inline-block;   /* 入りきらないときは「、」のあとでまとめて折り返す */
 }
 
-.view-box a {
-    display: flex;
-    width: 50%;
-    height: 2.4cqw;
-    margin: 0 auto;
+.about-section .view-box a {
     margin-top: 10%;
-    text-decoration: none;
-}
-
-.view-box a p,
-.view-box2 a p {
-    width: 50%;
-    font-size: clamp(13px, 1.5vw, 21.6px);
-    text-align: center;
-    color: #202020;
-    font-family: "Zen Kurenaido";
-}
-
-.arrow-parent {
-    width: 20%;
-    margin-top: 4%;
-}
-
-.arrow-left,
-.arrow-left2 {
-    width: 3cqw;
-    height: 0.5cqw;
-    border-right: 0.2cqw solid #000;
-    border-bottom: 0.1cqw solid #000;
-    transform: skewX(45deg);
-    transition: 0.5s;
-}
-
-.arrow-right,
-.arrow-right2 {
-    width: 3cqw;
-    height: 0.5cqw;
-    border-right: 0.2cqw solid #000;
-    border-top: 0.1cqw solid #000;
-    transform: skewX(-45deg);
-    transition: 0.5s;
-}
-
-.view-box a:hover .arrow-left,
-.view-box a:hover .arrow-right,
-.view-box2 a:hover .arrow-left2,
-.view-box2 a:hover .arrow-right2 {
-    width: 5cqw;
 }
 
 /*セクションの間の波線*/
@@ -719,14 +714,6 @@ main {
 
 .work-section .h2-position {
     margin-left: auto;
-}
-
-.work-section h2 {
-    margin-bottom: 8%;
-}
-
-.work-section h2 + div {
-    right: -20%;
 }
 
 .work-flex-box {
@@ -798,18 +785,8 @@ main {
     top: 30%;
 }
 
-.view-box2 a {
-    display: flex;
-    width: 100%;
-    height: 2.4cqw;
-    margin: 0 auto;
+.work-section .view-box a {
     margin-top: 20%;
-    text-decoration: none;
-}
-
-.arrow-parent2 {
-    width: 20%;
-    margin-top: 6%;
 }
 
 .work-right {
@@ -857,10 +834,6 @@ main {
 /*************************** セクション コンタクト ****************************/
 .contact-section {
     padding-top: 8%;
-}
-
-.contact-section h2 {
-    margin-bottom: 10%;
 }
 
 .contact-box {
