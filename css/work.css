@@ -371,24 +371,10 @@ h3 {
 .arrow-parent {
     position: relative;
     width: 15%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;     /* 色・矢印・動きは common.css */
     margin-left: auto;
     margin-bottom: auto;
-    border-radius: 50%;
-    background-color: #FFB11B;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12h12M13 7l5 5-5 5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 62%;
-    transition: background-position 0.5s;
     cursor: pointer;
-}
-
-/* ホバーで矢印が少し右へ */
-.web-box a:hover .arrow-parent,
-.other-card:has(.other-img a:hover) .arrow-parent,
-.other-card .arrow-parent:hover {
-    background-position: 65% 50%;
 }
 
 /*************************** ページ送り（1 / 2 …） ***************************/

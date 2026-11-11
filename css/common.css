@@ -325,3 +325,20 @@ footer .top-return img {
     white-space: nowrap;
     vertical-align: 0.1em;
 }
+
+/********************** オレンジの丸い矢印（作品へ進む） **********************/
+/*Work 一覧のカードと、詳細ページの「前の作品・次の作品」で共通（大きさはそれぞれのページで）*/
+.card-bottom .arrow-parent,
+.pager-arrow {
+    border-radius: 50%;
+    background: #FFB11B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12h12M13 7l5 5-5 5'/%3E%3C/svg%3E") center / 62% no-repeat;
+    transition: background-position 0.5s;   /* ホバーで丸の中の矢印だけが進む方向へ動く */
+}
+
+/*ホバーで矢印が少し進む方向へ（「前の作品」は左右反転しているので左へ）*/
+.web-box a:hover .arrow-parent,
+.other-card:has(.other-img a:hover) .arrow-parent,
+.other-card .arrow-parent:hover,
+.work-pager a:hover .pager-arrow {
+    background-position: 80% 50%;
+}

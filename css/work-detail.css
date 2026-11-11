@@ -347,26 +347,15 @@ nav ul {
     font-family: "Klee One";
 }
 
-/*オレンジの丸い矢印（Work 一覧の矢印と同じ）*/
+/*オレンジの丸い矢印（色・矢印・動きは common.css で Work 一覧と共通）*/
 .pager-arrow {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #FFB11B url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center / 55% no-repeat;
-    transition: transform 0.3s;
+    width: 44px;            /* 一覧の矢印と同じくらいの大きさ */
+    height: 44px;
 }
 
 .work-pager .prev .pager-arrow {
-    transform: scaleX(-1);              /* 左向きにする */
-}
-
-.work-pager .prev:hover .pager-arrow {
-    transform: scaleX(-1) translateX(3px);
-}
-
-.work-pager .next:hover .pager-arrow {
-    transform: translateX(3px);
+    transform: scaleX(-1);              /* 左向きにする（動きも左へ） */
 }
 
 .work-pager a:hover img {
