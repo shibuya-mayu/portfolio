@@ -16,23 +16,20 @@ nav ul {
 .right-box-top h2,
 .right-box-bottom h2,
 .flex-box + h2 {
-    width: fit-content;
     margin: 8% auto 4%;
     padding: 0 8vw;
     font-size: clamp(24px, 3.4vw, 28px);
 }
 
 .style-box h2::before,
-.right-box-top h2::before,
-.right-box-bottom h2::before,
+.right-box h2::before,
 .flex-box + h2::before {
     left: 1.5vw;
     width: 5vw;
 }
 
 .style-box h2::after,
-.right-box-top h2::after,
-.right-box-bottom h2::after,
+.right-box h2::after,
 .flex-box + h2::after {
     left: auto;
     right: 1.5vw;

@@ -15,23 +15,20 @@ nav ul {
 .right-box-top h2,
 .right-box-bottom h2,
 .flex-box + h2 {
-    width: fit-content;
     margin: 12% auto 6%;
     padding: 0 12vw;
     font-size: clamp(20px, 5.5vw, 24px);
 }
 
 .style-box h2::before,
-.right-box-top h2::before,
-.right-box-bottom h2::before,
+.right-box h2::before,
 .flex-box + h2::before {
     left: 2vw;
     width: 8vw;
 }
 
 .style-box h2::after,
-.right-box-top h2::after,
-.right-box-bottom h2::after,
+.right-box h2::after,
 .flex-box + h2::after {
     left: auto;
     right: 2vw;
@@ -66,13 +63,10 @@ nav ul {
     font-size: clamp(14px, 4.6vw, 16px);
 }
 
-.profile-box p,
-.profile-box p:nth-child(3),
-.inner-flex p {
+.profile-box p {
     font-size: clamp(14px, 3.8vw, 16px);
 }
 
-.profile-box p:nth-child(3)::before,
 .inner-flex p::before {
     width: 3.4vw;
     height: 3.4vw;
