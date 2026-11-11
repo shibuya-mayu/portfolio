@@ -85,10 +85,6 @@ nav ul {
     font-size: clamp(24px, 3.4vw, 28px);
 }
 
-::marker {
-    font-size: clamp(12px, 1.8vw, 13px);
-}
-
 .skill-group h3 {
     font-size: max(13px, 2vw);
 }
@@ -171,6 +167,11 @@ nav ul {
 
 .right-lste-flex .right-child:nth-of-type(n) ul li {
     font-size: clamp(15px, 2.2vw, 16px);
+}
+
+/*リストの黒丸の大きさ*/
+.right-lste-flex li::marker {
+    font-size: clamp(12px, 1.8vw, 13px);
 }
 
 /********************************** フッター **********************************/

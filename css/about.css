@@ -144,10 +144,6 @@ nav ul {
     transform: translateY(-50%);
 }
 
-::marker {
-    font-size: clamp(12px, 1vw, 14px);
-}
-
 /*種類（コーディング・デザインなど）ごとのまとまり*/
 .skill-box h2 + .skill-group {
     margin-top: 0.8em;      /* 枠の線に乗せた「Skill」と重ならないように */
@@ -451,6 +447,11 @@ nav ul {
     line-height: 1.8;
     font-size: clamp(15px, 1.3vw, 18px);
     font-family: "Noto Sans JP";
+}
+
+/*リストの黒丸の大きさ*/
+.right-lste-flex li::marker {
+    font-size: clamp(12px, 1vw, 14px);
 }
 
 /********************************** フッター **********************************/
