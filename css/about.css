@@ -68,7 +68,7 @@ nav ul {
     width: 30%;
 }
 
-/*プロフィール*/
+/*************** プロフィール ***************/
 .profile-box div:nth-child(1) {
     margin-bottom: 5%;
     width: 100%;
@@ -121,7 +121,7 @@ nav ul {
     margin-top: 5%;
 }
 
-/*Skill*/
+/*************** Skill ***************/
 .skill-box {
     position: relative;
     margin-top: 13%;
@@ -163,7 +163,7 @@ nav ul {
     text-align: left;
 }
 
-/*得意の制作スタイル*/
+/*************** 得意の制作スタイル ***************/
 .style-box h2 {
     margin: 10% auto 5%;
 }
@@ -182,7 +182,7 @@ nav ul {
     margin-left: 3%;
 }
 
-/*考え・目標*/
+/*************** 考え・目標 ***************/
 .right-box-top h2 {
     margin: 0 auto 3%;
 }
@@ -215,7 +215,7 @@ nav ul {
     background-size: 100% 100%;
 }
 
-/*好きなもの・趣味*/
+/*************** 好きなもの・趣味 ***************/
 .right-box-bottom {
     margin-top: 5%;
 }
@@ -307,7 +307,7 @@ nav ul {
     display: block;
 }
 
-/*クマと吹き出し*/
+/*************** クマと吹き出し ***************/
 .img-box {
     position: relative;
     margin-top: 10%;
