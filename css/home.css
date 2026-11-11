@@ -36,6 +36,13 @@
     visibility: visible;
 }
 
+/*アニメーションの画像を画面の中に収める（幅が狭くても左右が切れない）*/
+.loading-animation img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
 /********************************** ヘッダー **********************************/
 .header-parent {
     position: relative;
