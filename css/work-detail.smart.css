@@ -75,7 +75,6 @@ nav ul {
     gap: 0.1em;
     max-width: 100%;
     padding: 0.7em 1.4em;
-    font-size: 16px;
 }
 
 .site-button svg {
@@ -86,23 +85,11 @@ nav ul {
     width: 100%;
 }
 
-.page-links a {
-    font-size: 14px;
-}
-
-.back-link {
-    font-size: 13px;
-}
-
 /*********************** 前の作品・次の作品（上下2段） ************************/
 .work-pager {
     grid-template-columns: 1fr;
     gap: 10px;
     width: 100%;
-}
-
-.work-pager a {
-    font-size: 15px;
 }
 
 .work-pager img {

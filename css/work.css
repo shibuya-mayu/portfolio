@@ -314,7 +314,6 @@ h3 {
 .line {
     width: 80%;
     margin: 3% auto 5%;
-    border: none;
     border-top: 1px solid color-mix(in srgb, var(--c-deep) 40%, transparent);   /* 色はカードの色 */
 }
 
@@ -371,8 +370,6 @@ h3 {
     position: relative;
     width: 15%;
     aspect-ratio: 1 / 1;     /* 色・矢印・動きは common.css */
-    margin-left: auto;
-    margin-bottom: auto;
     cursor: pointer;
 }
 
