@@ -912,7 +912,7 @@ main + div img {
 /********************************** フッター **********************************/
 footer {
     margin-top: 10%;
-    background-image: url(../images/contact-fotter.png);
+    background-image: url(../images/contact-fotter.webp);
 }
 
 /************** スクロールで表示（js/home.js が .elem に付ける） **************/
